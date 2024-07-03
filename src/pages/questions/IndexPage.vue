@@ -76,13 +76,16 @@ let changeQuestionTimeout: number | undefined;
  * Selects a next question.
  */
 const nextQuestion = () => {
-  window.clearTimeout(changeQuestionTimeout);
+  blinkingAnswer.value = undefined;
+  window.clearTimeout(blinkingTimeout);
+
   changeQuestionTimeout = undefined;
+  window.clearTimeout(changeQuestionTimeout);
+
   isPageFadeOut.value = true;
 
   changeQuestionTimeout = window.setTimeout(() => {
     changeQuestionTimeout = undefined;
-    window.clearTimeout(blinkingTimeout);
 
     history.replaceState({
       ['answer-id']: selectedAnswer.value?.id,
@@ -311,18 +314,19 @@ const t = (key: string) => {
 }
 
 .text {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: var(--gap-s);
   line-height: 130%;
   text-wrap: pretty;
   background: var(--secondary-color-10);
   padding: var(--gap);
-  border-radius: var(--gap);
+  border-radius: var(--border-radius);
 }
 
 .button {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: var(--gap-s);
   padding: 0.7rem 1rem;
   cursor: pointer;
   text-align: center;
@@ -360,9 +364,8 @@ const t = (key: string) => {
 .answer {
   filter: blur(0);
   transition: filter 200ms;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
-  padding: 0.7rem 1rem;
   cursor: pointer;
   text-align: center;
   width: 100%;
