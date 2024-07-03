@@ -215,7 +215,7 @@ const t = (key: string) => {
     <div :class="[$style.container, { [$style.fadeOut]: isPageFadeOut }]">
       <div :class="$style.scrollContainer">
         <div :class="$style.question" :key="currentQuestion.id">
-          <div :class="$style.text">{{ t(currentQuestion.question) }}</div>
+          <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
           <template v-if="currentQuestion.options">
             <div v-for="option in currentQuestion.options" :key="option.id">
               <button @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
@@ -258,6 +258,7 @@ const t = (key: string) => {
   display: flex;
   align-items: center;
   gap: var(--gap);
+  flex-shrink: 0;
 
   &>* {
     opacity: 0.7;
@@ -370,6 +371,7 @@ const t = (key: string) => {
   user-select: none;
   width: 100%;
   line-height: 100%;
+  flex-shrink: 0;
 
   &>div {
     padding: var(--gap-s);
