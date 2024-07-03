@@ -77,9 +77,11 @@ let changeQuestionTimeout: number | undefined;
  */
 const nextQuestion = () => {
   window.clearTimeout(changeQuestionTimeout);
+  changeQuestionTimeout = undefined;
   isPageFadeOut.value = true;
 
   changeQuestionTimeout = window.setTimeout(() => {
+    changeQuestionTimeout = undefined;
     window.clearTimeout(blinkingTimeout);
 
     history.replaceState({
