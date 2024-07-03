@@ -84,7 +84,7 @@ const nextQuestion = () => {
 
     history.replaceState({
       ['answer-id']: selectedAnswer.value?.id,
-      ['answer-revealed']: isAnswerRevealed.value,
+      ['answer-revealed']: isAnswerRevealed.value ? '1' : undefined,
     }, '');
 
     $router.push({
