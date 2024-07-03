@@ -1,0 +1,101 @@
+// out: false
+.vars() {
+  @secondary-color: spin(@main-color, 180);
+
+  --gap: 16px;
+  --gap-s: 8px;
+
+  --main-color: @main-color;
+  --secondary-color: @secondary-color;
+
+  --bg-color: @bg-color;
+  --text-color: @negative-color;
+
+  --main-color-90: mix(@main-color, @bg-color, 90%);
+  --main-color-80: mix(@main-color, @bg-color, 80%);
+  --main-color-70: mix(@main-color, @bg-color, 70%);
+  --main-color-60: mix(@main-color, @bg-color, 60%);
+  --main-color-50: mix(@main-color, @bg-color, 50%);
+  --main-color-40: mix(@main-color, @bg-color, 40%);
+  --main-color-30: mix(@main-color, @bg-color, 30%);
+  --main-color-20: mix(@main-color, @bg-color, 20%);
+  --main-color-10: mix(@main-color, @bg-color, 10%);
+  --main-color-5: mix(@main-color, @bg-color, 5%);
+
+  --main-color-alpha-90: rgba(@main-color, 0.9);
+  --main-color-alpha-80: rgba(@main-color, 0.8);
+  --main-color-alpha-70: rgba(@main-color, 0.7);
+  --main-color-alpha-60: rgba(@main-color, 0.6);
+  --main-color-alpha-50: rgba(@main-color, 0.5);
+  --main-color-alpha-40: rgba(@main-color, 0.4);
+  --main-color-alpha-30: rgba(@main-color, 0.3);
+  --main-color-alpha-20: rgba(@main-color, 0.2);
+  --main-color-alpha-10: rgba(@main-color, 0.1);
+  --main-color-alpha-5: rgba(@main-color, 0.05);
+
+  --secondary-color-90: mix(@secondary-color, @bg-color, 90%);
+  --secondary-color-80: mix(@secondary-color, @bg-color, 80%);
+  --secondary-color-70: mix(@secondary-color, @bg-color, 70%);
+  --secondary-color-60: mix(@secondary-color, @bg-color, 60%);
+  --secondary-color-50: mix(@secondary-color, @bg-color, 50%);
+  --secondary-color-40: mix(@secondary-color, @bg-color, 40%);
+  --secondary-color-30: mix(@secondary-color, @bg-color, 30%);
+  --secondary-color-20: mix(@secondary-color, @bg-color, 20%);
+  --secondary-color-10: mix(@secondary-color, @bg-color, 10%);
+  --secondary-color-5: mix(@secondary-color, @bg-color, 5%);
+
+  --secondary-color-alpha-90: rgba(@secondary-color, 0.9);
+  --secondary-color-alpha-80: rgba(@secondary-color, 0.8);
+  --secondary-color-alpha-70: rgba(@secondary-color, 0.7);
+  --secondary-color-alpha-60: rgba(@secondary-color, 0.6);
+  --secondary-color-alpha-50: rgba(@secondary-color, 0.5);
+  --secondary-color-alpha-40: rgba(@secondary-color, 0.4);
+  --secondary-color-alpha-30: rgba(@secondary-color, 0.3);
+  --secondary-color-alpha-20: rgba(@secondary-color, 0.2);
+  --secondary-color-alpha-10: rgba(@secondary-color, 0.1);
+  --secondary-color-alpha-5: rgba(@secondary-color, 0.05);
+
+  --btn-bg-color: var(--main-color-10);
+  --btn-text-color: var(--text-color);
+  --btn-border: 1px solid rgba(0, 0, 0, 0.1);
+
+  --border-radius: 16px;
+  --btn-border-radius: var(--border-radius);
+
+  --success-bg-color: @success-bg-color;
+  --success-text-color: @success-text-color;
+  --error-bg-color: @error-bg-color;
+  --error-text-color: @error-text-color;
+
+  --switch-on-bg-color: #444;
+  --switch-bg-color: #999;
+  --switch-toggle-bg-color: #fff;
+}
+
+html {
+  @bg-color: #f8f8f8;
+  @negative-color: #222;
+  @main-color: rgb(59, 0, 29);
+
+  @success-bg-color: rgb(35, 171, 35);
+  @success-text-color: #fff;
+
+  @error-bg-color: rgb(183, 41, 41);
+  @error-text-color: #fff;
+
+  .vars;
+}
+
+html.dark {
+  @bg-color: #151515;
+  @negative-color: #eee;
+  @main-color: #ffb5d9;
+
+  @success-bg-color: rgb(0, 97, 0);
+  @success-text-color: #fff;
+
+  @error-bg-color: rgb(97, 0, 0);
+  @error-text-color: #fff;
+
+  .vars;
+}
