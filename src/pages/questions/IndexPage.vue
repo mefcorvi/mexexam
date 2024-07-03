@@ -112,6 +112,11 @@ const back = () => {
  * Next navigation.
  */
 const forward = () => {
+  // changing animation is in progress
+  if (changeQuestionTimeout) {
+    return;
+  }
+
   // user returned by navigation, ignore
   if (history.state.forward) {
     history.forward();
