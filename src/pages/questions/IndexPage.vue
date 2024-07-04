@@ -10,6 +10,7 @@ const $style = useCssModule();
 const $router = useRouter();
 
 const {
+  stat,
   isAnswerRevealed,
   correctCount,
   currentOptionsRandomized,
@@ -216,6 +217,10 @@ const t = (key: string) => {
 
 <template>
   <div :class="$style.page" @click="onPageClick">
+    <div :class="$style.progress">
+      <div :class="$style.correctAnswers" :style="{ width: `${stat.correctPercentage}%` }"></div>
+      <div :class="$style.wrongAnswers" :style="{ width: `${stat.wrongPercentage}%` }"></div>
+    </div>
     <div :class="$style.topBar">
       <div :class="$style.counter" @click.stop="resetCount">
         <span>{{ correctCount }}</span>&nbsp;/&nbsp;<span>{{ correctCount + wrongCount }}</span>
@@ -223,20 +228,18 @@ const t = (key: string) => {
       <ToggleSwitch v-model="isDarkTheme" size="16px" label="Dark Theme" />
     </div>
     <div :class="[$style.container, { [$style.fadeOut]: isPageFadeOut }]">
-      <div :class="$style.scrollContainer">
-        <div :class="$style.question" :key="currentQuestion.id">
-          <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
-          <template v-if="currentQuestion.options">
-            <div v-for="option in currentQuestion.options" :key="option.id">
-              <button @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
-                {{ t(option.value) }}
-              </button>
-            </div>
-          </template>
-          <div v-if="currentQuestion.type === 'text'"
-            :class="[$style.answer, isAnswerRevealed ? '' : $style.hiddenAnswer]" @click.stop="forward">
-            <p :key="idx" v-for="(item, idx) of t(currentQuestion.answer).split('\n')">{{ item }}</p>
+      <div :class="$style.question" :key="currentQuestion.id">
+        <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
+        <template v-if="currentQuestion.options">
+          <div v-for="option in currentQuestion.options" :key="option.id">
+            <button @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
+              {{ t(option.value) }}
+            </button>
           </div>
+        </template>
+        <div v-if="currentQuestion.type === 'text'"
+          :class="[$style.answer, isAnswerRevealed ? '' : $style.hiddenAnswer]" @click.stop="forward">
+          <p :key="idx" v-for="(item, idx) of t(currentQuestion.answer).split('\n')">{{ item }}</p>
         </div>
       </div>
     </div>
@@ -267,8 +270,15 @@ const t = (key: string) => {
   padding: var(--gap-s) var(--gap);
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 2px;
+  left: 0;
+  right: 0;
   gap: var(--gap);
   flex-shrink: 0;
+  background: var(--bg-color-alpha-50);
+  backdrop-filter: blur(5px);
 
   &>* {
     opacity: 0.7;
@@ -288,8 +298,10 @@ const t = (key: string) => {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
-  overflow: hidden;
+  padding-top: 42px;
+  padding-bottom: 64px;
 
   opacity: 1;
   transition: opacity @pageFadeOutDuration;
@@ -327,7 +339,7 @@ const t = (key: string) => {
 .button {
   font-size: 1.1rem;
   margin-bottom: var(--gap-s);
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.4rem;
   cursor: pointer;
   text-align: center;
   width: 100%;
@@ -382,6 +394,12 @@ const t = (key: string) => {
   width: 100%;
   line-height: 100%;
   flex-shrink: 0;
+  background: var(--bg-color-alpha-50);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   &>div {
     padding: var(--gap-s);
@@ -397,6 +415,29 @@ const t = (key: string) => {
   .disabled {
     opacity: 0.3;
     cursor: default;
+  }
+}
+
+.progress {
+  background: var(--secondary-color-10);
+  height: 2px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+
+  .correctAnswers {
+    background: var(--success-bg-color);
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .wrongAnswers {
+    background: var(--error-bg-color);
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 }
 

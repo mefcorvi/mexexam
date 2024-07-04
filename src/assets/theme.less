@@ -11,6 +11,17 @@
   --bg-color: @bg-color;
   --text-color: @negative-color;
 
+  --bg-color-alpha-90: rgba(@bg-color, 0.9);
+  --bg-color-alpha-80: rgba(@bg-color, 0.8);
+  --bg-color-alpha-70: rgba(@bg-color, 0.7);
+  --bg-color-alpha-60: rgba(@bg-color, 0.6);
+  --bg-color-alpha-50: rgba(@bg-color, 0.5);
+  --bg-color-alpha-40: rgba(@bg-color, 0.4);
+  --bg-color-alpha-30: rgba(@bg-color, 0.3);
+  --bg-color-alpha-20: rgba(@bg-color, 0.2);
+  --bg-color-alpha-10: rgba(@bg-color, 0.1);
+  --bg-color-alpha-5: rgba(@bg-color, 0.05);
+
   --main-color-90: mix(@main-color, @bg-color, 90%);
   --main-color-80: mix(@main-color, @bg-color, 80%);
   --main-color-70: mix(@main-color, @bg-color, 70%);
@@ -87,7 +98,7 @@ html {
 }
 
 html.dark {
-  @bg-color: #151515;
+  @bg-color: #111;
   @negative-color: #eee;
   @main-color: #ffb5d9;
 

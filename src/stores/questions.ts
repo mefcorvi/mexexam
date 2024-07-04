@@ -1,6 +1,6 @@
 import { computed, markRaw, ref, watch } from 'vue';
 import questionsData from './questions.json';
-import { createSharedComposable } from '@vueuse/core';
+import { createSharedComposable, useStorage } from '@vueuse/core';
 
 export type QuestionOption = {
   id: number;
@@ -27,11 +27,26 @@ export type QuestionsSection = {
 export const useQuestionsStore = createSharedComposable(() => {
   const { questions, translations } = loadQuestions();
 
+  const correctQuestions = useStoredSet('correct-questions');
+  const wrongQuestions = useStoredSet('wrong-questions');
+
+  const currentQuestionId = ref('');
+
   const getRandomQuestionId = () => {
-    return selectRandomQuestionId(questions);
+    let questionId = currentQuestionId.value;
+
+    while (questionId === currentQuestionId.value) {
+      questionId = selectRandomQuestionId(
+        questions,
+        correctQuestions.value,
+        wrongQuestions.value
+      );
+    }
+
+    return questionId;
   };
 
-  const currentQuestionId = ref(getRandomQuestionId());
+  currentQuestionId.value = getRandomQuestionId();
 
   const currentQuestion = computed(() => {
     const question = questions.get(currentQuestionId.value);
@@ -92,8 +107,12 @@ export const useQuestionsStore = createSharedComposable(() => {
 
     if (selectedAnswer.value.isAnswer) {
       correctCount.value++;
+      correctQuestions.value.add(currentQuestion.value.id);
+      wrongQuestions.value.delete(currentQuestion.value.id);
     } else {
       wrongCount.value++;
+      wrongQuestions.value.add(currentQuestion.value.id);
+      correctQuestions.value.delete(currentQuestion.value.id);
     }
   };
 
@@ -115,8 +134,27 @@ export const useQuestionsStore = createSharedComposable(() => {
     { immediate: true, flush: 'sync' }
   );
 
+  const stat = computed(() => ({
+    correctQuestions: correctQuestions.value.size,
+    wrongQuestions: wrongQuestions.value.size,
+    unansweredQuestions:
+      questions.size - correctQuestions.value.size - wrongQuestions.value.size,
+    totalQuestions: questions.size,
+    correctPercentage: (correctQuestions.value.size / questions.size) * 100,
+    wrongPercentage: (wrongQuestions.value.size / questions.size) * 100,
+    unansweredPercentage:
+      ((questions.size -
+        correctQuestions.value.size -
+        wrongQuestions.value.size) /
+        questions.size) *
+      100
+  }));
+
   return {
+    stat,
     correctCount,
+    correctQuestions,
+    wrongQuestions,
     currentOptionsRandomized,
     currentQuestion,
     isAnswerRevealed,
@@ -133,7 +171,40 @@ export const useQuestionsStore = createSharedComposable(() => {
   };
 });
 
-function selectRandomQuestionId(questions: Map<string, Question>) {
+function useStoredSet(key: string) {
+  return useStorage(key, () => new Set<string>(), undefined, {
+    serializer: {
+      read(value) {
+        return value ? new Set(value.split(',')) : new Set<string>();
+      },
+      write(value: Set<string>) {
+        return [...value].join(',');
+      }
+    }
+  });
+}
+
+function selectRandomQuestionId(
+  questions: Map<string, Question>,
+  correct: Set<string>,
+  wrong: Set<string>
+) {
+  // if there are wrong questions, select one of them
+  // each new wrong question cause a higher chance that wrong question
+  // will be selected
+  if (Math.random() < wrong.size / 10) {
+    const keys = [...wrong];
+    return keys[Math.floor(Math.random() * keys.length)];
+  }
+
+  // if there are correct questions, select one of them
+  // with a 20% chance
+  if (Math.random() < 0.2) {
+    const keys = [...correct];
+    return keys[Math.floor(Math.random() * keys.length)];
+  }
+
+  // 40% chance to select a random question
   const keys = [...questions.keys()];
   return keys[Math.floor(Math.random() * keys.length)];
 }
