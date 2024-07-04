@@ -27,6 +27,8 @@ const {
   wrongCount,
 } = useQuestionsStore();
 
+const isNoteAvailable = computed(() => currentQuestion.value.note !== undefined);
+
 const questionParamId = useRouteParams<string>('id', '');
 
 const hasBackPage = ref(false);
@@ -34,10 +36,13 @@ const hasForwardPage = ref(false);
 
 const isBackAllowed = computed(() => hasBackPage.value);
 const isForwardAllowed = computed(() => hasForwardPage.value || selectedAnswer.value || currentQuestion.value.type === 'text');
+
 const blinkingAnswer = ref<QuestionOption>();
+const isNoteShown = ref(false);
 
 watch(questionParamId, () => {
   blinkingAnswer.value = undefined;
+  isNoteShown.value = false;
 
   if (hasQuestion(questionParamId.value)) {
     setQuestion(questionParamId.value);
@@ -201,6 +206,10 @@ const onPageClick = () => {
 }
 
 const toggleLocale = () => {
+  if (!window.getSelection()?.isCollapsed) {
+    return;
+  }
+
   if (locale.value === 'es') {
     locale.value = 'ru';
   } else {
@@ -212,6 +221,14 @@ const isDarkTheme = useDark()
 
 const t = (key: string) => {
   return translations.t(locale.value, key);
+}
+
+const hideNote = () => {
+  isNoteShown.value = false;
+}
+
+const showNote = () => {
+  isNoteShown.value = true;
 }
 </script>
 
@@ -245,7 +262,14 @@ const t = (key: string) => {
     </div>
     <div :class="$style.navigation">
       <div :class="[$style.back, { [$style.disabled]: !isBackAllowed }]" @click.stop="back">←</div>
+      <div :class="[$style.question, { [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">?</div>
       <div :class="[$style.forward, { [$style.disabled]: !isForwardAllowed }]" @click.stop="forward">→</div>
+    </div>
+    <div @click.stop="hideNote" :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
+      <div v-if="currentQuestion.note" :class="[$style.note, { [$style.hidden]: !isNoteShown }]">
+        <img v-if="currentQuestion.noteImage" :src="`/notes/${currentQuestion.noteImage}`" />
+        {{ t(currentQuestion.note) }}
+      </div>
     </div>
   </div>
 </template>
@@ -369,10 +393,6 @@ const t = (key: string) => {
   color: var(--text-color);
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .answer {
   filter: blur(0);
   transition: filter 200ms;
@@ -401,15 +421,20 @@ const t = (key: string) => {
   left: 0;
   right: 0;
 
-  &>div {
-    padding: var(--gap-s);
-    flex-basis: 50%;
-    cursor: pointer;
-    transition: opacity 200ms;
+  .back {
+    flex-grow: 1;
+    text-align: right;
   }
 
-  &>div:first-child {
-    text-align: right;
+  .forward {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  &>div {
+    padding: var(--gap-s);
+    cursor: pointer;
+    transition: opacity 200ms;
   }
 
   .disabled {
@@ -453,6 +478,59 @@ const t = (key: string) => {
   100% {
     background: var(--btn-bg-color);
     color: var(--btn-text-color);
+  }
+}
+
+.noteContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-color-alpha-10);
+  backdrop-filter: blur(5px);
+  opacity: 1;
+  transition: opacity 500ms;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.note {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  line-height: 160%;
+  margin: 0 auto;
+  max-height: 100vh;
+  overflow: auto;
+  padding: var(--gap-l);
+  background: var(--bg-color-alpha-90);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  backdrop-filter: blur(5px);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 500ms, transform 500ms;
+  opacity: 1;
+  transform: translateY(0);
+
+  img {
+    float: left;
+    width: 50%;
+    margin-right: var(--gap-s);
+    margin-bottom: var(--gap-s);
+    border-radius: var(--border-radius);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
 </style>

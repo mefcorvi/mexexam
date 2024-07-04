@@ -151,6 +151,8 @@
             "Químico mexicano ganador del Premio Nobel",
             "Reconocido muralista mexicano"
           ],
+          "note": "Luis Barragán fue uno de los arquitectos más importantes de México y del mundo. Nacido en Guadalajara en 1902, Barragán es conocido por su estilo único que combina elementos modernos con toques tradicionales mexicanos. Sus obras, como la Casa Estudio Luis Barragán y las Torres de Satélite, destacan por el uso innovador del color, la luz y los espacios. En 1980, fue galardonado con el Premio Pritzker, el reconocimiento más prestigioso en la arquitectura. Su legado sigue vivo, inspirando a arquitectos y amantes del arte alrededor del mundo, y su trabajo continúa siendo un referente en la arquitectura contemporánea.",
+          "noteImage": "cmy4ic2.jpg",
           "ru": {
             "question": "Кто был Луис Барраган?",
             "answer": "Мексиканский инженер и архитектор, автор Спутниковых башен",
@@ -158,7 +160,8 @@
               "Олимпийский чемпион по плаванию в 1968 году",
               "Мексиканский химик, лауреат Нобелевской премии",
               "Известный мексиканский муралист"
-            ]
+            ],
+            "note": "Луис Барраган был одним из самых важных архитекторов Мексики и мира. Родившись в Гвадалахаре в 1902 году, Барраган известен своим уникальным стилем, который сочетает современные элементы с традиционными мексиканскими чертами. Его работы, такие как Дом-студия Луиса Баррагана и Сателлитные башни, выделяются инновационным использованием цвета, света и пространства. В 1980 году он был удостоен Притцкеровской премии, самого престижного признания в области архитектуры. Его наследие живет, вдохновляя архитекторов и любителей искусства по всему миру, и его работы продолжают быть образцом в современной архитектуре."
           }
         },
         {
@@ -8745,10 +8748,13 @@
           "question": "¿Quién escribió \"El ratón vaquero\"?",
           "answer": "Cri Cri (Francisco Gabilondo Soler)",
           "options": ["Octavio Paz", "Juan Rulfo", "Carlos Fuentes"],
+          "note": "\"El ratón vaquero\" es una canción infantil muy popular en México, escrita por el famoso compositor y cantante Francisco Gabilondo Soler, conocido como Cri-Cri. Cri-Cri es una figura icónica de la música infantil mexicana, y sus canciones han entretenido a generaciones de niños desde la década de 1940. \"El ratón vaquero\" narra la historia de un ratón que llega a una prisión y se comunica en inglés, añadiendo un toque de humor y aprendizaje de idiomas a la canción. La creatividad y la narrativa de Cri-Cri han dejado una huella perdurable en la cultura mexicana. Su legado sigue vivo en la memoria colectiva y en el corazón de muchas familias mexicanas.",
+          "noteImage": "h761z9.jpg",
           "ru": {
             "question": "Кто написал \"Ковбоя-мышонка\"?",
             "answer": "Кри Кри (Франсиско Габилондо Солер)",
-            "options": ["Октавио Пас", "Хуан Рульфо", "Карлос Фуэнтес"]
+            "options": ["Октавио Пас", "Хуан Рульфо", "Карлос Фуэнтес"],
+            "note": "«Ковбойская мышь» — это очень популярная в Мексике детская песня, написанная известным композитором и певцом Франциско Габилондо Солером, известным как Кри-Кри. Кри-Кри — знаковая фигура в мексиканской детской музыке, и его песни развлекали поколения детей с 1940-х годов. «Ковбойская мышь» рассказывает историю мышонка, который попадает в тюрьму и разговаривает на английском, добавляя песне юмор и элементы изучения языков. Творчество и повествование Кри-Кри оставили неизгладимый след в мексиканской культуре. Его наследие живет в коллективной памяти и в сердцах многих мексиканских семей."
           }
         },
         {

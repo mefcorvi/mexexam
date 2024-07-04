@@ -16,6 +16,7 @@ export type Question = {
   answer: string;
   options?: QuestionOption[];
   note?: string;
+  noteImage?: string;
 };
 
 export type QuestionsSection = {
@@ -232,6 +233,8 @@ function loadQuestions() {
         answer: questionData.answer,
         question: questionData.question,
         note: questionData.note,
+        noteImage:
+          'noteImage' in questionData ? questionData.noteImage : undefined,
         options: questionData.options?.map((x, idx) =>
           markRaw({
             id: idx,
