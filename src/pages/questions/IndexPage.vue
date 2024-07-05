@@ -2,7 +2,7 @@
 import { computed, ref, useCssModule, watch } from 'vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import { useQuestionsStore, type QuestionOption } from '../../stores/questions';
-import { useDark } from '@vueuse/core';
+import { useDark, useToggle } from '@vueuse/core';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
 
@@ -230,6 +230,13 @@ const hideNote = () => {
 const showNote = () => {
   isNoteShown.value = true;
 }
+
+const isLocaleToggled = computed({
+  get: () => locale.value === 'ru',
+  set: (value: boolean) => {
+    locale.value = value ? 'ru' : 'es';
+  }
+});
 </script>
 
 <template>
@@ -243,6 +250,7 @@ const showNote = () => {
         <span>{{ correctCount }}</span>&nbsp;/&nbsp;<span>{{ correctCount + wrongCount }}</span>
       </div>
       <ToggleSwitch v-model="isDarkTheme" size="16px" label="Dark Theme" />
+      <ToggleSwitch v-model="isLocaleToggled" size="16px" label="Translate" />
     </div>
     <div :class="[$style.container, { [$style.fadeOut]: isPageFadeOut }]">
       <div :class="$style.question" :key="currentQuestion.id">
@@ -484,11 +492,11 @@ const showNote = () => {
 .noteContainer {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 40px;
   right: 0;
   bottom: 0;
   background: var(--bg-color-alpha-10);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   opacity: 1;
   transition: opacity 500ms;
 
@@ -506,12 +514,11 @@ const showNote = () => {
   max-width: 600px;
   line-height: 160%;
   margin: 0 auto;
-  max-height: 100vh;
+  max-height: 100%;
   overflow: auto;
   padding: var(--gap-l);
-  background: var(--bg-color-alpha-90);
+  background: var(--bg-color-alpha-70);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  backdrop-filter: blur(5px);
   font-size: 1.1rem;
   cursor: pointer;
   transition: opacity 500ms, transform 500ms;
