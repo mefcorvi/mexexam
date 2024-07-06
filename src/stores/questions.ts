@@ -1,5 +1,5 @@
-import { computed, markRaw, ref, watch } from 'vue';
-import questionsData from './questions.json';
+import { computed, markRaw, readonly, ref, toRaw, watch } from 'vue';
+import { questionsData } from './questions-data';
 import { createSharedComposable, useStorage } from '@vueuse/core';
 
 export type QuestionOption = {
@@ -33,6 +33,14 @@ export const useQuestionsStore = createSharedComposable(() => {
 
   const currentQuestionId = ref('');
 
+  const dontKnowOption: QuestionOption = markRaw({
+    id: -1,
+    value: 'No se',
+    isAnswer: false
+  });
+
+  translations.add('ru', 'No se', 'Не знаю');
+
   const getRandomQuestionId = () => {
     let questionId = currentQuestionId.value;
 
@@ -64,9 +72,10 @@ export const useQuestionsStore = createSharedComposable(() => {
   const currentOptionsRandomized = ref<QuestionOption[]>([]);
 
   const randomizeOptions = () => {
-    currentOptionsRandomized.value = (
-      currentQuestion.value?.options ?? []
-    ).sort(() => Math.random() - 0.5);
+    currentOptionsRandomized.value = [
+      ...(currentQuestion.value?.options ?? []).sort(() => Math.random() - 0.5),
+      dontKnowOption
+    ];
   };
 
   const selectedAnswer = ref<QuestionOption>();

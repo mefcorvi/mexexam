@@ -72,3 +72,24 @@ button {
     background: var(--main-color-30);
   }
 }
+
+.scroll {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    background-clip: content-box;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--negative-color-alpha-10);
+    }
+  }
+}

@@ -2,7 +2,7 @@
 import { computed, ref, useCssModule, watch } from 'vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import { useQuestionsStore, type QuestionOption } from '../../stores/questions';
-import { useDark, useToggle } from '@vueuse/core';
+import { useDark } from '@vueuse/core';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
 
@@ -150,8 +150,14 @@ const forward = () => {
 }
 
 const getOptionClass = (option: QuestionOption) => {
+  const result: string[] = [];
+
+  if (option.id === -1) {
+    result.push($style.dontKnowOption);
+  }
+
   if (!selectedAnswer.value) {
-    return undefined;
+    return result;
   }
 
   // user is selected correct answer
@@ -162,21 +168,25 @@ const getOptionClass = (option: QuestionOption) => {
     }
 
     // other options are faded out
-    return $style['wrong-fade'];
+    result.push($style['wrong-fade']);
+    return result;
   }
 
   // user is selected wrong answer and we want to show correct answer as blinking
   if (option === blinkingAnswer.value) {
-    return $style['correct-blinking'];
+    result.push($style['correct-blinking']);
+    return result;
   }
 
   // if blinking has ended, show correct option as correct
   if (option.isAnswer) {
-    return $style.correct;
+    result.push($style.correct);
+    return result;
   }
 
   // current option is wrong
-  return $style.wrong;
+  result.push($style.wrong);
+  return result;
 }
 
 const onOptionClick = (option: QuestionOption) => {
@@ -201,7 +211,11 @@ const onOptionClick = (option: QuestionOption) => {
 
 const locale = ref<'es' | 'ru'>('es');
 
-const onPageClick = () => {
+const onPageClick = (ev: MouseEvent) => {
+  if (isButtonOrLinkClick(ev)) {
+    return;
+  }
+
   forward();
 }
 
@@ -223,6 +237,15 @@ const t = (key: string) => {
   return translations.t(locale.value, key);
 }
 
+const onNoteClick = (ev: MouseEvent) => {
+  if (isButtonOrLinkClick(ev)) {
+    return;
+  }
+
+  ev.stopPropagation();
+  hideNote();
+}
+
 const hideNote = () => {
   isNoteShown.value = false;
 }
@@ -237,6 +260,11 @@ const isLocaleToggled = computed({
     locale.value = value ? 'ru' : 'es';
   }
 });
+
+function isButtonOrLinkClick(ev: MouseEvent) {
+  const target = ev.target as HTMLElement;
+  return target.tagName === 'BUTTON' || target.tagName === 'A';
+}
 </script>
 
 <template>
@@ -255,8 +283,8 @@ const isLocaleToggled = computed({
     <div :class="[$style.container, { [$style.fadeOut]: isPageFadeOut }]">
       <div :class="$style.question" :key="currentQuestion.id">
         <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
-        <template v-if="currentQuestion.options">
-          <div v-for="option in currentQuestion.options" :key="option.id">
+        <template v-if="currentQuestion.type === 'choice'">
+          <div v-for="option in currentOptionsRandomized" :key="option.id" :class="$style.option">
             <button @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
               {{ t(option.value) }}
             </button>
@@ -273,10 +301,10 @@ const isLocaleToggled = computed({
       <div :class="[$style.question, { [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">?</div>
       <div :class="[$style.forward, { [$style.disabled]: !isForwardAllowed }]" @click.stop="forward">→</div>
     </div>
-    <div @click.stop="hideNote" :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
-      <div v-if="currentQuestion.note" :class="[$style.note, { [$style.hidden]: !isNoteShown }]">
+    <div @click.stop="onNoteClick" :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
+      <div v-if="currentQuestion.note" class="scroll" :class="[$style.note, { [$style.hidden]: !isNoteShown }]">
         <img v-if="currentQuestion.noteImage" :src="`/notes/${currentQuestion.noteImage}`" />
-        {{ t(currentQuestion.note) }}
+        <div v-html="t(currentQuestion.note)"></div>
       </div>
     </div>
   </div>
@@ -366,6 +394,10 @@ const isLocaleToggled = computed({
   background: var(--secondary-color-10);
   padding: var(--gap);
   border-radius: var(--border-radius);
+}
+
+.option {
+  display: flex;
 }
 
 .button {
@@ -533,6 +565,29 @@ const isLocaleToggled = computed({
     border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     object-fit: cover;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: var(--gap-s);
+  }
+
+  a {
+    color: var(--main-color);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
   }
 
   &.hidden {
