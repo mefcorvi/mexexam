@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, useCssModule, watch } from 'vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
+import GeneralPage from '@/components/GeneralPage.vue';
+import GeneralButton from '@/components/GeneralButton.vue';
 import { useQuestionsStore, type QuestionOption } from '../../stores/questions';
 import { useDark } from '@vueuse/core';
 import { useRouteParams } from '@vueuse/router';
@@ -268,7 +270,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 </script>
 
 <template>
-  <div :class="$style.page" @click="onPageClick">
+  <GeneralPage @click="onPageClick">
     <div :class="$style.progress">
       <div :class="$style.correctAnswers" :style="{ width: `${stat.correctPercentage}%` }"></div>
       <div :class="$style.wrongAnswers" :style="{ width: `${stat.wrongPercentage}%` }"></div>
@@ -285,9 +287,9 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
         <template v-if="currentQuestion.type === 'choice'">
           <div v-for="option in currentOptionsRandomized" :key="option.id" :class="$style.option">
-            <button @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
+            <GeneralButton @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
               {{ t(option.value) }}
-            </button>
+            </GeneralButton>
           </div>
         </template>
         <div v-if="currentQuestion.type === 'text'"
@@ -307,7 +309,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         <div v-html="t(currentQuestion.note)"></div>
       </div>
     </div>
-  </div>
+  </GeneralPage>
 </template>
 
 <style module lang="less">
@@ -315,15 +317,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
 :export {
   pageFadeOutDuration: @pageFadeOutDuration;
-}
-
-.page {
-  display: flex;
-  width: 100%;
-  min-height: 100%;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
 }
 
 .topBar {
@@ -401,14 +394,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 }
 
 .button {
-  font-size: 1.1rem;
-  margin-bottom: var(--gap-s);
-  padding: 0.7rem 1.4rem;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
-  transition: background-color 200ms, color 200ms;
-
   &.correct {
     background: var(--success-bg-color);
     color: var(--success-text-color);

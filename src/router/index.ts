@@ -5,9 +5,14 @@ const router = createRouter({
   history,
   routes: [
     {
-      path: '/:id?',
+      path: '/:id',
+      name: 'question',
+      component: () => import('../pages/questions/QuestionPage.vue')
+    },
+    {
+      path: '/',
       name: 'home',
-      component: () => import('../pages/questions/IndexPage.vue')
+      component: () => import('../pages/IndexPage.vue')
     }
   ]
 });
