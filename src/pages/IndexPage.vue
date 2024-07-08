@@ -16,7 +16,7 @@ const start = () => {
 </script>
 <template>
   <GeneralPage :class="$style.page">
-    <img src="/android-chrome-192x192.png" width="192" height="192" />
+    <img src="/logo.svg" width="192" height="192" />
     <h3>MexExam</h3>
     <div :class="$style.menu">
       <GeneralButton @click="start">Start</GeneralButton>
@@ -37,6 +37,8 @@ const start = () => {
     max-height: 50vh;
     aspect-ratio: 1;
     margin-bottom: var(--gap-s);
+    border-radius: 50%;
+    border: 5px solid #012D48;
   }
 }
 
