@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const historyModern: SectionData = {
+export const data: SectionData = {
   id: 'okkktn',
   title: 'Historia: México Contemporáneo',
   ru: {

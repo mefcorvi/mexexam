@@ -1,31 +1,23 @@
-import type { DeepReadonly } from 'vue';
-import type { QuestionsData } from './questions/interfaces';
-import { science } from './questions/science';
-import { citizenship } from './questions/citizenship';
-import { gastronomy } from './questions/gastronomy';
-import { geografy } from './questions/geografy';
-import { historyColony } from './questions/history-colony';
-import { historyIndependency } from './questions/history-independency';
-import { historyModern } from './questions/history-modern';
-import { historyPrespain } from './questions/history-prespain';
-import { historyRevolution } from './questions/history-revoluction';
-import { artLitMusic } from './questions/art-lit-music';
-import { artPaintCinema } from './questions/art-paint-cinema';
-import { traditionsCulture } from './questions/traditions-culture';
+import type { QuestionsData, SectionData } from './questions/interfaces';
 
-export const questionsData: DeepReadonly<QuestionsData> = {
-  sections: [
-    science,
-    citizenship,
-    gastronomy,
-    geografy,
-    historyColony,
-    historyIndependency,
-    historyModern,
-    historyPrespain,
-    historyRevolution,
-    artLitMusic,
-    artPaintCinema,
-    traditionsCulture
-  ]
+const modules = import.meta.glob('./questions/*.ts');
+
+export const loadQuestionsData = async () => {
+  const questions: QuestionsData = {
+    sections: []
+  };
+
+  await Promise.all(Object.values(modules).map((x) => x()));
+
+  for (const path in modules) {
+    const module = await modules[path]();
+
+    if (module && typeof module === 'object' && 'data' in module) {
+      questions.sections.push(module.data as SectionData);
+    }
+  }
+
+  console.dir(questions);
+
+  return questions;
 };

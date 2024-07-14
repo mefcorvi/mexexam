@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const citizenship: SectionData = {
+export const data: SectionData = {
   id: 'm2661',
   title: 'Civismo',
   ru: {
@@ -439,11 +439,20 @@ export const citizenship: SectionData = {
       type: 'text',
       question: 'Descripción del escudo nacional y sus elementos',
       answer:
-        'Está constituido por un águila, posada su garra izquierda sobre un nopal florecido que nace en una peña que emerge de un lago, sujeta con la derecha y con el pico, en actitud de devorar a una serpiente curvada, varias pencas del nopal se ramifican a los lados. Dos ramas, una de encino al frente del águila y otra de laurel al lado opuesto.',
+        'El escudo representa a un águila real sentada sobre un nopal floreciente, capturando una serpiente. El águila está posada sobre su pata izquierda, mientras que con su pata derecha y su pico sostiene a la serpiente. El nopal crece sobre una roca ubicada encima de un lago. En la parte inferior, el escudo está enmarcado por ramas de roble y laurel, unidas en el centro con una cinta de los colores de la bandera mexicana.',
       ru: {
         question: 'Описание национального герба и его элементов',
         answer:
-          'Он состоит из орла, сидящего на лапе слева на цветущем кактусе, растущем на скале, вздымающейся из озера, держащего правой лапой и клювом, в позе поглощения изогнутой змеи, несколько листьев кактуса разветвляются по сторонам. Две ветви, одна из дуба перед орлом и другая из лавра на противоположной стороне.'
+          'Герб изображает сидящего на цветущем кактусе беркута, поймавшего змею. Беркут сидит на левой лапе, а правой лапой и клювом держит змею. Кактус произрастает из скалы, расположенной над озером. В нижней части герб обрамлен ветвями дуба и лавра, перевязанных посредине лентой цветов мексиканского флага.',
+        note: `
+          Согласно древнеиндейскому преданию, бог солнца Уицилопочтли приказал ацтекам поселиться в том месте,
+          где им встретится орёл, сидящий на высоком кактусе и удерживающий в клюве змею.
+          Индейцам удалось обнаружить такую местность, которая полностью соответствовала описанию,
+          и они решили основать на западном берегу озера Тескоко, в живописной долине, свой город.
+          Эта легенда нашла своё отражение на флаге и гербе Мексики.
+          У ацтеков изображения имели глубокие религиозные коннотации,
+          но для европейцев это лишь символ триумфа добра над злом. Флаг принят 16 сентября 1968 года.
+        `
       }
     },
     {

@@ -1,5 +1,5 @@
-import { computed, markRaw, readonly, ref, toRaw, watch } from 'vue';
-import { questionsData } from './questions-data';
+import { computed, markRaw, ref, watch } from 'vue';
+import { loadQuestionsData } from './questions-data';
 import { createSharedComposable, useStorage } from '@vueuse/core';
 
 export type QuestionOption = {
@@ -26,12 +26,12 @@ export type QuestionsSection = {
 };
 
 export const useQuestionsStore = createSharedComposable(() => {
-  const { questions, translations } = loadQuestions();
+  const { questions, translations, load } = loadQuestions();
 
   const correctQuestions = useStoredSet('correct-questions');
   const wrongQuestions = useStoredSet('wrong-questions');
 
-  const currentQuestionId = ref('');
+  const currentQuestionId = ref<string>();
 
   const dontKnowOption: QuestionOption = markRaw({
     id: -1,
@@ -50,14 +50,20 @@ export const useQuestionsStore = createSharedComposable(() => {
         correctQuestions.value,
         wrongQuestions.value
       );
+
+      if (!questionId) {
+        return questionId;
+      }
     }
 
     return questionId;
   };
 
-  currentQuestionId.value = getRandomQuestionId();
-
   const currentQuestion = computed(() => {
+    if (!currentQuestionId.value) {
+      return null;
+    }
+
     const question = questions.get(currentQuestionId.value);
 
     if (!question) {
@@ -98,6 +104,10 @@ export const useQuestionsStore = createSharedComposable(() => {
   };
 
   const selectAnswer = (option: QuestionOption) => {
+    if (!currentQuestion.value) {
+      return;
+    }
+
     // only for choice types
     if (currentQuestion.value.type !== 'choice') {
       return;
@@ -115,6 +125,10 @@ export const useQuestionsStore = createSharedComposable(() => {
       return;
     }
 
+    if (!currentQuestion.value) {
+      return;
+    }
+
     if (selectedAnswer.value.isAnswer) {
       correctCount.value++;
       correctQuestions.value.add(currentQuestion.value.id);
@@ -127,6 +141,10 @@ export const useQuestionsStore = createSharedComposable(() => {
   };
 
   const revealAnswer = () => {
+    if (!currentQuestion.value) {
+      return;
+    }
+
     if (currentQuestion.value.type !== 'text') {
       return;
     }
@@ -135,7 +153,7 @@ export const useQuestionsStore = createSharedComposable(() => {
   };
 
   watch(
-    () => currentQuestion.value.id,
+    () => currentQuestion.value?.id,
     () => {
       selectedAnswer.value = undefined;
       isAnswerRevealed.value = false;
@@ -161,6 +179,7 @@ export const useQuestionsStore = createSharedComposable(() => {
   }));
 
   return {
+    load,
     stat,
     correctCount,
     correctQuestions,
@@ -198,7 +217,7 @@ function selectRandomQuestionId(
   questions: Map<string, Question>,
   correct: Set<string>,
   wrong: Set<string>
-) {
+): string | undefined {
   // if there are wrong questions, select one of them
   // each new wrong question cause a higher chance that wrong question
   // will be selected
@@ -224,68 +243,73 @@ function loadQuestions() {
   const sections = new Map<string, QuestionsSection>();
   const translations = useTranslations();
 
-  for (const sectionData of questionsData.sections) {
-    const section: QuestionsSection = {
-      id: sectionData.id,
-      title: sectionData.title,
-      questions: []
-    };
+  const load = async () => {
+    const questionsData = await loadQuestionsData();
 
-    sections.set(section.id, markRaw(section));
-
-    translations.add('ru', sectionData.title, sectionData.ru.title);
-
-    for (const questionData of sectionData.questions) {
-      const question: Question = {
-        id: questionData.id,
-        section,
-        answer: questionData.answer,
-        question: questionData.question,
-        note: questionData.note,
-        noteImage:
-          'noteImage' in questionData ? questionData.noteImage : undefined,
-        options: questionData.options?.map((x, idx) =>
-          markRaw({
-            id: idx,
-            value: x,
-            isAnswer: false
-          })
-        ),
-        type: questionData.type === 'text' ? 'text' : 'choice'
+    for (const sectionData of questionsData.sections) {
+      const section: QuestionsSection = {
+        id: sectionData.id,
+        title: sectionData.title,
+        questions: []
       };
 
-      translations.add('ru', questionData.answer, questionData.ru.answer);
-      translations.add('ru', questionData.question, questionData.ru.question);
-      translations.add('ru', questionData.note, questionData.ru.note);
+      sections.set(section.id, markRaw(section));
 
-      if (questionData.ru.options && questionData.options) {
-        for (let i = 0; i < questionData.ru.options.length; i++) {
-          translations.add(
-            'ru',
-            questionData.options[i],
-            questionData.ru.options[i]
+      translations.add('ru', sectionData.title, sectionData.ru.title);
+
+      for (const questionData of sectionData.questions) {
+        const question: Question = {
+          id: questionData.id,
+          section,
+          answer: questionData.answer,
+          question: questionData.question,
+          note: questionData.note,
+          noteImage:
+            'noteImage' in questionData ? questionData.noteImage : undefined,
+          options: questionData.options?.map((x, idx) =>
+            markRaw({
+              id: idx,
+              value: x,
+              isAnswer: false
+            })
+          ),
+          type: questionData.type === 'text' ? 'text' : 'choice'
+        };
+
+        translations.add('ru', questionData.answer, questionData.ru.answer);
+        translations.add('ru', questionData.question, questionData.ru.question);
+        translations.add('ru', questionData.note, questionData.ru.note);
+
+        if (questionData.ru.options && questionData.options) {
+          for (let i = 0; i < questionData.ru.options.length; i++) {
+            translations.add(
+              'ru',
+              questionData.options[i],
+              questionData.ru.options[i]
+            );
+          }
+        }
+
+        if (question.type === 'choice' && question.options) {
+          question.options.push(
+            markRaw({
+              id: question.options.length,
+              isAnswer: true,
+              value: question.answer
+            })
           );
         }
+
+        const q = markRaw(question);
+
+        questions.set(question.id, q);
+        section.questions.push(q);
       }
-
-      if (question.type === 'choice' && question.options) {
-        question.options.push(
-          markRaw({
-            id: question.options.length,
-            isAnswer: true,
-            value: question.answer
-          })
-        );
-      }
-
-      const q = markRaw(question);
-
-      questions.set(question.id, q);
-      section.questions.push(q);
     }
-  }
+  };
 
   return {
+    load,
     sections,
     questions,
     translations

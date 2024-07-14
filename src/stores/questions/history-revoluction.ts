@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const historyRevolution: SectionData = {
+export const data: SectionData = {
   id: 'v00zr',
   title: 'Historia: Revolución',
   ru: {

@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const artLitMusic: SectionData = {
+export const data: SectionData = {
   id: 'u6w4x',
   title: 'Artes I: Literatura y música',
   ru: {

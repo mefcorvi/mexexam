@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const geografy: SectionData = {
+export const data: SectionData = {
   id: 'hmc4a',
   title: 'Geografía y población',
   ru: {

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { computed, ref, useCssModule, watch } from 'vue';
-import ToggleSwitch from '@/components/ToggleSwitch.vue';
+import { computed, nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
-import { useQuestionsStore, type QuestionOption } from '../../stores/questions';
-import { useDark } from '@vueuse/core';
+import { useQuestionsStore, type QuestionOption } from '@/stores/questions';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
+import { until } from '@vueuse/core';
 
 const $style = useCssModule();
 const $router = useRouter();
 
 const {
+  load,
   stat,
   isAnswerRevealed,
   correctCount,
@@ -29,7 +29,7 @@ const {
   wrongCount,
 } = useQuestionsStore();
 
-const isNoteAvailable = computed(() => currentQuestion.value.note !== undefined);
+const isNoteAvailable = computed(() => currentQuestion.value?.note !== undefined);
 
 const questionParamId = useRouteParams<string>('id', '');
 
@@ -37,12 +37,12 @@ const hasBackPage = ref(false);
 const hasForwardPage = ref(false);
 
 const isBackAllowed = computed(() => hasBackPage.value);
-const isForwardAllowed = computed(() => hasForwardPage.value || selectedAnswer.value || currentQuestion.value.type === 'text');
+const isForwardAllowed = computed(() => hasForwardPage.value || selectedAnswer.value || currentQuestion.value?.type === 'text');
 
 const blinkingAnswer = ref<QuestionOption>();
 const isNoteShown = ref(false);
 
-watch(questionParamId, () => {
+const onQuestionIdChanged = () => {
   blinkingAnswer.value = undefined;
   isNoteShown.value = false;
 
@@ -73,7 +73,10 @@ watch(questionParamId, () => {
       }
     })
   }
-}, { immediate: true });
+}
+
+watch(questionParamId, onQuestionIdChanged);
+load().then(onQuestionIdChanged);
 
 let blinkingTimeout: number | undefined;
 
@@ -92,7 +95,7 @@ const nextQuestion = () => {
 
   isPageFadeOut.value = true;
 
-  changeQuestionTimeout = window.setTimeout(() => {
+  changeQuestionTimeout = window.setTimeout(async () => {
     changeQuestionTimeout = undefined;
 
     history.replaceState({
@@ -100,12 +103,14 @@ const nextQuestion = () => {
       ['answer-revealed']: isAnswerRevealed.value ? '1' : undefined,
     }, '');
 
-    $router.push({
+    await $router.push({
       params: {
         id: getRandomQuestionId(),
       },
     })
 
+    await until(selectedAnswer).toBeUndefined();
+    await nextTick();
     isPageFadeOut.value = false;
   }, parseInt($style.pageFadeOutDuration, 10));
 }
@@ -137,12 +142,12 @@ const forward = () => {
   }
 
   // current question is choice and answer is not selected, ignore
-  if (currentQuestion.value.type === 'choice' && !selectedAnswer.value) {
+  if (currentQuestion.value?.type === 'choice' && !selectedAnswer.value) {
     return;
   }
 
   // current question is text and answer is hidden, just shown answer
-  if (currentQuestion.value.type === 'text' && !isAnswerRevealed.value) {
+  if (currentQuestion.value?.type === 'text' && !isAnswerRevealed.value) {
     revealAnswer();
     return;
   }
@@ -233,7 +238,6 @@ const toggleLocale = () => {
   }
 }
 
-const isDarkTheme = useDark()
 
 const t = (key: string) => {
   return translations.t(locale.value, key);
@@ -256,13 +260,6 @@ const showNote = () => {
   isNoteShown.value = true;
 }
 
-const isLocaleToggled = computed({
-  get: () => locale.value === 'ru',
-  set: (value: boolean) => {
-    locale.value = value ? 'ru' : 'es';
-  }
-});
-
 function isButtonOrLinkClick(ev: MouseEvent) {
   const target = ev.target as HTMLElement;
   return target.tagName === 'BUTTON' || target.tagName === 'A';
@@ -270,23 +267,29 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 </script>
 
 <template>
-  <GeneralPage @click="onPageClick">
+  <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }">
+    <template #topBar>
+      <div :class="$style.navigation">
+        <div :class="[$style.backBtn, { [$style.disabled]: !isBackAllowed }]" @click.stop="back">←</div>
+        <div :class="[$style.noteBtn, { [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">?</div>
+        <div :class="[$style.forwardBtn, { [$style.disabled]: !isForwardAllowed }]" @click.stop="forward">→</div>
+      </div>
+      <div :class="$style.counter" @click.stop="resetCount">
+        <span>{{ correctCount }}</span>&nbsp;/&nbsp;<span>{{ correctCount + wrongCount }}</span>
+      </div>
+    </template>
     <div :class="$style.progress">
       <div :class="$style.correctAnswers" :style="{ width: `${stat.correctPercentage}%` }"></div>
       <div :class="$style.wrongAnswers" :style="{ width: `${stat.wrongPercentage}%` }"></div>
     </div>
-    <div :class="$style.topBar">
-      <div :class="$style.counter" @click.stop="resetCount">
-        <span>{{ correctCount }}</span>&nbsp;/&nbsp;<span>{{ correctCount + wrongCount }}</span>
+    <div :class="$style.question" v-if="currentQuestion">
+      <div :class="$style.text" @click.stop="toggleLocale">
+        <div>{{ t(currentQuestion.question) }}</div>
       </div>
-      <ToggleSwitch v-model="isDarkTheme" size="16px" label="Dark Theme" />
-      <ToggleSwitch v-model="isLocaleToggled" size="16px" label="Translate" />
-    </div>
-    <div :class="[$style.container, { [$style.fadeOut]: isPageFadeOut }]">
-      <div :class="$style.question" :key="currentQuestion.id">
-        <div :class="$style.text" @click.stop="toggleLocale">{{ t(currentQuestion.question) }}</div>
+      <div :class="$style.answers">
         <template v-if="currentQuestion.type === 'choice'">
-          <div v-for="option in currentOptionsRandomized" :key="option.id" :class="$style.option">
+          <div v-for="option in currentOptionsRandomized" :key="`${currentQuestion.id}-${option.id}`"
+            :class="$style.option">
             <GeneralButton @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
               {{ t(option.value) }}
             </GeneralButton>
@@ -298,12 +301,8 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         </div>
       </div>
     </div>
-    <div :class="$style.navigation">
-      <div :class="[$style.back, { [$style.disabled]: !isBackAllowed }]" @click.stop="back">←</div>
-      <div :class="[$style.question, { [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">?</div>
-      <div :class="[$style.forward, { [$style.disabled]: !isForwardAllowed }]" @click.stop="forward">→</div>
-    </div>
-    <div @click.stop="onNoteClick" :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
+    <div v-if="currentQuestion" @click.stop="onNoteClick"
+      :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
       <div v-if="currentQuestion.note" class="scroll" :class="[$style.note, { [$style.hidden]: !isNoteShown }]">
         <img v-if="currentQuestion.noteImage" :src="`/notes/${currentQuestion.noteImage}`" />
         <div v-html="t(currentQuestion.note)"></div>
@@ -319,84 +318,89 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   pageFadeOutDuration: @pageFadeOutDuration;
 }
 
-.topBar {
-  padding: var(--gap-s) var(--gap);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 2px;
-  left: 0;
-  right: 0;
-  gap: var(--gap);
-  flex-shrink: 0;
-  background: var(--bg-color-alpha-50);
-  backdrop-filter: blur(5px);
-
-  &>* {
-    opacity: 0.7;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
 .counter {
   font-weight: 500;
+
   cursor: pointer;
 }
 
-.container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+.question {
   flex-grow: 1;
-  padding-top: 42px;
-  padding-bottom: 64px;
+
+  width: 100%;
+  height: 100%;
+  padding: var(--gap);
+  padding-top: var(--topbar-height);
+}
+
+.text {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-end;
+
+  width: 100%;
+  min-height: 6em;
+  margin-bottom: var(--gap-s);
+  padding: 0.75em 1em;
+
+  font-size: var(--font-size-3);
+  line-height: 130%;
+  font-weight: 400;
+  text-align: right;
+  text-align: center;
+  text-wrap: pretty;
+  text-shadow: var(--text-shadow);
+
+  background: linear-gradient(90deg, var(--secondary-color-alpha-5), var(--secondary-color-alpha-30), var(--secondary-color-alpha-5));
+  border-radius: var(--border-radius);
+
+  &>div {
+    max-width: 400px;
+
+    opacity: 1;
+    transition: opacity @pageFadeOutDuration;
+  }
+}
+
+
+.answers {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+
+  padding: var(--gap);
+
+  font-size: var(--font-size-2);
 
   opacity: 1;
   transition: opacity @pageFadeOutDuration;
 
-  &.fadeOut {
+  .option {
+    width: 100%;
+    max-width: 400px;
+  }
+
+}
+
+.fadeOut {
+  .text>div {
+    opacity: 0;
+  }
+
+  .answers {
     opacity: 0;
   }
 }
 
-.scrollContainer {
-  overflow: auto;
-  display: flex;
-  width: 100%;
-  max-height: 100%;
-  justify-content: center;
-}
-
-.question {
-  max-width: 600px;
-  padding-left: var(--gap);
-  padding-right: var(--gap);
-}
-
-.text {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-bottom: var(--gap-s);
-  line-height: 130%;
-  text-wrap: pretty;
-  background: var(--secondary-color-10);
-  padding: var(--gap);
-  border-radius: var(--border-radius);
-}
-
-.option {
-  display: flex;
-}
-
 .button {
   &.correct {
-    background: var(--success-bg-color);
     color: var(--success-text-color);
+
+    background: var(--success-bg-color);
   }
 
   &.correct-blinking {
@@ -404,8 +408,9 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   }
 
   &.wrong {
-    background: var(--error-bg-color);
     color: var(--error-text-color);
+
+    background: var(--error-bg-color);
   }
 
   &.wrong-fade {
@@ -414,18 +419,21 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 }
 
 .next {
-  background: var(--secondary-color-20);
   color: var(--text-color);
+
+  background: var(--secondary-color-20);
 }
 
 .answer {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  font-size: var(--font-size-2);
+  text-align: center;
+
+  cursor: pointer;
   filter: blur(0);
   transition: filter 200ms;
-  font-size: 1.15rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
 }
 
 .hiddenAnswer {
@@ -434,60 +442,66 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
 .navigation {
   display: flex;
-  font-size: 3rem;
-  user-select: none;
-  width: 100%;
-  line-height: 100%;
   flex-shrink: 0;
-  background: var(--bg-color-alpha-50);
-  backdrop-filter: blur(5px);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
+  font-size: var(--font-size-4);
+  line-height: 100%;
+
+  user-select: none;
 
   .back {
     flex-grow: 1;
+
     text-align: right;
   }
 
   .forward {
     flex-grow: 1;
+
     text-align: left;
   }
 
   &>div {
     padding: var(--gap-s);
+
     cursor: pointer;
     transition: opacity 200ms;
   }
 
   .disabled {
-    opacity: 0.3;
     cursor: default;
+    opacity: 0.3;
   }
 }
 
 .progress {
-  background: var(--secondary-color-10);
-  height: 2px;
-  width: 100%;
-  display: flex;
   position: fixed;
   top: 0;
+  z-index: 3;
+
+  display: flex;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--secondary-color-10);
 
   .correctAnswers {
-    background: var(--success-bg-color);
-    height: 100%;
     flex-grow: 0;
     flex-shrink: 0;
+
+    height: 100%;
+
+    background: var(--success-bg-color);
   }
 
   .wrongAnswers {
-    background: var(--error-bg-color);
-    height: 100%;
     flex-grow: 0;
     flex-shrink: 0;
+
+    height: 100%;
+
+    background: var(--error-bg-color);
   }
 }
 
@@ -495,70 +509,69 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
   0%,
   49% {
-    background: var(--success-bg-color);
     color: var(--success-text-color);
+
+    background: var(--success-bg-color);
   }
 
   50%,
   100% {
-    background: var(--btn-bg-color);
     color: var(--btn-text-color);
+
+    background: var(--btn-bg-color);
   }
 }
 
 .noteContainer {
   position: fixed;
-  left: 0;
-  top: 40px;
+  top: var(--topbar-height);
   right: 0;
   bottom: 0;
-  background: var(--bg-color-alpha-10);
-  backdrop-filter: blur(3px);
-  opacity: 1;
-  transition: opacity 500ms;
+  left: 0;
 
   &.hidden {
-    opacity: 0;
     pointer-events: none;
   }
 }
 
 .note {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 600px;
-  line-height: 160%;
-  margin: 0 auto;
   max-height: 100%;
-  overflow: auto;
+  margin: 0 auto;
   padding: var(--gap-l);
-  background: var(--bg-color-alpha-70);
+  overflow: auto;
+
+  font-size: var(--font-size-2);
+  line-height: 160%;
+
+  background: var(--bg-color-alpha-80);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: opacity 500ms, transform 500ms;
-  opacity: 1;
+
   transform: translateY(0);
+  cursor: pointer;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  transition: all 500ms;
 
   img {
     float: left;
+
     width: 50%;
-    margin-right: var(--gap-s);
+    max-width: 400px;
+    margin-right: var(--gap);
     margin-bottom: var(--gap-s);
+
     border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     object-fit: cover;
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: var(--font-size-4);
     font-weight: 500;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: var(--font-size-3);
     font-weight: 500;
   }
 
@@ -576,8 +589,8 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   }
 
   &.hidden {
+    transform: translateY(-100%);
     opacity: 0;
-    transform: translateY(100%);
   }
 }
 </style>

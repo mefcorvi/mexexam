@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const traditionsCulture: SectionData = {
+export const data: SectionData = {
   id: 'iy3qg',
   title: 'Tradiciones y cultura',
   ru: {

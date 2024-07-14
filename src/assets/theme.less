@@ -1,10 +1,14 @@
 // out: false
-.vars() {
-  @secondary-color: spin(@main-color, 180);
+@import './variables.less';
 
+.vars() {
   --gap: 16px;
   --gap-s: 8px;
   --gap-l: 32px;
+
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 
   --main-color: @main-color;
   --secondary-color: @secondary-color;
@@ -67,7 +71,7 @@
   --secondary-color-alpha-10: rgba(@secondary-color, 0.1);
   --secondary-color-alpha-5: rgba(@secondary-color, 0.05);
 
-  --btn-bg-color: var(--main-color-10);
+  --btn-bg-color: var(--main-color-20);
   --btn-text-color: var(--text-color);
   --btn-border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -82,12 +86,31 @@
   --switch-on-bg-color: #444;
   --switch-bg-color: #999;
   --switch-toggle-bg-color: #fff;
+
+  --main-width: 600px;
+  --topbar-height: 64px;
+
+  --font-size-base: 16px;
+
+  --font-size-a2: calc(var(--font-size-base) * 0.75);
+  --font-size-a1: calc(var(--font-size-base) * 0.875);
+  --font-size-1: calc(var(--font-size-base) * 1);
+  --font-size-2: calc(var(--font-size-base) * 1.125);
+  --font-size-3: calc(var(--font-size-base) * 1.25);
+  --font-size-4: calc(var(--font-size-base) * 1.5);
+  --font-size-5: calc(var(--font-size-base) * 1.75);
+  --font-size-6: calc(var(--font-size-base) * 2);
+  --font-size-7: calc(var(--font-size-base) * 2.5);
+
+  @media @md-and-up {
+    --font-size-base: 18px;
+  }
 }
 
 html {
   @bg-color: #f8f8f8;
   @negative-color: #222;
-  @main-color: #da4430;
+  @main-color: #9e3828;
   @secondary-color: #07867d;
   @third-color: #012d48;
 
@@ -98,12 +121,15 @@ html {
   @error-text-color: #fff;
 
   .vars;
+
+  --text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 html.dark {
   @bg-color: #111;
   @negative-color: #eee;
-  @main-color: #ffb5d9;
+  @main-color: #9e3828;
+  @secondary-color: #07867d;
 
   @success-bg-color: rgb(0, 97, 0);
   @success-text-color: #fff;
@@ -112,4 +138,6 @@ html.dark {
   @error-text-color: #fff;
 
   .vars;
+
+  --text-shadow: 0 0 5px #000;
 }

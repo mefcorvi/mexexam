@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const historyPrespain: SectionData = {
+export const data: SectionData = {
   id: 'zpvby',
   title: 'Historia: México Prehispánico',
   ru: {

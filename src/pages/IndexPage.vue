@@ -2,6 +2,10 @@
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import { useRouter } from 'vue-router';
+import { useDark } from '@vueuse/core';
+import { useLocalization } from '@/stores/localization';
+
+useDark();
 
 const $router = useRouter();
 
@@ -12,14 +16,25 @@ const start = () => {
       id: 'init'
     }
   })
-}
+};
+
+const openSettings = () => {
+  $router.push({
+    name: 'settings'
+  })
+};
+
+const { t } = useLocalization();
 </script>
 <template>
-  <GeneralPage :class="$style.page">
-    <img src="/logo.svg" width="192" height="192" />
-    <h3>MexExam</h3>
+  <GeneralPage :class="$style.page" hideTopBar>
+    <div :class="$style.logo">
+      <img src="/logo.svg" width="192" height="192" />
+      <h3>MexExam</h3>
+    </div>
     <div :class="$style.menu">
-      <GeneralButton @click="start">Start</GeneralButton>
+      <GeneralButton @click="start">{{ t('Start') }}</GeneralButton>
+      <GeneralButton @click="openSettings">{{ t('Settings') }}</GeneralButton>
     </div>
   </GeneralPage>
 </template>
@@ -27,18 +42,24 @@ const start = () => {
 .page {
   justify-content: center;
 
-  h3 {
-    font-weight: 500;
-    font-size: 1.8rem;
-  }
+  .logo {
+    h3 {
+      margin: 0;
 
-  img {
-    max-width: 50vw;
-    max-height: 50vh;
-    aspect-ratio: 1;
-    margin-bottom: var(--gap-s);
-    border-radius: 50%;
-    border: 5px solid #012D48;
+      font-size: var(--font-size-5);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    img {
+      max-width: 50vw;
+      max-height: 50vh;
+      margin-bottom: var(--gap-s);
+
+      border: 5px solid #012D48;
+      border-radius: 50%;
+      aspect-ratio: 1;
+    }
   }
 }
 

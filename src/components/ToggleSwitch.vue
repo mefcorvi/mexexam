@@ -35,12 +35,15 @@ const toggle = () => {
 </template>
 <style module lang="less">
 .outer {
+  position: relative;
+
   width: var(--width);
   height: calc(var(--height) + 4px);
-  border-radius: var(--height);
+
   background: var(--bg-color);
+  border-radius: var(--height);
+
   cursor: pointer;
-  position: relative;
 
   --bg-color: var(--switch-bg-color, #999);
   --bg-color-off: var(--switch-off-bg-color, var(--bg-color));
@@ -52,41 +55,47 @@ const toggle = () => {
 
 .outerOff {
   background: var(--bg-color-off);
+
   transition: background 0.4s;
 }
 
 .outerOn {
   background: var(--bg-color-on);
+
   transition: background 0.4s;
 }
 
 .inner {
-  height: var(--height);
-  width: var(--height);
-  background: var(--bg-color-toggle);
-  border-radius: 50%;
   position: absolute;
   top: 2px;
   left: 2px;
+
+  width: var(--height);
+  height: var(--height);
+
+  background: var(--bg-color-toggle);
+  border-radius: 50%;
 }
 
 .innerLeft {
   top: 2px;
   left: 2px;
+
   transition: left 0.4s;
 }
 
 .innerRight {
   top: 2px;
   left: calc(var(--width) - var(--height) - 2px);
+
   transition: left 0.4s;
 }
 
 .toggler {
   display: flex;
-  cursor: pointer;
-
   align-items: center;
+
+  cursor: pointer;
 
   .label {
     margin-left: 4px;

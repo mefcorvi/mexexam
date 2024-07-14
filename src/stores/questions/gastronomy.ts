@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const gastronomy: SectionData = {
+export const data: SectionData = {
   id: 'k91hli',
   title: 'Gastronomía',
   ru: {

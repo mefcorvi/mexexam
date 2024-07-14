@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const science: SectionData = {
+export const data: SectionData = {
   id: 'xhrpl7t',
   title: 'Ciencia y deportes',
   ru: {

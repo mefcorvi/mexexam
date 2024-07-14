@@ -1,6 +1,6 @@
 import type { SectionData } from './interfaces';
 
-export const artPaintCinema: SectionData = {
+export const data: SectionData = {
   id: 'bzymvt',
   title: 'Artes II: Pintura y cine',
   ru: {
