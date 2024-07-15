@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { mdiCog, mdiHelp } from '@mdi/js';
 import { computed, nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
+import SvgIcon from '@/components/SvgIcon.vue';
 import { useQuestionsStore, type QuestionOption } from '@/stores/questions';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
@@ -14,11 +16,9 @@ const {
   load,
   stat,
   isAnswerRevealed,
-  correctCount,
   currentOptionsRandomized,
   currentQuestion,
   getRandomQuestionId,
-  resetCount,
   revealAnswer,
   selectAnswer,
   updateCounters,
@@ -26,46 +26,25 @@ const {
   setQuestion,
   hasQuestion,
   translations,
-  wrongCount,
 } = useQuestionsStore();
 
 const isNoteAvailable = computed(() => currentQuestion.value?.note !== undefined);
 
 const questionParamId = useRouteParams<string>('id', '');
 
-const hasBackPage = ref(false);
-const hasForwardPage = ref(false);
-
-const isBackAllowed = computed(() => hasBackPage.value);
-const isForwardAllowed = computed(() => hasForwardPage.value || selectedAnswer.value || currentQuestion.value?.type === 'text');
-
 const blinkingAnswer = ref<QuestionOption>();
 const isNoteShown = ref(false);
 
 const onQuestionIdChanged = () => {
+  if (questionParamId.value === '') {
+    return;
+  }
+
   blinkingAnswer.value = undefined;
   isNoteShown.value = false;
 
   if (hasQuestion(questionParamId.value)) {
     setQuestion(questionParamId.value);
-
-    const answerId = window.history.state['answer-id'];
-    const isRevealed = window.history.state['answer-revealed'] === '1';
-
-    hasBackPage.value = !!window.history.state['back'];
-    hasForwardPage.value = !!window.history.state['forward'];
-
-    if (typeof answerId === 'number') {
-      const answer = currentOptionsRandomized.value.find(x => x.id === answerId);
-
-      if (answer) {
-        selectAnswer(answer);
-      }
-    }
-
-    if (isRevealed) {
-      revealAnswer();
-    }
   } else {
     $router.replace({
       params: {
@@ -98,12 +77,7 @@ const nextQuestion = () => {
   changeQuestionTimeout = window.setTimeout(async () => {
     changeQuestionTimeout = undefined;
 
-    history.replaceState({
-      ['answer-id']: selectedAnswer.value?.id,
-      ['answer-revealed']: isAnswerRevealed.value ? '1' : undefined,
-    }, '');
-
-    await $router.push({
+    await $router.replace({
       params: {
         id: getRandomQuestionId(),
       },
@@ -116,28 +90,11 @@ const nextQuestion = () => {
 }
 
 /**
- * Back navigation.
- */
-const back = () => {
-  if (!isBackAllowed.value) {
-    return;
-  }
-
-  window.history.back();
-}
-
-/**
  * Next navigation.
  */
 const forward = () => {
   // changing animation is in progress
   if (changeQuestionTimeout) {
-    return;
-  }
-
-  // user returned by navigation, ignore
-  if (history.state.forward) {
-    history.forward();
     return;
   }
 
@@ -260,6 +217,12 @@ const showNote = () => {
   isNoteShown.value = true;
 }
 
+const openSettings = () => {
+  $router.push({
+    name: 'settings'
+  });
+}
+
 function isButtonOrLinkClick(ev: MouseEvent) {
   const target = ev.target as HTMLElement;
   return target.tagName === 'BUTTON' || target.tagName === 'A';
@@ -270,12 +233,12 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }">
     <template #topBar>
       <div :class="$style.navigation">
-        <div :class="[$style.backBtn, { [$style.disabled]: !isBackAllowed }]" @click.stop="back">←</div>
-        <div :class="[$style.noteBtn, { [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">?</div>
-        <div :class="[$style.forwardBtn, { [$style.disabled]: !isForwardAllowed }]" @click.stop="forward">→</div>
-      </div>
-      <div :class="$style.counter" @click.stop="resetCount">
-        <span>{{ correctCount }}</span>&nbsp;/&nbsp;<span>{{ correctCount + wrongCount }}</span>
+        <div :class="[{ [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">
+          <SvgIcon type="mdi" :path="mdiHelp" />
+        </div>
+        <div @click.stop="openSettings">
+          <SvgIcon type="mdi" :path="mdiCog" />
+        </div>
       </div>
     </template>
     <div :class="$style.progress">
@@ -284,7 +247,11 @@ function isButtonOrLinkClick(ev: MouseEvent) {
     </div>
     <div :class="$style.question" v-if="currentQuestion">
       <div :class="$style.text" @click.stop="toggleLocale">
-        <div>{{ t(currentQuestion.question) }}</div>
+        <div>
+          <img :src="`/sections/${currentQuestion.section.image}`" v-if="currentQuestion.section.image" />
+
+          <div> {{ t(currentQuestion.question) }}</div>
+        </div>
       </div>
       <div :class="$style.answers">
         <template v-if="currentQuestion.type === 'choice'">
@@ -349,8 +316,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   font-size: var(--font-size-3);
   line-height: 130%;
   font-weight: 400;
-  text-align: right;
-  text-align: center;
   text-wrap: pretty;
   text-shadow: var(--text-shadow);
 
@@ -360,8 +325,18 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   &>div {
     max-width: 400px;
 
+    text-align: center;
+
     opacity: 1;
     transition: opacity @pageFadeOutDuration;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+
+    border-radius: var(--border-radius);
   }
 }
 

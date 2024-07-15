@@ -3,6 +3,7 @@ import type { SectionData } from './interfaces';
 export const data: SectionData = {
   id: 'bzymvt',
   title: 'Artes II: Pintura y cine',
+  image: 'art-lit-cinema.webp',
   ru: {
     title: ''
   },

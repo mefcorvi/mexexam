@@ -1,13 +1,17 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { mdiArrowLeft } from '@mdi/js';
+import SvgIcon from './SvgIcon.vue';
 
-const slots = defineSlots<{
+defineSlots<{
   topBar: {};
   default: {};
 }>();
 
-const props = defineProps<{
+defineProps<{
   hideTopBar?: boolean;
+  hideBackButton?: boolean;
 }>();
 
 const $router = useRouter();
@@ -17,13 +21,30 @@ const openHome = () => {
     name: 'home'
   });
 };
+
+const hasBack = ref(false);
+
+onMounted(() => {
+  hasBack.value = !!window.history.state.back;
+});
+
+$router.afterEach(() => {
+  hasBack.value = !!window.history.state.back;
+});
+
+const back = () => {
+  window.history.back();
+};
 </script>
 <template>
   <div :class="$style.page">
     <div :class="$style.topBar" v-if="!hideTopBar">
-      <div :class="$style.logo" @click="openHome">
+      <div :class="$style.logo" @click="openHome" v-if="!hasBack">
         <img src="/logo.svg" width="32" height="32" />
         <div :class="$style.title">MexExam</div>
+      </div>
+      <div v-else :class="$style.backBtn" @click="back">
+        <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
       </div>
       <div :class="$style.separator"></div>
       <slot name="topBar" />
@@ -96,6 +117,10 @@ const openHome = () => {
     flex-grow: 1;
     flex-shrink: 1;
   }
+}
+
+.backBtn {
+  cursor: pointer;
 }
 
 .logo {

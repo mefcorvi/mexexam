@@ -3,6 +3,7 @@ import type { SectionData } from './interfaces';
 export const data: SectionData = {
   id: 'u6w4x',
   title: 'Artes I: Literatura y música',
+  image: 'art-lit-music.webp',
   ru: {
     title: ''
   },

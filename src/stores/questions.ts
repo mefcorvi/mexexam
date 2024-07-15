@@ -23,6 +23,7 @@ export type QuestionsSection = {
   id: string;
   title: string;
   questions: Question[];
+  image?: string;
 };
 
 export const useQuestionsStore = createSharedComposable(() => {
@@ -250,7 +251,8 @@ function loadQuestions() {
       const section: QuestionsSection = {
         id: sectionData.id,
         title: sectionData.title,
-        questions: []
+        questions: [],
+        image: sectionData.image
       };
 
       sections.set(section.id, markRaw(section));

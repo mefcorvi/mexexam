@@ -1,6 +1,7 @@
 export type SectionData = {
   id: string;
   title: string;
+  image?: string;
   ru: {
     title: string;
   };
