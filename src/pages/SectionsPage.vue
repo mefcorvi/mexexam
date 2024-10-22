@@ -7,11 +7,14 @@ import { useLocalization } from '@/stores/localization';
 import { useQuestionsStore } from '@/stores/questions';
 import { useRouter } from 'vue-router';
 import { RouteName } from '@/router/names';
+import { useTranslations } from '@/stores/translations';
 
 const {
   sections,
   loadSections,
 } = useQuestionsStore();
+
+const translations = useTranslations();
 
 loadSections();
 
@@ -35,7 +38,7 @@ const { t } = useLocalization();
       <div :class="$style.tile" v-for="section of sections.values() " :key="section.id"
         @click="startSection(section.id)">
         <SectionImage :class="$style.sectionImg" :section="section" />
-        <div :class="$style.tileTitle">{{ t(section.title) }}</div>
+        <div :class="$style.tileTitle">{{ translations.t('es', section.title) }}</div>
       </div>
     </div>
   </GeneralPage>

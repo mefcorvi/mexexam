@@ -3,5 +3,8 @@ export const data = {
   Settings: 'Ajustes',
   Language: 'Idioma',
   'Dark theme': 'Tema oscuro',
-  "I don't know": 'No sé'
+  "I don't know": 'No sé',
+  'Choose section': 'Elegir sección',
+  'All questions': 'Todas las preguntas',
+  'Exam mode': 'Modo de examen'
 };
