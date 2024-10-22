@@ -1,7 +1,7 @@
 <script setup lang="ts">
 </script>
 <template>
-  <button :class="$style.button">
+  <button data-rpl :class="$style.button">
     <slot />
   </button>
 </template>

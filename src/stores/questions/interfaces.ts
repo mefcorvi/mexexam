@@ -1,3 +1,20 @@
+export type QuestionData = {
+  id: string;
+  type: 'text' | 'choice';
+  question: string;
+  answer: string;
+  options?: string[];
+  note?: string;
+  noteImage?: string;
+  ru?: {
+    question: string;
+    answer: string;
+    options?: string[];
+    note?: string;
+  };
+  tags?: Tag[];
+};
+
 export type SectionData = {
   id: string;
   title: string;
@@ -5,22 +22,7 @@ export type SectionData = {
   ru: {
     title: string;
   };
-  questions: {
-    id: string;
-    type: 'text' | 'choice';
-    question: string;
-    answer: string;
-    options?: string[];
-    note?: string;
-    noteImage?: string;
-    ru: {
-      question: string;
-      answer: string;
-      options?: string[];
-      note?: string;
-    };
-    tags?: Tag[];
-  }[];
+  questions: () => Promise<QuestionData[]>;
 };
 
 /**

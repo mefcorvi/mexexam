@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { mdiArrowLeft } from '@mdi/js';
 import SvgIcon from './SvgIcon.vue';
+import { RouteName } from '@/router/names';
 
 defineSlots<{
   topBar: {};
@@ -12,13 +13,15 @@ defineSlots<{
 defineProps<{
   hideTopBar?: boolean;
   hideBackButton?: boolean;
+  hideTitle?: boolean;
+  title?: string;
 }>();
 
 const $router = useRouter();
 
 const openHome = () => {
   $router.push({
-    name: 'home'
+    name: RouteName.Home
   });
 };
 
@@ -48,6 +51,9 @@ const back = () => {
       </div>
       <div :class="$style.separator"></div>
       <slot name="topBar" />
+    </div>
+    <div v-if="!hideTitle" :class="$style.title">
+      {{ title }}
     </div>
     <slot />
   </div>
@@ -143,5 +149,13 @@ const back = () => {
     font-size: var(--font-size-2);
     font-weight: 500;
   }
+}
+
+.title {
+  margin-bottom: var(--gap);
+
+  font-size: var(--font-size-4);
+  font-weight: 500;
+  text-align: center;
 }
 </style>

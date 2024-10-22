@@ -1,38 +1,44 @@
 <script setup lang="ts">
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
+import GeneralMenu from '@/components/GeneralMenu.vue';
 import { useRouter } from 'vue-router';
-import { useDark } from '@vueuse/core';
 import { useLocalization } from '@/stores/localization';
-
-useDark();
+import { RouteName } from '@/router/names';
 
 const $router = useRouter();
 
-const start = () => {
+const allQuestions = () => {
   $router.push({
-    name: 'question',
+    name: RouteName.AllQuestions,
     params: {
       id: 'init'
     }
   })
 };
 
+const chooseSection = () => {
+  $router.push({
+    name: RouteName.ChooseSection
+  })
+};
+
+const exam = () => {
+};
+
 const { t } = useLocalization();
 </script>
 <template>
-  <GeneralPage :class="$style.page">
-    <div :class="$style.menu">
-      <GeneralButton @click="start">{{ t('Start') }}</GeneralButton>
-    </div>
+  <GeneralPage :class="$style.page" :title="t('Start')">
+    <GeneralMenu>
+      <GeneralButton @click="allQuestions">{{ t('All questions') }}</GeneralButton>
+      <GeneralButton @click="chooseSection">{{ t('Choose section') }}</GeneralButton>
+      <GeneralButton @click="exam">{{ t('Exam mode') }}</GeneralButton>
+    </GeneralMenu>
   </GeneralPage>
 </template>
 <style module lang="less">
 .page {
   justify-content: center;
-}
-
-.menu {
-  margin-top: var(--gap);
 }
 </style>

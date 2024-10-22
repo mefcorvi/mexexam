@@ -4,16 +4,21 @@ import { computed, nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
-import { useQuestionsStore, type QuestionOption } from '@/stores/questions';
+import SectionImage from '@/components/SectionImage.vue';
+import { type QuestionOption } from '@/stores/questions';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
 import { until } from '@vueuse/core';
+import { useFreeSessionStore } from '@/stores/free-session';
+import { useTranslations } from '@/stores/translations';
+import { RouteName } from '@/router/names';
 
 const $style = useCssModule();
 const $router = useRouter();
+const translations = useTranslations();
 
 const {
-  load,
+  startAll,
   stat,
   isAnswerRevealed,
   currentOptionsRandomized,
@@ -25,8 +30,7 @@ const {
   selectedAnswer,
   setQuestion,
   hasQuestion,
-  translations,
-} = useQuestionsStore();
+} = useFreeSessionStore();
 
 const isNoteAvailable = computed(() => currentQuestion.value?.note !== undefined);
 
@@ -55,7 +59,7 @@ const onQuestionIdChanged = () => {
 }
 
 watch(questionParamId, onQuestionIdChanged);
-load().then(onQuestionIdChanged);
+startAll().then(onQuestionIdChanged);
 
 let blinkingTimeout: number | undefined;
 
@@ -219,7 +223,7 @@ const showNote = () => {
 
 const openSettings = () => {
   $router.push({
-    name: 'settings'
+    name: RouteName.Settings
   });
 }
 
@@ -248,8 +252,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
     <div :class="$style.question" v-if="currentQuestion">
       <div :class="$style.text" @click.stop="toggleLocale">
         <div>
-          <img :src="`/sections/${currentQuestion.section.image}`" v-if="currentQuestion.section.image" />
-
+          <SectionImage :section="currentQuestion.section" />
           <div> {{ t(currentQuestion.question) }}</div>
         </div>
       </div>

@@ -38,6 +38,8 @@
   --main-color-10: mix(@main-color, @bg-color, 10%);
   --main-color-5: mix(@main-color, @bg-color, 5%);
 
+  --main-text-color: @main-text-color;
+
   --main-color-alpha-90: rgba(@main-color, 0.9);
   --main-color-alpha-80: rgba(@main-color, 0.8);
   --main-color-alpha-70: rgba(@main-color, 0.7);
@@ -105,12 +107,15 @@
   @media @md-and-up {
     --font-size-base: 18px;
   }
+
+  --transition-duration: 200ms;
 }
 
 html {
   @bg-color: #f8f8f8;
   @negative-color: #222;
   @main-color: #9e3828;
+  @main-text-color: #fff;
   @secondary-color: #07867d;
   @third-color: #012d48;
 
@@ -129,6 +134,7 @@ html.dark {
   @bg-color: #111;
   @negative-color: #eee;
   @main-color: #9e3828;
+  @main-text-color: #fff;
   @secondary-color: #07867d;
 
   @success-bg-color: rgb(0, 97, 0);
