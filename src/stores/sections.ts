@@ -1,7 +1,5 @@
 import type { SectionData } from './questions/interfaces';
 
-const questionsPath = './questions-2';
-
 const sections: SectionData[] = [
   {
     id: 'u6w4x',
@@ -11,7 +9,7 @@ const sections: SectionData[] = [
       title: 'Искусство I: Литература и музыка'
     },
     questions: () =>
-      import(`${questionsPath}/art-lit-music`).then((x) => x.questions)
+      import(`./questions-2/art-lit-music`).then((x) => x.questions)
   },
   {
     id: 'bzymvt',
@@ -21,7 +19,7 @@ const sections: SectionData[] = [
       title: 'Искусство II: Живопись и кино'
     },
     questions: () =>
-      import(`${questionsPath}/art-paint-cinema`).then((x) => x.questions)
+      import(`./questions-2/art-paint-cinema`).then((x) => x.questions)
   },
   {
     id: 'm2661',
@@ -31,7 +29,7 @@ const sections: SectionData[] = [
       title: 'Гражданство'
     },
     questions: () =>
-      import(`${questionsPath}/citizenship`).then((x) => x.questions)
+      import(`./questions-2/citizenship`).then((x) => x.questions)
   },
   {
     id: 'k91hli',
@@ -40,8 +38,7 @@ const sections: SectionData[] = [
     ru: {
       title: 'Гастрономия'
     },
-    questions: () =>
-      import(`${questionsPath}/gastronomy`).then((x) => x.questions)
+    questions: () => import(`./questions-2/gastronomy`).then((x) => x.questions)
   },
   {
     id: 'hmc4a',
@@ -50,8 +47,7 @@ const sections: SectionData[] = [
     ru: {
       title: 'География и население'
     },
-    questions: () =>
-      import(`${questionsPath}/geography`).then((x) => x.questions)
+    questions: () => import(`./questions-2/geography`).then((x) => x.questions)
   },
   {
     id: 'z7ige6',
@@ -60,7 +56,7 @@ const sections: SectionData[] = [
       title: 'История: Завоевание и колония'
     },
     questions: () =>
-      import(`${questionsPath}/history-colony`).then((x) => x.questions)
+      import(`./questions-2/history-colony`).then((x) => x.questions)
   },
   {
     id: 'u7glcp',
@@ -70,7 +66,7 @@ const sections: SectionData[] = [
       title: 'История: Независимость'
     },
     questions: () =>
-      import(`${questionsPath}/history-independence`).then((x) => x.questions)
+      import(`./questions-2/history-independence`).then((x) => x.questions)
   },
   {
     id: 'okkktn',
@@ -80,7 +76,7 @@ const sections: SectionData[] = [
       title: 'История: Современная Мексика'
     },
     questions: () =>
-      import(`${questionsPath}/history-modern`).then((x) => x.questions)
+      import(`./questions-2/history-modern`).then((x) => x.questions)
   },
   {
     id: 'zpvby',
@@ -90,7 +86,7 @@ const sections: SectionData[] = [
       title: 'История: Доколумбова Мексика'
     },
     questions: () =>
-      import(`${questionsPath}/history-prespain`).then((x) => x.questions)
+      import(`./questions-2/history-prespain`).then((x) => x.questions)
   },
   {
     id: 'v00zr',
@@ -100,7 +96,7 @@ const sections: SectionData[] = [
       title: 'История: Революция'
     },
     questions: () =>
-      import(`${questionsPath}/history-revolution`).then((x) => x.questions)
+      import(`./questions-2/history-revolution`).then((x) => x.questions)
   },
   {
     id: 'xhrpl7t',
@@ -109,7 +105,7 @@ const sections: SectionData[] = [
     ru: {
       title: 'Наука и спорт'
     },
-    questions: () => import(`${questionsPath}/science`).then((x) => x.questions)
+    questions: () => import(`./questions-2/science`).then((x) => x.questions)
   },
   {
     id: 'iy3qg',
@@ -119,7 +115,7 @@ const sections: SectionData[] = [
       title: 'Традиции и культура'
     },
     questions: () =>
-      import(`${questionsPath}/traditions-culture`).then((x) => x.questions)
+      import(`./questions-2/traditions-culture`).then((x) => x.questions)
   }
 ];
 

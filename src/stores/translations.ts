@@ -21,6 +21,9 @@ export const useTranslations = createSharedComposable(() => {
     return translations.get(`$${locale}$${key}`) ?? key;
   };
 
+  add('es', "I don't know", 'No sé');
+  add('ru', "I don't know", 'Не знаю');
+
   return {
     add,
     t

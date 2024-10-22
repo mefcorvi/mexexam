@@ -44,11 +44,18 @@ const back = () => {
     <div :class="$style.topBar" v-if="!hideTopBar">
       <div :class="$style.logo" @click="openHome" v-if="!hasBack">
         <img src="/logo.svg" width="32" height="32" />
-        <div :class="$style.title">MexExam</div>
+        <div :class="$style.logoTitle">MexExam</div>
       </div>
-      <div v-else :class="$style.backBtn" @click="back">
-        <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
-      </div>
+      <template v-else>
+        <div :class="$style.backBtn" @click="back">
+          <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
+        </div>
+        <div :class="$style.separator"></div>
+        <div :class="[$style.logo, $style.logoFadeOut]" @click="openHome">
+          <img src="/logo.svg" width="32" height="32" />
+          <div :class="$style.logoTitle">MexExam</div>
+        </div>
+      </template>
       <div :class="$style.separator"></div>
       <slot name="topBar" />
     </div>
@@ -145,9 +152,18 @@ const back = () => {
     border-radius: 30%;
   }
 
-  .title {
+  .logoTitle {
     font-size: var(--font-size-2);
     font-weight: 500;
+  }
+
+  &.logoFadeOut {
+    opacity: 0.3;
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

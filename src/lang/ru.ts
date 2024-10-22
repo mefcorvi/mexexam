@@ -5,7 +5,6 @@ export const data: LocalizationData = {
   Settings: 'Настройки',
   Language: 'Язык',
   'Dark theme': 'Тёмная тема',
-  "I don't know": 'Не знаю',
   'Choose section': 'Выбрать раздел',
   'All questions': 'Все вопросы',
   'Exam mode': 'Режим экзамена'

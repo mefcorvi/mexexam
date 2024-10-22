@@ -133,8 +133,20 @@ export const useQuestionsStore = createSharedComposable(() => {
     await Promise.all([...sections.values()].map((x) => x.load()));
   };
 
+  const loadSection = async (sectionId: string) => {
+    await loadSections();
+    const section = sections.get(sectionId);
+
+    if (!section) {
+      return;
+    }
+
+    await section.load();
+  };
+
   return {
     loadAll,
+    loadSection,
     loadSections,
     questions,
     sections

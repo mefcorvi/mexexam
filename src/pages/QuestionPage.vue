@@ -4,7 +4,6 @@ import { computed, nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
-import SectionImage from '@/components/SectionImage.vue';
 import { type QuestionOption } from '@/stores/questions';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
@@ -19,6 +18,7 @@ const translations = useTranslations();
 
 const {
   startAll,
+  startSection,
   stat,
   isAnswerRevealed,
   currentOptionsRandomized,
@@ -35,6 +35,7 @@ const {
 const isNoteAvailable = computed(() => currentQuestion.value?.note !== undefined);
 
 const questionParamId = useRouteParams<string>('id', '');
+const sectionParamId = useRouteParams<string>('sectionId', '');
 
 const blinkingAnswer = ref<QuestionOption>();
 const isNoteShown = ref(false);
@@ -50,16 +51,30 @@ const onQuestionIdChanged = () => {
   if (hasQuestion(questionParamId.value)) {
     setQuestion(questionParamId.value);
   } else {
+    const questionId = getRandomQuestionId();
+
+    if (!questionId) {
+      $router.replace({
+        name: RouteName.Home,
+      });
+      return;
+    }
+
     $router.replace({
       params: {
-        id: getRandomQuestionId(),
+        id: questionId,
       }
     })
   }
 }
 
 watch(questionParamId, onQuestionIdChanged);
-startAll().then(onQuestionIdChanged);
+
+if (sectionParamId.value) {
+  startSection(sectionParamId.value).then(onQuestionIdChanged);
+} else {
+  startAll().then(onQuestionIdChanged);
+}
 
 let blinkingTimeout: number | undefined;
 
@@ -252,7 +267,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
     <div :class="$style.question" v-if="currentQuestion">
       <div :class="$style.text" @click.stop="toggleLocale">
         <div>
-          <SectionImage :section="currentQuestion.section" />
+          <div :class="$style.sectionTitle">{{ t(currentQuestion.section.title) }}</div>
           <div> {{ t(currentQuestion.question) }}</div>
         </div>
       </div>
@@ -570,5 +585,11 @@ function isButtonOrLinkClick(ev: MouseEvent) {
     transform: translateY(-100%);
     opacity: 0;
   }
+}
+
+.sectionTitle {
+  font-size: var(--font-size-a2);
+
+  opacity: 0.3;
 }
 </style>

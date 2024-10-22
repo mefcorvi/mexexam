@@ -10,7 +10,11 @@ import { useStoredSet } from '@/utils/stored-set';
 export const useFreeSessionStore = createSharedComposable(() => {
   const correctQuestions = useStoredSet('correct-questions-2');
   const wrongQuestions = useStoredSet('wrong-questions-2');
-  const { questions, loadAll: loadAllQuestions } = useQuestionsStore();
+  const {
+    questions,
+    loadAll: loadAllQuestions,
+    loadSection
+  } = useQuestionsStore();
 
   const currentQuestionId = ref<string>();
 
@@ -164,8 +168,16 @@ export const useFreeSessionStore = createSharedComposable(() => {
     await loadAllQuestions();
   };
 
+  /**
+   * Starts session with a specific section.
+   */
+  const startSection = async (sectionId: string) => {
+    await loadSection(sectionId);
+  };
+
   return {
     startAll,
+    startSection,
     stat,
     correctCount,
     correctQuestions,
@@ -195,14 +207,38 @@ function selectRandomQuestionId(
   // will be selected
   if (Math.random() < wrong.size / 10) {
     const keys = [...wrong];
-    return keys[Math.floor(Math.random() * keys.length)];
+    let key = '';
+
+    while (keys.length > 0) {
+      const idx = Math.floor(Math.random() * keys.length);
+      key = keys[idx];
+
+      if (questions.has(key)) {
+        return key;
+      } else {
+        keys.splice(idx, 1);
+        wrong.delete(key);
+      }
+    }
   }
 
   // if there are correct questions, select one of them
   // with a 20% chance
   if (Math.random() < 0.2) {
     const keys = [...correct];
-    return keys[Math.floor(Math.random() * keys.length)];
+    let key = '';
+
+    while (keys.length > 0) {
+      const idx = Math.floor(Math.random() * keys.length);
+      key = keys[idx];
+
+      if (questions.has(key)) {
+        return key;
+      } else {
+        keys.splice(idx, 1);
+        correct.delete(key);
+      }
+    }
   }
 
   // 40% chance to select a random question
