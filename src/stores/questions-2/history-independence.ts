@@ -894,10 +894,25 @@ export const questions: QuestionData[] = [
     options: ['Guadalupe Victoria', 'Anastacio Bustamante', 'Vicente Guerrero'],
     type: 'choice',
     id: 'eyzvo',
+    note: `<p>El título de <strong>Benemérito de las Américas</strong> fue otorgado a <em>Benito Juárez</em>, uno de los más importantes y admirados líderes de la historia de México. Juárez, quien nació el 21 de marzo de 1806 en San Pablo Guelatao, Oaxaca, es reconocido por sus contribuciones a la defensa de los principios de soberanía, igualdad y justicia en México y América Latina.</p>
+
+    <h2>Vida y Logros de Benito Juárez</h2>
+    <p>Benito Juárez fue un indígena zapoteca que, a pesar de sus humildes orígenes, logró convertirse en presidente de México. Entre sus mayores logros destacan la promulgación de las <strong>Leyes de Reforma</strong>, que separaron la Iglesia del Estado y promovieron la igualdad ante la ley. Estas reformas marcaron un hito en la historia de México, modernizando las instituciones y consolidando un estado laico.</p>
+
+    <h2>Defensor de la Soberanía Nacional</h2>
+    <p>Uno de los momentos más destacados en la vida de Juárez fue su papel durante la <em>Intervención Francesa</em> y el Segundo Imperio Mexicano, liderado por Maximiliano de Habsburgo. Juárez se mantuvo firme en su defensa de la soberanía mexicana, luchando contra la intervención extranjera hasta restaurar la República en 1867.</p>
+
+    <h2>Reconocimiento como Benemérito de las Américas</h2>
+    <p>El título de "Benemérito de las Américas" fue otorgado a Benito Juárez por su defensa de los valores republicanos y democráticos, los cuales sirvieron de inspiración para muchos otros países de la región. Su legado sigue siendo un símbolo de lucha por la libertad y la justicia en todo el continente.</p>`,
     ru: {
-      question: 'Кого называют благодетелем Америки?',
+      question: 'Кого называют заслуженным деятелем Америки?',
       answer: 'Бенито Хуарес',
-      options: ['Гвадалупе Виктория', 'Анастасио Бустаманте', 'Висенте Герреро']
+      options: [
+        'Гвадалупе Виктория',
+        'Анастасио Бустаманте',
+        'Висенте Герреро'
+      ],
+      note: `<p><strong>Почетное звание «Заслуженный деятель Америк»</strong> было присвоено <em>Бенито Хуаресу</em>, одному из самых значимых и уважаемых лидеров в истории Мексики. Хуарес, родившийся 21 марта 1806 года в Сан-Пабло-Гелатао, штат Оахака, известен своим вкладом в защиту принципов суверенитета, равенства и справедливости в Мексике и Латинской Америке.</p> <h2>Жизнь и достижения Бенито Хуареса</h2> <p>Бенито Хуарес был индейцем сапотекского происхождения, который, несмотря на свое скромное происхождение, сумел стать президентом Мексики. Среди его главных достижений — принятие <strong>Реформаторских законов</strong>, которые отделили церковь от государства и утвердили равенство перед законом. Эти реформы стали поворотным моментом в истории Мексики, модернизировав институты и укрепив светское государство.</p> <h2>Защитник национального суверенитета</h2> <p>Одним из самых ярких моментов в жизни Хуареса была его роль во время <em>Французской интервенции</em> и Второй Мексиканской империи под руководством Максимилиана Габсбурга. Хуарес твердо отстаивал суверенитет Мексики, сражаясь против иностранной интервенции и добившись восстановления Республики в 1867 году.</p> <h2>Признание как Заслуженного деятеля Америк</h2> <p>Звание «Заслуженный деятель Америк» было присвоено Бенито Хуаресу за его защиту республиканских и демократических ценностей, которые вдохновили многие другие страны региона. Его наследие до сих пор остается символом борьбы за свободу и справедливость на всем континенте.</p>`
     }
   },
   {
