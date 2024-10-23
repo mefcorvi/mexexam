@@ -857,13 +857,41 @@ export const questions: QuestionData[] = [
       'Leyes Separatistas',
       'Sentimientos de la Nacion'
     ],
+    note: `<ul>
+        <li><strong>Leyes de Reforma:</strong> 
+            <p>Este conjunto de leyes fue promulgado en la segunda mitad del siglo XIX. Establecieron la separación entre la Iglesia y el Estado, nacionalizaron los bienes eclesiásticos y promovieron la libertad de culto. Estas reformas fueron fundamentales para la modernización del Estado mexicano.</p>
+        </li>
+        <li><strong>Nuevas Leyes:</strong> 
+            <p>Si bien su nombre sugiere cambios, "Nuevas Leyes" no es un término relacionado con las reformas mencionadas. Estas leyes históricamente se asocian con la regulación de la relación entre los colonizadores españoles y los pueblos indígenas en el siglo XVI.</p>
+        </li>
+        <li><strong>Leyes Separatistas:</strong> 
+            <p>Este nombre no es históricamente correcto en este contexto. Aunque las Leyes de Reforma buscaban una separación institucional, nunca se les llamó "Leyes Separatistas".</p>
+        </li>
+        <li><strong>Sentimientos de la Nación:</strong> 
+            <p>Es un documento de 1813 redactado por José María Morelos, donde se establecen principios independentistas y sociales para México, pero no tiene relación con las Leyes de Reforma.</p>
+        </li>
+    </ul>`,
     type: 'choice',
     id: 'dcpl1',
     ru: {
       question:
         'Как называются законы, продвигаемые Хуаном Альваресом, Игнасио Комонфортом и Бенито Хуаресом для отделения церкви от государства?',
       answer: 'Законы о реформах',
-      options: ['Новые законы', 'Законы сепаратистов', 'Чувства Нации']
+      options: ['Новые законы', 'Законы сепаратистов', 'Чувства Нации'],
+      note: `<ul>
+        <li><strong>Законы Реформы (Leyes de Reforma):</strong> 
+            <p>Эти законы были приняты во второй половине XIX века и установили разделение церкви и государства, национализацию церковной собственности и свободу вероисповедания. Они сыграли важную роль в модернизации мексиканского государства.</p>
+        </li>
+        <li><strong>Новые законы (Nuevas Leyes):</strong> 
+            <p>Хотя название подразумевает реформы, этот термин не относится к разделению церкви и государства. Исторически "Новые законы" касались регулирования отношений между колонизаторами и коренными народами в XVI веке.</p>
+        </li>
+        <li><strong>Законы Сепаратизма (Leyes Separatistas):</strong> 
+            <p>Такого названия для этих реформ не использовали. Хотя они направлены на институциональное разделение, название "Законы Сепаратизма" не применяется.</p>
+        </li>
+        <li><strong>Чувства нации (Sentimientos de la Nación):</strong> 
+            <p>Документ 1813 года, составленный Хосе Марией Морелосом, описывает принципы независимости и социальной справедливости, но не связан с Законами Реформы.</p>
+        </li>
+      </ul>`
     }
   },
   {
@@ -894,16 +922,20 @@ export const questions: QuestionData[] = [
     options: ['Guadalupe Victoria', 'Anastacio Bustamante', 'Vicente Guerrero'],
     type: 'choice',
     id: 'eyzvo',
-    note: `<p>El título de <strong>Benemérito de las Américas</strong> fue otorgado a <em>Benito Juárez</em>, uno de los más importantes y admirados líderes de la historia de México. Juárez, quien nació el 21 de marzo de 1806 en San Pablo Guelatao, Oaxaca, es reconocido por sus contribuciones a la defensa de los principios de soberanía, igualdad y justicia en México y América Latina.</p>
-
-    <h2>Vida y Logros de Benito Juárez</h2>
-    <p>Benito Juárez fue un indígena zapoteca que, a pesar de sus humildes orígenes, logró convertirse en presidente de México. Entre sus mayores logros destacan la promulgación de las <strong>Leyes de Reforma</strong>, que separaron la Iglesia del Estado y promovieron la igualdad ante la ley. Estas reformas marcaron un hito en la historia de México, modernizando las instituciones y consolidando un estado laico.</p>
-
-    <h2>Defensor de la Soberanía Nacional</h2>
-    <p>Uno de los momentos más destacados en la vida de Juárez fue su papel durante la <em>Intervención Francesa</em> y el Segundo Imperio Mexicano, liderado por Maximiliano de Habsburgo. Juárez se mantuvo firme en su defensa de la soberanía mexicana, luchando contra la intervención extranjera hasta restaurar la República en 1867.</p>
-
-    <h2>Reconocimiento como Benemérito de las Américas</h2>
-    <p>El título de "Benemérito de las Américas" fue otorgado a Benito Juárez por su defensa de los valores republicanos y democráticos, los cuales sirvieron de inspiración para muchos otros países de la región. Su legado sigue siendo un símbolo de lucha por la libertad y la justicia en todo el continente.</p>`,
+    note: `<ul>
+        <li><strong>Benito Juárez:</strong> 
+            <p>Es conocido como el "Benemérito de las Américas" por su defensa de la soberanía mexicana durante la intervención francesa y sus reformas liberales. Fue presidente de México y luchó por la separación de la Iglesia y el Estado.</p>
+        </li>
+        <li><strong>Guadalupe Victoria:</strong> 
+            <p>Primer presidente de México tras la independencia. Su mandato sentó las bases del nuevo Estado, pero no se le asocia con el título de "Benemérito de las Américas".</p>
+        </li>
+        <li><strong>Anastasio Bustamante:</strong> 
+            <p>Militar y político que ocupó la presidencia varias veces en el siglo XIX. No tiene relación directa con el título de "Benemérito de las Américas".</p>
+        </li>
+        <li><strong>Vicente Guerrero:</strong> 
+            <p>Figura clave en la guerra de independencia. Fue presidente y abolió la esclavitud en México, pero no es conocido con ese título.</p>
+        </li>
+    </ul>`,
     ru: {
       question: 'Кого называют заслуженным деятелем Америки?',
       answer: 'Бенито Хуарес',
@@ -912,7 +944,20 @@ export const questions: QuestionData[] = [
         'Анастасио Бустаманте',
         'Висенте Герреро'
       ],
-      note: `<p><strong>Почетное звание «Заслуженный деятель Америк»</strong> было присвоено <em>Бенито Хуаресу</em>, одному из самых значимых и уважаемых лидеров в истории Мексики. Хуарес, родившийся 21 марта 1806 года в Сан-Пабло-Гелатао, штат Оахака, известен своим вкладом в защиту принципов суверенитета, равенства и справедливости в Мексике и Латинской Америке.</p> <h2>Жизнь и достижения Бенито Хуареса</h2> <p>Бенито Хуарес был индейцем сапотекского происхождения, который, несмотря на свое скромное происхождение, сумел стать президентом Мексики. Среди его главных достижений — принятие <strong>Реформаторских законов</strong>, которые отделили церковь от государства и утвердили равенство перед законом. Эти реформы стали поворотным моментом в истории Мексики, модернизировав институты и укрепив светское государство.</p> <h2>Защитник национального суверенитета</h2> <p>Одним из самых ярких моментов в жизни Хуареса была его роль во время <em>Французской интервенции</em> и Второй Мексиканской империи под руководством Максимилиана Габсбурга. Хуарес твердо отстаивал суверенитет Мексики, сражаясь против иностранной интервенции и добившись восстановления Республики в 1867 году.</p> <h2>Признание как Заслуженного деятеля Америк</h2> <p>Звание «Заслуженный деятель Америк» было присвоено Бенито Хуаресу за его защиту республиканских и демократических ценностей, которые вдохновили многие другие страны региона. Его наследие до сих пор остается символом борьбы за свободу и справедливость на всем континенте.</p>`
+      note: `<ul>
+        <li><strong>Бенито Хуарес:</strong> 
+            <p>Известен как «Бенемерито де лас Америкас» за защиту суверенитета Мексики во время французской интервенции и либеральные реформы. Был президентом Мексики и выступал за разделение церкви и государства.</p>
+        </li>
+        <li><strong>Гуадалупе Виктория:</strong> 
+            <p>Первый президент Мексики после обретения независимости. Его правление заложило основы нового государства, но это звание ему не присваивали.</p>
+        </li>
+        <li><strong>Анастасио Бустаманте:</strong> 
+            <p>Военный и политик, несколько раз занимавший пост президента в XIX веке. С этим званием не связан.</p>
+        </li>
+        <li><strong>Висенте Герреро:</strong> 
+            <p>Ключевая фигура войны за независимость. Будучи президентом, отменил рабство в Мексике, но этого титула не носит.</p>
+        </li>
+    </ul>`
     }
   },
   {

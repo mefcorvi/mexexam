@@ -275,7 +275,8 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         <template v-if="currentQuestion.type === 'choice'">
           <div v-for="option in currentOptionsRandomized" :key="`${currentQuestion.id}-${option.id}`"
             :class="$style.option">
-            <GeneralButton @click.stop="onOptionClick(option)" :class="[$style.button, getOptionClass(option)]">
+            <GeneralButton @click.stop="onOptionClick(option)" :disabled="!!selectedAnswer"
+              :class="[$style.button, getOptionClass(option)]">
               {{ t(option.value) }}
             </GeneralButton>
           </div>
@@ -285,10 +286,8 @@ function isButtonOrLinkClick(ev: MouseEvent) {
           <p :key="idx" v-for="(item, idx) of t(currentQuestion.answer).split('\n')">{{ item }}</p>
         </div>
       </div>
-    </div>
-    <div v-if="currentQuestion" @click.stop="onNoteClick"
-      :class="[$style.noteContainer, { [$style.hidden]: !isNoteShown }]">
-      <div v-if="currentQuestion.note" class="scroll" :class="[$style.note, { [$style.hidden]: !isNoteShown }]">
+      <div v-if="currentQuestion?.note" :key="currentQuestion.id" class="scroll"
+        :class="[$style.note, { [$style.hidden]: !selectedAnswer || isPageFadeOut }]">
         <img v-if="currentQuestion.noteImage" :src="`/notes/${currentQuestion.noteImage}`" />
         <div v-html="t(currentQuestion.note)"></div>
       </div>
@@ -515,35 +514,29 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   }
 }
 
-.noteContainer {
-  position: fixed;
-  top: var(--topbar-height);
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  &.hidden {
-    pointer-events: none;
-  }
-}
-
 .note {
-  max-height: 100%;
+  width: fit-content;
+  max-width: 900px;
   margin: 0 auto;
   padding: var(--gap-l);
+  padding-top: 0;
+  padding-bottom: 0;
   overflow: auto;
 
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-1);
   line-height: 160%;
 
-  background: var(--bg-color-alpha-80);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-
-  transform: translateY(0);
-  cursor: pointer;
   opacity: 1;
-  backdrop-filter: blur(30px);
-  transition: all 500ms;
+  transition: all 200ms;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
 
   img {
     float: left;
@@ -579,11 +572,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
     &:hover {
       color: var(--secondary-color);
     }
-  }
-
-  &.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
   }
 }
 

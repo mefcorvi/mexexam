@@ -1,7 +1,10 @@
 <script setup lang="ts">
+defineProps<{
+  disabled?: boolean;
+}>();
 </script>
 <template>
-  <button data-rpl :class="$style.button">
+  <button :data-rpl="!disabled" :class="$style.button" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -14,5 +17,9 @@
   letter-spacing: 0.02em;
 
   cursor: pointer;
+
+  &:disabled {
+    pointer-events: none;
+  }
 }
 </style>

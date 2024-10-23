@@ -7,10 +7,22 @@ export const questions: QuestionData[] = [
     options: ['Teatro Mayor', 'Teatro Juarez', 'Palacio del Arte y la Cultura'],
     type: 'choice',
     id: 'oqiuc',
+    note: `    <ul>
+        <li><strong>Teatro Mayor</strong> – No existe un teatro con este nombre en la Ciudad de México.</li>
+        <li><strong>Teatro Juárez</strong> – Se encuentra en Guanajuato, no en la Ciudad de México.</li>
+        <li><strong>Palacio del Arte y la Cultura</strong> – No corresponde a ningún recinto reconocido en la ciudad.</li>
+        <li><strong>Palacio de Bellas Artes</strong> – Es el teatro más prestigioso y emblemático de la Ciudad de México.</li>
+    </ul>`,
     ru: {
       question: 'Самый престижный театр в Мехико это',
       answer: 'Дворец изящных искусств',
-      options: ['Театр Майор', 'Театр Хуарес', 'Дворец искусства и культуры']
+      options: ['Театр Майор', 'Театр Хуарес', 'Дворец искусства и культуры'],
+      note: `<ul>
+          <li><strong>Teatro Mayor</strong> – В Мехико нет театра с таким названием.</li>
+          <li><strong>Teatro Juárez</strong> – Находится в Гуанахуато, а не в Мехико.</li>
+          <li><strong>Palacio del Arte y la Cultura</strong> – Не соответствует какому-либо известному театру в городе.</li>
+          <li><strong>Palacio de Bellas Artes</strong> – Это самый престижный и знаковый театр Мехико.</li>
+      </ul>`
     },
     tags: [
       {
@@ -76,7 +88,20 @@ export const questions: QuestionData[] = [
   {
     question: '¿Dónde se ubica el Teatro Juárez?',
     answer: 'Guanajuato',
-    note: 'Es uno de los teatros históricos más reconocidos de México, sede del Festival Cervantino.',
+    note: `<ul>
+      <li><strong>Guanajuato:</strong> 
+          <p>El Teatro Juárez se encuentra en Guanajuato. Inaugurado en 1903, es famoso por su arquitectura neoclásica y art nouveau, y es sede del Festival Internacional Cervantino.</p>
+      </li>
+      <li><strong>Zacatecas:</strong> 
+          <p>Ciudad con importante herencia colonial, aunque el Teatro Juárez no está aquí. Su teatro más conocido es el Fernando Calderón.</p>
+      </li>
+      <li><strong>Jalisco:</strong> 
+          <p>Famoso por la música mariachi y el tequila. En su capital, Guadalajara, se encuentra el Teatro Degollado.</p>
+      </li>
+      <li><strong>CDMX:</strong> 
+          <p>Centro cultural de México, aunque el Teatro Juárez no está aquí. Alberga el Palacio de Bellas Artes.</p>
+      </li>
+      </ul>`,
     options: ['Zacatecas', 'Jalisco', 'CDMX'],
     type: 'choice',
     id: '4ls26c',
@@ -84,7 +109,20 @@ export const questions: QuestionData[] = [
       question: 'Где находится Театр Хуарес?',
       answer: 'Гуанахуато',
       options: ['Сакатекас', 'Халиско', 'Мехико'],
-      note: 'Это один из самых известных исторических театров Мексики, место проведения Фестиваля Сервантеса.'
+      note: `<ul>
+        <li><strong>Гуанахуато:</strong> 
+            <p>Театр Хуарес находится в Гуанахуато. Открыт в 1903 году, известен своей архитектурой в стиле неоклассицизма и ар-нуво. Здесь проходит фестиваль Сервантеса.</p>
+        </li>
+        <li><strong>Сакатекас:</strong> 
+            <p>Колониальный город с богатой историей, но Театр Хуарес там не расположен. Известен Театр Фернандо Кальдерона.</p>
+        </li>
+        <li><strong>Халиско:</strong> 
+            <p>Известен мариачи и текилой. В Гвадалахаре расположен Театр Дегольядо.</p>
+        </li>
+        <li><strong>Мехико (CDMX):</strong> 
+            <p>Культурный центр страны, но Театр Хуарес находится не здесь. Известен Дворец изящных искусств.</p>
+        </li>
+    </ul>`
     },
     tags: [
       {
@@ -97,8 +135,13 @@ export const questions: QuestionData[] = [
     question:
       '¿Cómo se llama el premio que entrega el Instituto Nacional de Bellas Artes?',
     answer: 'Premio Bellas Artes',
-    note: 'Fundado en 1945, premia diferentes categorías.',
     options: ['José Vasconcelos', 'El Heraldo de México', 'Premio Ohtli'],
+    note: `<ul>
+      <li><strong>Premio Bellas Artes</strong> – Es la respuesta correcta, es el principal premio otorgado por el Instituto Nacional de Bellas Artes.</li>
+      <li><strong>José Vasconcelos</strong> – Es un premio otorgado por logros culturales, pero no está directamente relacionado con el INBA.</li>
+      <li><strong>El Heraldo de México</strong> – Es un premio periodístico, no vinculado al INBA.</li>
+      <li><strong>Premio Ohtli</strong> – Se entrega a mexicanos por su apoyo a la diáspora mexicana, sin relación con el INBA.</li>
+    </ul>`,
     type: 'choice',
     id: 'xi6wy',
     ru: {
@@ -106,7 +149,12 @@ export const questions: QuestionData[] = [
         'Как называется премия, вручаемая Национальным институтом изящных искусств?',
       answer: 'Премия изящных искусств',
       options: ['Хосе Васконселос', 'Эль Херальдо де Мехико', 'Премия Охтли'],
-      note: 'Основана в 1945 году, награждает в различных категориях.'
+      note: `<ul>
+        <li><strong>Premio Bellas Artes</strong> – Это правильный ответ, это основная премия от Национального института изящных искусств.</li>
+        <li><strong>José Vasconcelos</strong> – Премия, вручаемая за культурные достижения, но не связана с INBA напрямую.</li>
+        <li><strong>El Heraldo de México</strong> – Журналистская премия, не связана с INBA.</li>
+        <li><strong>Premio Ohtli</strong> – Присуждается мексиканцам за вклад в поддержку мексиканской диаспоры, не имеет отношения к INBA.</li>
+      </ul>`
     },
     tags: [
       {
@@ -250,13 +298,13 @@ export const questions: QuestionData[] = [
     ],
     type: 'choice',
     id: 'j687v8',
-    note: '\n    <p><em>La región más transparente</em> fue la primera novela escrita por Carlos \n      Fuentes, publicada cuando tenía 29 años. Fuentes comenzó a escribirla a los 25, \n      inspirándose en la temática urbana de la Ciudad de México, en contraste con la \n      ruralidad tratada por Juan Rulfo en <em>Pedro Páramo</em>. Utilizó un estilo \n      narrativo que refleja el léxico de diversos estratos sociales de la ciudad, \n      similar al de Balzac, incorporando extranjerismos y acentos de inmigrantes. El \n      título de la novela se inspiró en una frase de Alexander von Humboldt sobre el \n      valle de la Ciudad de México, también utilizada por Alfonso Reyes en su obra \n      <em>Visión de Anáhuac</em>. Parte de esta obra fue anticipada en la Revista de \n      Literatura Mexicana en 1955 antes de su publicación completa por el Fondo de \n      Cultura Económica en mayo de 1958.</p>\n    ',
+    note: `"La región más transparente" es la primera novela de Carlos Fuentes, publicada en 1958. Fuentes comenzó a escribirla a los 25 años, inspirado en la temática urbana de la Ciudad de México, a diferencia de la temática rural de Juan Rulfo. La obra refleja el lenguaje y los acentos de diferentes clases sociales. El título fue inspirado por una frase de Alexander von Humboldt sobre el valle de México, también utilizada por Alfonso Reyes.`,
     ru: {
       question:
         'Какое произведение написал Карлос Фуэнтес о мексиканской жизни в 1958 году?',
       answer: 'Край наипрозрачнейшей ясности',
       options: ['Сезон стервятников', 'Пылающая равнина', 'Голоса Тлателолко'],
-      note: '\n      <p><em>Край наипрозрачнейшей ясности</em> был первым романом Карлоса Фуэнтеса, \n      опубликованным, когда ему было 29 лет. Фуэнтес начал писать его в 25 лет, \n      вдохновляясь городской тематикой Мехико, в отличие от сельской тематики, \n      описанной Хуаном Рульфо в <em>Педро Парамо</em>. Он использовал повествовательный \n      стиль, отражающий лексику различных социальных слоев города, подобно Бальзаку, \n      включая заимствования и акценты иммигрантов. Название романа было вдохновлено \n      фразой Александра фон Гумбольдта о долине Мехико, также использованной Альфонсо \n      Рейесом в его произведении <em>Видение Анауака</em>. Часть этого произведения \n      была предварительно опубликована в Мексиканском литературном журнале в 1955 году \n      перед полной публикацией Фондом экономической культуры в мае 1958 года.</p>\n      '
+      note: `«Край наипрозрачнейшей ясности» — первый роман Карлоса Фуэнтеса, опубликованный в 1958 году. Начав писать его в 25 лет, Фуэнтес вдохновлялся урбанистической тематикой Мехико, в отличие от сельской тематики Хуана Рульфо. В романе отражены лексика и акценты различных слоев общества. Название навеяно фразой Александра фон Гумбольдта о долине Мехико, использованной также Альфонсо Рейесом.`
     },
     tags: [
       {
