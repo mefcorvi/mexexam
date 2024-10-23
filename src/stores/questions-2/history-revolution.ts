@@ -6,7 +6,12 @@ export const questions: QuestionData[] = [
     answer:
       'Inicia cuando Fracisco I Madero publica el Plan San Luis Potosí donde llama a tomar las armas, aparecen personajes como Pascual Orozco, Pancho Villa y Emiliano Zapata, se inicia una lucha en la que los revolucionarios salen victoriosos y Porfirio Díaz renuncia al poder en Mayo de 1911.',
     type: 'text',
-    id: 'u860q'
+    id: 'r9q5k',
+    ru: {
+      question: 'Что такое революция?',
+      answer:
+        'Начинается, когда Франсиско I. Мадеро публикует План Сан-Луис-Потоси, в котором призывает взяться за оружие, появляются такие персонажи, как Паскуаль Ороско, Панчо Вилья и Эмилиано Сапата, начинается борьба, в которой революционеры выходят победителями, и Порфирио Диас отказывается от власти в мае 1911 года.'
+    }
   },
   {
     question: 'Fecha de la Revolución Mexicana',
@@ -17,7 +22,16 @@ export const questions: QuestionData[] = [
       '30 de noviembre de 1910'
     ],
     type: 'choice',
-    id: 'fu8jnh'
+    id: 'rhx4t',
+    ru: {
+      question: 'Дата Мексиканской революции',
+      answer: '20 ноября 1910 года',
+      options: [
+        '05 ноября 1810 года',
+        '15 ноября 1710 года',
+        '30 ноября 1910 года'
+      ]
+    }
   },
   {
     question: '¿Qué se celebra el 20 de noviembre?',
@@ -28,7 +42,12 @@ export const questions: QuestionData[] = [
       'Dia de la Bandera'
     ],
     type: 'choice',
-    id: '7rtd3m'
+    id: '0r04xt',
+    ru: {
+      question: 'Что отмечается 20 ноября?',
+      answer: 'День Мексиканской революции',
+      options: ['День мертвых', 'Независимость Мексики', 'День флага']
+    }
   },
   {
     question: 'Orden cronológico de los eventos',
@@ -39,20 +58,28 @@ export const questions: QuestionData[] = [
       'Independencia, Revolución, Conquista'
     ],
     type: 'choice',
-    id: '5aq18m'
+    id: 'bkxotq',
+    ru: {
+      question: 'Хронологический порядок событий',
+      answer: 'Завоевание, независимость и революция',
+      options: [
+        'Завоевание, революция и независимость',
+        'Революция, завоевание и независимость',
+        'Независимость, революция, завоевание'
+      ]
+    }
   },
   {
     question: 'Personajes de la revolución',
-    answer: `Porfirio Diaz
-      Pancho Villa
-      Francisco I. Madero
-      Emiliano Zapata
-      Victoriano Huerta
-      Venustiano Carranza
-      Pino Suarez'
-      Plutarco Elias Calles`,
+    answer:
+      'Porfirio Diaz\nPancho Villa\nFrancisco I. Madero\nEmiliano Zapata\nVictoriano Huerta\nVenustiano Carranza\nPino Suarez\nPlutarco Elias Calles',
     type: 'text',
-    id: '5g1unq'
+    id: 'el3ek',
+    ru: {
+      question: 'Персонажи революции',
+      answer:
+        'Порфирио Диас\nПанчо Вилья\nФрансиско И. Мадеро\nЭмилиано Сапата\nВикториано Уэрта\nВенустиано Карранса\nПино Суарес\nПлутарко Элиас Кальес'
+    }
   },
   {
     question: '¿De qué se trató el plan de San Luis Potosí?',
@@ -65,7 +92,18 @@ export const questions: QuestionData[] = [
       'Documento en el que se acuerda la Independencia de México'
     ],
     type: 'choice',
-    id: 'y8qdso'
+    id: '78azu',
+    ru: {
+      question: 'О чем был план Сан-Луис-Потоси?',
+      answer:
+        'Был издан Франсиско И. Мадеро, чтобы предотвратить переизбрание Порфирио Диаса и свергнуть порфириат. Стремились к свободным и демократическим выборам',
+      options: [
+        'Нераспространение ядерного оружия',
+        'Провозглашен Адрианом Флоренсио Вильярреалом для прекращения диктатуры Санта-Анны',
+        'Документ, в котором согласовывается независимость Мексики'
+      ],
+      note: '5 октября 1910 года.'
+    }
   },
   {
     question:
@@ -73,7 +111,13 @@ export const questions: QuestionData[] = [
     answer: 'Francisco I. Madero',
     options: ['Benito Juarez', 'Porfirio Díaz', 'Vicente Guerrero'],
     type: 'choice',
-    id: '4xdewdv'
+    id: 'j4khkr',
+    ru: {
+      question:
+        'Лозунг “Эффективное избирательное право, без переизбрания” был политическим лозунгом',
+      answer: 'Франсиско И. Мадеро',
+      options: ['Бенито Хуарес', 'Порфирио Диас', 'Висенте Герреро']
+    }
   },
   {
     question:
@@ -81,14 +125,25 @@ export const questions: QuestionData[] = [
     answer: 'Emiliano Zapata',
     options: ['Doroteo Arango', 'Venustiano Carranza', 'Francisco I. Madero'],
     type: 'choice',
-    id: 'gxj3z9'
+    id: 'aijexh',
+    ru: {
+      question:
+        'Имя аграрного лидера, возглавившего мексиканскую революцию в штате Морелос',
+      answer: 'Эмилиано Сапата',
+      options: ['Доротео Аранго', 'Венустиано Карранса', 'Франсиско И. Мадеро']
+    }
   },
   {
     question: '¿Quién dijo "Tierra y libertad"?',
     answer: 'Emiliano Zapata',
     options: ['Doroteo Arango', 'Venustiano Carranza', 'Francisco I. Madero'],
     type: 'choice',
-    id: 'r79e3k'
+    id: '3cxsnd',
+    ru: {
+      question: 'Кто сказал "Земля и свобода"?',
+      answer: 'Эмилиано Сапата',
+      options: ['Доротео Аранго', 'Венустиано Карранса', 'Франсиско И. Мадеро']
+    }
   },
   {
     question: '¿Cuándo y dónde fué asesinado Emiliano Zapata?',
@@ -99,7 +154,16 @@ export const questions: QuestionData[] = [
       'En la hacienda del Carmen en Hidalgo el 27 de Abril de 1919'
     ],
     type: 'choice',
-    id: 'siis4'
+    id: 'cb6wha',
+    ru: {
+      question: 'Когда и где был убит Эмилиано Сапата?',
+      answer: 'На асьенде Чинамека, Морелос, 10 апреля 1919 года',
+      options: [
+        'В Мехико 14 февраля 1920 года',
+        'В Пуэбле 10 марта 1918 года',
+        'На асьенде дель Кармен в Идальго 27 апреля 1919 года'
+      ]
+    }
   },
   {
     question:
@@ -108,7 +172,18 @@ export const questions: QuestionData[] = [
     note: 'Fue una huelga dada en la ciudad minera de cobre de Cananea, Sonora, que sentó precedentes para la revolución, por lo que a la ciudad se le conoce como cuna de la revolución.',
     options: ['Huelga Minera', 'Huelga de Sonora', 'Huelga industrial'],
     type: 'choice',
-    id: 'cws58'
+    id: 'ckeul',
+    ru: {
+      question:
+        'Событие, связанное с горнодобывающей промышленностью и революцией',
+      answer: 'Забастовка в Кананеа',
+      options: [
+        'Горнодобывающая забастовка',
+        'Забастовка в Соноре',
+        'Промышленная забастовка'
+      ],
+      note: 'Это была забастовка в медном шахтерском городе Кананеа, Сонора, которая создала прецедент для революции, поэтому город известен как колыбель революции.'
+    }
   },
   {
     question: 'Composición musical característica de la época revolucionaria',
@@ -116,14 +191,25 @@ export const questions: QuestionData[] = [
     note: 'Narrativa popular en forma de canción sobre temas políticos, históricos, etc.',
     options: ['Las Golondrinas', 'La Bikina', 'Las Mañanitas'],
     type: 'choice',
-    id: 'syg71m'
+    id: 'rqmyz',
+    ru: {
+      question: 'Музыкальная композиция, характерная для революционной эпохи',
+      answer: 'Корридо',
+      options: ['Лас Голондринас', 'Ла Бикина', 'Лас Мананитас'],
+      note: 'Популярный рассказ в виде песни о политических, исторических и других темах.'
+    }
   },
   {
     question: 'Nombre de un famoso corrido revolucionario',
     answer: 'La Adelita',
     options: ['El Caballo Blanco', 'La Valentina', 'El Barzón'],
     type: 'choice',
-    id: 'o8qddb'
+    id: 'ajp61',
+    ru: {
+      question: 'Название известного революционного корридо',
+      answer: 'Ла Аделита',
+      options: ['Эль Кабальо Бланко', 'Ла Валентина', 'Эль Барсон']
+    }
   },
   {
     question: '"Las Adelitas" acompañaron a sus hombres al combate en',
@@ -134,7 +220,16 @@ export const questions: QuestionData[] = [
       'La Batalla de Puebla'
     ],
     type: 'choice',
-    id: '5jccdm'
+    id: 'sifxm',
+    ru: {
+      question: '"Аделиты" сопровождали своих мужчин в бою в',
+      answer: 'Революции 1910 года',
+      options: [
+        'Войне за независимость',
+        'Кристерской войне',
+        'Битве при Пуэбле'
+      ]
+    }
   },
   {
     question: '¿De qué se trató el plan de Ayala?',
@@ -147,14 +242,30 @@ export const questions: QuestionData[] = [
       'Documento en el que se acuerda la Independencia de México'
     ],
     type: 'choice',
-    id: 'ycdgc7'
+    id: 'vlz2nd',
+    ru: {
+      question: 'О чем был план Аялы?',
+      answer:
+        'Провозглашен Эмилиано Сапатой для непризнания правительства Франсиско И. Мадеро и возвращения собственности крестьянам. Его лозунг был: "Реформа, Свобода, Справедливость и Закон"',
+      options: [
+        'Нераспространение ядерного оружия',
+        'Провозглашен Адрианом Флоренсио Вильярреалом для прекращения диктатуры Санта-Анны',
+        'Документ, в котором согласовывается независимость Мексики'
+      ],
+      note: '28 ноября 1911 года.'
+    }
   },
   {
     question: '¿Quién fué el autor de la traición de Francisco I. Madero?',
     answer: 'Victoriano Huerta',
     options: ['Emiliano Zapata', 'Porfirio Díaz', 'Venustiano Carranza'],
     type: 'choice',
-    id: 'ziijtj'
+    id: 'zwrqpw',
+    ru: {
+      question: 'Кто был автором предательства Франсиско И. Мадеро?',
+      answer: 'Викториано Уэрта',
+      options: ['Эмилиано Сапата', 'Порфирио Диас', 'Венустиано Карранса']
+    }
   },
   {
     question:
@@ -162,7 +273,13 @@ export const questions: QuestionData[] = [
     answer: 'Decena Trágica',
     options: ['Temporada de Zopilotes', 'El Golpe Duro', 'La Noche Triste'],
     type: 'choice',
-    id: 'tar2h6'
+    id: 'wvd8rc',
+    ru: {
+      question:
+        'Название государственного переворота, произошедшего с 9 по 19 февраля 1913 года или военного переворота для свержения Франсиско И. Мадеро',
+      answer: 'Трагическая десятка',
+      options: ['Сезон стервятников', 'Жесткий удар', 'Грустная ночь']
+    }
   },
   {
     question: '¿De qué trató el Plan de Guadalupe?',
@@ -175,14 +292,30 @@ export const questions: QuestionData[] = [
       'Documento en el que se acuerda la Independencia de México'
     ],
     type: 'choice',
-    id: '17yvo5'
+    id: 'v9ykzf',
+    ru: {
+      question: 'О чем был план Гваделупе?',
+      answer:
+        'План по непризнанию правительства Викториано Уэрты за предательство Франсиско И. Мадеро. Создан Венустиано Каррансой',
+      options: [
+        'Нераспространение ядерного оружия',
+        'Мексика присоединяет территорию на севере',
+        'Документ, в котором согласовывается независимость Мексики'
+      ],
+      note: 'Подписан 26 марта 1913 года в асьенде Гваделупе в Коауиле.'
+    }
   },
   {
     question: 'Plan de Venustiano Carranza para derrocar a Victoriano Huerta',
     answer: 'Plan Guadalupe',
     options: ['Plan de Iguala', 'Plan de San Luis', 'Plan de Noria'],
     type: 'choice',
-    id: 'vwge5'
+    id: 'x28cz8',
+    ru: {
+      question: 'План Венустиано Каррансы по свержению Викториано Уэрты',
+      answer: 'План Гваделупе',
+      options: ['План Игала', 'План Сан-Луиса', 'План Нории']
+    }
   },
   {
     question:
@@ -190,7 +323,12 @@ export const questions: QuestionData[] = [
     answer: 'Venustiano Carranza',
     options: ['Francisco I. Madero', 'Doroteo Arango', 'Emiliano Zapata'],
     type: 'choice',
-    id: 'qzt8eq'
+    id: 'hxqtgo',
+    ru: {
+      question: 'Кто возглавлял конституционную армию во время революции?',
+      answer: 'Венустиано Карранса',
+      options: ['Франсиско И. Мадеро', 'Доротео Аранго', 'Эмилиано Сапата']
+    }
   },
   {
     question: '¿Quién fué Pancho Villa?',
@@ -202,7 +340,17 @@ export const questions: QuestionData[] = [
       'Un traidor de la revolución mexicana'
     ],
     type: 'choice',
-    id: '7aegfb'
+    id: 'r9zca',
+    ru: {
+      question: 'Кем был Панчо Вилья?',
+      answer: 'Лидер мексиканской революции',
+      options: [
+        'Лидер независимости',
+        'Вице-король Испании',
+        'Предатель мексиканской революции'
+      ],
+      note: 'Появился на сцене, когда Венустиано Карранса призвал создать конституционную армию.'
+    }
   },
   {
     question: 'Nombre de Pancho Villa',
@@ -213,14 +361,28 @@ export const questions: QuestionData[] = [
       'Venustiano Carranza'
     ],
     type: 'choice',
-    id: '94elxj'
+    id: '3x4ei9',
+    ru: {
+      question: 'Имя Панчо Вильи',
+      answer: 'Хосе Доротео Аранго Арамбула',
+      options: [
+        'Эмилиано Сапата Салазар',
+        'Викториано Уэрта',
+        'Венустиано Карранса'
+      ]
+    }
   },
   {
     question: '¿A quién se le conoce como el Centauro del Norte?',
     answer: 'Pancho Villa',
     options: ['Emiliano Zapata', 'Victoriano Huerta', 'Venustiano Carranza'],
     type: 'choice',
-    id: '6th2un'
+    id: '7ouw55',
+    ru: {
+      question: 'Кого знают как Кентавра Севера?',
+      answer: 'Панчо Вилью',
+      options: ['Эмилиано Сапата', 'Викториано Уэрта', 'Венустиано Карранса']
+    }
   },
   {
     question: '¿Cuándo y dónde fué asesinado Pancho Villa?',
@@ -232,7 +394,17 @@ export const questions: QuestionData[] = [
       '10 de Febrero de 1923 en Nuevo León'
     ],
     type: 'choice',
-    id: 'v6ou9t'
+    id: 'rna7ea',
+    ru: {
+      question: 'Когда и где был убит Панчо Вилья?',
+      answer: '20 июля 1923 года в Паррале, Чиуауа',
+      options: [
+        '5 июля 1923 года в Керетаро',
+        '20 декабря 1923 года в Коауиле',
+        '10 февраля 1923 года в Нуэво-Леоне'
+      ],
+      note: 'Был многократно застрелен в своем автомобиле, а его тело было обезглавлено.'
+    }
   },
   {
     question: '¿En qué año se firmó la constitución que nos rige actualmente?',
@@ -243,7 +415,17 @@ export const questions: QuestionData[] = [
       '3 de Enero en Nuevo León'
     ],
     type: 'choice',
-    id: 'htcons'
+    id: '5aq09b',
+    ru: {
+      question:
+        'В каком году была подписана конституция, которая нас сейчас регулирует?',
+      answer: '5 февраля 1917 года в Керетаро',
+      options: [
+        '7 марта 1917 года в Халиско',
+        '12 декабря в Мехико',
+        '3 января в Нуэво-Леоне'
+      ]
+    }
   },
   {
     question:
@@ -255,7 +437,17 @@ export const questions: QuestionData[] = [
       'Plutarco Elías Calles'
     ],
     type: 'choice',
-    id: 'ocshea'
+    id: 'xnvjwm',
+    ru: {
+      question:
+        'Кто был первым секретарем общественного образования Мексики (1921)?',
+      answer: 'Хосе Васконселос',
+      options: [
+        'Эльба Эстер Гордильо',
+        'Бернардо Х. Гастелум',
+        'Плутарко Элиас Кальес'
+      ]
+    }
   },
   {
     question:
@@ -267,6 +459,16 @@ export const questions: QuestionData[] = [
       'Bernardo J. Gastélum'
     ],
     type: 'choice',
-    id: 'y2oqz'
+    id: 'bmrub9',
+    ru: {
+      question:
+        'Кто был секретарем общественного образования и изящных искусств с 1901 по 1911 год?',
+      answer: 'Хусто Сьерра',
+      options: [
+        'Хосе Васконселос',
+        'Феликс Фульхенсио Палавичини',
+        'Бернардо Х. Гастелум'
+      ]
+    }
   }
 ];

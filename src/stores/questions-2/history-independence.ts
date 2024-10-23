@@ -6,7 +6,12 @@ export const questions: QuestionData[] = [
     answer: '1810',
     options: ['1811', '1812', '1800'],
     type: 'choice',
-    id: '873wpg'
+    id: 't3utl8',
+    ru: {
+      question: 'Независимость Мексики началась в',
+      answer: '1810',
+      options: ['1811', '1812', '1800']
+    }
   },
   {
     question: '¿En qué estado fue el Grito de Independencia?',
@@ -17,14 +22,28 @@ export const questions: QuestionData[] = [
       'Salvatierra - Guanajuato'
     ],
     type: 'choice',
-    id: '09bb4'
+    id: 'st0np9',
+    ru: {
+      question: 'В каком штате прозвучал Крик Независимости?',
+      answer: 'Долорес Идальго - Гуанахуато',
+      options: [
+        'Минераль де Позос - Гуанахуато',
+        'Хальпа - Гуанахуато',
+        'Сальватиерра - Гуанахуато'
+      ]
+    }
   },
   {
     question: '¿Dónde fué la cuna de la independencia?',
     answer: 'Guanajuato',
     options: ['Querétaro', 'Hidalgo', 'Zacatecas'],
     type: 'choice',
-    id: 'dkois'
+    id: 'sx7n8h',
+    ru: {
+      question: 'Где была колыбель независимости?',
+      answer: 'Гуанахуато',
+      options: ['Керетаро', 'Идальго', 'Сакатекас']
+    }
   },
   {
     question: '¿A quién se conoce como “El Padre de la Patria”?',
@@ -35,7 +54,16 @@ export const questions: QuestionData[] = [
       'Agustín de Iturbide'
     ],
     type: 'choice',
-    id: '0s3nnb'
+    id: '71wti',
+    ru: {
+      question: 'Кого знают как «Отца Отечества»?',
+      answer: 'Мигель Идальго и Костилья',
+      options: [
+        'Хосе Мария Морелос и Павон',
+        'Висенте Герреро',
+        'Агустин де Итурбиде'
+      ]
+    }
   },
   {
     question:
@@ -47,7 +75,17 @@ export const questions: QuestionData[] = [
       'Agustín de Iturbide'
     ],
     type: 'choice',
-    id: 'dpm0r'
+    id: '4l9tn',
+    ru: {
+      question:
+        'Кто сказал фразу «Помилование для преступников, а не для защитников Родины»?',
+      answer: 'Мигель Идальго и Костилья',
+      options: [
+        'Хосе Мария Морелос и Павон',
+        'Висенте Герреро',
+        'Агустин де Итурбиде'
+      ]
+    }
   },
   {
     question: 'Imagen presente en el estandarte de Hidalgo (Blasón de Hidalgo)',
@@ -58,7 +96,12 @@ export const questions: QuestionData[] = [
       'La Virgen de la Candelaria'
     ],
     type: 'choice',
-    id: 'huz67s'
+    id: '6l6tqu',
+    ru: {
+      question: 'Изображение на знамени Идальго (Герб Идальго)',
+      answer: 'Дева Гваделупская',
+      options: ['Дева Кармельская', 'Дева Долинная', 'Дева Канделярская']
+    }
   },
   {
     question: 'Día de la Independencia de México (Grito de Dolores)',
@@ -69,21 +112,28 @@ export const questions: QuestionData[] = [
       '16 de septiembre de 1812'
     ],
     type: 'choice',
-    id: 'opwd7'
+    id: 'xdxspl',
+    ru: {
+      question: 'День Независимости Мексики (Крик Долорес)',
+      answer: '16 сентября 1810 года',
+      options: [
+        '16 сентября 1811 года',
+        '16 сентября 1800 года',
+        '16 сентября 1812 года'
+      ]
+    }
   },
   {
     question: 'Nombres de héroes de la independencia',
-    answer: `Miguel Hidalgo y Costilla
-      José María Morelos y Pavón
-      Vicente Guerrero
-      Agustín de Iturbide
-      Ignacio Allende
-      Josefa Ortiz de Domínguez
-      Francisco Javier Mina
-      Juan Aldama
-      Epigmenio González`,
+    answer:
+      'Miguel Hidalgo y Costilla\nJosé María Morelos y Pavón\nVicente Guerrero\n Agustín de Iturbide\nIgnacio Allende\nJosefa Ortiz de Domínguez\nFrancisco Javier Mina\nJuan Aldama\nEpigmenio González',
     type: 'text',
-    id: 'gahct'
+    id: 'z6jqx9',
+    ru: {
+      question: 'Имена героев независимости',
+      answer:
+        'Мигель Идальго и Костилья\nХосе Мария Морелос и Павон\nВисенте Герреро\nАгустин де Итурбиде\nИгнасио Альенде\nХосефа Ортис де Домингес\nФрансиско Хавьер Мина\nХуан Альдама\nЭпигменио Гонсалес'
+    }
   },
   {
     question: 'Mujeres destacadas en la independencia',
@@ -94,14 +144,32 @@ export const questions: QuestionData[] = [
       'María Gertrudis Armendáriz y Josefina Muriel'
     ],
     type: 'choice',
-    id: 'rrniq4'
+    id: 'na8vjc',
+    ru: {
+      question: 'Выдающиеся женщины в борьбе за независимость',
+      answer: 'Хосефа Ортис де Домингес и Леона Викарио',
+      options: [
+        'Хосефина Муриель и Леона Викарио',
+        'Моника Салас и Хосефа Ортис де Домингес',
+        'Мария Гертрудис Армендарис и Хосефина Муриель'
+      ]
+    }
   },
   {
     question: '¿Quién fué conocida como “La Corregidora”?',
     answer: 'Josefa Ortiz de Domínguez',
     options: ['Josefina Muriel', 'Leona Vicario', 'María Gertrudis Armendáriz'],
     type: 'choice',
-    id: 'dlvhv7'
+    id: 'p1ohb',
+    ru: {
+      question: 'Кто была известна как «Коррехидора»?',
+      answer: 'Хосефа Ортис де Домингес',
+      options: [
+        'Хосефина Муриель',
+        'Леона Викарио',
+        'Мария Гертрудис Армендарис'
+      ]
+    }
   },
   {
     question: '¿Quién fué Leona Vicario?',
@@ -113,7 +181,17 @@ export const questions: QuestionData[] = [
       '​Mujer fusilada durante de la Guerra de Independencia'
     ],
     type: 'choice',
-    id: '98d6k9'
+    id: 'edc22e',
+    ru: {
+      question: 'Кто была Леона Викарио?',
+      answer: 'Одна из самых выдающихся женщин в Войне за независимость',
+      options: [
+        'Одна из самых выдающихся женщин в Революции',
+        'Выдающаяся женщина во время завоевания',
+        'Женщина, расстрелянная во время Войны за независимость'
+      ],
+      note: 'Она занималась информированием повстанцев о движениях, которые могли их заинтересовать и происходили в столице Вице-королевства.'
+    }
   },
   {
     question:
@@ -125,7 +203,17 @@ export const questions: QuestionData[] = [
       'Pedro Fernández de Lizardi'
     ],
     type: 'choice',
-    id: '31lov'
+    id: 'x6h9km',
+    ru: {
+      question:
+        'Кто был основателем «El Pensador Mexicano»? (Самая важная газета в эпоху независимости)',
+      answer: 'Хосе Хоакин Фернандес де Лисарди',
+      options: [
+        'Хуан Фернандес де Лисарди',
+        'Мануэль Фернандес де Лисарди',
+        'Педро Фернандес де Лисарди'
+      ]
+    }
   },
   {
     question:
@@ -137,14 +225,29 @@ export const questions: QuestionData[] = [
       'La Gaceta en 1710'
     ],
     type: 'choice',
-    id: 'zuvjml'
+    id: 'zkhsfa',
+    ru: {
+      question:
+        'Какая была первая газета повстанцев (эпоха движения за независимость)?',
+      answer: 'El Despertador Americano в 1810 году',
+      options: [
+        'El Informador Americano в 1910 году',
+        'El Americano в 1510 году',
+        'La Gaceta в 1710 году'
+      ]
+    }
   },
   {
     question: 'Periódico durante el movimiento Independentista',
     answer: 'El Despertador Americano',
     options: ['El Informador', 'El Americano', 'La Gaceta'],
     type: 'choice',
-    id: 'wf1ib'
+    id: '722evln',
+    ru: {
+      question: 'Газета во время движения за независимость',
+      answer: 'El Despertador Americano',
+      options: ['El Informador', 'El Americano', 'La Gaceta']
+    }
   },
   {
     question:
@@ -152,7 +255,13 @@ export const questions: QuestionData[] = [
     answer: 'Colegio de Minería',
     options: ['Colegio de ciencias', 'Colegio de artes', 'Colegio Tlatelolco'],
     type: 'choice',
-    id: 'ddp7m'
+    id: 'pjdbgj',
+    ru: {
+      question:
+        'Первое образовательное учреждение в 1811 году, предназначенное для наук и искусств',
+      answer: 'Горный колледж',
+      options: ['Колледж наук', 'Колледж искусств', 'Колледж Тлателолько']
+    }
   },
   {
     question:
@@ -165,7 +274,18 @@ export const questions: QuestionData[] = [
       'Miguel Hidalgo y Costilla'
     ],
     type: 'choice',
-    id: '3mr2a'
+    id: 'x8bx8l',
+    ru: {
+      question:
+        'Кто сказал фразу: «Не важно, в каком городе или деревне рождаются мужчины или женщины, они, в конце концов, равны своему делу, своему желанию возвеличить и обогатить своих братьев»?',
+      answer: 'Игнасио Альенде',
+      options: [
+        'Висенте Герреро',
+        'Хосе Мария Морелос и Павон',
+        'Мигель Идальго и Костилья'
+      ],
+      note: 'Лидер независимости, расстрелянный вместе с Мигелем Идальго.'
+    }
   },
   {
     question: '¿Quién dijo la frase: “La patria es primero”?',
@@ -176,7 +296,16 @@ export const questions: QuestionData[] = [
       'Ignacio Allende'
     ],
     type: 'choice',
-    id: 'mkim6q'
+    id: 'wkkkqm',
+    ru: {
+      question: 'Кто сказал фразу: «Родина прежде всего»?',
+      answer: 'Висенте Герреро',
+      options: [
+        'Хосе Мария Морелос и Павон',
+        'Мигель Идальго и Костилья',
+        'Игнасио Альенде'
+      ]
+    }
   },
   {
     question:
@@ -188,19 +317,36 @@ export const questions: QuestionData[] = [
       'Nuestros derechos'
     ],
     type: 'choice',
-    id: 'nnihzz'
+    id: 'kmlxb9j',
+    ru: {
+      question:
+        'Текст, в котором упоминаются разделение властей и права коренных народов',
+      answer: 'Чувства Нации',
+      options: ['Конституция Кадиса', 'Соглашения о разделении', 'Наши права']
+    }
   },
   {
     question: '¿Quién escribió el documento "Sentimientos de la Nación"?',
     answer: 'José María Morelos y Pavón',
-    note: 'En 1813, fue la primera expresión pública del deseo de separarse de España.',
+    note: 'El documento "Sentimientos de la Nación" fue escrito por José María Morelos, un destacado líder de la independencia de México. Morelos presentó este documento en 1813 durante el Congreso de Chilpancingo, con el objetivo de establecer las bases de una nueva nación libre del dominio español. En "Sentimientos de la Nación", Morelos expone 23 puntos que reflejan sus ideales de justicia social, igualdad y soberanía nacional. Este documento es considerado un pilar fundamental en la historia de México, ya que sentó las bases para la Constitución de Apatzingán de 1814. A través de su redacción, Morelos dejó un legado de lucha por la independencia y los derechos humanos.',
     options: [
       'Miguel Hidalgo y Costilla',
       'Ignacio Allende',
       'Vicente Guerrero'
     ],
     type: 'choice',
-    id: 'oe0vkq'
+    id: 'yk1zir',
+    noteImage: 'yk1zir.jpg',
+    ru: {
+      question: 'Кто написал документ «Чувства Нации»?',
+      answer: 'Хосе Мария Морелос и Павон',
+      options: [
+        'Мигель Идальго и Костилья',
+        'Игнасио Альенде',
+        'Висенте Герреро'
+      ],
+      note: 'Документ "Чувства нации" был написан Хосе Марией Морелосом, выдающимся лидером мексиканской борьбы за независимость. Морелос представил этот документ в 1813 году на Конгрессе в Чильпансинго с целью заложить основы новой нации, свободной от испанского господства. В "Чувствах нации" Морелос изложил 23 пункта, отражающие его идеалы социальной справедливости, равенства и национального суверенитета. Этот документ считается важнейшим в истории Мексики, так как он стал основой для Конституции Апатсингана 1814 года. Через свое творчество Морелос оставил наследие борьбы за независимость и права человека.'
+    }
   },
   {
     question:
@@ -223,7 +369,16 @@ export const questions: QuestionData[] = [
       'Ignacio Allende'
     ],
     type: 'choice',
-    id: 'cbbl7'
+    id: '4j60ao',
+    ru: {
+      question: 'Кто сказал «Умереть - это ничто, когда умираешь за Родину!»?',
+      answer: 'Хосе Мария Морелос и Павон',
+      options: [
+        'Висенте Герреро',
+        'Мигель Идальго и Костилья',
+        'Игнасио Альенде'
+      ]
+    }
   },
   {
     question: '¿Qué es el Plan de Iguala?',
@@ -235,7 +390,17 @@ export const questions: QuestionData[] = [
       'Promovido por Porfirio Diaz para evitar la reelección de Benito Juárez'
     ],
     type: 'choice',
-    id: 'jh3jma'
+    id: '3qbck',
+    ru: {
+      question: 'Что такое План Игала?',
+      answer:
+        'Политический документ, провозглашенный Агустином де Итурбиде, в котором Новая Испания объявляется суверенной и независимой страной',
+      options: [
+        'Провозглашен генералом Санта-Анной, чтобы не признавать Итурбиде',
+        'Договор, по которому Мексика уступает территории на севере',
+        'Продвигается Порфирио Диасом, чтобы избежать переизбрания Бенито Хуареса'
+      ]
+    }
   },
   {
     question:
@@ -243,7 +408,13 @@ export const questions: QuestionData[] = [
     answer: 'Plan de Iguala',
     options: ['Plan de Tuxtepec', 'Plan de Noria', 'Plan de Ayutla'],
     type: 'choice',
-    id: '4j8p5y'
+    id: 'i3rjsj',
+    ru: {
+      question:
+        'План, подписанный Итурбиде для провозглашения независимости страны, был',
+      answer: 'План Игала',
+      options: ['План Тустепек', 'План Нория', 'План Аютла']
+    }
   },
   {
     question: '¿Cuándo se firmó el tratado o Plan de Iguala?',
@@ -254,7 +425,16 @@ export const questions: QuestionData[] = [
       '24 de Julio de 1821'
     ],
     type: 'choice',
-    id: 'dvr1yp'
+    id: 'brp4x',
+    ru: {
+      question: 'Когда был подписан договор или План Игала?',
+      answer: '24 февраля 1821 года',
+      options: [
+        '1 февраля 1821 года',
+        '24 декабря 1821 года',
+        '24 июля 1821 года'
+      ]
+    }
   },
   {
     question: '¿Qué personajes proclamaron el Plan de Iguala?',
@@ -265,7 +445,16 @@ export const questions: QuestionData[] = [
       'Ignacio Allende y Juan Aldama'
     ],
     type: 'choice',
-    id: 'zs9y7'
+    id: '4el55i',
+    ru: {
+      question: 'Какие личности провозгласили План Игала?',
+      answer: 'Агустин де Итурбиде и Висенте Герреро',
+      options: [
+        'Хосефа Ортис де Домингес и Феликс Каллеха',
+        'Мигель Идальго и Хосе Мария Морелос',
+        'Игнасио Альенде и Хуан Альдама'
+      ]
+    }
   },
   {
     question:
@@ -277,26 +466,51 @@ export const questions: QuestionData[] = [
       'Independencia, Paz y Unión'
     ],
     type: 'choice',
-    id: 's638pg'
+    id: 'pte3lv',
+    ru: {
+      question:
+        'Какие были три основных принципа плана Игала? / Три гарантии Тригарантной армии?',
+      answer: 'Религия, Независимость и Единство',
+      options: [
+        'Оборона, Независимость и Единство',
+        'Оружие, Независимость и Единство',
+        'Независимость, Мир и Единство'
+      ]
+    }
   },
   {
     question: '¿Qué fué el Tratado de Córdoba?',
     answer:
-      'Documento en el que se ratifica la Independencia de México, firmado en la ciudad de Córdoba, Veracruz, el 24 de agosto de 1821, por Agustín de Iturbide, (comandante del Ejército Trigarante) y por Juan O`Donoju (Jefe Político Superior de Nueva España).',
+      'Documento en el que se ratifica la Independencia de México, firmado en la ciudad de Córdoba, Veracruz, el 24 de agosto de 1821, por Agustín de Iturbide, (comandante del Ejército Trigarante) y por Juan O`Donoju (Jefe Político Superior de la Provincia de Nueva España).',
     type: 'text',
-    id: 'e3mvc'
+    id: 'bq7u4j',
+    ru: {
+      question: 'Что такое Кордовский договор?',
+      answer:
+        'Документ, подтверждающий Независимость Мексики, подписанный в городе Кордова, Веракрус, 24 августа 1821 года Агустином де Итурбиде (командиром Тригарантной армии) и Хуаном О`Доноху (Главным политическим руководителем провинции Новая Испания).'
+    }
   },
   {
     question: '¿Cuál fue la primera constitución de México independiente?',
     answer: 'Constitución Federal de 1824',
-    note: 'México se independizó en 1821.',
+    note: 'México fué independiente el 24 de Febrero de 1821 con el Plan de Iguala.',
     options: [
       'Constitución Federal de 1825',
       'Constitución Federal de 1924',
       'Constitución Federal de 1834'
     ],
     type: 'choice',
-    id: '4nobsa'
+    id: 'npgvrb',
+    ru: {
+      question: 'Какой была первая конституция независимой Мексики?',
+      answer: 'Федеральная конституция 1824 года',
+      options: [
+        'Федеральная конституция 1825 года',
+        'Федеральная конституция 1924 года',
+        'Федеральная конституция 1834 года'
+      ],
+      note: 'Мексика стала независимой 24 февраля 1821 года с Планом Игала.'
+    }
   },
   {
     question:
@@ -304,14 +518,25 @@ export const questions: QuestionData[] = [
     answer:
       'En 1822 Iturbide se coronó como Agustín I Emperador de México, en medio del desorden político del país y el desconocimiento de España de la independencia de México.',
     type: 'text',
-    id: 'w8n3cr'
+    id: '6fj4vq',
+    ru: {
+      question:
+        'Что случилось с Итурбиде после достижения независимости Мексики?',
+      answer:
+        'В 1822 году Итурбиде короновался как Агустин I Император Мексики, на фоне политического беспорядка в стране и непризнания Испанией независимости Мексики.'
+    }
   },
   {
     question: 'Nombre del primer emperador en México',
     answer: 'Agustin de Iturbide',
     options: ['Maximiliano de Habsburgo', 'Cuauhtémoc', 'Cesar Augusto'],
     type: 'choice',
-    id: 'np2fwi'
+    id: '3vbzfd',
+    ru: {
+      question: 'Имя первого императора в Мексике',
+      answer: 'Агустин де Итурбиде',
+      options: ['Максимилиан Габсбург', 'Куаутемок', 'Цезарь Август']
+    }
   },
   {
     question: '¿De que se trató el Plan de Casa Mata?',
@@ -324,7 +549,18 @@ export const questions: QuestionData[] = [
       'Proclamado por Adrián Florencio Villareal para terminar con la dictadura de Santa Anna'
     ],
     type: 'choice',
-    id: '1zawu'
+    id: 'l4zcle',
+    ru: {
+      question: 'О чем был План Каса Мата?',
+      answer:
+        'Провозглашен генералом Санта-Анной, чтобы не признавать Итурбиде императором, аннулировать империю и восстановить Конгресс',
+      options: [
+        'Договор, по которому Мексика уступает территории на севере',
+        'Продвигается Порфирио Диасом, чтобы избежать переизбрания Бенито Хуареса',
+        'Провозглашен Адрианом Флоренсио Вильярреалом для окончания диктатуры Санта-Анны'
+      ],
+      note: '1 февраля 1823 года в имении Касамата, Веракрус.'
+    }
   },
   {
     question: '¿Quién fué el primer presidente de México?',
@@ -336,14 +572,28 @@ export const questions: QuestionData[] = [
       'Vicente Guerrero'
     ],
     type: 'choice',
-    id: 'v4swm'
+    id: 'msess',
+    ru: {
+      question: 'Кто был первым президентом Мексики?',
+      answer: 'Гвадалупе Виктория',
+      options: [
+        'Хосе Мария Боканегра',
+        'Анастасио Бустаманте',
+        'Висенте Герреро'
+      ]
+    }
   },
   {
     question: '¿Qué fué la batalla de Chapultepec?',
     answer:
       'Fue un conflicto armado que tuvo lugar el día lunes 13 de septiembre de 1847 en el cerro llamado Chapultepec. En el combate intervinieron los ejércitos de Estados Unidos y de México. El motivo de la batalla, y de la invasión en general, fue que Estados Unidos deseaba apoderarse del territorio al norte del Río Bravo, incluido Texas.',
     type: 'text',
-    id: '108ps'
+    id: '7cxvewb',
+    ru: {
+      question: 'Что было битвой при Чапультепеке?',
+      answer:
+        'Это был вооруженный конфликт, который произошел в понедельник, 13 сентября 1847 года на холме под названием Чапультепек. В бою участвовали армии США и Мексики. Причиной битвы и вторжения в целом было желание США завладеть территорией к северу от реки Браво, включая Техас.'
+    }
   },
   {
     question:
@@ -351,32 +601,49 @@ export const questions: QuestionData[] = [
     answer: 'Niños héroes',
     options: ['Niños militares', 'Niños salvadores', 'Niños patrióticos'],
     type: 'choice',
-    id: 'jvf5at'
+    id: '4lgmud',
+    ru: {
+      question:
+        'Военные кадеты, защищавшие Замок Чапультепек от американского вторжения 13 сентября 1847 года',
+      answer: 'Детишки герои',
+      options: ['Военные дети', 'Дети спасатели', 'Патриотические дети']
+    }
   },
   {
     question: 'Nombre de cadetes que enfrentaron a Estados Unidos en CDMX',
     answer: 'Niños héroes',
     options: ['Los liberadores', 'Los conservadores', 'Niños patrióticos'],
     type: 'choice',
-    id: 'x7rgj4'
+    id: 'cpjmxi',
+    ru: {
+      question: 'Имя кадетов, сражавшихся против США в Мехико',
+      answer: 'Детишки герои',
+      options: ['Освободители', 'Консерваторы', 'Патриотические дети']
+    }
   },
   {
     question: '¿Dónde esta ubicado el Castillo de Chapultepec?',
     answer: 'Cuidad de México',
     options: ['Zacatecas', 'Morelos', 'Jalisco'],
     type: 'choice',
-    id: '01im4g'
+    id: 'sfnp9f',
+    ru: {
+      question: 'Где находится замок Чапультепек?',
+      answer: 'Мехико',
+      options: ['Сакатекас', 'Морелос', 'Халиско']
+    }
   },
   {
     question: 'Nombres de los Niños Héroes',
-    answer: `Juan Escutia
-      Juan de la Barrera
-      Agustín Melgar
-      Fernando Montes de Oca
-      Vicente Suárez
-      Francisco Márquez`,
+    answer:
+      'Juan Escutia\nJuan de la Barrera\nAgustín Melgar\nFernando Montes de Oca\nVicente Suárez \nFrancisco Márquez',
     type: 'text',
-    id: '66y8ka'
+    id: 'ku09mw',
+    ru: {
+      question: 'Имена Детей Героев',
+      answer:
+        'Хуан Эскутия\nХуан де ла Баррера\nАгустин Мельгар\nФернандо Монтес де Ока\nВисенте Суарес\nФрансиско Маркес'
+    }
   },
   {
     question: '¿Cuál fue el niño héroe más pequeño?',
@@ -384,7 +651,13 @@ export const questions: QuestionData[] = [
     note: '12 años.',
     options: ['Fernando Montes de Oca', 'Vicente Suárez', 'Juan Escutia'],
     type: 'choice',
-    id: '41345l'
+    id: 'a66wyr',
+    ru: {
+      question: 'Кто был самым молодым Детем Героем?',
+      answer: 'Франсиско Маркес',
+      options: ['Фернандо Монтес де Ока', 'Висенте Суарес', 'Хуан Эскутия'],
+      note: '12 лет.'
+    }
   },
   {
     question:
@@ -392,7 +665,13 @@ export const questions: QuestionData[] = [
     answer: 'Juan Escutia',
     options: ['Fernando Montes de Oca', 'Vicente Suárez', 'Francisco Márquez'],
     type: 'choice',
-    id: 'njbt0a'
+    id: 'nq08b',
+    ru: {
+      question:
+        'Как зовут Дитя Героя, который бросился с замка, завернувшись в флаг?',
+      answer: 'Хуан Эскутия',
+      options: ['Фернандо Монтес де Ока', 'Висенте Суарес', 'Франсиско Маркес']
+    }
   },
   {
     question: 'Tratado de Guadalupe Hidalgo',
@@ -405,7 +684,18 @@ export const questions: QuestionData[] = [
       'Documento en el que se acuerda la Independencia de México'
     ],
     type: 'choice',
-    id: 'dbwqk'
+    id: 'r8zybd',
+    ru: {
+      question: 'Гуадалупе-Идальго договор',
+      answer:
+        'Договор, по которому Мексика уступает территории Калифорнии, Нью-Мексико, Аризоны и Невады',
+      options: [
+        'Не распространение ядерного оружия',
+        'Провозглашен Адрианом Флоренсио Вильярреалом для окончания диктатуры Санта-Анны',
+        'Документ, по которому согласована Независимость Мексики'
+      ],
+      note: 'Подписан 2 февраля 1848 года, положив конец войне с США.'
+    }
   },
   {
     question:
@@ -413,7 +703,12 @@ export const questions: QuestionData[] = [
     answer: 'Tratado Guadalupe Hidalgo',
     options: ['Plan de Tuxtepec', 'Plan de Noria', 'Plan de Ayutla'],
     type: 'choice',
-    id: 'kl0lq'
+    id: 'seq0o',
+    ru: {
+      question: 'Какой договор положил конец войне с США?',
+      answer: 'Гуадалупе-Идальго договор',
+      options: ['План Тустепек', 'План Нория', 'План Аютла']
+    }
   },
   {
     question: '¿De qué se trató el Plan de Ayutla?',
@@ -426,7 +721,18 @@ export const questions: QuestionData[] = [
       'Promovido por Porfirio Diaz para evitar la reelección de Benito Juárez'
     ],
     type: 'choice',
-    id: '9z4s8q'
+    id: '6lbj8b',
+    ru: {
+      question: 'О чем был План Аютла?',
+      answer:
+        'Провозглашен Адрианом Флоренсио Вильярреалом, чтобы положить конец диктатуре Антонио Лопеса де Санта Анны',
+      options: [
+        'Не распространение ядерного оружия',
+        'Документ, по которому согласована Независимость Мексики',
+        'Продвигается Порфирио Диасом, чтобы избежать переизбрания Бенито Хуареса'
+      ],
+      note: '1 марта 1854 года.'
+    }
   },
   {
     question:
@@ -438,7 +744,17 @@ export const questions: QuestionData[] = [
       'Gral. Henry H. Arnold (Guerra contra EEUU)'
     ],
     type: 'choice',
-    id: 'wrclc'
+    id: '56sg5n',
+    ru: {
+      question:
+        'Кто победил генерала Санта Анну в битве при Сан-Хасинто 21 апреля 1836 года?',
+      answer: 'Генерал Самуэль Хьюстон (Война против США за Техас)',
+      options: [
+        'Генерал Джордж К. Маршалл (Война против Франции)',
+        'Генерал Дуглас Макартур (Война против Англии)',
+        'Генерал Генри Х. Арнольд (Война против США)'
+      ]
+    }
   },
   {
     question: 'La Guerra de Reforma fue entre',
@@ -450,7 +766,17 @@ export const questions: QuestionData[] = [
       'Cuidadanos y el gobierno'
     ],
     type: 'choice',
-    id: 'oxykccc'
+    id: 'o0eo08',
+    ru: {
+      question: 'Реформенная война была между',
+      answer: 'Либералами и Консерваторами',
+      options: [
+        'Мексикой и Францией',
+        'Коммунистами и империалистами',
+        'Гражданами и правительством'
+      ],
+      note: 'Выиграли либералы (Бенито Хуарес), также называемая войной трех лет.'
+    }
   },
   {
     question: '¿Cuál fue la guerra de los 3 años?',
@@ -461,7 +787,16 @@ export const questions: QuestionData[] = [
       'La Guerra Liberal (1850 - 1853)'
     ],
     type: 'choice',
-    id: 'jeh25'
+    id: 'vav3c',
+    ru: {
+      question: 'Что было войной трех лет?',
+      answer: 'Реформенная война (1857 - 1860)',
+      options: [
+        'Война за независимость (1810 - 1813)',
+        'Последняя война (1960 - 1963)',
+        'Либеральная война (1850 - 1853)'
+      ]
+    }
   },
   {
     question:
@@ -469,7 +804,13 @@ export const questions: QuestionData[] = [
     answer: 'Conservadores',
     options: ['Liberales', 'Imparciales', 'Cristianos'],
     type: 'choice',
-    id: '2s6lk'
+    id: '3sx4kq',
+    ru: {
+      question:
+        'Группа, которая продвигала экономическое развитие, не затрагивая церковь и военных',
+      answer: 'Консерваторы',
+      options: ['Либералы', 'Беспристрастные', 'Христиане']
+    }
   },
   {
     question:
@@ -477,7 +818,13 @@ export const questions: QuestionData[] = [
     answer: 'Liberales (Benito Juárez)',
     options: ['Conservadores', 'Cristianos', 'Franceses'],
     type: 'choice',
-    id: '4749pd'
+    id: '7gm5zn',
+    ru: {
+      question:
+        'Группа, которая продвигала национальную интеграцию и открыла путь к капитализму',
+      answer: 'Либералы (Бенито Хуарес)',
+      options: ['Консерваторы', 'Христиане', 'Французы']
+    }
   },
   {
     question: '¿Quién fue Benito Pablo Juárez García?',
@@ -489,7 +836,17 @@ export const questions: QuestionData[] = [
       'Presidente de México de 1860 a 1866 que promovió el Plan de Tuxtepec'
     ],
     type: 'choice',
-    id: 'j9yh8'
+    id: 'qzmya6',
+    ru: {
+      question: 'Кто был Бенито Пабло Хуарес Гарсия?',
+      answer:
+        'Президент Мексики с 1857 по 1872 год, который продвигал Законы о реформах',
+      options: [
+        'Президент Мексики с 1857 по 1872 год, который продвигал НАФТА',
+        'Президент Мексики с 1957 по 1963 год, который продвигал План Нория',
+        'Президент Мексики с 1860 по 1866 год, который продвигал План Тустепек'
+      ]
+    }
   },
   {
     question:
@@ -501,7 +858,13 @@ export const questions: QuestionData[] = [
       'Sentimientos de la Nacion'
     ],
     type: 'choice',
-    id: 'iqu2tj'
+    id: 'dcpl1',
+    ru: {
+      question:
+        'Как называются законы, продвигаемые Хуаном Альваресом, Игнасио Комонфортом и Бенито Хуаресом для отделения церкви от государства?',
+      answer: 'Законы о реформах',
+      options: ['Новые законы', 'Законы сепаратистов', 'Чувства Нации']
+    }
   },
   {
     question:
@@ -513,14 +876,29 @@ export const questions: QuestionData[] = [
       'Vicente Guerrero'
     ],
     type: 'choice',
-    id: 'qrk8jk'
+    id: 'vid4qi',
+    ru: {
+      question:
+        'Мексиканский президент, которому приписывают фразу «Между людьми, как между нациями, уважение к чужим правам есть мир»',
+      answer: 'Бенито Хуарес',
+      options: [
+        'Хосе Мария Боканегра',
+        'Анастасио Бустаманте',
+        'Висенте Герреро'
+      ]
+    }
   },
   {
     question: '¿A quién le llaman el benemérito de las américas?',
     answer: 'Benito Juárez',
     options: ['Guadalupe Victoria', 'Anastacio Bustamante', 'Vicente Guerrero'],
     type: 'choice',
-    id: '4unmra'
+    id: 'eyzvo',
+    ru: {
+      question: 'Кого называют благодетелем Америки?',
+      answer: 'Бенито Хуарес',
+      options: ['Гвадалупе Виктория', 'Анастасио Бустаманте', 'Висенте Герреро']
+    }
   },
   {
     question: 'Fecha en que se estableció el primer registro civil',
@@ -531,7 +909,16 @@ export const questions: QuestionData[] = [
       '28 de Noviembre de 1889'
     ],
     type: 'choice',
-    id: 'nl771w'
+    id: '0wfh8d',
+    ru: {
+      question: 'Дата учреждения первого гражданского регистра',
+      answer: '28 июля 1859 года',
+      options: [
+        '28 декабря 1750 года',
+        '5 марта 1900 года',
+        '28 ноября 1889 года'
+      ]
+    }
   },
   {
     question: 'Fecha en que se expidió la primera acta de nacimiento',
@@ -542,14 +929,28 @@ export const questions: QuestionData[] = [
       '05 de noviembre de 1959'
     ],
     type: 'choice',
-    id: 'y0oxw'
+    id: 's5n1y',
+    ru: {
+      question: 'Дата выдачи первого свидетельства о рождении',
+      answer: '10 ноября 1859 года',
+      options: [
+        '15 декабря 1559 года',
+        '20 января 1779 года',
+        '5 ноября 1959 года'
+      ]
+    }
   },
   {
     question: '¿Cuándo fue la Batalla de Puebla?',
     answer: '5 de mayo de 1862',
     options: ['15 de mayo de 1862', '20 de mayo de 1962', '25 de mayo de 1762'],
     type: 'choice',
-    id: 'lvmu9m'
+    id: 'ves8i7',
+    ru: {
+      question: 'Когда была битва при Пуэбле?',
+      answer: '5 мая 1862 года',
+      options: ['15 мая 1862 года', '20 мая 1962 года', '25 мая 1762 года']
+    }
   },
   {
     question: '¿Qué fué la Batalla de Puebla?',
@@ -562,14 +963,30 @@ export const questions: QuestionData[] = [
       'Fue una victoria militar de los realistas sobre las fuerzas insurgentes mexicanas durante la Guerra de Independencia'
     ],
     type: 'choice',
-    id: 'l2wbkn'
+    id: '3kf1de',
+    ru: {
+      question: 'Что было битвой при Пуэбле?',
+      answer:
+        'Вооруженный конфликт под руководством Игнасио Сарагосы против второй французской интервенции, где Мексика одержала победу',
+      options: [
+        'Битва под командованием генерала Франсиско Ксавьера Мины, одержавшего победу над роялистами',
+        'Битва под командованием Игнасио Лопеса Района, потерпевшего поражение в бою от роялистов генерала Эмпарана',
+        'Военная победа роялистов над мексиканскими повстанческими силами во время войны за независимость'
+      ],
+      note: 'Позже с новой армией французы побеждают мексиканцев и устанавливают второй имперский режим под командованием Максимилиана Габсбурга.'
+    }
   },
   {
     question: '¿Quién fué el emperador del segundo imperio mexicano?',
     answer: 'Maximiliano de Habsburgo',
     options: ['Agustín de Iturbide', 'Cuauhtémoc', 'Cesar Augusto'],
     type: 'choice',
-    id: 'u2y96s'
+    id: '3f17tc',
+    ru: {
+      question: 'Кто был императором второй мексиканской империи?',
+      answer: 'Максимилиан Габсбург',
+      options: ['Агустин де Итурбиде', 'Куаутемок', 'Цезарь Август']
+    }
   },
   {
     question: '¿Quién hizo el trazo de Paseo de la Reforma y cómo se llamó?',
@@ -580,7 +997,16 @@ export const questions: QuestionData[] = [
       'Guadalupe Victoria, se llamó Paseo Guadalupe'
     ],
     type: 'choice',
-    id: 'ukrve'
+    id: 'fmrbfj',
+    ru: {
+      question: 'Кто разработал проект Paseo de la Reforma и как он назывался?',
+      answer: 'Максимилиан Габсбург, назывался Paseo de la Emperatriz',
+      options: [
+        'Агустин де Итурбиде, назывался Paseo del Emperador',
+        'Куаутемок, назывался Paseo del Imperio',
+        'Гвадалупе Виктория, назывался Paseo Guadalupe'
+      ]
+    }
   },
   {
     question: '¿Cuándo y dónde murió Maximiliano de Habsburgo?',
@@ -591,7 +1017,16 @@ export const questions: QuestionData[] = [
       '15 de Marzo de 1767 en Coahuila'
     ],
     type: 'choice',
-    id: 'dhijzf'
+    id: 'tb600h',
+    ru: {
+      question: 'Когда и где умер Максимилиан Габсбург?',
+      answer: '19 июня 1867 года в Керетаро',
+      options: [
+        '10 декабря 1897 года в Сакатекасе',
+        '25 января 1880 года в Дуранго',
+        '15 марта 1767 года в Коауиле'
+      ]
+    }
   },
   {
     question:
@@ -604,7 +1039,17 @@ export const questions: QuestionData[] = [
       'Vicente Guerrero'
     ],
     type: 'choice',
-    id: '9m97oj'
+    id: '9qsob7',
+    ru: {
+      question: 'Кто занял пост президента после смерти Бенито Хуареса?',
+      answer: 'Себастьян Лердо де Техада',
+      options: [
+        'Хосе Мария Боканегра',
+        'Анастасио Бустаманте',
+        'Висенте Герреро'
+      ],
+      note: 'Он был председателем Верховного суда.'
+    }
   },
   {
     question:
@@ -612,7 +1057,13 @@ export const questions: QuestionData[] = [
     answer: '1842',
     options: ['1942', '1800', '1835'],
     type: 'choice',
-    id: 'ulsbr4'
+    id: '43twum',
+    ru: {
+      question:
+        'В каком году начались работы по строительству первой железной дороги в Мексике?',
+      answer: '1842',
+      options: ['1942', '1800', '1835']
+    }
   },
   {
     question:
@@ -620,7 +1071,13 @@ export const questions: QuestionData[] = [
     answer: '1850',
     options: ['1860 ', '1970', '1830'],
     type: 'choice',
-    id: 'qw1m1'
+    id: 'qbo78',
+    ru: {
+      question:
+        'В каком году был открыт первый железнодорожный участок в Мексике (Веракрус - Эль Молино)?',
+      answer: '1850',
+      options: ['1860', '1970', '1830']
+    }
   },
   {
     question:
@@ -628,7 +1085,13 @@ export const questions: QuestionData[] = [
     answer: 'USA',
     options: ['Belice', 'Guatemala', 'Francia'],
     type: 'choice',
-    id: 'de96b'
+    id: 'msd6vq',
+    ru: {
+      question:
+        'Мексика потеряла половину своей территории в середине XIX века в результате столкновения с',
+      answer: 'США',
+      options: ['Белиз', 'Гватемала', 'Франция']
+    }
   },
   {
     question:
@@ -641,7 +1104,18 @@ export const questions: QuestionData[] = [
       'Batallón de San Nicolás'
     ],
     type: 'choice',
-    id: 'i7t90k'
+    id: 'tno9tc',
+    ru: {
+      question:
+        'Иностранный батальон, участвовавший и помогавший Мексике в войне против США',
+      answer: 'Батальон Святого Патрика',
+      options: [
+        'Батальон Святого Киприана',
+        'Батальон Святого Иакова',
+        'Батальон Святого Николая'
+      ],
+      note: 'Это было воинское подразделение, состоящее из сотен европейских иммигрантов (немцев, ирландцев и американцев), которые сражались в мексиканской армии против вторжения США с 1846 по 1848 год. Они взяли имя святого покровителя Ирландии.'
+    }
   },
   {
     question: '¿Quién fué Porfirio Díaz?',
@@ -653,7 +1127,17 @@ export const questions: QuestionData[] = [
       'Lider de la victoria militar de los realistas sobre las fuerzas insurgentes mexicanas'
     ],
     type: 'choice',
-    id: 'he1zzs'
+    id: 'ftiuhn',
+    ru: {
+      question: 'Кто был Порфирио Диас?',
+      answer:
+        'Мексиканский военный, отличившийся в битве 5 мая в Пуэбле против французов, позднее президент Мексики',
+      options: [
+        'Известен продвижением борьбы за независимость',
+        'Автор знаменитых Катринас',
+        'Лидер военной победы роялистов над мексиканскими повстанческими силами'
+      ]
+    }
   },
   {
     question: 'Nombre completo de Porfirio Diaz',
@@ -664,7 +1148,16 @@ export const questions: QuestionData[] = [
       'Juan Jose Porfirio Diaz Méndez'
     ],
     type: 'choice',
-    id: '72dwx'
+    id: 'tycqlp',
+    ru: {
+      question: 'Полное имя Порфирио Диас',
+      answer: 'Хосе де ла Крус Порфирио Диас Мори',
+      options: [
+        'Хосе Порфирио Крус Диас Родригес',
+        'Хосе Мануэль Порфирио Гомес Диас',
+        'Хуан Хосе Порфирио Диас Мендес'
+      ]
+    }
   },
   {
     question: '¿De que se trató el Plan de Tuxtepec?',
@@ -677,7 +1170,18 @@ export const questions: QuestionData[] = [
       'Plan promovido por Porfirio Diaz para evitar la reelección de Benito Juárez'
     ],
     type: 'choice',
-    id: 'rev6qf'
+    id: '7yzg3j',
+    ru: {
+      question: 'О чем был План Тустепек?',
+      answer:
+        'План, разработанный Порфирио Диасом для свержения правительства Себастьяна Лердо де Техады и предотвращения его переизбрания',
+      options: [
+        'Не распространение ядерного оружия',
+        'Провозглашен Адрианом Флоренсио Вильярреалом для окончания диктатуры Санта-Анны',
+        'План, продвигаемый Порфирио Диасом для предотвращения переизбрания Бенито Хуареса'
+      ],
+      note: '10 января 1876 года, подписан в Тустепеке, Оахака.'
+    }
   },
   {
     question:
@@ -686,7 +1190,14 @@ export const questions: QuestionData[] = [
     note: '1871.',
     options: ['Plan de Iguala', 'Plan de Ayutla', 'Plan de Tuxtepec'],
     type: 'choice',
-    id: 's3z4b'
+    id: '38o62c',
+    ru: {
+      question:
+        'Как назывался план, продвигаемый Порфирио Диасом для предотвращения переизбрания Бенито Хуареса?',
+      answer: 'План Ла Нория или Революция Ла Нория',
+      options: ['План Игала', 'План Аютла', 'План Тустепек'],
+      note: '1871 год.'
+    }
   },
   {
     question:
@@ -694,7 +1205,13 @@ export const questions: QuestionData[] = [
     answer: 'Plan de Noria',
     options: ['Plan de Tuxtepec', 'Plan de Iguala', 'Plan de Ayutla'],
     type: 'choice',
-    id: '2cahy'
+    id: '803vqf',
+    ru: {
+      question:
+        'Политико-военное движение, возглавляемое Порфирио Диасом в 1871 году для предотвращения переизбрания Бенито Хуареса',
+      answer: 'План Ла Нория',
+      options: ['План Тустепек', 'План Игала', 'План Аютла']
+    }
   },
   {
     question: 'Presidente mexicano que duró más de treinta años en el poder',
@@ -702,14 +1219,26 @@ export const questions: QuestionData[] = [
     note: 'Duró 34 años.',
     options: ['Benito Juárez', 'Guadalupe Victoria', 'Vicente Fox'],
     type: 'choice',
-    id: 'g4linu'
+    id: 'rdbf3f',
+    ru: {
+      question:
+        'Мексиканский президент, который пробыл у власти более тридцати лет',
+      answer: 'Порфирио Диас',
+      options: ['Бенито Хуарес', 'Гвадалупе Виктория', 'Висенте Фокс'],
+      note: 'Пробыл 34 года.'
+    }
   },
   {
     question: 'El Porfiriato se conoce como una época de extensión de',
     answer: 'Las vías férreas',
     options: ['Las vías aéreas', 'Las carreteras', 'La tecnología'],
     type: 'choice',
-    id: '97sr7'
+    id: 'a9p27c',
+    ru: {
+      question: 'Порфириат известен как эпоха расширения',
+      answer: 'Железных дорог',
+      options: ['Воздушных путей', 'Шоссейных дорог', 'Технологий']
+    }
   },
   {
     question: 'Etapa pre-revolucionaria',
@@ -720,7 +1249,16 @@ export const questions: QuestionData[] = [
       '1913 a 1920 (Constitucionalismo)'
     ],
     type: 'choice',
-    id: 'rzov8'
+    id: '8mlqzf',
+    ru: {
+      question: 'Предреволюционный этап',
+      answer: '1876 по 1910 год (Порфириат)',
+      options: [
+        '1976 по 1980 год (Мадеризм)',
+        '1929 по 1932 год (Карденизм)',
+        '1913 по 1920 год (Конституционализм)'
+      ]
+    }
   },
   {
     question: 'Periódico revolucionario en la época en el Porfiriato',
@@ -731,17 +1269,24 @@ export const questions: QuestionData[] = [
       'La Gaceta de México'
     ],
     type: 'choice',
-    id: 'br29sk'
+    id: 'jhm84v',
+    ru: {
+      question: 'Революционная газета в эпоху Порфириата',
+      answer: 'El hijo de Ahuizote',
+      options: ['Сын своей мамы', 'Сын Ажолоте', 'Газета Мексики']
+    }
   },
   {
     question: 'Obras más importantes del Porfiriato',
-    answer: `El Teléfono
-      El Sistema Ferroviario
-      El Teatro de Bellas Artes
-      El Ángel de la Independencia
-      El Palacio Postal`,
+    answer:
+      'El Teléfono\nEl Sistema Ferroviario\nEl Teatro de Bellas Artes\nEl Ángel de la Independencia\nEl Palacio Postal',
     type: 'text',
-    id: 'azovwr'
+    id: '4vc9n',
+    ru: {
+      question: 'Самые важные произведения эпохи Порфириата',
+      answer:
+        'Телефон\nЖелезнодорожная система\nТеатр изящных искусств\nАнгел Независимости\nПочтовый дворец'
+    }
   },
   {
     question:
@@ -750,14 +1295,26 @@ export const questions: QuestionData[] = [
     note: 'El 16 de Septiembre de 1878. En un tendido que iba desde el Castillo Chapultepec hasta Palacio Nacional.',
     options: ['El fonógrafo', 'El tranvía', 'El gran canal'],
     type: 'choice',
-    id: 'z8k069'
+    id: 'dmvcb9',
+    ru: {
+      question:
+        'Технологический вклад в страну во время правления Порфирио Диаса',
+      answer: 'Телефон',
+      options: ['Фонограф', 'Трамвай', 'Большой канал'],
+      note: '16 сентября 1878 года. В прокладке, простирающейся от замка Чапультепек до Национального дворца.'
+    }
   },
   {
     question: '¿Que inauguró Porfirio Diaz el 17 de febrero de 1907?',
     answer: 'El Palacio Postal',
     options: ['El tranvía', 'El gran canal', 'El cine'],
     type: 'choice',
-    id: 'vff8lh'
+    id: '0l4ws9',
+    ru: {
+      question: 'Что открыл Порфирио Диас 17 февраля 1907 года?',
+      answer: 'Почтовый дворец',
+      options: ['Трамвай', 'Большой канал', 'Кино']
+    }
   },
   {
     question:
@@ -765,7 +1322,13 @@ export const questions: QuestionData[] = [
     answer: 'Ley de fuga',
     options: ['Ley de fusilamiento', 'Ley de Porfirio', 'Ley de calles'],
     type: 'choice',
-    id: '6o6gt6'
+    id: 'dtuuwm',
+    ru: {
+      question:
+        'Обычная форма убийства в эпоху Порфириата или метод расстрела, использовавшийся в эпоху Порфириата',
+      answer: 'Закон о побеге',
+      options: ['Закон о расстреле', 'Закон Порфирио', 'Закон улиц']
+    }
   },
   {
     question: '¿A que se conoce como la Ley de Fuga?',
@@ -777,7 +1340,17 @@ export const questions: QuestionData[] = [
       'Deportación de obreros en el Porfiriato'
     ],
     type: 'choice',
-    id: 'zszcgj'
+    id: 'kumpd',
+    ru: {
+      question: 'Что известно как Закон о побеге?',
+      answer: 'Тип казни, использовавшийся в эпоху Порфириата',
+      options: [
+        'Изгнание из страны, использовавшееся в эпоху Порфириата',
+        'Наказание за неуплату налогов',
+        'Депортация рабочих в эпоху Порфириата'
+      ],
+      note: 'Заключалось в том, чтобы заставить заключенного поверить, что он может сбежать, чтобы убить его в спину.'
+    }
   },
   {
     question:
@@ -785,7 +1358,13 @@ export const questions: QuestionData[] = [
     answer: 'Porfirio Díaz',
     options: ['Vicente Fox', 'Benito Juárez', 'Francisco I. Madero'],
     type: 'choice',
-    id: 'lter3s'
+    id: 'wlitd',
+    ru: {
+      question:
+        'Какой президент сказал: «Так далеко от Бога и так близко к Соединенным Штатам»?',
+      answer: 'Порфирио Диас',
+      options: ['Висенте Фокс', 'Бенито Хуарес', 'Франсиско И. Мадеро']
+    }
   },
   {
     question: '¿Cuando se inauguró el Ángel de la independencia?',
@@ -796,7 +1375,16 @@ export const questions: QuestionData[] = [
       '10 de septiembre de 1910'
     ],
     type: 'choice',
-    id: 'mso2vs'
+    id: 'kk4wt',
+    ru: {
+      question: 'Когда был открыт Ангел независимости?',
+      answer: '16 сентября 1910 года',
+      options: [
+        '5 сентября 1910 года',
+        '20 сентября 1910 года',
+        '10 сентября 1910 года'
+      ]
+    }
   },
   {
     question: '¿En qué año se fundó la UNAM?',
@@ -808,14 +1396,29 @@ export const questions: QuestionData[] = [
       'El 15 de Octubre de 1910'
     ],
     type: 'choice',
-    id: 'it2359'
+    id: '97ib7',
+    ru: {
+      question: 'В каком году был основан УНАМ?',
+      answer: '22 сентября 1910 года',
+      options: [
+        '22 декабря 1910 года',
+        '22 февраля 1910 года',
+        '15 октября 1910 года'
+      ],
+      note: 'Хусто Сьерра во время правления Порфирио Диаса.'
+    }
   },
   {
     question: '¿Cuál es la universidad más antigua de México?',
     answer: 'UNAM',
     options: ['BUAP', 'UGTO', 'UDG'],
     type: 'choice',
-    id: 'sq7f2d'
+    id: '1cmmne',
+    ru: {
+      question: 'Какой университет является самым старым в Мексике?',
+      answer: 'УНАМ',
+      options: ['БУАП', 'УГТО', 'УДГ']
+    }
   },
   {
     question: 'Lema de la UNAM',
@@ -826,7 +1429,16 @@ export const questions: QuestionData[] = [
       'Por mi raza hablarán mañana'
     ],
     type: 'choice',
-    id: 'lwlx8a'
+    id: 'oxvm77',
+    ru: {
+      question: 'Девиз УНАМ',
+      answer: 'За мою расу будет говорить дух',
+      options: [
+        'За мою расу будет говорить народ',
+        'За мой дух',
+        'За мою расу будут говорить завтра'
+      ]
+    }
   },
   {
     question: '¿Quién dijo la frase “Por mi raza hablará el espíritu”?',
@@ -837,7 +1449,16 @@ export const questions: QuestionData[] = [
       'Justo Sierra'
     ],
     type: 'choice',
-    id: '83v37u'
+    id: 'pf7qtc',
+    ru: {
+      question: 'Кто сказал фразу «За мою расу будет говорить дух»?',
+      answer: 'Хосе Васконселос',
+      options: [
+        'Хосе Мария Пино Суарес',
+        'Игнасио Гарсия Теллес',
+        'Хусто Сьерра'
+      ]
+    }
   },
   {
     question:
@@ -849,7 +1470,17 @@ export const questions: QuestionData[] = [
       'Justo Sierra'
     ],
     type: 'choice',
-    id: 'mdys1j'
+    id: '3sn3g',
+    ru: {
+      question:
+        'Кто сказал фразу «Я не пришел работать ради университета, я пришел попросить университет работать ради народа»?',
+      answer: 'Хосе Васконселос',
+      options: [
+        'Хосе Мария Пино Суарес',
+        'Игнасио Гарсия Теллес',
+        'Хусто Сьерра'
+      ]
+    }
   },
   {
     question: '¿Qué presidente le dio autonomía a la UNAM?',
@@ -860,6 +1491,15 @@ export const questions: QuestionData[] = [
       'Lázaro Cárdenas del Río'
     ],
     type: 'choice',
-    id: '4umbdc'
+    id: 'veft0m',
+    ru: {
+      question: 'Какой президент дал автономию УНАМ?',
+      answer: 'Эмилио Портес Хиль',
+      options: [
+        'Паскуаль Ортис Рубио',
+        'Абелардо Родригес Лухан',
+        'Ласаро Карденас дель Рио'
+      ]
+    }
   }
 ];

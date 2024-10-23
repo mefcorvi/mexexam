@@ -6,7 +6,12 @@ export const questions: QuestionData[] = [
     answer: 'Tequila',
     options: ['Vodka', 'Whisky', 'Mojito'],
     type: 'choice',
-    id: '3j9ub'
+    id: 'rtt498',
+    ru: {
+      question: 'Типичный напиток Мексики',
+      answer: 'Текила',
+      options: ['Водка', 'Виски', 'Мохито']
+    }
   },
   {
     question:
@@ -14,7 +19,13 @@ export const questions: QuestionData[] = [
     answer: 'Tamal',
     options: ['Pozole', 'Sopitos', 'Tatemado'],
     type: 'choice',
-    id: 'xt97xd'
+    id: '0tk2bj',
+    ru: {
+      question:
+        'Типичное мексиканское блюдо из кукурузной муки, завернутое в банановый лист',
+      answer: 'Тамаль',
+      options: ['Позоле', 'Сопитос', 'Татемадо']
+    }
   },
   {
     question: '¿Qué son escamoles?',
@@ -22,7 +33,13 @@ export const questions: QuestionData[] = [
     note: 'Son huevos de la hormiga güijera, apreciadas en México desde tiempos prehispánicos. Las hormigas escamoleras son muy agresivas, lo cual, dificulta su explotación y hace de los escamoles un platillo caro.',
     options: ['Gusanos', 'Grillos', 'Avispas'],
     type: 'choice',
-    id: '2nahd'
+    id: 'kc1i08',
+    ru: {
+      question: 'Что такое эскамолес?',
+      answer: 'Яйца муравьев',
+      options: ['Черви', 'Сверчки', 'Осы'],
+      note: 'Это яйца муравьев güijera, ценимые в Мексике с доиспанских времен. Муравьи эскамолеры очень агрессивны, что затрудняет их добычу и делает эскамолес дорогим блюдом.'
+    }
   },
   {
     question: 'Productos originarios de México',
@@ -33,14 +50,28 @@ export const questions: QuestionData[] = [
       'Maiz, aguacate, quinoa, trigo'
     ],
     type: 'choice',
-    id: 'qlwia'
+    id: '2i8j5l',
+    ru: {
+      question: 'Продукты, происходящие из Мексики',
+      answer: 'Шоколад, авокадо, помидор, индейка',
+      options: [
+        'Фасоль, помидор, нопал, вишня',
+        'Джикама, ваниль, кофе, халапеньо',
+        'Кукуруза, авокадо, киноа, пшеница'
+      ]
+    }
   },
   {
     question: 'Dulce típico de Xochimilco hecho de amaranto',
     answer: 'Alegría',
     options: ['Chocolate de mesa', 'Tamarindo enchilado', 'Mazapán'],
     type: 'choice',
-    id: 'dsqnq4'
+    id: 'sm08sx',
+    ru: {
+      question: 'Типичный сладость из Сочимилько, сделанный из амаранта',
+      answer: 'Алегрия',
+      options: ['Столовый шоколад', 'Тамаринд с чили', 'Мазапан']
+    }
   },
   {
     question:
@@ -48,21 +79,37 @@ export const questions: QuestionData[] = [
     answer: 'Pozole',
     options: ['Tatemado', 'Birria', 'Sopa azteca'],
     type: 'choice',
-    id: 'sdic1'
+    id: 'jf4ubs',
+    ru: {
+      question:
+        'Как называется мексиканский суп, приготовленный из кукурузных зерен?',
+      answer: 'Позоле',
+      options: ['Татемадо', 'Биррия', 'Ацтекский суп']
+    }
   },
   {
     question: '¿De dónde es originaria la ensalada de noche buena?',
     answer: 'Michoacán',
     options: ['Jalisco', 'Chihuahua', 'Yucatán'],
     type: 'choice',
-    id: 'qvspve'
+    id: 'tqrhg',
+    ru: {
+      question: 'Откуда родом рождественский салат?',
+      answer: 'Мичоакан',
+      options: ['Халиско', 'Чиуауа', 'Юкатан']
+    }
   },
   {
     question: 'Bebidas sacadas del agave',
     answer: 'Tequila y mezcal',
     options: ['Tequila y horchata', 'Pulque y tonayan', 'Tejuino y tequila'],
     type: 'choice',
-    id: '91q6sw'
+    id: '80ah7',
+    ru: {
+      question: 'Напитки из агавы',
+      answer: 'Текила и мескаль',
+      options: ['Текила и орчата', 'Пульке и тонайан', 'Техуино и текила']
+    }
   },
   {
     question: 'Platillos mexicanos a base de tortilla',
@@ -74,7 +121,17 @@ export const questions: QuestionData[] = [
       'Sopes, barbacoa, memelas'
     ],
     type: 'choice',
-    id: 'rat768'
+    id: 'ot6jzr',
+    ru: {
+      question: 'Мексиканские блюда на основе тортильи',
+      answer: 'Сопес, тлакойос, мемелас',
+      options: [
+        'Сопес, тлакойос, позоле',
+        'Моле, тлакойос, мемелас',
+        'Сопес, барбакоа, мемелас'
+      ],
+      note: 'Также: такос, кесадильи, тостадас, флаутас, панучос, энчиладас, энфрихоладас.'
+    }
   },
   {
     question: '¿Qué son memelas?',
@@ -85,7 +142,16 @@ export const questions: QuestionData[] = [
       'Postre michoacano a base de leche'
     ],
     type: 'choice',
-    id: 'siqkdn'
+    id: '47n3me',
+    ru: {
+      question: 'Что такое мемелас?',
+      answer: 'Овальные кукурузные тортильи (Пуэбла)',
+      options: [
+        'Кукурузный суп обычно со свининой',
+        'Потосинские энчилады',
+        'Мичоаканский десерт на основе молока'
+      ]
+    }
   },
   {
     question:
@@ -93,21 +159,36 @@ export const questions: QuestionData[] = [
     answer: 'Yucatán',
     options: ['Colima', 'Tamaulipas', 'Baja California Sur'],
     type: 'choice',
-    id: 'bsbgu3'
+    id: '42i2f',
+    ru: {
+      question: 'Откуда родом суп из лайма, панучос и кочинита пибиль?',
+      answer: 'Юкатан',
+      options: ['Колима', 'Тамаулипас', 'Баха Калифорния Сур']
+    }
   },
   {
     question: 'Plato típico de Monterrey',
     answer: 'El Cabrito',
     options: ['Birria', 'Barbacoa', 'Discada'],
     type: 'choice',
-    id: 'ph4on'
+    id: 'pb4qvt',
+    ru: {
+      question: 'Типичное блюдо Монтеррея',
+      answer: 'Эль Кабрито',
+      options: ['Биррия', 'Барбакоа', 'Дискада']
+    }
   },
   {
     question: 'El cabrito y la machaca son platos originarios de',
     answer: 'Nuevo León',
     options: ['Sinaloa', 'Guerrero', 'San Luis Potosí'],
     type: 'choice',
-    id: 'oh4otg'
+    id: 'g3wj',
+    ru: {
+      question: 'Эль Кабрито и Мачака — блюда, происходящие из',
+      answer: 'Нуэво-Леон',
+      options: ['Синалоа', 'Герреро', 'Сан-Луис-Потоси']
+    }
   },
   {
     question:
@@ -115,14 +196,24 @@ export const questions: QuestionData[] = [
     answer: 'San Luis Potosí',
     options: ['Tabasco', 'Zacatecas', 'Michoacán'],
     type: 'choice',
-    id: 'oxgq8t'
+    id: '3ynb1i',
+    ru: {
+      question: 'Место, где традиционны сырные тамалес на День мертвых',
+      answer: 'Сан-Луис-Потоси',
+      options: ['Табаско', 'Сакатекас', 'Мичоакан']
+    }
   },
   {
     question: '¿De dónde es originario el Chile en Nogada?',
     answer: 'Puebla',
     options: ['Chiapas', 'Sonora', 'Oaxaca'],
     type: 'choice',
-    id: 'j7bst9'
+    id: '49u8dh',
+    ru: {
+      question: 'Откуда родом Чили эн Ногада?',
+      answer: 'Пуэбла',
+      options: ['Чьяпас', 'Сонора', 'Оахака']
+    }
   },
   {
     question: 'Nombre de 3 platos típicos poblanos',
@@ -133,14 +224,28 @@ export const questions: QuestionData[] = [
       'Entamalados, enchiladas poblanas, sopes'
     ],
     type: 'choice',
-    id: 'y9l6'
+    id: 'cq2kqh',
+    ru: {
+      question: 'Назовите 3 типичных блюда из Пуэблы',
+      answer: 'Моле поблано, чили эн ногада, чалупас',
+      options: [
+        'Черный моле из Пуэблы, Кабрито, мемелас',
+        'Тамалес, побланские энчилады, хрустящие тако',
+        'Энтамаладас, побланские энчилады, сопес'
+      ]
+    }
   },
   {
     question: 'Plato típico de Veracruz',
     answer: 'Zacahuil',
     options: ['Cabrito', 'Mole veracruzano', 'Tamales Jarochos'],
     type: 'choice',
-    id: 'gpkckb'
+    id: '3fx8l',
+    ru: {
+      question: 'Типичное блюдо Веракруса',
+      answer: 'Закахуиль',
+      options: ['Кабрито', 'Веракрусанский моле', 'Харочские тамалес']
+    }
   },
   {
     question: '¿Qué insectos son comestibles?',
@@ -152,28 +257,53 @@ export const questions: QuestionData[] = [
       'Escamoles, arañas'
     ],
     type: 'choice',
-    id: 'gnqe2'
+    id: '2rb6fl',
+    ru: {
+      question: 'Какие насекомые съедобны?',
+      answer:
+        'Чапулины (кузнечики), эскамолес (яйца муравьев), жумилес, черви магея',
+      options: [
+        'Тигровый комар, жумилес',
+        'Желтые осы, черви магея',
+        'Эскамолес, пауки'
+      ]
+    }
   },
   {
     question: 'Bebida prehispánica conocida como curado',
     answer: 'Pulque',
     options: ['Tequila', 'Tejuino', 'Jocoque'],
     type: 'choice',
-    id: 'vtyu85j'
+    id: '4fk6wq',
+    ru: {
+      question: 'Доиспанский напиток, известный как курадо',
+      answer: 'Пульке',
+      options: ['Текила', 'Техуино', 'Жококе']
+    }
   },
   {
     question: 'Bebida sacada del maguey',
     answer: 'Pulque',
     options: ['Tejuino', 'Jocoque', 'Tehuical'],
     type: 'choice',
-    id: 'l85bx'
+    id: 'v6fvle',
+    ru: {
+      question: 'Напиток из магея',
+      answer: 'Пульке',
+      options: ['Техуино', 'Жококе', 'Техуикаль']
+    }
   },
   {
     question: '¿Cuál es el ingrediente principal del mole?',
     answer: 'Chocolate amargo',
     options: ['Ajonjolí', 'Pimienta', 'Leche'],
     type: 'choice',
-    id: 'pd4zfr'
+    id: 'cfzjkc',
+    ru: {
+      question: 'Какой основной ингредиент у моле?',
+      answer: 'Горький шоколад',
+      options: ['Кунжут', 'Перец', 'Молоко']
+    }
   },
   {
     question: '¿De dónde es el platillo de los 7 moles?',
@@ -181,7 +311,13 @@ export const questions: QuestionData[] = [
     note: 'Se considera que el mole oaxaqueño es la combinación de 7 moles de la región: mole negro, mole amarillo, mole colorado, mole verde, mole rojo, mole chichillo y mole estofado.',
     options: ['Puebla', 'Sonora', 'Chiapas'],
     type: 'choice',
-    id: '5ljfw8'
+    id: 'tex1wl',
+    ru: {
+      question: 'Откуда родом блюдо из 7 моле?',
+      answer: 'Оахака',
+      options: ['Пуэбла', 'Сонора', 'Чьяпас'],
+      note: 'Считается, что оахаканский моле представляет собой комбинацию из 7 моле региона: черный моле, желтый моле, красный моле, зеленый моле, красный моле, чичилло моле и тушеный моле.'
+    }
   },
   {
     question: '¿Qué es la guanábana?',
@@ -192,14 +328,28 @@ export const questions: QuestionData[] = [
       'Dulce tradicional duranguense a base de leche de cabra'
     ],
     type: 'choice',
-    id: 'fcv04j'
+    id: '1ulju',
+    ru: {
+      question: 'Что такое гуанабана?',
+      answer: 'Фрукт с зеленой кожурой и белой мякотью',
+      options: [
+        'Освежающий напиток из штата Веракрус',
+        'Типичное блюдо из Тласкалы, приготовленное из кукурузы и куриного мяса',
+        'Традиционный дессерт из Дуранго на основе козьего молока'
+      ]
+    }
   },
   {
     question: 'Postre típico a base de harina de trigo',
     answer: 'Buñuelos',
     options: ['Chongos zamoranos', 'Alegría', 'Ate'],
     type: 'choice',
-    id: 'gs9zmn'
+    id: 'duot1',
+    ru: {
+      question: 'Типичный десерт из пшеничной муки',
+      answer: 'Буньюэлос',
+      options: ['Чонгос заморанос', 'Алегрия', 'Ате']
+    }
   },
   {
     question: 'Postre típico de Guadalajara',
@@ -211,14 +361,29 @@ export const questions: QuestionData[] = [
       'Palanquetas de cacahuate'
     ],
     type: 'choice',
-    id: 'dw8md4'
+    id: 'io7hf5',
+    ru: {
+      question: 'Типичный десерт из Гвадалахары',
+      answer: 'Херикайя (Похож на флан или крем-брюле)',
+      options: [
+        'Желатин из Халиско',
+        'Чонгос из Халиско',
+        'Арахисовые паланкетас'
+      ],
+      note: 'Сделан из молока, яиц, ванили, корицы и сахара.'
+    }
   },
   {
     question: 'Dulce típico de Guanajuato',
     answer: 'Charamuscas',
     options: ['Obleas', 'Cocadas', 'Dulces de alfeñique'],
     type: 'choice',
-    id: 'rd863'
+    id: 'kigymc',
+    ru: {
+      question: 'Типичная сладость из Гуанахуато',
+      answer: 'Чарамускас',
+      options: ['Облеас', 'Кокадас', 'Альфенике']
+    }
   },
   {
     question: 'Dulce típico de Pachuca, Hidalgo',
@@ -229,7 +394,16 @@ export const questions: QuestionData[] = [
       'Gallo (pepita de calavaza en forma de gallito)'
     ],
     type: 'choice',
-    id: '2x05z'
+    id: 'lr3tzh',
+    ru: {
+      question: 'Типичный сладость из Пачука, Идальго',
+      answer: 'Паланкетас (батончики/нуга из арахиса)',
+      options: [
+        'Хамонсильо (семена тыквы и пинии)',
+        'Муэганос (кусочки муки, склеенные сладостью)',
+        'Гайо (тыквенные семечки в форме петушка)'
+      ]
+    }
   },
   {
     question: '¿Qué es la cajeta?',
@@ -240,20 +414,39 @@ export const questions: QuestionData[] = [
       'Dulce de leche con coco'
     ],
     type: 'choice',
-    id: 'p4wwc'
+    id: 'twmbsd',
+    ru: {
+      question: 'Что такое кахета?',
+      answer: 'Карамелизованное козье молоко',
+      options: [
+        'Сладость из тортильи с сахаром',
+        'Сладость из амаранта с медом',
+        'Сладость из молока с кокосом'
+      ]
+    }
   },
   {
     question: '¿De dónde es el queso menonita?',
     answer: 'Chihuahua',
     options: ['Coahuila', 'Sonora', 'Colima'],
     type: 'choice',
-    id: 'okipbi'
+    id: 'eualk',
+    ru: {
+      question: 'Откуда происходит менонитский сыр?',
+      answer: 'Чиуауа',
+      options: ['Коауила', 'Сонора', 'Колима']
+    }
   },
   {
     question: '¿De dónde es típico el queso de tuna?',
     answer: 'San Luis Potosí',
     options: ['Hidalgo', 'Quintana Roo', 'Querétaro'],
     type: 'choice',
-    id: '9m8vk3'
+    id: 'maf0ej',
+    ru: {
+      question: 'Где типичен сыр из тунца?',
+      answer: 'Сан-Луис-Потоси',
+      options: ['Идальго', 'Кинтана-Роо', 'Керетаро']
+    }
   }
 ];
