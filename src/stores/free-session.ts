@@ -162,12 +162,16 @@ export const useFreeSessionStore = createSharedComposable(() => {
     { immediate: true, flush: 'sync' }
   );
 
+  const choiceQuestions = computed(() =>
+    [...questions.values()].filter((x) => x.type === 'choice')
+  );
+
   const stat = computed(() => ({
     correctQuestions: correctQuestions.value.size,
     wrongQuestions: wrongQuestions.value.size,
     unansweredQuestions:
       questions.size - correctQuestions.value.size - wrongQuestions.value.size,
-    totalQuestions: questions.size,
+    totalQuestions: choiceQuestions.value.length,
     correctPercentage: (correctQuestions.value.size / questions.size) * 100,
     wrongPercentage: (wrongQuestions.value.size / questions.size) * 100,
     unansweredPercentage:
@@ -227,54 +231,41 @@ function selectRandomQuestionId(
   correct: Map<string, number>,
   wrong: Map<string, number>
 ): string | undefined {
-  // if there are wrong questions, select one of them
-  // each new wrong question cause a higher chance that wrong question
-  // will be selected
-  if (Math.random() < wrong.size / 10) {
-    const keys = [...wrong.keys()];
-    let key = '';
-
-    while (keys.length > 0) {
-      const idx = Math.floor(Math.random() * keys.length);
-      key = keys[idx];
-
-      if (questions.has(key)) {
-        return key;
-      } else {
-        keys.splice(idx, 1);
-        wrong.delete(key);
-      }
-    }
-  }
-
-  // get list of correct questions with a most answers count
-  const correctMax = Math.max(...correct.values());
-  const topCorrectQuestions = new Set<string>();
-
-  for (const [key, count] of correct) {
-    if (count === correctMax) {
-      topCorrectQuestions.add(key);
-    }
-  }
-
-  // if all questions are correct, clear the list
-  // so we won't get stuck in an infinite loop
-  if (topCorrectQuestions.size === correct.size) {
-    topCorrectQuestions.clear();
-  }
-
-  let result = '';
   const keys = [...questions.keys()];
-
-  while (!result) {
-    const key = keys[Math.floor(Math.random() * keys.length)];
-
-    if (topCorrectQuestions.has(key)) {
-      continue;
+  const weights = keys.map((key) => {
+    if (wrong.has(key)) {
+      return (wrong.get(key) ?? 0) * 2;
     }
 
-    result = key;
+    if (correct.has(key)) {
+      return (correct.get(key) ?? 0) / 2;
+    }
+
+    return 1;
+  });
+
+  return randomByWeight(keys, weights);
+}
+
+function randomByWeight(values: string[], weights: number[]): string {
+  let total = 0;
+
+  // Sum total of weights
+  weights.forEach((weight) => {
+    total += weight;
+  });
+
+  // Random a number between [1, total]
+  const random = Math.random() * total; // [0,total]
+
+  // Seek cursor to find which area the random is in
+  let cursor = 0;
+  for (let i = 0; i < weights.length; i++) {
+    cursor += weights[i];
+    if (cursor >= random) {
+      return values[i];
+    }
   }
 
-  return result;
+  throw new Error('This should never happen');
 }
