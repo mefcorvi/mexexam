@@ -247,25 +247,76 @@ function selectRandomQuestionId(
   return randomByWeight(keys, weights);
 }
 
-function randomByWeight(values: string[], weights: number[]): string {
-  let total = 0;
+export function randomByWeight(values: string[], weights: number[]): string {
+  if (values.length !== weights.length) {
+    throw new Error('Длины массивов values и weights должны совпадать.');
+  }
 
-  // Sum total of weights
-  weights.forEach((weight) => {
-    total += weight;
-  });
+  const n = values.length;
+  if (n === 0) {
+    throw new Error('Массив values не должен быть пустым.');
+  }
 
-  // Random a number between [1, total]
-  const random = Math.random() * total; // [0,total]
+  // Сумма весов
+  const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+  if (totalWeight === 0) {
+    throw new Error('Сумма весов не должна быть равна 0.');
+  }
 
-  // Seek cursor to find which area the random is in
-  let cursor = 0;
-  for (let i = 0; i < weights.length; i++) {
-    cursor += weights[i];
-    if (cursor >= random) {
-      return values[i];
+  // Нормированные вероятности, умноженные на n
+  // p[i] = (weights[i] / totalWeight) * n
+  const p: number[] = new Array(n);
+  for (let i = 0; i < n; i++) {
+    p[i] = (weights[i] / totalWeight) * n;
+  }
+
+  // Массив алиасов (индексы)
+  const alias: number[] = new Array(n);
+
+  // Две "стопки": малая (small) и большая (large)
+  const small: number[] = [];
+  const large: number[] = [];
+
+  // Разделяем вероятности на две группы: < 1 и >= 1
+  for (let i = 0; i < n; i++) {
+    if (p[i] < 1) {
+      small.push(i);
+    } else {
+      large.push(i);
     }
   }
 
-  throw new Error('This should never happen');
+  // Основной цикл алгоритма
+  while (small.length > 0 && large.length > 0) {
+    const l = small.pop() as number; // индекс с p[l] < 1
+    const g = large.pop() as number; // индекс с p[g] >= 1
+
+    alias[l] = g;
+    p[g] = p[g] + p[l] - 1; // уменьшаем p[g]
+
+    if (p[g] < 1) {
+      small.push(g);
+    } else {
+      large.push(g);
+    }
+  }
+
+  // Оставшиеся индексы (либо все в small, либо все в large) приводим к 1
+  // чтобы они сами ссылались на себя
+  while (small.length > 0) {
+    p[small.pop() as number] = 1;
+  }
+  while (large.length > 0) {
+    p[large.pop() as number] = 1;
+  }
+
+  // Выбираем случайный индекс из [0, n-1]
+  const i = Math.floor(Math.random() * n);
+
+  // Сравниваем дополнительным броском с p[i]
+  if (Math.random() < p[i]) {
+    return values[i];
+  } else {
+    return values[alias[i]];
+  }
 }
