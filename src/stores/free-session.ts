@@ -7,13 +7,14 @@ import {
 } from './questions';
 
 export const useFreeSessionStore = createSharedComposable(() => {
-  const correctQuestions = new Map<string, number>();
-  const wrongQuestions = new Map<string, number>();
+  const correctQuestions = ref(new Map<string, number>());
+  const wrongQuestions = ref(new Map<string, number>());
 
   const {
     questions,
     loadAll: loadAllQuestions,
-    loadSection
+    loadSection,
+    reset: resetQuestions
   } = useQuestionsStore();
 
   const currentQuestionId = ref<string>();
@@ -27,11 +28,11 @@ export const useFreeSessionStore = createSharedComposable(() => {
   const getRandomQuestionId = () => {
     let questionId = currentQuestionId.value;
 
-    while (questionId === currentQuestionId.value) {
+    while (questionId === currentQuestionId.value && questions.size > 1) {
       questionId = selectRandomQuestionId(
         questions,
-        correctQuestions,
-        wrongQuestions
+        correctQuestions.value,
+        wrongQuestions.value
       );
 
       if (!questionId) {
@@ -50,9 +51,7 @@ export const useFreeSessionStore = createSharedComposable(() => {
     const question = questions.get(currentQuestionId.value);
 
     if (!question) {
-      throw new Error(
-        `Failed to get question by id ${currentQuestionId.value}`
-      );
+      return null;
     }
 
     return question;
@@ -76,14 +75,6 @@ export const useFreeSessionStore = createSharedComposable(() => {
 
   const hasQuestion = (id: string) => {
     return questions.has(id);
-  };
-
-  const correctCount = ref(0);
-  const wrongCount = ref(0);
-
-  const resetCount = () => {
-    correctCount.value = 0;
-    wrongCount.value = 0;
   };
 
   const selectAnswer = (option: QuestionOption) => {
@@ -113,42 +104,38 @@ export const useFreeSessionStore = createSharedComposable(() => {
     }
 
     if (selectedAnswer.value.isAnswer) {
-      correctCount.value++;
-
       // increase the count of correct answers for this question
-      correctQuestions.set(
+      correctQuestions.value.set(
         currentQuestion.value.id,
-        (correctQuestions.get(currentQuestion.value.id) ?? 0) + 1
+        (correctQuestions.value.get(currentQuestion.value.id) ?? 0) + 1
       );
 
       // decrease the count of wrong answers for this question
-      wrongQuestions.set(
+      wrongQuestions.value.set(
         currentQuestion.value.id,
-        (wrongQuestions.get(currentQuestion.value.id) ?? 0) - 1
+        (wrongQuestions.value.get(currentQuestion.value.id) ?? 0) - 1
       );
 
       // if wrong count is negative, remove the question from wrong questions
-      if ((wrongQuestions.get(currentQuestion.value.id) ?? 0) <= 0) {
-        wrongQuestions.delete(currentQuestion.value.id);
+      if ((wrongQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
+        wrongQuestions.value.delete(currentQuestion.value.id);
       }
     } else {
-      wrongCount.value++;
-
       // increase the count of wrong answers for this question
-      wrongQuestions.set(
+      wrongQuestions.value.set(
         currentQuestion.value.id,
-        (wrongQuestions.get(currentQuestion.value.id) ?? 0) + 1
+        (wrongQuestions.value.get(currentQuestion.value.id) ?? 0) + 1
       );
 
       // decrease the count of correct answers for this question
-      correctQuestions.set(
+      correctQuestions.value.set(
         currentQuestion.value.id,
-        (correctQuestions.get(currentQuestion.value.id) ?? 0) - 1
+        (correctQuestions.value.get(currentQuestion.value.id) ?? 0) - 1
       );
 
       // if correct count is negative, remove the question from correct questions
-      if ((correctQuestions.get(currentQuestion.value.id) ?? 0) <= 0) {
-        correctQuestions.delete(currentQuestion.value.id);
+      if ((correctQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
+        correctQuestions.value.delete(currentQuestion.value.id);
       }
     }
   };
@@ -176,15 +163,17 @@ export const useFreeSessionStore = createSharedComposable(() => {
   );
 
   const stat = computed(() => ({
-    correctQuestions: correctQuestions.size,
-    wrongQuestions: wrongQuestions.size,
+    correctQuestions: correctQuestions.value.size,
+    wrongQuestions: wrongQuestions.value.size,
     unansweredQuestions:
-      questions.size - correctQuestions.size - wrongQuestions.size,
+      questions.size - correctQuestions.value.size - wrongQuestions.value.size,
     totalQuestions: questions.size,
-    correctPercentage: (correctQuestions.size / questions.size) * 100,
-    wrongPercentage: (wrongQuestions.size / questions.size) * 100,
+    correctPercentage: (correctQuestions.value.size / questions.size) * 100,
+    wrongPercentage: (wrongQuestions.value.size / questions.size) * 100,
     unansweredPercentage:
-      ((questions.size - correctQuestions.size - wrongQuestions.size) /
+      ((questions.size -
+        correctQuestions.value.size -
+        wrongQuestions.value.size) /
         questions.size) *
       100
   }));
@@ -196,37 +185,35 @@ export const useFreeSessionStore = createSharedComposable(() => {
     await loadAllQuestions();
 
     // clear all counters
-    correctQuestions.clear();
-    wrongQuestions.clear();
-    resetCount();
+    correctQuestions.value.clear();
+    wrongQuestions.value.clear();
   };
 
   /**
    * Starts session with a specific section.
    */
   const startSection = async (sectionId: string) => {
+    resetQuestions();
     await loadSection(sectionId);
 
     // clear all counters
-    correctQuestions.clear();
-    wrongQuestions.clear();
-    resetCount();
+    correctQuestions.value.clear();
+    wrongQuestions.value.clear();
   };
 
   return {
     startAll,
     startSection,
     stat,
-    correctCount,
+    correctCount: computed(() => correctQuestions.value),
     correctQuestions,
     wrongQuestions,
     currentOptionsRandomized,
     currentQuestion,
     isAnswerRevealed,
     selectedAnswer,
-    wrongCount,
+    wrongCount: computed(() => wrongQuestions.value.size),
     getRandomQuestionId,
-    resetCount,
     updateCounters,
     revealAnswer,
     selectAnswer,

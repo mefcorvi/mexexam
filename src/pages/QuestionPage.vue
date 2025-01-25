@@ -68,13 +68,30 @@ const onQuestionIdChanged = () => {
   }
 }
 
-watch(questionParamId, onQuestionIdChanged);
+watch(() => [questionParamId.value, sectionParamId.value], async (newValue, oldValue) => {
+  if (!oldValue) {
+    oldValue = ['', ''];
+  }
 
-if (sectionParamId.value) {
-  startSection(sectionParamId.value).then(onQuestionIdChanged);
-} else {
-  startAll().then(onQuestionIdChanged);
-}
+  if (!newValue[0] && !newValue[1]) {
+    return;
+  }
+
+  if (newValue[0] === oldValue[0] && newValue[1] === oldValue[1]) {
+    return;
+  }
+
+  if (newValue[1] !== oldValue[1] || !oldValue[1]) {
+    if (newValue[1]) {
+      await startSection(newValue[1]);
+    } else {
+      await startAll();
+    }
+  }
+
+  onQuestionIdChanged();
+}, { immediate: true });
+
 
 let blinkingTimeout: number | undefined;
 
@@ -261,8 +278,10 @@ function isButtonOrLinkClick(ev: MouseEvent) {
       </div>
     </template>
     <div :class="$style.progress">
-      <div :class="$style.correctAnswers" :style="{ width: `${stat.correctPercentage}%` }"></div>
-      <div :class="$style.wrongAnswers" :style="{ width: `${stat.wrongPercentage}%` }"></div>
+      <div :class="$style.correctAnswers">{{ stat.correctQuestions }}
+      </div>
+      <div :class="$style.wrongAnswers">{{ stat.wrongQuestions }}</div>
+      <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
     </div>
     <div :class="$style.question" v-if="currentQuestion">
       <div :class="$style.text" @click.stop="toggleLocale">
@@ -467,33 +486,35 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 }
 
 .progress {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: var(--topbar-height);
   z-index: 3;
 
   display: flex;
 
-  width: 100%;
-  height: 2px;
+  line-height: 120%;
 
-  background: var(--secondary-color-10);
+  gap: var(--gap-s);
 
-  .correctAnswers {
+  &>div {
     flex-grow: 0;
     flex-shrink: 0;
 
-    height: 100%;
+    padding: 2px 4px;
 
+    border-radius: var(--border-radius);
+  }
+
+  .correctAnswers {
     background: var(--success-bg-color);
   }
 
   .wrongAnswers {
-    flex-grow: 0;
-    flex-shrink: 0;
-
-    height: 100%;
-
     background: var(--error-bg-color);
+  }
+
+  .allAnswers {
+    background: var(--bg-color-alpha-50);
   }
 }
 

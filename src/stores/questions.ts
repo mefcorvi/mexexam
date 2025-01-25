@@ -1,4 +1,4 @@
-import { markRaw, shallowReactive } from 'vue';
+import { markRaw, ref, shallowReactive } from 'vue';
 import { loadSectionsData } from './sections';
 import { createSharedComposable } from '@vueuse/core';
 import { useTranslations } from './translations';
@@ -33,6 +33,7 @@ export type QuestionsSection = {
 export const useQuestionsStore = createSharedComposable(() => {
   const questions = shallowReactive(new Map<string, Question>());
   const sections = shallowReactive(new Map<string, QuestionsSection>());
+  const isLoaded = ref(false);
   const translations = useTranslations();
 
   const loadSections = async () => {
@@ -125,6 +126,7 @@ export const useQuestionsStore = createSharedComposable(() => {
       sections.set(section.id, markRaw(section));
 
       translations.add('ru', sectionData.title, sectionData.ru.title);
+      isLoaded.value = true;
     }
   };
 
@@ -144,10 +146,18 @@ export const useQuestionsStore = createSharedComposable(() => {
     await section.load();
   };
 
+  const reset = () => {
+    isLoaded.value = false;
+    sections.clear();
+    questions.clear();
+  };
+
   return {
     loadAll,
     loadSection,
     loadSections,
+    reset,
+    isLoaded,
     questions,
     sections
   };

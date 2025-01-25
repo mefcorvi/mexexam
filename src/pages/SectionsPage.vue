@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import GeneralPage from '@/components/GeneralPage.vue';
-import GeneralButton from '@/components/GeneralButton.vue';
-import GeneralMenu from '@/components/GeneralMenu.vue';
 import SectionImage from '@/components/SectionImage.vue';
 import { useLocalization } from '@/stores/localization';
 import { useQuestionsStore } from '@/stores/questions';
@@ -37,7 +35,6 @@ const { t } = useLocalization();
     <div :class="$style.tilesMenu">
       <div :class="$style.tile" v-for="section of sections.values() " :key="section.id"
         @click="startSection(section.id)">
-        <SectionImage :class="$style.sectionImg" :section="section" />
         <div :class="$style.tileTitle">{{ translations.t('es', section.title) }}</div>
       </div>
     </div>
@@ -46,72 +43,40 @@ const { t } = useLocalization();
 <style module lang="less">
 .page {
   justify-content: center;
-  --tile-size: 200px;
+
+  padding-top: var(--topbar-height);
 }
 
 .tilesMenu {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fill, var(--tile-size));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   width: 100%;
-  padding: var(--gap);
+  padding: var(--gap-s);
   gap: var(--gap);
 }
 
 .tile {
   position: relative;
 
-  width: var(--tile-size);
-  height: var(--tile-size);
-  overflow: hidden;
-
-  border-radius: var(--border-radius);
-
-  cursor: pointer;
-
-  &:hover {
-    .sectionImg {
-      filter: brightness(1.2);
-    }
-
-    .tileTitle {
-      background: var(--secondary-color);
-    }
-  }
-}
-
-.sectionImg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-
-  width: var(--tile-size);
-  height: var(--tile-size);
-
-  filter: brightness(1);
-  transition: filter var(--transition-duration);
-}
-
-.tileTitle {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
+  width: 100%;
+  max-width: 300px;
   padding: var(--gap-s) var(--gap);
 
   font-size: var(--font-size-1);
   line-height: 1.2;
   text-align: center;
-  color: var(--text-color);
   color: var(--main-text-color);
 
   background: var(--main-color);
+  border-radius: var(--border-radius);
 
+  cursor: pointer;
   transition: background var(--transition-duration);
+
+  &:hover {
+    background: var(--secondary-color);
+  }
 }
 </style>
