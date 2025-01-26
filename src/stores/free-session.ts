@@ -234,11 +234,11 @@ function selectRandomQuestionId(
   const keys = [...questions.keys()];
   const weights = keys.map((key) => {
     if (wrong.has(key)) {
-      return (wrong.get(key) ?? 0) * 2;
+      return (wrong.get(key) ?? 0) * 3;
     }
 
     if (correct.has(key)) {
-      return (correct.get(key) ?? 0) / 2;
+      return 1 / (correct.get(key) || 1);
     }
 
     return 1;

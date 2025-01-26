@@ -64,9 +64,9 @@ const { t } = useLocalization();
   max-width: 300px;
   padding: var(--gap-s) var(--gap);
 
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-2);
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   color: var(--main-text-color);
 
   background: var(--main-color);
