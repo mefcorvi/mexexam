@@ -68,6 +68,8 @@ const onQuestionIdChanged = () => {
   }
 }
 
+const isAllStarted = ref(false);
+
 watch(() => [questionParamId.value, sectionParamId.value], async (newValue, oldValue) => {
   if (!oldValue) {
     oldValue = ['', ''];
@@ -83,9 +85,13 @@ watch(() => [questionParamId.value, sectionParamId.value], async (newValue, oldV
 
   if (newValue[1] !== oldValue[1] || !oldValue[1]) {
     if (newValue[1]) {
+      isAllStarted.value = false;
       await startSection(newValue[1]);
     } else {
-      await startAll();
+      if (!isAllStarted.value) {
+        isAllStarted.value = true;
+        await startAll();
+      }
     }
   }
 
