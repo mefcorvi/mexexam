@@ -17,6 +17,18 @@ export const useFreeSessionStore = createSharedComposable(() => {
     reset: resetQuestions
   } = useQuestionsStore();
 
+  const choiceQuestions = computed(() => {
+    const result = new Map<string, Question>();
+
+    for (const question of questions.values()) {
+      if (question.type === 'choice') {
+        result.set(question.id, question);
+      }
+    }
+
+    return result;
+  });
+
   const currentQuestionId = ref<string>();
 
   const dontKnowOption: QuestionOption = markRaw({
@@ -28,9 +40,12 @@ export const useFreeSessionStore = createSharedComposable(() => {
   const getRandomQuestionId = () => {
     let questionId = currentQuestionId.value;
 
-    while (questionId === currentQuestionId.value && questions.size > 1) {
+    while (
+      questionId === currentQuestionId.value &&
+      choiceQuestions.value.size > 1
+    ) {
       questionId = selectRandomQuestionId(
-        questions,
+        choiceQuestions.value,
         correctQuestions.value,
         wrongQuestions.value
       );
@@ -162,23 +177,23 @@ export const useFreeSessionStore = createSharedComposable(() => {
     { immediate: true, flush: 'sync' }
   );
 
-  const choiceQuestions = computed(() =>
-    [...questions.values()].filter((x) => x.type === 'choice')
-  );
-
   const stat = computed(() => ({
     correctQuestions: correctQuestions.value.size,
     wrongQuestions: wrongQuestions.value.size,
     unansweredQuestions:
-      questions.size - correctQuestions.value.size - wrongQuestions.value.size,
-    totalQuestions: choiceQuestions.value.length,
-    correctPercentage: (correctQuestions.value.size / questions.size) * 100,
-    wrongPercentage: (wrongQuestions.value.size / questions.size) * 100,
+      choiceQuestions.value.size -
+      correctQuestions.value.size -
+      wrongQuestions.value.size,
+    totalQuestions: choiceQuestions.value.size,
+    correctPercentage:
+      (correctQuestions.value.size / choiceQuestions.value.size) * 100,
+    wrongPercentage:
+      (wrongQuestions.value.size / choiceQuestions.value.size) * 100,
     unansweredPercentage:
-      ((questions.size -
+      ((choiceQuestions.value.size -
         correctQuestions.value.size -
         wrongQuestions.value.size) /
-        questions.size) *
+        choiceQuestions.value.size) *
       100
   }));
 
