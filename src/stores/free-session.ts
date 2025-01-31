@@ -231,17 +231,20 @@ function selectRandomQuestionId(
   correct: Map<string, number>,
   wrong: Map<string, number>
 ): string | undefined {
+  const unanswered = new Map<string, Question>(
+    [...questions].filter(([id]) => !correct.has(id) && !wrong.has(id))
+  );
+
+  // if there are unanswered questions, return a random one
+  if (unanswered.size > 0) {
+    return [...unanswered.keys()][Math.floor(Math.random() * unanswered.size)];
+  }
+
   const keys = [...questions.keys()];
   const weights = keys.map((key) => {
-    if (wrong.has(key)) {
-      return (wrong.get(key) ?? 0) * 3;
-    }
-
-    if (correct.has(key)) {
-      return 1 / (correct.get(key) || 1);
-    }
-
-    return 1;
+    return wrong.has(key)
+      ? (wrong.get(key) || 1) * 3
+      : 1 / (correct.get(key) || 1);
   });
 
   return randomByWeight(keys, weights);

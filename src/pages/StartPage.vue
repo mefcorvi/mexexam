@@ -23,9 +23,6 @@ const chooseSection = () => {
   })
 };
 
-const exam = () => {
-};
-
 const { t } = useLocalization();
 </script>
 <template>
@@ -33,7 +30,6 @@ const { t } = useLocalization();
     <GeneralMenu>
       <GeneralButton @click="allQuestions">{{ t('All questions') }}</GeneralButton>
       <GeneralButton @click="chooseSection">{{ t('Choose section') }}</GeneralButton>
-      <GeneralButton @click="exam">{{ t('Exam mode') }}</GeneralButton>
     </GeneralMenu>
   </GeneralPage>
 </template>
