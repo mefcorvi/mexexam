@@ -137,6 +137,10 @@ const back = () => {
 }
 
 .logo {
+
+  position: absolute;
+  left: 50%;
+
   display: flex;
   align-items: center;
 
@@ -144,6 +148,7 @@ const back = () => {
 
   line-height: 100%;
 
+  transform: translateX(-50%);
   cursor: pointer;
 
   img {

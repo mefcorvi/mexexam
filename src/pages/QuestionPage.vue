@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { mdiCog, mdiHelp } from '@mdi/js';
-import { computed, nextTick, ref, useCssModule, watch } from 'vue';
+import { mdiCog, mdiTranslate } from '@mdi/js';
+import { nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
@@ -11,10 +11,12 @@ import { until } from '@vueuse/core';
 import { useFreeSessionStore } from '@/stores/free-session';
 import { useTranslations } from '@/stores/translations';
 import { RouteName } from '@/router/names';
+import { useLocalization } from '@/stores/localization';
 
 const $style = useCssModule();
 const $router = useRouter();
 const translations = useTranslations();
+const { locale } = useLocalization();
 
 const {
   startAll,
@@ -32,13 +34,10 @@ const {
   hasQuestion,
 } = useFreeSessionStore();
 
-const isNoteAvailable = computed(() => currentQuestion.value?.note !== undefined);
-
 const questionParamId = useRouteParams<string>('id', '');
 const sectionParamId = useRouteParams<string>('sectionId', '');
 
 const blinkingAnswer = ref<QuestionOption>();
-const isNoteShown = ref(false);
 
 const onQuestionIdChanged = () => {
   if (questionParamId.value === '') {
@@ -46,7 +45,6 @@ const onQuestionIdChanged = () => {
   }
 
   blinkingAnswer.value = undefined;
-  isNoteShown.value = false;
 
   if (hasQuestion(questionParamId.value)) {
     setQuestion(questionParamId.value);
@@ -215,7 +213,8 @@ const onOptionClick = (option: QuestionOption) => {
   }, 1000);
 }
 
-const locale = ref<'es' | 'ru'>('es');
+// Question language: 'es' or current UI language
+const questionLocale = ref<'es' | 'ru'>('es');
 
 const onPageClick = (ev: MouseEvent) => {
   if (isButtonOrLinkClick(ev)) {
@@ -225,38 +224,20 @@ const onPageClick = (ev: MouseEvent) => {
   forward();
 }
 
-const toggleLocale = () => {
+const toggleQuestionLanguage = () => {
   if (!window.getSelection()?.isCollapsed) {
     return;
   }
 
-  if (locale.value === 'es') {
-    locale.value = 'ru';
+  if (questionLocale.value === 'es') {
+    questionLocale.value = locale.value;
   } else {
-    locale.value = 'es';
+    questionLocale.value = 'es';
   }
 }
-
 
 const t = (key: string) => {
-  return translations.t(locale.value, key);
-}
-
-const onNoteClick = (ev: MouseEvent) => {
-  if (isButtonOrLinkClick(ev)) {
-    return;
-  }
-
-  ev.stopPropagation();
-  hideNote();
-}
-
-const hideNote = () => {
-  isNoteShown.value = false;
-}
-
-const showNote = () => {
-  isNoteShown.value = true;
+  return translations.t(questionLocale.value, key);
 }
 
 const openSettings = () => {
@@ -275,8 +256,9 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }">
     <template #topBar>
       <div :class="$style.navigation">
-        <div :class="[{ [$style.disabled]: !isNoteAvailable }]" @click.stop="showNote">
-          <SvgIcon type="mdi" :path="mdiHelp" />
+        <div @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
+          <SvgIcon type="mdi" :path="mdiTranslate" />
+          <span :class="$style.languageLabel">{{ questionLocale.toUpperCase() }}</span>
         </div>
         <div @click.stop="openSettings">
           <SvgIcon type="mdi" :path="mdiCog" />
@@ -290,7 +272,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
       <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
     </div>
     <div :class="$style.question" v-if="currentQuestion">
-      <div :class="$style.text" @click.stop="toggleLocale">
+      <div :class="$style.text" @click.stop="toggleQuestionLanguage">
         <div>
           <div :class="$style.sectionTitle">{{ t(currentQuestion.section.title) }}</div>
           <div> {{ t(currentQuestion.question) }}</div>
@@ -310,11 +292,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
           :class="[$style.answer, isAnswerRevealed ? '' : $style.hiddenAnswer]" @click.stop="forward">
           <p :key="idx" v-for="(item, idx) of t(currentQuestion.answer).split('\n')">{{ item }}</p>
         </div>
-      </div>
-      <div v-if="currentQuestion?.note" :key="currentQuestion.id" class="scroll"
-        :class="[$style.note, { [$style.hidden]: !selectedAnswer || isPageFadeOut }]">
-        <img v-if="currentQuestion.noteImage" :src="`/notes/${currentQuestion.noteImage}`" />
-        <div v-html="t(currentQuestion.note)"></div>
       </div>
     </div>
   </GeneralPage>
@@ -541,70 +518,38 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   }
 }
 
-.note {
-  width: fit-content;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: var(--gap-l);
-  padding-top: 0;
-  padding-bottom: 0;
-  overflow: auto;
-
-  font-size: var(--font-size-1);
-  line-height: 160%;
-
-  opacity: 1;
-  transition: all 200ms;
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-
-  &.hidden {
-    opacity: 0;
-  }
-
-  img {
-    float: left;
-
-    width: 50%;
-    max-width: 400px;
-    margin-right: var(--gap);
-    margin-bottom: var(--gap-s);
-
-    border-radius: var(--border-radius);
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-
-  h1 {
-    font-size: var(--font-size-4);
-    font-weight: 500;
-  }
-
-  h2 {
-    font-size: var(--font-size-3);
-    font-weight: 500;
-  }
-
-  p {
-    margin-bottom: var(--gap-s);
-  }
-
-  a {
-    color: var(--main-color);
-    text-decoration: underline;
-
-    &:hover {
-      color: var(--secondary-color);
-    }
-  }
-}
-
 .sectionTitle {
   font-size: var(--font-size-a2);
 
   opacity: 0.3;
+}
+
+.languageButton {
+  display: flex;
+  align-items: center;
+
+  width: 64px;
+  padding: var(--gap-s);
+
+  line-height: 100%;
+
+  cursor: pointer;
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  .languageLabel {
+    flex-grow: 1;
+
+    margin-left: var(--gap-s);
+
+    font-size: var(--font-size-a1);
+  }
 }
 </style>
