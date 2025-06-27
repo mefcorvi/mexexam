@@ -230,7 +230,7 @@ const toggleQuestionLanguage = () => {
   }
 
   if (questionLocale.value === 'es') {
-    questionLocale.value = locale.value;
+    questionLocale.value = locale.value === 'en' ? 'es' : 'ru';
   } else {
     questionLocale.value = 'es';
   }
