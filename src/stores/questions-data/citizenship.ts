@@ -1,12 +1,12 @@
-import type { QuestionData } from './interfaces';
+import type { QuestionData } from '../interfaces';
 
 export const questions: QuestionData[] = [
   {
-    id: 'r7s4yk',
-    type: 'choice',
     question: 'Árbol nacional',
     answer: 'Ahuehuete o árbol de tule',
     options: ['Árbol de aguacate', 'Parota', 'Agave'],
+    type: 'choice',
+    id: 'r7s4yk',
     ru: {
       question: 'Национальное дерево',
       answer: 'Агуэхуэте или тулевое дерево',
@@ -14,11 +14,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '03gm3o',
-    type: 'choice',
     question: 'Animal nacional',
     answer: 'Águila real',
     options: ['Burro', 'Caballo', 'Serpiente'],
+    type: 'choice',
+    id: '03gm3o',
     ru: {
       question: 'Национальное животное',
       answer: 'Королевский орел',
@@ -26,11 +26,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'vzfh9',
-    type: 'choice',
     question: 'Flor nacional',
     answer: 'Dalia',
     options: ['Cempazuchitl', 'Rosa', 'Margarita'],
+    type: 'choice',
+    id: 'vzfh9',
     ru: {
       question: 'Национальный цветок',
       answer: 'Далия',
@@ -38,8 +38,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '7gml3a',
-    type: 'choice',
     question: 'Nombre oficial de México',
     answer: 'Estados Unidos Mexicanos',
     options: [
@@ -47,6 +45,8 @@ export const questions: QuestionData[] = [
       'Estados Unidos del Sur Mexicano',
       'República de México'
     ],
+    type: 'choice',
+    id: '7gml3a',
     ru: {
       question: 'Официальное название Мексики',
       answer: 'Мексиканские Соединенные Штаты',
@@ -58,8 +58,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '5jhoxe',
-    type: 'choice',
     question: '¿Cómo se llama la ley fundamental de México?',
     answer: 'Constitución Política de los Estados Unidos Mexicanos',
     options: [
@@ -67,6 +65,8 @@ export const questions: QuestionData[] = [
       'Libro de leyes de la república Mexicana',
       'Reglamento Nacional de los Estados Unidos Mexicanos'
     ],
+    type: 'choice',
+    id: '5jhoxe',
     ru: {
       question: 'Как называется основной закон Мексики?',
       answer: 'Политическая конституция Мексиканских Соединенных Штатов',
@@ -78,8 +78,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'l7gfov',
-    type: 'choice',
     question:
       '¿Qué documento rige a los extranjeros y mexicanos en el territorio nacional o que documento otorga derechos a los mexicanos?',
     answer: 'Constitución Política de los Estados Unidos Mexicanos',
@@ -88,6 +86,8 @@ export const questions: QuestionData[] = [
       'Libro de leyes de la república Mexicana',
       'Reglamento Nacional de los Estados Unidos Mexicanos'
     ],
+    type: 'choice',
+    id: 'l7gfov',
     ru: {
       question:
         'Какой документ регулирует иностранцев и мексиканцев на национальной территории или какой документ предоставляет права мексиканцам?',
@@ -100,12 +100,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '7e79j',
-    type: 'choice',
     question:
       'Artículo de la constitución que prohíbe la esclavitud, habla sobre los derechos humanos y la discriminación',
     answer: 'Artículo 1',
     options: ['Artículo 3', 'Artículo 128', 'Artículo 10'],
+    type: 'choice',
+    id: '7e79j',
     ru: {
       question:
         'Статья конституции, запрещающая рабство, говорит о правах человека и дискриминации',
@@ -114,12 +114,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xznx4k',
-    type: 'choice',
     question:
       '¿Cuál es el artículo de la constitución que habla del derecho de los pueblos indígenas? / Artículo de la constitución que establece una nación pluricultural',
     answer: 'Artículo 2',
     options: ['Artículo 1', 'Artículo 3', 'Artículo 4'],
+    type: 'choice',
+    id: 'xznx4k',
     ru: {
       question:
         'Какая статья конституции говорит о праве коренных народов? / Статья конституции, устанавливающая многонациональное государство',
@@ -128,12 +128,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'f3k4k',
-    type: 'choice',
     question:
       '¿Cuál es el artículo de la constitución que rige la educación primaria y secundaria?',
     answer: 'Artículo 3',
     options: ['Artículo 1', 'Artículo 5', 'Artículo 2'],
+    type: 'choice',
+    id: 'f3k4k',
     ru: {
       question:
         'Какая статья конституции регулирует начальное и среднее образование?',
@@ -142,12 +142,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'b4mmhg',
-    type: 'choice',
     question:
       '¿Cual artículo de la constitución dice que la educación es gratuita y obligatoria?',
     answer: 'Artículo 3',
     options: ['Artículo 1', 'Artículo 5', 'Artículo 2'],
+    type: 'choice',
+    id: 'b4mmhg',
     ru: {
       question:
         'Какая статья конституции говорит, что образование бесплатно и обязательно?',
@@ -156,12 +156,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '9qngj7',
-    type: 'choice',
     question:
       '¿Cuál artículo de la constitución habla sobre la libertad de trabajo?',
     answer: 'Artículo 5',
     options: ['Artículo 1', 'Artículo 4', 'Artículo 2'],
+    type: 'choice',
+    id: '9qngj7',
     ru: {
       question: 'Какая статья конституции говорит о свободе труда?',
       answer: 'Статья 5',
@@ -169,12 +169,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '5jnher',
-    type: 'choice',
     question:
       '¿Cuál artículo de la constitución habla sobre la libertad de expresión?',
     answer: 'Artículo 6',
     options: ['Artículo 9', 'Artículo 1', 'Artículo 7'],
+    type: 'choice',
+    id: '5jnher',
     ru: {
       question: 'Какая статья конституции говорит о свободе слова?',
       answer: 'Статья 6',
@@ -182,12 +182,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'aekgt',
-    type: 'choice',
     question:
       'Artículo de la constitución que trata sobre el derecho de petición',
     answer: 'Artículo 8',
     options: ['Artículo 10', 'Artículo 5', 'Artículo 6'],
+    type: 'choice',
+    id: 'aekgt',
     ru: {
       question: 'Статья конституции, говорящая о праве на обращение',
       answer: 'Статья 8',
@@ -195,12 +195,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'tkott',
-    type: 'choice',
     question:
       'Artículo de la constitución que trata el derecho a buscar y recibir asilo',
     answer: 'Artículo 11',
     options: ['Artículo 10', 'Artículo 8', 'Artículo 20'],
+    type: 'choice',
+    id: 'tkott',
     ru: {
       question:
         'Статья конституции, говорящая о праве на поиск и получение убежища',
@@ -209,12 +209,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'eopryv',
-    type: 'choice',
     question:
       'Artículo de la constitución sobre las obligaciones de los ciudadanos',
     answer: 'Artículo 31',
     options: ['Artículo 13', 'Artículo 30', 'Artículo 33'],
+    type: 'choice',
+    id: 'eopryv',
     ru: {
       question: 'Статья конституции о обязанностях граждан',
       answer: 'Статья 31',
@@ -222,11 +222,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'd00wke',
-    type: 'choice',
     question: 'Artículo de la constitución que habla sobre los extranjeros',
     answer: 'Artículo 33',
     options: ['Artículo 13', 'Artículo 23', 'Artículo 31'],
+    type: 'choice',
+    id: 'd00wke',
     ru: {
       question: 'Статья конституции, говорящая об иностранцах',
       answer: 'Статья 33',
@@ -234,12 +234,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'pgb65j',
-    type: 'choice',
     question:
       '¿Cuál artículo de la constitución trata sobre los derechos de los ciudadanos?',
     answer: 'Artículo 35',
     options: ['Artículo 15', 'Artículo 5', 'Artículo 53'],
+    type: 'choice',
+    id: 'pgb65j',
     ru: {
       question: 'Какая статья конституции говорит о правах граждан?',
       answer: 'Статья 35',
@@ -247,12 +247,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '94xre7',
-    type: 'choice',
     question:
       '¿Cuál es el artículo de la constitución que explica cómo puedes perder la naturalización?',
     answer: 'Artículo 37',
     options: ['Artículo 17', 'Artículo 57', 'Artículo 27'],
+    type: 'choice',
+    id: '94xre7',
     ru: {
       question:
         'Какая статья конституции объясняет, как можно потерять натурализацию?',
@@ -261,8 +261,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '0j0ah7',
-    type: 'choice',
     question: '¿Cuáles son los símbolos patrios?',
     answer: 'La Bandera, el himno nacional y el escudo nacional',
     options: [
@@ -270,6 +268,8 @@ export const questions: QuestionData[] = [
       'El himno nacional, la bandera y la virgen de Guadalupe',
       'Los tacos, el tequila y la charreria'
     ],
+    type: 'choice',
+    id: '0j0ah7',
     ru: {
       question: 'Какие национальные символы?',
       answer: 'Флаг, гимн и герб',
@@ -281,8 +281,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '4wscae',
-    type: 'choice',
     question: '¿Cuándo fué creado el Himno Nacional?',
     answer: '13 de Septiembre de 1854',
     options: [
@@ -290,6 +288,8 @@ export const questions: QuestionData[] = [
       '13 de Agosto de 1854',
       '10 de Agosto de 1855'
     ],
+    type: 'choice',
+    id: '4wscae',
     ru: {
       question: 'Когда был создан Гимн?',
       answer: '13 сентября 1854 года',
@@ -301,8 +301,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'eziegc',
-    type: 'choice',
     question: '¿Cuándo fué declarado oficial el Himno Nacional?',
     answer: '1943 durante la presidencia de Manuel Ávila Camacho',
     options: [
@@ -310,6 +308,8 @@ export const questions: QuestionData[] = [
       '1982 durante la presidencia de López Mateos',
       '1945 durante la presidencia de Díaz Ordaz'
     ],
+    type: 'choice',
+    id: 'eziegc',
     ru: {
       question: 'Когда был официально объявлен Гимн?',
       answer: '1943 год во время президентства Мануэля Авила Камачо',
@@ -321,12 +321,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'brvwv',
-    type: 'choice',
     question:
       '¿Cuál de los símbolos patrios fue reconocido oficialmente en 1943 durante la presidencia de Manuel Ávila Camacho?',
     answer: 'El Himno Nacional',
     options: ['La Bandera', 'El Escudo Nacional', 'La Charrería'],
+    type: 'choice',
+    id: 'brvwv',
     ru: {
       question:
         'Какой из национальных символов был официально признан в 1943 году во время президентства Мануэля Авила Камачо?',
@@ -335,8 +335,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'fudy1op',
-    type: 'choice',
     question: 'El tema dominante del Himno Nacional Mexicano',
     answer: 'Una exhortación a la guerra defensiva',
     options: [
@@ -344,6 +342,8 @@ export const questions: QuestionData[] = [
       'Expandir el territorio',
       'Atacar a los enemigos de la nación'
     ],
+    type: 'choice',
+    id: 'fudy1op',
     ru: {
       question: 'Доминирующая тема Мексиканского Гимна',
       answer: 'Призыв к оборонительной войне',
@@ -355,8 +355,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'cufb4',
-    type: 'choice',
     question: '¿Quién escribió la letra del Himno Nacional?',
     answer: 'El poeta potosino Francisco González Bocanegra',
     options: [
@@ -364,6 +362,8 @@ export const questions: QuestionData[] = [
       'El poeta veracruzano Ritchie Valens',
       'El poeta colimense Jorge Solorzano'
     ],
+    type: 'choice',
+    id: 'cufb4',
     ru: {
       question: 'Кто написал текст Гимна?',
       answer: 'Поэт Франсиско Гонсалес Боканегра',
@@ -375,8 +375,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'b1vwds',
-    type: 'choice',
     question: '¿Quién compuso la música del Himno Nacional?',
     answer: 'El músico español Jaime Nunó',
     options: [
@@ -384,6 +382,8 @@ export const questions: QuestionData[] = [
       'El músico Dominicano José Perez Guardiola',
       'El músico frances Charles Ferdinand Latrille'
     ],
+    type: 'choice',
+    id: 'b1vwds',
     ru: {
       question: 'Кто сочинил музыку Гимна?',
       answer: 'Испанский музыкант Хайме Нуньо',
@@ -395,8 +395,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '2igt9',
-    type: 'choice',
     question:
       'En el Himno Nacional, la expresión "Más si osare un extraño enemigo" ¿Qué significa?',
     answer: 'Sí un enemigo desconocido se atreviera',
@@ -405,6 +403,8 @@ export const questions: QuestionData[] = [
       'Los enemigos extraños son osados',
       'Más de un enemigo esta al acecho'
     ],
+    type: 'choice',
+    id: '2igt9',
     ru: {
       question:
         'В Гимне Национальном выражение "Más si osare un extraño enemigo" Что означает?',
@@ -417,11 +417,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'gj9z7',
-    type: 'text',
     question: 'Descripción de la bandera, colores y elementos',
     answer:
       'Es un rectángulo dividido en tres franjas verticales de igual proporción, de colores verde blanco y rojo. El Escudo Nacional se encuentra al centro de la franja blanca. El color verde simboliza esperanza, blanco la pureza de los ideales y rojo la sangre derramada por los héroes de la patria.',
+    type: 'text',
+    id: 'gj9z7',
     ru: {
       question: 'Описание флага, цветов и элементов',
       answer:
@@ -429,29 +429,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'g0hf2u',
-    type: 'text',
-    question: 'Descripción del escudo nacional y sus elementos',
-    answer:
-      'El escudo representa a un águila real sentada sobre un nopal floreciente, capturando una serpiente. El águila está posada sobre su pata izquierda, mientras que con su pata derecha y su pico sostiene a la serpiente. El nopal crece sobre una roca ubicada encima de un lago. En la parte inferior, el escudo está enmarcado por ramas de roble y laurel, unidas en el centro con una cinta de los colores de la bandera mexicana.',
-    ru: {
-      question: 'Описание национального герба и его элементов',
-      answer:
-        'Герб изображает сидящего на цветущем кактусе беркута, поймавшего змею. Беркут сидит на левой лапе, а правой лапой и клювом держит змею. Кактус произрастает из скалы, расположенной над озером. В нижней части герб обрамлен ветвями дуба и лавра, перевязанных посредине лентой цветов мексиканского флага.',
-      note: `
-        Согласно древнеиндейскому преданию, бог солнца Уицилопочтли приказал ацтекам поселиться в том месте,
-        где им встретится орёл, сидящий на высоком кактусе и удерживающий в клюве змею.
-        Индейцам удалось обнаружить такую местность, которая полностью соответствовала описанию,
-        и они решили основать на западном берегу озера Тескоко, в живописной долине, свой город.
-        Эта легенда нашла своё отражение на флаге и гербе Мексики.
-        У ацтеков изображения имели глубокие религиозные коннотации,
-        но для европейцев это лишь символ триумфа добра над злом. Флаг принят 16 сентября 1968 года.
-      `
-    }
-  },
-  {
-    id: 'e0akao',
-    type: 'choice',
     question:
       '¿Cúal es el significado de el águila y la serpiente que aparecen en el escudo nacional mexicano, incluido en la franja blanca de la bandera?',
     answer: 'Representan una leyenda prehispánica',
@@ -460,6 +437,8 @@ export const questions: QuestionData[] = [
       'Representan una pintura',
       'Representan un ritual'
     ],
+    type: 'choice',
+    id: 'e0akao',
     ru: {
       question:
         'Каково значение орла и змеи, изображенных на национальном гербе Мексики, включенном в белую полосу флага?',
@@ -472,8 +451,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'sqxvrk',
-    type: 'choice',
     question: '¿Quién es el máximo comandante de las Fuerzas Armadas?',
     answer: 'El presidente de la república',
     options: [
@@ -481,6 +458,8 @@ export const questions: QuestionData[] = [
       'El general en servicio de mayor rango en el ejercito',
       'El titular de la Secretaría de la Defensa Nacional'
     ],
+    type: 'choice',
+    id: 'sqxvrk',
     ru: {
       question: 'Кто является верховным командующим Вооруженными силами?',
       answer: 'Президент республики',
@@ -492,8 +471,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'to5cl',
-    type: 'choice',
     question: 'Los tres niveles de gobierno en México son',
     answer: 'Federación, estado y municipio',
     options: [
@@ -501,6 +478,8 @@ export const questions: QuestionData[] = [
       'Ejecutivo, legislativo y judicial',
       'Federación, delegación y provincia'
     ],
+    type: 'choice',
+    id: 'to5cl',
     ru: {
       question: 'Три уровня правительства в Мексике',
       answer: 'Федерация, штат и муниципалитет',
@@ -512,8 +491,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '41ajni',
-    type: 'choice',
     question: 'Según la constitución, ¿Cuáles son los poderes máximos?',
     answer: 'Ejecutivo, legislativo y judicial',
     options: [
@@ -521,6 +498,8 @@ export const questions: QuestionData[] = [
       'Los diputados y los ciudadanos',
       'Tribunal Supremo de Justicia, Instituto Nacional Electoral y los cuerpos policiales'
     ],
+    type: 'choice',
+    id: '41ajni',
     ru: {
       question: 'Согласно конституции, какие власти максимальны?',
       answer: 'Исполнительная, законодательная и судебная',
@@ -532,8 +511,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xr1mfr',
-    type: 'choice',
     question: '¿Quién imparte la justicia en México?',
     answer: 'El Poder Judicial con división federal y estatal',
     options: [
@@ -541,6 +518,8 @@ export const questions: QuestionData[] = [
       'El presidente y la camara de diputados',
       'El senado de la república'
     ],
+    type: 'choice',
+    id: 'xr1mfr',
     ru: {
       question: 'Кто осуществляет правосудие в Мексике?',
       answer: 'Судебная власть с федеральным и штатным делением',
@@ -552,11 +531,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '12udrk',
-    type: 'text',
     question: 'Estructura del Poder Judicial Mexicano',
     answer:
       'Suprema Corte de Justicia\nTribunal Electoral\nLos Tribunales de Circuito (Colegiados y Unitarios)\nJuzgados de Distrito\nConsejo de la Judicatura Federal',
+    type: 'text',
+    id: '12udrk',
     ru: {
       question: 'Структура Мексиканской судебной власти',
       answer:
@@ -564,11 +543,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'u56wa',
-    type: 'choice',
     question: '¿Cuántos magistrados tiene la Corte Suprema de Justicia?',
     answer: '11',
     options: ['32', '500', '2 por cada estado de la república mexicana (64)'],
+    type: 'choice',
+    id: 'u56wa',
     ru: {
       question: 'Сколько судей в Верховном суде?',
       answer: '11',
@@ -576,8 +555,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'zvhp7',
-    type: 'choice',
     question: '¿Cuál es el organo depositario del Poder Legislativo?',
     answer: 'El Congreso de la Unión',
     options: [
@@ -585,6 +562,8 @@ export const questions: QuestionData[] = [
       'La Guardia Nacional',
       'El Instituto Nacional Electoral'
     ],
+    type: 'choice',
+    id: 'zvhp7',
     ru: {
       question: 'Какой орган является хранилищем законодательной власти?',
       answer: 'Конгресс Союза',
@@ -596,8 +575,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'eksbft',
-    type: 'choice',
     question: '¿Quienes crean y aprueban las leyes en México?',
     answer: 'Los diputados y senadores del congreso de la unión',
     options: [
@@ -605,6 +582,8 @@ export const questions: QuestionData[] = [
       'El presidente de la república',
       'Los jueces y magistrados de la suprema corte de justicia'
     ],
+    type: 'choice',
+    id: 'eksbft',
     ru: {
       question: 'Кто создает и принимает законы в Мексике?',
       answer: 'Депутаты и сенаторы конгресса союза',
@@ -616,11 +595,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'lusig',
-    type: 'choice',
     question: '¿Cuántos diputados tiene el congreso?',
     answer: '500',
     options: ['11', '32', '128'],
+    type: 'choice',
+    id: 'lusig',
     ru: {
       question: 'Сколько депутатов в конгрессе?',
       answer: '500',
@@ -628,8 +607,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'n34pze',
-    type: 'choice',
     question:
       '¿A qué entidad representan los diputados del Congreso de la Unión?',
     answer: 'A los distritos electorales',
@@ -638,6 +615,8 @@ export const questions: QuestionData[] = [
       'A los municipios',
       'A las regiones del país'
     ],
+    type: 'choice',
+    id: 'n34pze',
     ru: {
       question: 'Какую сущность представляют депутаты конгресса союза?',
       answer: 'Избирательные округа',
@@ -645,11 +624,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '40ihpn',
-    type: 'choice',
     question: '¿Cuántos distritos electorales hay en México?',
     answer: '300',
     options: ['32', '500', '128'],
+    type: 'choice',
+    id: '40ihpn',
     ru: {
       question: 'Сколько избирательных округов в Мексике?',
       answer: '300',
@@ -657,8 +636,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '0uvmu',
-    type: 'choice',
     question: '¿A quién representan los senadores?',
     answer: 'A las entidades federativas',
     options: [
@@ -666,6 +643,8 @@ export const questions: QuestionData[] = [
       'A jueces y magistrados',
       'A los municipios'
     ],
+    type: 'choice',
+    id: '0uvmu',
     ru: {
       question: 'Кого представляют сенаторы?',
       answer: 'Субъекты федерации',
@@ -673,11 +652,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'wp6sgq',
-    type: 'choice',
     question: '¿Cuántos senadores hay en México?',
     answer: '128',
     options: ['500', '11', '158'],
+    type: 'choice',
+    id: 'wp6sgq',
     ru: {
       question: 'Сколько сенаторов в Мексике?',
       answer: '128',
@@ -685,8 +664,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'bj2ii',
-    type: 'choice',
     question: '¿Cuánto tiempo dura el mandato presidencial en México?',
     answer: '6 años sin reelección',
     options: [
@@ -694,6 +671,8 @@ export const questions: QuestionData[] = [
       '4 años sin reeleción',
       '6 años con reeleciónes indefinidas'
     ],
+    type: 'choice',
+    id: 'bj2ii',
     ru: {
       question: 'Как долго длится президентский срок в Мексике?',
       answer: '6 лет без переизбрания',
@@ -705,8 +684,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '7w0won',
-    type: 'choice',
     question: '¿Cuándo son las elecciones presidenciales en México?',
     answer: 'El primer domingo de Junio cada 6 años',
     options: [
@@ -714,6 +691,8 @@ export const questions: QuestionData[] = [
       'El primer domingo de Enero cada 6 años',
       'El primer domingo Febrero cada 6 años'
     ],
+    type: 'choice',
+    id: '7w0won',
     ru: {
       question: 'Когда президентские выборы в Мексике?',
       answer: 'Первое воскресенье июня каждые 6 лет',
@@ -725,17 +704,17 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '86nw8',
-    type: 'choice',
     question: '"Los Pinos”, en la capital de México, es el nombre de',
     answer:
       'Residencia oficial del presidente de la República desde 1934 hasta Noviembre 2018',
+    note: 'Desde 1 diciembre 2018 es un espacio abierto al público.',
     options: [
       'Museo de arte revolucionario fundado en 1946',
       'Parque urbano localizado en la alcaldía Miguel Hidalgo',
       'Monumento nacional considerado patrimonio cultural de la humanidad por la unesco'
     ],
-    note: 'Desde 1 diciembre 2018 es un espacio abierto al público, el presidente actual AMLO no vive allí.',
+    type: 'choice',
+    id: '86nw8',
     ru: {
       question: '"Лос Пинос", в столице Мексики, это название',
       answer:
@@ -745,15 +724,15 @@ export const questions: QuestionData[] = [
         'Городской парк, расположенный в административном районе Мигель Идальго',
         'Национальный памятник, признанный ЮНЕСКО культурным наследием человечества'
       ],
-      note: 'С 1 декабря 2018 года это открытое пространство для общественности, нынешний президент АМЛО там не живет.'
+      note: 'С 1 декабря 2018 года это открытое пространство для общественности.'
     }
   },
   {
-    id: 'lzieq',
-    type: 'choice',
     question: '¿A qué edad se puede votar en México?',
     answer: '18 años',
     options: ['16 años', '21 años', '19 años'],
+    type: 'choice',
+    id: 'lzieq',
     ru: {
       question: 'Во сколько лет можно голосовать в Мексике?',
       answer: '18 лет',
@@ -761,8 +740,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'hz6m7r',
-    type: 'choice',
     question:
       '¿Dónde se hacen las denuncias del consumidor? o ¿Cuál es la institución de protección al consumidor?',
     answer: 'PROFECO: Procuraduría Federal del Consumidor',
@@ -771,6 +748,8 @@ export const questions: QuestionData[] = [
       'MINCO: Ministerio Nacional del Consumidor',
       'MINPROCON: Ministerio de Proteción de los Consumidores'
     ],
+    type: 'choice',
+    id: 'hz6m7r',
     ru: {
       question:
         'Где можно подать жалобу потребителя? или Какое учреждение занимается защитой прав потребителей?',
@@ -783,8 +762,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'ivh34z',
-    type: 'choice',
     question: '¿Secretaría que se encarga de cobrar impuestos?',
     answer: 'SHCP: Secretaría de Hacienda y Crédito Público',
     options: [
@@ -792,6 +769,8 @@ export const questions: QuestionData[] = [
       'SAIM: Secretaría de Administracion de Impuestos',
       'SENAT: Secretaria Nacional de Administración Tributaria'
     ],
+    type: 'choice',
+    id: 'ivh34z',
     ru: {
       question: 'Какое министерство занимается сбором налогов?',
       answer: 'СНКП: Министерство финансов и общественного кредита',
@@ -803,8 +782,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'yes4zc',
-    type: 'choice',
     question: '¿Qué órgano público otorga las cédulas profesionales?',
     answer:
       'Secretaria de Educación Pública (SEP) mediante la Dirección General de Profesiones',
@@ -813,6 +790,8 @@ export const questions: QuestionData[] = [
       'Ministerio Nacional de Educación (MNE) a través de la direccion general de profesionistas',
       'Es facultad exclusiva del Instituto Politécnico Nacional (IPN)'
     ],
+    type: 'choice',
+    id: 'yes4zc',
     ru: {
       question:
         'Какой государственный орган выдает профессиональные удостоверения?',
@@ -826,17 +805,17 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'lycqq7',
-    type: 'choice',
     question:
       'El organismo encargado de regular la participación de los partidos políticos en las elecciones es',
     answer: 'INE (Instituto Nacional Electoral)',
+    note: 'A partir del 4 de Abril del 2014, anteriormente era Instituto Federal Electoral (IFE).',
     options: [
       'IFE (Instituto Federal Electoral)',
       'CNE (Consejo Nacional Electoral)',
       'CFE (Comisión Federal Electoral)'
     ],
-    note: 'A partir del 4 de Abril del 2014, anteriormente era Instituto Federal Electoral (IFE).',
+    type: 'choice',
+    id: 'lycqq7',
     ru: {
       question:
         'Орган, ответственный за регулирование участия политических партий в выборах',
@@ -850,32 +829,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'r1yt4h',
-    type: 'choice',
-    question: '¿Cuántos consulados tiene México?',
-    answer: '67',
-    options: ['61', '69', '63'],
-    ru: {
-      question: 'Сколько консульств в Мексике?',
-      answer: '67',
-      options: ['61', '69', '63']
-    }
-  },
-  {
-    id: 'py325r',
-    type: 'choice',
-    question: '¿Cuántas embajadas tiene México?',
-    answer: '80',
-    options: ['50', '60', '70'],
-    ru: {
-      question: 'Сколько посольств в Мексике?',
-      answer: '80',
-      options: ['50', '60', '70']
-    }
-  },
-  {
-    id: 'r45ra',
-    type: 'choice',
     question: '¿Cuándo se fundó el IFE?',
     answer: '11 de Octubre de 1990',
     options: [
@@ -883,6 +836,8 @@ export const questions: QuestionData[] = [
       '7 de Mayo de 1986',
       '14 de Noviembre de 1986'
     ],
+    type: 'choice',
+    id: 'r45ra',
     ru: {
       question: 'Когда был основан Федеральный институт избирательной системы?',
       answer: '11 октября 1990 года',
@@ -890,11 +845,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'q1es7f9',
-    type: 'choice',
     question: '¿En que año se creó el INE?',
     answer: '2014',
     options: ['2000', '2011', '2006'],
+    type: 'choice',
+    id: 'q1es7f9',
     ru: {
       question:
         'В каком году был создан INE (Национальный институт избирательной системы)?',
@@ -903,8 +858,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '97cwd',
-    type: 'choice',
     question: '¿Qué dice la constitución sobre como debe ser la educación?',
     answer: 'Laica, gratuita, obligatoria y de calidad',
     options: [
@@ -912,6 +865,8 @@ export const questions: QuestionData[] = [
       'Obligatoria y de calidad',
       'Laica y gratuita'
     ],
+    type: 'choice',
+    id: '97cwd',
     ru: {
       question: 'Что говорит конституция о том, каким должно быть образование?',
       answer: 'Светское, бесплатное, обязательное и качественное',
@@ -923,8 +878,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'fxlk4',
-    type: 'choice',
     question:
       'Según la constitución, la educación es obligatoria ¿En qué niveles académicos?',
     answer:
@@ -934,6 +887,8 @@ export const questions: QuestionData[] = [
       'Educación preescolar, primaria y secundaria',
       'Educación preescolar y primaria'
     ],
+    type: 'choice',
+    id: 'fxlk4',
     ru: {
       question:
         'Согласно конституции, образование является обязательным. На каких академических уровнях?',
@@ -947,11 +902,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'njczl8',
-    type: 'text',
     question: '¿Cuánto dura la educación en México?',
     answer:
       'Preescolar: 3 años\n Primaria: 6 años\nSecundaria: 3 años\n Preparatoria o bachillerato: 3 años',
+    type: 'text',
+    id: 'njczl8',
     ru: {
       question: 'Сколько длится образование в Мексике?',
       answer:
@@ -959,11 +914,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'klh0xw6',
-    type: 'choice',
     question: '¿Cuántos años dura la educación primaria en México?',
     answer: '6 años',
     options: ['5 años', '3 años', '1 año'],
+    type: 'choice',
+    id: 'klh0xw6',
     ru: {
       question: 'Сколько лет длится начальное образование в Мексике?',
       answer: '6 лет',
@@ -971,8 +926,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'j7k7wj',
-    type: 'choice',
     question:
       '¿En qué año se declaró gratuita y obligatoria la educación elemental? / En qué año se fundó la Escuela Nacional Preparatoria y quién lo hizo?',
     answer: 'El 2 de Diciembre de 1867 durante el periodo de Benito Juárez',
@@ -981,6 +934,8 @@ export const questions: QuestionData[] = [
       'El 15 de Diciembre de 1871 durante el periodo de Sebastián Lerdo de Tejada',
       'El 09 de Diciembre de 1877 durante el periodo de Porfirio Díaz'
     ],
+    type: 'choice',
+    id: 'j7k7wj',
     ru: {
       question:
         'В каком году было объявлено бесплатное и обязательное начальное образование? / В каком году была основана Национальная подготовительная школа и кем?',
@@ -993,12 +948,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'klq3nh',
-    type: 'choice',
     question: '¿Cuánto dura el CICLO ESCOLAR primario en México?',
     answer: '1 año',
-    options: ['2 años', '3 años', '6 años'],
     note: 'Es diferente a cuanto dura la primaria que son 6 años.',
+    options: ['2 años', '3 años', '6 años'],
+    type: 'choice',
+    id: 'klq3nh',
     ru: {
       question: 'Сколько длится учебный год в начальной школе в Мексике?',
       answer: '1 год',
@@ -1006,11 +961,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xj18wn',
-    type: 'choice',
     question: '¿Quién es la canciller actual?',
     answer: 'Alicia Bárcena',
     options: ['Luis Videgaray', 'José Antonio Meade', 'Luis Ernesto Derbez'],
+    type: 'choice',
+    id: 'xj18wn',
     ru: {
       question: 'Кто является текущим министром иностранных дел?',
       answer: 'Алисия Барсена',
@@ -1018,23 +973,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'heluul',
-    type: 'text',
-    question: 'Listado en orden de los más recientes presidentes de México',
-    answer:
-      'Andrés Manuel López Obrador 2018 - 2024\nEnrique Peña Nieto 2012 - 2018\nFelipe Calderón Hinojosa 2006 - 2012\nVicente Fox Quesada 2000 - 2006\nErnesto Cedillo Ponce de León 1994 - 2000\nCarlos Salinas de Gortari 1988 - 1994\nMiguel de la Madrid Hurtado 1982 - 1988\nJosé López Portillo y Pacheco 1976 - 1982\nLuis Echeverría Álvarez 1970 - 1976\nGustavo Díaz Ordaz 1964 - 1970',
-    ru: {
-      question: 'Список в порядке последних президентов Мексики',
-      answer:
-        'Андрес Мануэль Лопес Обрадор 2018 - 2024\nЭнрике Пенья Ньето 2012 - 2018\nФелипе Кальдерон Иноса 2006 - 2012\nВисенте Фокс Кесада 2000 - 2006\nЭрнесто Седильо Понсе де Леон 1994 - 2000\nКарлос Салинас де Гортари 1988 - 1994\nМигель де ла Мадрид Уртадо 1982 - 1988\nХосе Лопес Портильо и Пачеко 1976 - 1982\nЛуис Эчеверрия Альварес 1970 - 1976\nГуставо Диас Ордас 1964 - 1970'
-    }
-  },
-  {
-    id: 'fn8mv',
-    type: 'text',
     question: 'Algunas fechas conmemorativas en México',
     answer:
       'Día de la Candelaria - 2 de febrero\nDía de la Constitución - 5 de febrero\nDía de la Bandera Nacional - 24 de febrero\nNatalicio de Benito Juárez - 21 de marzo\nAniversario de la Batalla de Puebla - 5 de mayo\nDía de la Independencia - 16 de septiembre\nDía de Muertos - 2 de noviembre\nAniversario de la revolución - 20 de noviembre',
+    type: 'text',
+    id: 'fn8mv',
     ru: {
       question: 'Некоторые памятные даты в Мексике',
       answer:

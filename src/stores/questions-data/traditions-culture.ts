@@ -1,9 +1,7 @@
-import type { QuestionData } from './interfaces';
+import type { QuestionData } from '../interfaces';
 
 export const questions: QuestionData[] = [
   {
-    id: '3ij6ef',
-    type: 'choice',
     question: '¿Qué es una tienda de abarrotes?',
     answer:
       'Lugar donde venden productos de uso cotidiano, viveres, articulos de limpieza, etc',
@@ -12,6 +10,8 @@ export const questions: QuestionData[] = [
       'Tienda de ropa económica',
       'Donde compras zapatos al mayor'
     ],
+    type: 'choice',
+    id: '3ij6ef',
     ru: {
       question: 'Что такое магазин абарротес?',
       answer:
@@ -24,12 +24,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'of7v37',
-    type: 'choice',
     question: 'Historieta mexicana creada por Gabriel Vargas',
     answer: 'La Familia Burrón',
-    options: ['Archie', 'Mafalda', 'Spiderman', 'Heidi'],
     note: 'Comenzó en 1948 y el último número apareció en 2009, más de 60 años de publicación ininterrumpida. Aborda las aventuras de una familia de clase baja de la Ciudad de México.',
+    options: ['Archie', 'Mafalda', 'Spiderman', 'Heidi'],
+    type: 'choice',
+    id: 'of7v37',
     ru: {
       question: 'Мексиканский комикс, созданный Габриэлем Варгасом',
       answer: 'Семья Буррон',
@@ -38,11 +38,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'wj038d',
-    type: 'choice',
     question: 'Día de la Virgen de Guadalupe',
     answer: '12 de Diciembre',
     options: ['16 de Septiembre', '20 de Noviembre', '10 de Mayo'],
+    type: 'choice',
+    id: 'wj038d',
     ru: {
       question: 'День Девы Гваделупской',
       answer: '12 декабря',
@@ -50,12 +50,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'ksyvo',
-    type: 'choice',
     question:
       '¿Como se le conoce popularmente a los habitantes de la Ciudad de México?',
     answer: 'Chilangos',
     options: ['Porteños', 'Pipope', 'Regios'],
+    type: 'choice',
+    id: 'ksyvo',
     ru: {
       question: 'Как популярно называют жителей Мехико?',
       answer: 'Чиланго',
@@ -63,12 +63,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '9laxw6',
-    type: 'choice',
     question:
       'Nombre de las embarcaciones coloridas con flores que se usan en Xochimilco, populares para los turistas',
     answer: 'Trajineras',
     options: ['Chinampa', 'Barcazas', 'Buques'],
+    type: 'choice',
+    id: '9laxw6',
     ru: {
       question:
         'Название красочных лодок с цветами, используемых в Сочимилько, популярных среди туристов',
@@ -77,11 +77,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '3x0fioi',
-    type: 'choice',
     question: 'Otro modo de llamar a la base o lugar de taxis en México',
     answer: 'Sitios',
     options: ['Estacionamiento', 'Planta', 'Taxímetro'],
+    type: 'choice',
+    id: '3x0fioi',
     ru: {
       question: 'Другой способ назвать стоянку такси в Мексике',
       answer: 'Сито',
@@ -89,13 +89,13 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'z0m4nc',
-    type: 'choice',
     question:
       'Pan en forma de rosca, adornado con frutas, contiene figuritas y se come en la celebración de',
     answer: 'El día de reyes',
-    options: ['Navidad', 'Año nuevo', 'Semana Santa'],
     note: '6 de Enero.',
+    options: ['Navidad', 'Año nuevo', 'Semana Santa'],
+    type: 'choice',
+    id: 'z0m4nc',
     ru: {
       question:
         'Хлеб в форме кольца, украшенный фруктами, содержит фигурки и едят на праздновании',
@@ -105,13 +105,13 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'vbj329',
-    type: 'choice',
     question:
       'Tiene forma de estrella, se llena de dulces y de juguetes, se usa en cumpleaños y durante los días previos a la Navidad, se golpea con un palo',
     answer: 'Piñata',
-    options: ['Bolo', 'Pachanga', 'Posada'],
     note: 'Los siete picos simbolizan los siete pecados capitales: pereza, envidia, gula, ira, lujuria, avaricia y soberbia.',
+    options: ['Bolo', 'Pachanga', 'Posada'],
+    type: 'choice',
+    id: 'vbj329',
     ru: {
       question:
         'Имеет форму звезды, наполняется сладостями и игрушками, используется на днях рождения и в дни перед Рождеством, бьют палкой',
@@ -121,11 +121,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'oizu1a',
-    type: 'choice',
     question: 'Flor de color rojo típica de navidad',
     answer: 'Nochebuena',
     options: ['Cempasúchil', 'Dalia', 'Magnolia'],
+    type: 'choice',
+    id: 'oizu1a',
     ru: {
       question: 'Типичный рождественский красный цветок',
       answer: 'Пуансеттия',
@@ -133,11 +133,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xowyri',
-    type: 'choice',
     question: '¿De dónde proviene el mariachi?',
     answer: 'Jalisco',
     options: ['Oaxaca', 'Zacatecas', 'Michoacán', 'Guanajuato'],
+    type: 'choice',
+    id: 'xowyri',
     ru: {
       question: 'Откуда происходит мариачи?',
       answer: 'Халиско',
@@ -145,21 +145,21 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xreg2x',
-    type: 'text',
     question: '¿Qué significa México?',
     answer: 'En el ombligo de la luna / En el centro del Lago de la Luna',
+    type: 'text',
+    id: 'xreg2x',
     ru: {
       question: 'Что означает Мексика?',
       answer: 'В пупке луны / В центре озера Луны'
     }
   },
   {
-    id: 'j34dgo',
-    type: 'choice',
     question: '¿A qué se le llama fonda?',
     answer: 'A un pequeño restaurante económico',
     options: ['A un hostal', 'A un carro pequeño', 'A un barrio popular'],
+    type: 'choice',
+    id: 'j34dgo',
     ru: {
       question: 'Что называют фондой?',
       answer: 'Маленький экономичный ресторан',
@@ -167,11 +167,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'xplrtr',
-    type: 'choice',
     question: 'Lugar donde se come a precios bajos',
     answer: 'Fonda',
     options: ['Pujol', 'Mexique', 'Oxte'],
+    type: 'choice',
+    id: 'xplrtr',
     ru: {
       question: 'Место, где можно поесть по низким ценам',
       answer: 'Фонда',
@@ -179,8 +179,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '5n6w2r',
-    type: 'choice',
     question: 'En México, una tlapalería es',
     answer: 'Una tienda de pinturas y solventes, ferretería',
     options: [
@@ -188,6 +186,8 @@ export const questions: QuestionData[] = [
       'Una tienda de tlacuaches',
       'Un tipo de restaurante'
     ],
+    type: 'choice',
+    id: '5n6w2r',
     ru: {
       question: 'В Мексике, tlapalería это',
       answer: 'Магазин красок и растворителей, хозяйственный магазин',
@@ -195,12 +195,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'yya656',
-    type: 'choice',
     question:
       'Perro originario de México o nombre de raza de perro prehispánico de poco pelo',
     answer: 'Xoloitzcuintle',
     options: ['Chihuahua', 'Techichi', 'Calupoh'],
+    type: 'choice',
+    id: 'yya656',
     ru: {
       question:
         'Собака, родом из Мексики или название породы доиспанской собаки с короткой шерстью',
@@ -209,11 +209,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'fez81l',
-    type: 'choice',
     question: 'El vocablo "chaparro" significa',
     answer: 'Bajo de estatura',
     options: ['Alto', 'Originario del Chaparro', 'Santurron'],
+    type: 'choice',
+    id: 'fez81l',
     ru: {
       question: 'Слово "чапарро" означает',
       answer: 'Низкорослый',
@@ -221,11 +221,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '3tobod',
-    type: 'text',
     question: '¿Qué es una bomba Yucateca?',
     answer:
       'Comúnmente las "bombas" son rimas. Estos versos son recitados de manera improvisada y pueden ser románticos, jocosos e inclusive melosos, pero nunca groseros. En ocasiones llegan a causar risa por su composición a manera de broma o descaro.',
+    type: 'text',
+    id: '3tobod',
     ru: {
       question: 'Что такое юкатанская бомба?',
       answer:
@@ -233,8 +233,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '2f7t5m',
-    type: 'choice',
     question:
       'En el habla popular de México, el término "marchante(a)" se refiere a',
     answer:
@@ -244,6 +242,8 @@ export const questions: QuestionData[] = [
       'Un vendedor de obras de arte',
       'Un bailarín'
     ],
+    type: 'choice',
+    id: '2f7t5m',
     ru: {
       question: 'В разговорной речи Мексики, термин "marchante(a)" относится к',
       answer:
@@ -256,11 +256,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'kxkane',
-    type: 'choice',
     question: 'La palabra "Jarocho" alude a que es propio de',
     answer: 'Veracruz',
     options: ['Chiapas', 'Campeche', 'Oaxaca'],
+    type: 'choice',
+    id: 'kxkane',
     ru: {
       question: 'Слово "Jarocho" означает, что оно родом из',
       answer: 'Веракрус',
@@ -268,11 +268,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'zalpk',
-    type: 'choice',
     question: '¿Qué significa papalote?',
     answer: 'Mariposa en Náhuatl',
     options: ['Papa', 'Papagayo', 'Jitomate'],
+    type: 'choice',
+    id: 'zalpk',
     ru: {
       question: 'Что означает папалоте?',
       answer: 'Бабочка на языке науатль',
@@ -280,11 +280,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '8g97ki',
-    type: 'text',
     question: '¿Qué es el metate?',
     answer:
       'Es un utensilio de cocina utilizado en diversas culturas (Maya, mexica, etc) y hasta la actualidad. Se compone de dos elementos: el metate, es decir, una plancha rectangular y el metlapile, el rodillo cilíndrico que se agarra con ambas manos. Se emplea para moler maíz, chiles, especias, etc',
+    type: 'text',
+    id: '8g97ki',
     ru: {
       question: 'Что такое метате?',
       answer:
@@ -292,11 +292,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'sd674',
-    type: 'text',
     question: '¿Qué es la Guelaguetza?',
     answer:
       'Es una fiesta conocida como los lunes del cerro que se celebra dos lunes de julio cercanos al día de la Virgen del Carmen en Oaxaca. Guelaguetza es una palabra Zapoteca que denota el acto de participar cooperando; es un don gratuito que no lleva consigo más obligación que la de la reciprocidad. Se refiere a la cortesía y atención con que se debe tratar a los demás, se relaciona con el compartir, la cortesía, cooperar y los presentes o regalos.',
+    type: 'text',
+    id: 'sd674',
     ru: {
       question: 'Что такое Гуэлагетца?',
       answer:
@@ -304,11 +304,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'bubij',
-    type: 'choice',
     question: '¿De dónde es la Guelaguetza?',
     answer: 'Oaxaca',
     options: ['Chihuahua', 'Coahuila', 'Nuevo León'],
+    type: 'choice',
+    id: 'bubij',
     ru: {
       question: 'Откуда Гуэлагетца?',
       answer: 'Оахака',
@@ -316,12 +316,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'w4uj7',
-    type: 'choice',
     question:
       '¿Cuál es la representación religiosa que se realiza en Iztapalapa?',
     answer: 'La Pasión de Cristo',
     options: ['la Anunciación', 'El Bautismo', 'El Juicio'],
+    type: 'choice',
+    id: 'w4uj7',
     ru: {
       question: 'Какое религиозное представление проводится в Истапалапе?',
       answer: 'Страсти Христовы',
@@ -329,11 +329,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '5yuul',
-    type: 'choice',
     question: '¿Dónde se celebra la Pasión de Cristo en CDMX?',
     answer: 'Iztapalapa',
     options: ['Coyoacán', 'Iztacalco', 'Cuajimalpa'],
+    type: 'choice',
+    id: '5yuul',
     ru: {
       question: 'Где в Мехико отмечают Страсти Христовы?',
       answer: 'Истапалапа',
@@ -341,23 +341,31 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '7kytj',
-    type: 'choice',
     question: '¿Cuál es el baile nacional de México?',
     answer: 'Jarabe Tapatío',
     options: ['El Huapango', 'La Jarana', 'La Danza de los Viejitos'],
+    type: 'choice',
+    id: '7kytj',
+    note: `<p>El baile nacional de México es el <strong>Jarabe Tapatío</strong>. Conocido popularmente como el "Baile del Sombrero Mexicano", es una representación vibrante de la cultura mexicana y un símbolo del folclore nacional. Este baile refleja la mezcla de culturas indígenas y europeas que ha dado forma a las tradiciones de México.</p>
+      <h2>Origen y Significado</h2>
+      <p>El <em>Jarabe Tapatío</em> surgió en el siglo XIX en el estado de Jalisco. En un inicio, fue visto como una danza controversial, ya que combinaba movimientos considerados atrevidos para la época. Sin embargo, con el paso del tiempo, se transformó en un emblema cultural y patriótico, siendo reconocido como símbolo de identidad nacional.</p>
+      <h2>Vestimenta Tradicional</h2>
+      <p>La vestimenta utilizada en el <em>Jarabe Tapatío</em> también es icónica. Las mujeres suelen llevar el <strong>traje de china poblana</strong>, un vestido colorido y bordado, mientras que los hombres visten con el clásico <strong>traje de charro</strong>, con sombrero ancho y detalles elegantes. Estos atuendos refuerzan el sentido de orgullo y tradición asociados con este baile.</p>
+      <h2>Reconocimiento Internacional</h2>
+      <p>El <em>Jarabe Tapatío</em> ha trascendido las fronteras de México y se ha presentado en escenarios de todo el mundo. Esta danza se ha convertido en una manera de promover la cultura mexicana y estrechar lazos con otras naciones. En eventos oficiales y festividades nacionales, suele ser interpretada para rendir homenaje a las raíces culturales de México.</p>`,
     ru: {
       question: 'Какой танец является национальным танцем Мексики?',
       answer: 'Харабе Тапатио',
-      options: ['Уапанго', 'Харана', 'Танец стариков']
+      options: ['Уапанго', 'Харана', 'Танец стариков'],
+      note: `<p>Национальным танцем Мексики является <strong>Харабе Тапатио</strong>. Широко известный как «Танец с мексиканской шляпой», он представляет собой яркое выражение мексиканской культуры и символ национального фольклора. Этот танец отражает смешение коренных и европейских культур, которые сформировали традиции Мексики.</p> <h2>Происхождение и значение</h2> <p><em>Харабе Тапатио</em> появился в XIX веке в штате Халиско. Сначала этот танец считался противоречивым, так как включал движения, считавшиеся смелыми для того времени. Однако со временем он превратился в культурный и патриотический символ, став признанным олицетворением национальной идентичности.</p> <h2>Традиционный костюм</h2> <p>Костюмы, используемые в <em>Харабе Тапатио</em>, также стали знаковыми. Женщины обычно носят <strong>костюм чины побланы</strong> — яркое платье с вышивкой, в то время как мужчины облачаются в классический <strong>костюм чарро</strong> с широкой шляпой и изящными деталями. Эти наряды подчеркивают гордость и приверженность традициям, связанным с этим танцем.</p> <h2>Международное признание</h2> <p><em>Харабе Тапатио</em> вышел за пределы Мексики и исполняется на сценах по всему миру. Этот танец стал способом продвижения мексиканской культуры и укрепления связей с другими странами. На официальных мероприятиях и национальных праздниках его обычно исполняют в знак уважения к культурным корням Мексики.</p>`
     }
   },
   {
-    id: 'wtjfbh',
-    type: 'choice',
     question: 'Baile de Jalisco',
     answer: 'Jarabe Tapatío',
     options: ['El Huapango', 'La Jarana', 'La Danza de los Viejitos'],
+    type: 'choice',
+    id: 'wtjfbh',
     ru: {
       question: 'Танец Халиско',
       answer: 'Харабе Тапатио',
@@ -365,11 +373,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'cnwkpn',
-    type: 'choice',
     question: 'Jarana es un baile de o Jarana es una manifestación de',
     answer: 'Yucatán',
     options: ['Chiapas', 'Campeche', 'Oaxaca'],
+    type: 'choice',
+    id: 'cnwkpn',
     ru: {
       question: 'Харана - это танец или проявление',
       answer: 'Юкатан',
@@ -377,11 +385,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'gbrvkd',
-    type: 'choice',
     question: '¿De dónde es la danza del venado?',
     answer: 'Sonora',
     options: ['Chihuahua', 'Coahuila', 'Nuevo León'],
+    type: 'choice',
+    id: 'gbrvkd',
     ru: {
       question: 'Откуда танец оленя?',
       answer: 'Сонора',
@@ -389,11 +397,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'ixslb6',
-    type: 'choice',
     question: '¿De dónde es el baile de los viejitos?',
     answer: 'Michoacán',
     options: ['Zacatecas', 'Oaxaca', 'Nuevo León'],
+    type: 'choice',
+    id: 'ixslb6',
     ru: {
       question: 'Откуда танец стариков?',
       answer: 'Мичоакан',
@@ -401,11 +409,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '1kyxvr',
-    type: 'choice',
     question: '¿De dónde es el baile de la piña o baile flor de piña?',
     answer: 'Oaxaca',
     options: ['Chiapas', 'Campeche', 'Yucatán'],
+    type: 'choice',
+    id: '1kyxvr',
     ru: {
       question: 'Откуда танец ананаса или танец цветка ананаса?',
       answer: 'Оахака',
@@ -413,8 +421,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '1ei18',
-    type: 'choice',
     question: '¿Qué son los voladores de Papantla?',
     answer: 'Danza Indígena de Veracruz',
     options: [
@@ -422,6 +428,8 @@ export const questions: QuestionData[] = [
       'Plato típico de Papantla',
       'Fuegos artificiales de Papantla'
     ],
+    type: 'choice',
+    id: '1ei18',
     ru: {
       question: 'Что такое voladores de Papantla?',
       answer: 'Индейский танец из Веракруса',
@@ -433,17 +441,17 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'wvlk1',
-    type: 'choice',
     question:
       'Ritual que está asociado a la fertilidad, se ejecuta con cuatro danzantes que representan los cuatro puntos cardinales y el caporal.',
     answer: 'Los voladores de Papantla',
+    note: 'La fertilidad se representa mediante el descenso de los danzantes, que simbolizan la caída de la lluvia. Se utiliza un tronco o "palo volador" de más de 20 metros. En lo alto de la estructura, se sitúa el caporal, personaje que toca un tambor y una flauta, y coordina el ritual.',
     options: [
       'Los voladores de Oaxaca',
       'Los voladores de Zacatecas',
       'Los voladores de Colima'
     ],
-    note: 'La fertilidad se representa mediante el descenso de los danzantes, que simbolizan la caída de la lluvia. Se utiliza un tronco o "palo volador" de más de 20 metros. En lo alto de la estructura, se sitúa el caporal, personaje que toca un tambor y una flauta, y coordina el ritual.',
+    type: 'choice',
+    id: 'wvlk1',
     ru: {
       question:
         'Ритуал, связанный с плодородием, выполняется четырьмя танцорами, представляющими четыре стороны света, и капоралем.',
@@ -453,8 +461,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '87xo3',
-    type: 'choice',
     question:
       'Una festividad que es patrimonio intangible de la humanidad o fiesta inscrita en el patrimonio cultural',
     answer: 'Día de Muertos',
@@ -463,6 +469,8 @@ export const questions: QuestionData[] = [
       'Día de la Candelaria',
       'Lucha libre mexicana'
     ],
+    type: 'choice',
+    id: '87xo3',
     ru: {
       question:
         'Праздник, который является нематериальным наследием человечества или включен в культурное наследие',
@@ -475,12 +483,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'qvrsn',
-    type: 'choice',
     question: 'Nombre de la flor que se usa el día de muertos',
     answer: 'Cempasúchil',
-    options: ['Nochebuena', 'Dalia', 'Magnolia'],
     note: 'Comúnmente de color amarillo o naranja.',
+    options: ['Nochebuena', 'Dalia', 'Magnolia'],
+    type: 'choice',
+    id: 'qvrsn',
     ru: {
       question: 'Название цветка, который используется в День мертвых',
       answer: 'Цемпасучиль',
@@ -489,12 +497,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '4q1tgc',
-    type: 'choice',
     question:
       'Versos festivos que se escriben en noviembre con motivo del día de muertos',
     answer: 'Calaveras o Calaveritas',
     options: ['Poesias', 'Bombas Yucatecas', 'Rimas'],
+    type: 'choice',
+    id: '4q1tgc',
     ru: {
       question:
         'Праздничные стихи, которые пишут в ноябре по случаю Дня мертвых',
@@ -503,11 +511,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'cvy71',
-    type: 'choice',
     question: 'Género música que pertenece al estado de Veracruz',
     answer: 'El Son Jarocho',
     options: ['Corridos', 'La Norteña', 'Ranchera'],
+    type: 'choice',
+    id: 'cvy71',
     ru: {
       question: 'Музыкальный жанр, который принадлежит штату Веракрус',
       answer: 'Сон Харочо',
@@ -515,8 +523,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '2iy41p',
-    type: 'choice',
     question:
       'Himno popular de la ciudad de Veracruz o canción popular de Veracruz',
     answer: 'La Bamba',
@@ -525,6 +531,8 @@ export const questions: QuestionData[] = [
       'Canción Mixteca',
       'El Huapango de Moncayo'
     ],
+    type: 'choice',
+    id: '2iy41p',
     ru: {
       question:
         'Популярный гимн города Веракрус или популярная песня Веракруса',
@@ -533,8 +541,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'r38hw',
-    type: 'choice',
     question: 'Es costumbre cantar "Las golondrinas" para',
     answer: 'Despedir a alguien',
     options: [
@@ -542,6 +548,8 @@ export const questions: QuestionData[] = [
       'Celebrar un cumpleaños',
       'Celebrar un triunfo'
     ],
+    type: 'choice',
+    id: 'r38hw',
     ru: {
       question: 'Принято петь "Лас Голондринас" чтобы',
       answer: 'Прощаться с кем-то',
@@ -553,11 +561,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 's8s3lb',
-    type: 'choice',
     question: 'En los cumpleaños se suele cantar en homenaje al festejado',
     answer: 'Las mañanitas',
     options: ['Las golondrinas', 'Cumpleaños feliz', 'Serenatas'],
+    type: 'choice',
+    id: 's8s3lb',
     ru: {
       question: 'На днях рождения обычно поют в честь именинника',
       answer: 'Лас маньянитас',
@@ -565,8 +573,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'zk169p',
-    type: 'choice',
     question: 'Las "posadas" son fiestas privadas o vecinales que se realizan',
     answer: 'Los días previos a la navidad',
     options: [
@@ -574,6 +580,8 @@ export const questions: QuestionData[] = [
       'Durante año nuevo',
       'En vacaciones de verano'
     ],
+    type: 'choice',
+    id: 'zk169p',
     ru: {
       question:
         '"Посады" - это частные или соседские праздники, которые проводятся',
@@ -586,11 +594,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'z63u7s',
-    type: 'choice',
     question: '¿Qué se celebra el 10 de mayo?',
     answer: 'El día de las madres',
     options: ['El día del padre', 'El día del niño', 'El día de la candelaria'],
+    type: 'choice',
+    id: 'z63u7s',
     ru: {
       question: 'Что отмечается 10 мая?',
       answer: 'День матери',
@@ -598,12 +606,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '1zzqvcq',
-    type: 'choice',
     question: '¿Cuál fue la primera Miss Universo Mexicana?',
     answer: 'Maria Guadalupe Jones',
-    options: ['Dayana Mendoza', 'Stefania Fernández', 'Gabriela Isler'],
     note: 'Mejor conocida como Lupita Jones en el año de 1991.',
+    options: ['Dayana Mendoza', 'Stefania Fernández', 'Gabriela Isler'],
+    type: 'choice',
+    id: '1zzqvcq',
     ru: {
       question: 'Кто была первой мексиканкой, ставшей Мисс Вселенная?',
       answer: 'Мария Гвадалупе Джонс',
@@ -612,8 +620,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'e3ogq',
-    type: 'choice',
     question: '¿Quiénes fueron las mexicanas ganadoras del Miss Universo?',
     answer:
       'Maria Guadalupe (Lupita) Jones (1991), Ximena Navarrete (2010), Andrea Meza (2020)',
@@ -622,6 +628,8 @@ export const questions: QuestionData[] = [
       'Irene Sáez (1981), Bárbara Palacios (1986), Alicia Machado (1996)',
       'Taliana Vargas (2008), Ariadna Gutiérrez (2015), Laura González (2017)'
     ],
+    type: 'choice',
+    id: 'e3ogq',
     ru: {
       question:
         'Кто были мексиканками, победившими на конкурсе Мисс Вселенная?',
@@ -635,8 +643,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'odn3u',
-    type: 'choice',
     question: '¿Qué significa el refrán: "A darle que es mole de olla"?',
     answer: 'Invitación a hacer alguna cosa con buen ánimo y sin demora',
     options: [
@@ -644,6 +650,8 @@ export const questions: QuestionData[] = [
       'Ir a una fiesta local',
       'Compartir un platillo de mole poblano'
     ],
+    type: 'choice',
+    id: 'odn3u',
     ru: {
       question: 'Что означает пословица: "A darle que es mole de olla"?',
       answer: 'Приглашение сделать что-то с хорошим настроением и без задержек',
@@ -655,12 +663,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'srd279',
-    type: 'choice',
     question:
       '¿Cómo se llama donde van a parar los fiesteros? (conductores alcoholizados)',
     answer: 'El torito',
     options: ['El becerrito', 'La vaquita', 'El corral'],
+    type: 'choice',
+    id: 'srd279',
     ru: {
       question:
         'Как называется место, куда отправляют гуляк? (пьяных водителей)',
@@ -669,8 +677,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'jrigjp',
-    type: 'choice',
     question: 'Famoso callejón de Guanajuato',
     answer: 'El callejón del beso',
     options: [
@@ -678,6 +684,8 @@ export const questions: QuestionData[] = [
       'Callejon del perro muerto',
       'Callejon de las ánimas'
     ],
+    type: 'choice',
+    id: 'jrigjp',
     ru: {
       question: 'Знаменитый переулок в Гуанахуато',
       answer: 'Переулок поцелуя',
@@ -685,8 +693,6 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '2j5u9m',
-    type: 'choice',
     question: 'Imagen religiosa más venerada en México',
     answer: 'La Virgen de Guadalupe',
     options: [
@@ -694,6 +700,8 @@ export const questions: QuestionData[] = [
       'La Virgen del Valle',
       'La Virgen del Carmen'
     ],
+    type: 'choice',
+    id: '2j5u9m',
     ru: {
       question: 'Самый почитаемый религиозный образ в Мексике',
       answer: 'Дева Гваделупская',
@@ -701,12 +709,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'c8b3h',
-    type: 'choice',
     question: '¿Cuántos Patrimonios Unesco tiene México?',
     answer: '35',
-    options: ['15', '20', '25'],
     note: 'Inscritos en la Lista de Patrimonio Mundial, de los cuales, 6 bienes son naturales (N), 27 bienes culturales y 2 mixtos (m).',
+    options: ['15', '20', '25'],
+    type: 'choice',
+    id: 'c8b3h',
     ru: {
       question: 'Сколько объектов ЮНЕСКО имеет Мексика?',
       answer: '35',
@@ -715,11 +723,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 't2yzrf',
-    type: 'choice',
     question: '¿Cuántos Patrimonios culturales Unesco tiene México?',
     answer: '27',
     options: ['15', '20', '25'],
+    type: 'choice',
+    id: 't2yzrf',
     ru: {
       question: 'Сколько культурных объектов ЮНЕСКО имеет Мексика?',
       answer: '27',
@@ -727,12 +735,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '839hmi',
-    type: 'text',
     question:
       'Bienes naturales patrimonio de la humanidad según UNESCO en México',
     answer:
       'Sian ka’an, Quintana Roo (1987)\nSantuario de ballenas de El Vizcaíno, BCS (1993)\nIslas y áreas protegidas del Golfo de California (2005)\nReserva de la biósfera de la mariposa monarca, Michoacán/Estado de México (2008)\nReserva de la biósfera El pinacate y gran desierto de Altar, Sonora (2013)\nArchipiélago de Revillagigedo (2016)',
+    type: 'text',
+    id: '839hmi',
     ru: {
       question:
         'Природные объекты всемирного наследия по версии ЮНЕСКО в Мексике',
@@ -741,11 +749,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'tqzkz',
-    type: 'text',
     question: 'Bienes mixtos patrimonio de la humanidad según UNESCO en México',
     answer:
       'Antigua Ciudad Maya y bosques tropicales protegidos de Calakmul, Campeche (2002, 2014)\nValle de Tehuacán -Cuicatlán: hábitat originario de Mesoamérica (2018)',
+    type: 'text',
+    id: 'tqzkz',
     ru: {
       question:
         'Смешанные объекты всемирного наследия по версии ЮНЕСКО в Мексике',
@@ -754,12 +762,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'rgh655',
-    type: 'text',
     question:
       'Patrimonios intangibles, inmateriales de la humanidad según la UNESCO',
     answer:
       'Día de Muertos (2008)\nLa peregrinación a la peña de Bernal (2009)\nVoladores de Papantla (2009)\nLa Pirekua, canto tradicional de los Purépechas (2010)\nLos Parachicos en la fiesta tradicional de Enero de Chiapa de Corzo (2010)\nCocina Tradicional Mexicana de Michoacán (2010)\nEl Mariachi (2011)\nLa Charrería (2016)\nLa Romería de Zapopan (2018)',
+    type: 'text',
+    id: 'rgh655',
     ru: {
       question:
         'Нематериальное культурное наследие человечества по версии ЮНЕСКО',
@@ -768,11 +776,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'fu8gq',
-    type: 'text',
     question: 'Zonas arqueológicas patrimonio de la humanidad según UNESCO',
     answer:
       'Palenque\nMonte Albán\nChichen Itzá\nTeotihuacán\nTajín\nUxmal\nXochicalco\n Calakmul',
+    type: 'text',
+    id: 'fu8gq',
     ru: {
       question: 'Археологические зоны всемирного наследия по версии ЮНЕСКО',
       answer:
@@ -780,12 +788,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '56p1t',
-    type: 'choice',
     question: '¿Cuál sítio arqueológico NO es un patrimonio UNESCO de México?',
     answer: 'Parque Nacional de Tikal',
-    options: ['Monte Albán', 'Chichen Itzá', 'Uxmal'],
     note: 'Está en Guatemala.',
+    options: ['Monte Albán', 'Chichen Itzá', 'Uxmal'],
+    type: 'choice',
+    id: '56p1t',
     ru: {
       question:
         'Какой археологический объект НЕ является объектом ЮНЕСКО в Мексике?',
@@ -795,11 +803,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'sq3rga',
-    type: 'choice',
     question: '¿Dónde se ubica la zona arqueológica El Tajín?',
     answer: 'Papantla, Veracruz',
     options: ['Oaxaca', 'Chiapas', 'Campeche'],
+    type: 'choice',
+    id: 'sq3rga',
     ru: {
       question: 'Где находится археологическая зона Эль-Тахин?',
       answer: 'Папантла, Веракрус',
@@ -807,12 +815,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'tmmdhg',
-    type: 'choice',
     question:
       'Lugar decretado patrimonio de la humanidad por la UNESCO en 1992',
     answer: 'Tajín',
     options: ['Palenque', 'Monte Albán', 'Chichen Itzá'],
+    type: 'choice',
+    id: 'tmmdhg',
     ru: {
       question:
         'Место, объявленное объектом всемирного наследия ЮНЕСКО в 1992 году',
@@ -821,12 +829,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'mzjtyp',
-    type: 'choice',
     question: '¿Dónde se encuentra la pirámide de Los Nichos?',
     answer: 'En la zona arqueológica El Tajín',
-    options: ['Palenque, Chiapas', 'Yucatán', 'Campeche'],
     note: 'En el estado de Veracruz, pertenece a la cultura Totonaca.',
+    options: ['Palenque, Chiapas', 'Yucatán', 'Campeche'],
+    type: 'choice',
+    id: 'mzjtyp',
     ru: {
       question: 'Где находится пирамида Лос Ничос?',
       answer: 'В археологической зоне Эль-Тахин',
@@ -835,11 +843,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'pytlj',
-    type: 'choice',
     question: 'Zona arqueológica de Morelos',
     answer: 'Xochicalco',
     options: ['Montealbán', 'Paquimé', 'Palenque'],
+    type: 'choice',
+    id: 'pytlj',
     ru: {
       question: 'Археологическая зона Морелоса',
       answer: 'Сочикалько',
@@ -847,12 +855,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '4bn4b9',
-    type: 'choice',
     question: '¿Dónde se encuentra la zona arqueológica de Cacaxtla?',
     answer: 'Tlaxcala',
-    options: ['Chiapas', 'Yucatán', 'Campeche'],
     note: 'Destaca por lo bien conservados de sus murales.',
+    options: ['Chiapas', 'Yucatán', 'Campeche'],
+    type: 'choice',
+    id: '4bn4b9',
     ru: {
       question: 'Где находится археологическая зона Какстла?',
       answer: 'Тласкала',
@@ -861,11 +869,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'u4jpsvi',
-    type: 'choice',
     question: '¿Dónde se encuentra la zona arqueológica de Huatabampo?',
     answer: 'Sonora',
     options: ['Chihuahua', 'Coahuila', 'Nuevo León'],
+    type: 'choice',
+    id: 'u4jpsvi',
     ru: {
       question: 'Где находится археологическая зона Уатабампо?',
       answer: 'Сонора',
@@ -873,12 +881,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'isejb8',
-    type: 'choice',
     question:
       '¿Donde se encuentra la zona arqueológica de Chalchihuites o AltaVista?',
     answer: 'Zacatecas',
     options: ['Chihuahua', 'Coahuila', 'Nuevo León'],
+    type: 'choice',
+    id: 'isejb8',
     ru: {
       question:
         'Где находится археологическая зона Чальчихуитес или Альтависта?',
@@ -887,11 +895,11 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: '6ipoz',
-    type: 'choice',
     question: '¿Dónde se encuentra la zona arqueológica de Villa de Reyes?',
     answer: 'San Luis Potosí',
     options: ['Chiapas', 'Campeche', 'Oaxaca'],
+    type: 'choice',
+    id: '6ipoz',
     ru: {
       question: 'Где находится археологическая зона Вилья-де-Рейес?',
       answer: 'Сан-Луис-Потоси',
@@ -899,12 +907,12 @@ export const questions: QuestionData[] = [
     }
   },
   {
-    id: 'mkyxl',
-    type: 'choice',
     question:
       '¿Dónde se encuentra la zona arqueológica de San Antonio Nogalar?',
     answer: 'Tamaulipas',
     options: ['Chiapas', 'Campeche', 'Oaxaca'],
+    type: 'choice',
+    id: 'mkyxl',
     ru: {
       question: 'Где находится археологическая зона Сан-Антонио Ногалар?',
       answer: 'Тамаулипас',
