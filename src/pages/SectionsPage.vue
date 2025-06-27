@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import GeneralPage from '@/components/GeneralPage.vue';
-import SectionImage from '@/components/SectionImage.vue';
 import { useLocalization } from '@/stores/localization';
 import { useQuestionsStore } from '@/stores/questions';
 import { useRouter } from 'vue-router';
@@ -13,6 +12,8 @@ const {
 } = useQuestionsStore();
 
 const translations = useTranslations();
+const { locale } = useLocalization();
+
 
 loadSections();
 
@@ -33,9 +34,9 @@ const { t } = useLocalization();
 <template>
   <GeneralPage :class="$style.page" :title="t('Choose section')">
     <div :class="$style.tilesMenu">
-      <div :class="$style.tile" v-for="section of sections.values() " :key="section.id"
+      <div :class="$style.tile" v-for="section of sections.values()" :key="section.id"
         @click="startSection(section.id)">
-        <div :class="$style.tileTitle">{{ translations.t('es', section.title) }}</div>
+        <div :class="$style.tileTitle">{{ translations.t(locale, section.title) }}</div>
       </div>
     </div>
   </GeneralPage>
@@ -54,14 +55,14 @@ const { t } = useLocalization();
 
   width: 100%;
   padding: var(--gap-s);
-  gap: var(--gap);
+  gap: var(--gap-s);
 }
 
 .tile {
   position: relative;
 
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   padding: var(--gap-s) var(--gap);
 
   font-size: var(--font-size-2);

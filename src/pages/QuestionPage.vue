@@ -214,7 +214,7 @@ const onOptionClick = (option: QuestionOption) => {
 }
 
 // Question language: 'es' or current UI language
-const questionLocale = ref<'es' | 'ru'>('es');
+const questionLocale = ref<'es' | 'ru' | 'en'>('es');
 
 const onPageClick = (ev: MouseEvent) => {
   if (isButtonOrLinkClick(ev)) {
@@ -230,7 +230,7 @@ const toggleQuestionLanguage = () => {
   }
 
   if (questionLocale.value === 'es') {
-    questionLocale.value = locale.value === 'en' ? 'es' : 'ru';
+    questionLocale.value = locale.value;
   } else {
     questionLocale.value = 'es';
   }

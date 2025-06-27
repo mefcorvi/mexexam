@@ -1,0 +1,22 @@
+import type { QuestionData } from '../../interfaces';
+
+export const question: QuestionData = {
+    question: '¿Qué son los voladores de Papantla?',
+    answer: 'Danza Indígena de Veracruz',
+    options: [
+      'Aviones de Papantla',
+      'Plato típico de Papantla',
+      'Fuegos artificiales de Papantla'
+    ],
+    type: 'choice',
+    id: '1ei18',
+    ru: {
+      question: 'Что такое voladores de Papantla?',
+      answer: 'Индейский танец из Веракруса',
+      options: [
+        'Самолеты из Папантлы',
+        'Типичное блюдо Папантлы',
+        'Фейерверки Папантлы'
+      ]
+    }
+  };

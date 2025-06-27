@@ -1,0 +1,18 @@
+import type { QuestionData } from '../../interfaces';
+
+export const question: QuestionData = {
+    question:
+      '¿En qué año se cambió el nombre de Distrito Federal a Ciudad de México?',
+    answer: '2016',
+    note: '29 Enero 2016.',
+    options: ['2015', '2010', '2000'],
+    type: 'choice',
+    id: 'qfq77',
+    ru: {
+      question:
+        'В каком году название Федерального округа было изменено на Мехико?',
+      answer: '2016',
+      options: ['2015', '2010', '2000'],
+      note: '29 января 2016 года.'
+    }
+  };

@@ -1,0 +1,23 @@
+import type { QuestionData } from '../../interfaces';
+
+export const question: QuestionData = {
+    question: '¿Quienes integraron la triple alianza?',
+    answer: 'Tenochtitlan, Texcoco, Tlacopan',
+    note: 'Fue acordada por los tres jefes indígenas del valle de México en 1427 con fines económicos.',
+    options: [
+      'Teotihuacán, Texcoco, Tlacopan',
+      'San Lorenzo, Texcoco, Tlacopan',
+      'Tenochtitlan, Texcoco, La Venta'
+    ],
+    type: 'choice',
+    id: '2h2smu',
+    ru: {
+      question: 'Кто составлял тройственный союз?',
+      answer: 'Теночтитлан, Тескоко, Тлакпан',
+      options: [
+        'Теотиуакан, Тескоко, Тлакпан',
+        'Сан-Лоренсо, Тескоко, Тлакпан',
+        'Теночтитлан, Тескоко, Ла Вента'
+      ]
+    }
+  };

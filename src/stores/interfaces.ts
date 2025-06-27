@@ -6,6 +6,12 @@ export type QuestionData = {
   options?: string[];
   note?: string;
   noteImage?: string;
+  en?: {
+    question: string;
+    answer: string;
+    options?: string[];
+    note?: string;
+  };
   ru?: {
     question: string;
     answer: string;
@@ -19,6 +25,9 @@ export type SectionData = {
   id: string;
   title: string;
   image?: string;
+  en: {
+    title: string;
+  };
   ru: {
     title: string;
   };
