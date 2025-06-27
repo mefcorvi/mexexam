@@ -7,6 +7,16 @@ export const question: QuestionData = {
   options: ['Primero sueño', 'El laberinto de la soledad', 'El Complot'],
   type: 'choice',
   id: 'giwoup',
+  en: {
+    question: 'Book written by Francisco I. Madero',
+    answer: 'The Presidential Succession',
+    options: [
+      "First Dream",
+      "The Labyrinth of Solitude",
+      "The Conspiracy"
+    ],
+    note: 'It is a book where Madero criticizes the then-president Porfirio Diaz after a long term of 34 years.'
+  },
   ru: {
     question: 'Книга, написанная Франсиско И. Мадеро',
     answer: 'Президентская преемственность',

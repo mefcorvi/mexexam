@@ -8,6 +8,16 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Elena Poniatowska', 'Carlos Fuentes'],
   type: 'choice',
   id: 'gtj9oh',
+  en: {
+    question: 'Exponent of revolutionary literature / Very important writer of the revolution',
+    answer: 'Mariano Azuela',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ],
+    note: 'Doctor, opponent of the Porfirio Díaz regime.'
+  },
   ru: {
     question:
       'Представитель революционной литературы / Очень важный писатель революции',

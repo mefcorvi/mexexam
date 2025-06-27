@@ -11,6 +11,16 @@ export const question: QuestionData = {
   ],
   type: 'choice',
   id: '1j1zkr',
+  en: {
+    question: 'What is the deal with the Season of Vultures?',
+    answer: 'The Tragic Ten Days',
+    options: [
+      "The Tlatelolco student massacre",
+      "Criticism of President Porfirio Diaz",
+      "Revolutionary poem"
+    ],
+    note: 'Military coup of 10 days (February 9 to 19, 1913) led by Victoriano Huerta to overthrow Francisco I. Madero.'
+  },
   ru: {
     question: 'О чем "Сезон стервятников"?',
     answer: 'О Трагической десятке',

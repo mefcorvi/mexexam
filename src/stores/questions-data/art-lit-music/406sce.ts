@@ -10,6 +10,15 @@ export const question: QuestionData = {
   ],
   type: 'choice',
   id: '406sce',
+  en: {
+    question: 'Famous Mexican writer of children\'s music',
+    answer: 'Francisco Gabilondo Soler, alias Cri Cri',
+    options: [
+      "Octavio Paz, alias Lagrimita",
+      "Juan Rulfo, alias Cepillín",
+      "Carlos Fuentes, alias Crin Crin"
+    ]
+  },
   ru: {
     question: 'Известный мексиканский автор детской музыки',
     answer: 'Франсиско Габилондо Солер, также известный как Кри Кри',

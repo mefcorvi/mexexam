@@ -1,16 +1,25 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
+  question:
+    'Grupo que promovió la integración nacional y abrió camino al capitalismo',
+  answer: 'Liberales (Benito Juárez)',
+  options: ['Conservadores', 'Cristianos', 'Franceses'],
+  type: 'choice',
+  id: '7gm5zn',
+  en: {
+    question: 'Group that promoted national integration and paved the way for capitalism',
+    answer: 'Liberals (Benito Juárez)',
+    options: [
+      "Conservatives",
+      "Christians",
+      "French"
+    ]
+  },
+  ru: {
     question:
-      'Grupo que promovió la integración nacional y abrió camino al capitalismo',
-    answer: 'Liberales (Benito Juárez)',
-    options: ['Conservadores', 'Cristianos', 'Franceses'],
-    type: 'choice',
-    id: '7gm5zn',
-    ru: {
-      question:
-        'Группа, которая продвигала национальную интеграцию и открыла путь к капитализму',
-      answer: 'Либералы (Бенито Хуарес)',
-      options: ['Консерваторы', 'Христиане', 'Французы']
-    }
-  };
+      'Группа, которая продвигала национальную интеграцию и открыла путь к капитализму',
+    answer: 'Либералы (Бенито Хуарес)',
+    options: ['Консерваторы', 'Христиане', 'Французы']
+  }
+};

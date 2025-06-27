@@ -1,14 +1,23 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question: 'Plan de Venustiano Carranza para derrocar a Victoriano Huerta',
-    answer: 'Plan Guadalupe',
-    options: ['Plan de Iguala', 'Plan de San Luis', 'Plan de Noria'],
-    type: 'choice',
-    id: 'x28cz8',
-    ru: {
-      question: 'План Венустиано Каррансы по свержению Викториано Уэрты',
-      answer: 'План Гваделупе',
-      options: ['План Игала', 'План Сан-Луиса', 'План Нории']
-    }
-  };
+  question: 'Plan de Venustiano Carranza para derrocar a Victoriano Huerta',
+  answer: 'Plan Guadalupe',
+  options: ['Plan de Iguala', 'Plan de San Luis', 'Plan de Noria'],
+  type: 'choice',
+  id: 'x28cz8',
+  ru: {
+    question: 'План Венустиано Каррансы по свержению Викториано Уэрты',
+    answer: 'План Гваделупе',
+    options: ['План Игала', 'План Сан-Луиса', 'План Нории']
+  },
+  en: {
+    question: 'Venustiano Carranza\'s plan to overthrow Victoriano Huerta',
+    answer: 'Guadalupe Plan',
+    options: [
+      "Iguala Plan",
+      "San Luis Plan",
+      "Noria Plan"
+    ]
+  }
+};

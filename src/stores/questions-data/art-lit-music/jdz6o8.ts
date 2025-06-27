@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Elena Poniatowska', 'Carlos Fuentes'],
   type: 'choice',
   id: 'jdz6o8',
+  en: {
+    question: 'He wrote about Francisco I. Madero',
+    answer: 'Paco Ignacio Taibo II',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ]
+  },
   ru: {
     question: 'Кто написал о Франсиско И. Мадеро?',
     answer: 'Пако Игнасио Тайбо II',

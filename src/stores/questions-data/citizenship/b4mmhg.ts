@@ -1,16 +1,25 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
+  question:
+    '¿Cual artículo de la constitución dice que la educación es gratuita y obligatoria?',
+  answer: 'Artículo 3',
+  options: ['Artículo 1', 'Artículo 5', 'Artículo 2'],
+  type: 'choice',
+  id: 'b4mmhg',
+  en: {
+    question: 'Which article of the constitution states that education is free and compulsory?',
+    answer: 'Article 3',
+    options: [
+      "Article 1",
+      "Article 5",
+      "Article 2"
+    ]
+  },
+  ru: {
     question:
-      '¿Cual artículo de la constitución dice que la educación es gratuita y obligatoria?',
-    answer: 'Artículo 3',
-    options: ['Artículo 1', 'Artículo 5', 'Artículo 2'],
-    type: 'choice',
-    id: 'b4mmhg',
-    ru: {
-      question:
-        'Какая статья конституции говорит, что образование бесплатно и обязательно?',
-      answer: 'Статья 3',
-      options: ['Статья 1', 'Статья 5', 'Статья 2']
-    }
-  };
+      'Какая статья конституции говорит, что образование бесплатно и обязательно?',
+    answer: 'Статья 3',
+    options: ['Статья 1', 'Статья 5', 'Статья 2']
+  }
+};

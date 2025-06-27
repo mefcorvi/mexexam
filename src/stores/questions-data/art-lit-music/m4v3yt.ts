@@ -7,6 +7,15 @@ export const question: QuestionData = {
   options: ['Desamor', 'Detente', 'Fragmento de Nocturno'],
   type: 'choice',
   id: 'm4v3yt',
+  en: {
+    question: 'Poem written by Bernardo Balbuena about New Spain in 1604',
+    answer: 'The Mexican Grandeur',
+    options: [
+      "Unrequited Love",
+      "Stop",
+      "Fragment of Nocturno"
+    ]
+  },
   ru: {
     question:
       'Стихотворение, написанное Бернардо Бальбуэной о Новой Испании в 1604 году',

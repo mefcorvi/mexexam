@@ -13,6 +13,15 @@ export const question: QuestionData = {
     </ul>`,
   type: 'choice',
   id: 'xi6wy',
+  en: {
+    question: 'What is the name of the award given by the National Institute of Fine Arts?',
+    answer: 'Bellas Artes Award',
+    options: [
+      "José Vasconcelos",
+      "El Heraldo de México",
+      "Premio Ohtli"
+    ]
+  },
   ru: {
     question:
       'Как называется премия, вручаемая Национальным институтом изящных искусств?',

@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Elena Poniatowska', 'Carlos Fuentes'],
   type: 'choice',
   id: 'o3huvr',
+  en: {
+    question: 'Who wrote "Relámpagos de Agosto"?',
+    answer: 'Jorge Ibargüengoitia',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ]
+  },
   ru: {
     question: 'Кто написал "Августовские молнии"?',
     answer: 'Хорхе Ибаргуэнгоития',

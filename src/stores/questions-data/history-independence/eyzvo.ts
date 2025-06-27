@@ -1,12 +1,12 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question: '¿A quién le llaman el benemérito de las américas?',
-    answer: 'Benito Juárez',
-    options: ['Guadalupe Victoria', 'Anastacio Bustamante', 'Vicente Guerrero'],
-    type: 'choice',
-    id: 'eyzvo',
-    note: `<ul>
+  question: '¿A quién le llaman el benemérito de las américas?',
+  answer: 'Benito Juárez',
+  options: ['Guadalupe Victoria', 'Anastacio Bustamante', 'Vicente Guerrero'],
+  type: 'choice',
+  id: 'eyzvo',
+  note: `<ul>
         <li><strong>Benito Juárez:</strong> 
             <p>Es conocido como el "Benemérito de las Américas" por su defensa de la soberanía mexicana durante la intervención francesa y sus reformas liberales. Fue presidente de México y luchó por la separación de la Iglesia y el Estado.</p>
         </li>
@@ -20,15 +20,24 @@ export const question: QuestionData = {
             <p>Figura clave en la guerra de independencia. Fue presidente y abolió la esclavitud en México, pero no es conocido con ese título.</p>
         </li>
     </ul>`,
-    ru: {
-      question: 'Кого называют заслуженным деятелем Америки?',
-      answer: 'Бенито Хуарес',
-      options: [
-        'Гвадалупе Виктория',
-        'Анастасио Бустаманте',
-        'Висенте Герреро'
-      ],
-      note: `<ul>
+  en: {
+    question: 'Who is called the benemérito of the Americas?',
+    answer: 'Benito Juárez',
+    options: [
+      "Guadalupe Victoria",
+      "Anastacio Bustamante",
+      "Vicente Guerrero"
+    ]
+  },
+  ru: {
+    question: 'Кого называют заслуженным деятелем Америки?',
+    answer: 'Бенито Хуарес',
+    options: [
+      'Гвадалупе Виктория',
+      'Анастасио Бустаманте',
+      'Висенте Герреро'
+    ],
+    note: `<ul>
         <li><strong>Бенито Хуарес:</strong> 
             <p>Известен как «Бенемерито де лас Америкас» за защиту суверенитета Мексики во время французской интервенции и либеральные реформы. Был президентом Мексики и выступал за разделение церкви и государства.</p>
         </li>
@@ -42,5 +51,5 @@ export const question: QuestionData = {
             <p>Ключевая фигура войны за независимость. Будучи президентом, отменил рабство в Мексике, но этого титула не носит.</p>
         </li>
     </ul>`
-    }
-  };
+  }
+};

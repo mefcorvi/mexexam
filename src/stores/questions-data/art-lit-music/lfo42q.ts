@@ -7,6 +7,16 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Juan Rulfo', 'Carlos Fuentes'],
   type: 'choice',
   id: 'lfo42q',
+  en: {
+    question: 'Who wrote "La Noche de Tlatelolco"?',
+    answer: 'Elena Poniatowska',
+    options: [
+      "Octavio Paz",
+      "Juan Rulfo",
+      "Carlos Fuentes"
+    ],
+    note: 'Mexican writer, journalist, and activist, born in France. It is a chronicle based on the student massacre that occurred on October 2, 1968, in the Plaza de las Tres Culturas.'
+  },
   ru: {
     question: 'Кто написал "Ночь Тлателолко"?',
     answer: 'Элена Понятовска',

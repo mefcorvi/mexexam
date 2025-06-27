@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Guanajuato', 'Campeche', 'Yucatán'],
   type: 'choice',
   id: 'bbtgs9',
+  en: {
+    question: 'The harp is a musical instrument from',
+    answer: 'Veracruz',
+    options: [
+      "Guanajuato",
+      "Campeche",
+      "Yucatán"
+    ]
+  },
   ru: {
     question: 'Арфа это музыкальный инструмент из',
     answer: 'Веракрус',

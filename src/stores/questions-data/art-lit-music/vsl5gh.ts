@@ -7,6 +7,16 @@ export const question: QuestionData = {
   options: ['Pintor', 'Muralista', 'Escultor'],
   type: 'choice',
   id: 'vsl5gh',
+  en: {
+    question: 'What was Juan Rulfo?',
+    answer: 'Writer',
+    options: [
+      "Painter",
+      "Muralist",
+      "Sculptor"
+    ],
+    note: 'Recognized as one of the great masters of 20th-century Hispanic American narrative.'
+  },
   ru: {
     question: 'Кем был Хуан Рульфо?',
     answer: 'Писатель',

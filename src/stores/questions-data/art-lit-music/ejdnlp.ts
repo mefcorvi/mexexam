@@ -6,6 +6,15 @@ export const question: QuestionData = {
     'Octavio Paz\nCarlos Fuentes\nElena Poniatowska\nJose Emilio Pacheco\nFernando del Paso\nSergio Pitol',
   type: 'text',
   id: 'ejdnlp',
+  en: {
+    question: 'Mexicans who have won the Cervantes Prize',
+    answer: 'Octavio Paz\n\
+Carlos Fuentes\n\
+Elena Poniatowska\n\
+Jose Emilio Pacheco\n\
+Fernando del Paso\n\
+Sergio Pitol'
+  },
   ru: {
     question: 'Мексиканцы, выигравшие премию Сервантеса',
     answer:

@@ -1,22 +1,31 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question: '¿Quién fue Chalchiuhtlicue?',
-    answer: 'Diosa de los lagos y corrientes de agua de los Mexicas',
+  question: '¿Quién fue Chalchiuhtlicue?',
+  answer: 'Diosa de los lagos y corrientes de agua de los Mexicas',
+  options: [
+    'Dios del cielo y de la tierra',
+    'Diosa de la fertilidad Mexica',
+    'Dios del viento'
+  ],
+  type: 'choice',
+  id: 'wsozik',
+  ru: {
+    question: 'Кто такая Чалчиутликуэ?',
+    answer: 'Богиня озёр и водных потоков у мексиканцев',
     options: [
-      'Dios del cielo y de la tierra',
-      'Diosa de la fertilidad Mexica',
-      'Dios del viento'
-    ],
-    type: 'choice',
-    id: 'wsozik',
-    ru: {
-      question: 'Кто такая Чалчиутликуэ?',
-      answer: 'Богиня озёр и водных потоков у мексиканцев',
-      options: [
-        'Бог неба и земли',
-        'Богиня плодородия у мексиканцев',
-        'Бог ветра'
-      ]
-    }
-  };
+      'Бог неба и земли',
+      'Богиня плодородия у мексиканцев',
+      'Бог ветра'
+    ]
+  },
+  en: {
+    question: 'Who was Chalchiuhtlicue?',
+    answer: 'Goddess of the lakes and water currents of the Mexicas',
+    options: [
+      "God of the sky and the earth",
+      "Mexica goddess of fertility",
+      "God of the wind"
+    ]
+  }
+};

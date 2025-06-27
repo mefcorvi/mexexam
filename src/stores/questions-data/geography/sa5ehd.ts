@@ -1,22 +1,31 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question: 'Geográficamente dónde está ubicado México',
-    answer: 'En el sur de América del Norte',
+  question: 'Geográficamente dónde está ubicado México',
+  answer: 'En el sur de América del Norte',
+  options: [
+    'América del Sur',
+    'América Central',
+    'En el norte de América Central'
+  ],
+  type: 'choice',
+  id: 'sa5ehd',
+  en: {
+    question: 'Geographically where is Mexico located',
+    answer: 'In the south of North America',
     options: [
-      'América del Sur',
-      'América Central',
-      'En el norte de América Central'
-    ],
-    type: 'choice',
-    id: 'sa5ehd',
-    ru: {
-      question: 'Географически где находится Мексика?',
-      answer: 'На юге Северной Америки',
-      options: [
-        'Южная Америка',
-        'Центральная Америка',
-        'На севере Центральной Америки'
-      ]
-    }
-  };
+      "South America",
+      "Central America",
+      "In the north of Central America"
+    ]
+  },
+  ru: {
+    question: 'Географически где находится Мексика?',
+    answer: 'На юге Северной Америки',
+    options: [
+      'Южная Америка',
+      'Центральная Америка',
+      'На севере Центральной Америки'
+    ]
+  }
+};

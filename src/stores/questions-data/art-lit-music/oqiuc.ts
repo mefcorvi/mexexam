@@ -12,6 +12,15 @@ export const question: QuestionData = {
         <li><strong>Palacio del Arte y la Cultura</strong> – No corresponde a ningún recinto reconocido en la ciudad.</li>
         <li><strong>Palacio de Bellas Artes</strong> – Es el teatro más prestigioso y emblemático de la Ciudad de México.</li>
     </ul>`,
+  en: {
+    question: 'The most prestigious theater in Mexico City is',
+    answer: 'Palacio de Bellas Artes',
+    options: [
+      "Teatro Mayor",
+      "Teatro Juarez",
+      "Palacio del Arte y la Cultura"
+    ]
+  },
   ru: {
     question: 'Самый престижный театр в Мехико это',
     answer: 'Дворец изящных искусств',

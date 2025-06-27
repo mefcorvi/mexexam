@@ -20,6 +20,15 @@ export const question: QuestionData = {
   options: ['Zacatecas', 'Jalisco', 'CDMX'],
   type: 'choice',
   id: '4ls26c',
+  en: {
+    question: 'Where is the Juárez Theater located?',
+    answer: 'Guanajuato',
+    options: [
+      "Zacatecas",
+      "Jalisco",
+      "CDMX"
+    ]
+  },
   ru: {
     question: 'Где находится Театр Хуарес?',
     answer: 'Гуанахуато',

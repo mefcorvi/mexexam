@@ -6,6 +6,14 @@ export const question: QuestionData = {
     'Octavio Paz\nAmado Nervo\nJose Emilio Pacheco\nRosario Castellanos\nJaime Sabines',
   type: 'text',
   id: 'wef8u',
+  en: {
+    question: 'Names of Mexican poets',
+    answer: 'Octavio Paz\n\
+Amado Nervo\n\
+Jose Emilio Pacheco\n\
+Rosario Castellanos\n\
+Jaime Sabines'
+  },
   ru: {
     question: 'Имена мексиканских поэтов',
     answer:

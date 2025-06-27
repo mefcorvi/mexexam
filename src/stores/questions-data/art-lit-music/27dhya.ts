@@ -8,6 +8,16 @@ export const question: QuestionData = {
   options: ['El IMSS', 'La Diana Cazadora', 'La Estela de Luz'],
   type: 'choice',
   id: '27dhya',
+  en: {
+    question: 'What was inaugurated during the presidential term of Abelardo Rodríguez Lujan?',
+    answer: 'The Palace of Fine Arts',
+    options: [
+      "The IMSS",
+      "The Diana the Hunter",
+      "The Beacon of Light"
+    ],
+    note: 'September 29, 1934.'
+  },
   ru: {
     question:
       'Что было открыто в период президентства Абелардо Родригеса Лухана?',

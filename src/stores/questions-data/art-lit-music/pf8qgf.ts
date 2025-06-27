@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Carlos Fuentes', 'Elena Poniatowska'],
   type: 'choice',
   id: 'pf8qgf',
+  en: {
+    question: 'Who wrote "El llano en llamas"?',
+    answer: 'Juan Rulfo',
+    options: [
+      "Octavio Paz",
+      "Carlos Fuentes",
+      "Elena Poniatowska"
+    ]
+  },
   ru: {
     question: 'Кто написал "Пылающую равнину"?',
     answer: 'Хуан Рульфо',

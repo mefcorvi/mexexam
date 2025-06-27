@@ -7,6 +7,15 @@ export const question: QuestionData = {
   options: ['José Vasconcelos', 'El Heraldo de México', 'Premio Ohtli'],
   type: 'choice',
   id: 'rkxodd',
+  en: {
+    question: 'What is the name of the award given by Bellas Artes for a short story or literary work?',
+    answer: 'Amparo Dávila',
+    options: [
+      "José Vasconcelos",
+      "El Heraldo de México",
+      "Premio Ohtli"
+    ]
+  },
   ru: {
     question:
       'Как называется премия, вручаемая за рассказ или литературное произведение?',

@@ -1,26 +1,36 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
+  question:
+    'Astronauta mexicano que participó en la misión STS-61-B del Transbordador Espacial Atlantis',
+  answer: 'Rodolfo Neri Vela',
+  note: 'La Misión STS-61-B tuvo como principal objetivo poner en órbita tres satélites: el Morelos II de México, el AUSSAT-2 de Australia y el SATCOM KU-2 de los Estados Unidos. Rodolfo Neri Vela fué parte de la tripulación como especialista de carga.',
+  options: [
+    'Gabriel Mendoza Soza',
+    'Erik Ochoa Velez',
+    'Javier Del Toro Amezcua'
+  ],
+  type: 'choice',
+  id: 'wdpsaf',
+  ru: {
     question:
-      'Astronauta mexicano que participó en la misión STS-61-B del Transbordador Espacial Atlantis',
-    answer: 'Rodolfo Neri Vela',
-    note: 'La Misión STS-61-B tuvo como principal objetivo poner en órbita tres satélites: el Morelos II de México, el AUSSAT-2 de Australia y el SATCOM KU-2 de los Estados Unidos. Rodolfo Neri Vela fué parte de la tripulación como especialista de carga.',
+      'Мексиканский космонавт, участвовавший в миссии STS-61-B шаттла Atlantis',
+    answer: 'Родольфо Нери Вела',
     options: [
-      'Gabriel Mendoza Soza',
-      'Erik Ochoa Velez',
-      'Javier Del Toro Amezcua'
+      'Габриэль Мендоса Соза',
+      'Эрик Очоа Велес',
+      'Хавьер Дель Торо Амескуа'
     ],
-    type: 'choice',
-    id: 'wdpsaf',
-    ru: {
-      question:
-        'Мексиканский космонавт, участвовавший в миссии STS-61-B шаттла Atlantis',
-      answer: 'Родольфо Нери Вела',
-      options: [
-        'Габриэль Мендоса Соза',
-        'Эрик Очоа Велес',
-        'Хавьер Дель Торо Амескуа'
-      ],
-      note: 'Миссия STS-61-B имела основной целью вывести на орбиту три спутника: Morelos II Мексики, AUSSAT-2 Австралии и SATCOM KU-2 США. Родольфо Нери Вела был частью экипажа в качестве специалиста по грузу.'
-    }
-  };
+    note: 'Миссия STS-61-B имела основной целью вывести на орбиту три спутника: Morelos II Мексики, AUSSAT-2 Австралии и SATCOM KU-2 США. Родольфо Нери Вела был частью экипажа в качестве специалиста по грузу.'
+  },
+  en: {
+    question: 'Mexican astronaut who participated in the STS-61-B mission of the Space Shuttle Atlantis',
+    answer: 'Rodolfo Neri Vela',
+    options: [
+      "Gabriel Mendoza Soza",
+      "Erik Ochoa Velez",
+      "Javier Del Toro Amezcua"
+    ],
+    note: 'The STS-61-B mission had as its main objective to place three satellites into orbit: Mexico\'s Morelos II, Australia\'s AUSSAT-2, and the United States\' SATCOM KU-2. Rodolfo Neri Vela was part of the crew as a payload specialist.'
+  }
+};

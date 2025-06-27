@@ -1,16 +1,25 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
+  question:
+    'Grupo que promovió el desarrollo económico sin afectar la iglesia y los militares',
+  answer: 'Conservadores',
+  options: ['Liberales', 'Imparciales', 'Cristianos'],
+  type: 'choice',
+  id: '3sx4kq',
+  en: {
+    question: 'Group that promoted economic development without affecting the church and the military',
+    answer: 'Conservatives',
+    options: [
+      "Liberals",
+      "Impartial",
+      "Christians"
+    ]
+  },
+  ru: {
     question:
-      'Grupo que promovió el desarrollo económico sin afectar la iglesia y los militares',
-    answer: 'Conservadores',
-    options: ['Liberales', 'Imparciales', 'Cristianos'],
-    type: 'choice',
-    id: '3sx4kq',
-    ru: {
-      question:
-        'Группа, которая продвигала экономическое развитие, не затрагивая церковь и военных',
-      answer: 'Консерваторы',
-      options: ['Либералы', 'Беспристрастные', 'Христиане']
-    }
-  };
+      'Группа, которая продвигала экономическое развитие, не затрагивая церковь и военных',
+    answer: 'Консерваторы',
+    options: ['Либералы', 'Беспристрастные', 'Христиане']
+  }
+};

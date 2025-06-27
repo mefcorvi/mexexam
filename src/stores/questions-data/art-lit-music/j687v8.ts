@@ -11,6 +11,15 @@ export const question: QuestionData = {
   type: 'choice',
   id: 'j687v8',
   note: `"La región más transparente" es la primera novela de Carlos Fuentes, publicada en 1958. Fuentes comenzó a escribirla a los 25 años, inspirado en la temática urbana de la Ciudad de México, a diferencia de la temática rural de Juan Rulfo. La obra refleja el lenguaje y los acentos de diferentes clases sociales. El título fue inspirado por una frase de Alexander von Humboldt sobre el valle de México, también utilizada por Alfonso Reyes.`,
+  en: {
+    question: 'What work did Carlos Fuentes write about Mexican life in 1958?',
+    answer: 'The Most Transparent Region',
+    options: [
+      "Season of Vultures",
+      "The Plain in Flames",
+      "The Voices of Tlatelolco"
+    ]
+  },
   ru: {
     question:
       'Какое произведение написал Карлос Фуэнтес о мексиканской жизни в 1958 году?',

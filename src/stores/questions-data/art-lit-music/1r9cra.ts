@@ -7,6 +7,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Elena Poniatowska', 'Carlos Fuentes'],
   type: 'choice',
   id: '1r9cra',
+  en: {
+    question: 'Vulture Season: A Narrative Story of the Tragic Ten Days, who is its author?',
+    answer: 'Paco Ignacio Taibo II',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ]
+  },
   ru: {
     question:
       'Сезон стервятников: Рассказ о Трагической десятке, кто его автор?',

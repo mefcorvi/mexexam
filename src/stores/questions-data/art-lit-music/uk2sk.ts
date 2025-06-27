@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Juan Rulfo', 'Elena Poniatowska'],
   type: 'choice',
   id: 'uk2sk',
+  en: {
+    question: '"The Death of Artemio Cruz" is a novel by',
+    answer: 'Carlos Fuentes',
+    options: [
+      "Octavio Paz",
+      "Juan Rulfo",
+      "Elena Poniatowska"
+    ]
+  },
   ru: {
     question: '"Смерть Артемио Круса" это роман',
     answer: 'Карлоса Фуэнтеса',

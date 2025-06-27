@@ -1,22 +1,31 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question: '¿Secretaría que se encarga de cobrar impuestos?',
-    answer: 'SHCP: Secretaría de Hacienda y Crédito Público',
+  question: '¿Secretaría que se encarga de cobrar impuestos?',
+  answer: 'SHCP: Secretaría de Hacienda y Crédito Público',
+  options: [
+    'SAT: Secretaria de Administración Tributaria',
+    'SAIM: Secretaría de Administracion de Impuestos',
+    'SENAT: Secretaria Nacional de Administración Tributaria'
+  ],
+  type: 'choice',
+  id: 'ivh34z',
+  en: {
+    question: 'Which department is responsible for collecting taxes?',
+    answer: 'SHCP: Ministry of Finance and Public Credit',
     options: [
-      'SAT: Secretaria de Administración Tributaria',
-      'SAIM: Secretaría de Administracion de Impuestos',
-      'SENAT: Secretaria Nacional de Administración Tributaria'
-    ],
-    type: 'choice',
-    id: 'ivh34z',
-    ru: {
-      question: 'Какое министерство занимается сбором налогов?',
-      answer: 'СНКП: Министерство финансов и общественного кредита',
-      options: [
-        'САТ: Федеральная налоговая служба',
-        'САИМ: Секретариат по управлению налогами',
-        'СЕНАТ: Национальный секретариат налогового управления'
-      ]
-    }
-  };
+      "SAT: Tax Administration Service",
+      "SAIM: Tax Administration Secretariat",
+      "SENAT: National Tax Administration Secretariat"
+    ]
+  },
+  ru: {
+    question: 'Какое министерство занимается сбором налогов?',
+    answer: 'СНКП: Министерство финансов и общественного кредита',
+    options: [
+      'САТ: Федеральная налоговая служба',
+      'САИМ: Секретариат по управлению налогами',
+      'СЕНАТ: Национальный секретариат налогового управления'
+    ]
+  }
+};

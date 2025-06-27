@@ -6,6 +6,15 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Juan Rulfo', 'Elena Poniatowska'],
   type: 'choice',
   id: 'is89di',
+  en: {
+    question: 'Who wrote "Aura"?',
+    answer: 'Carlos Fuentes',
+    options: [
+      "Octavio Paz",
+      "Juan Rulfo",
+      "Elena Poniatowska"
+    ]
+  },
   ru: {
     question: 'Кто написал "Ауру"?',
     answer: 'Карлос Фуэнтес',

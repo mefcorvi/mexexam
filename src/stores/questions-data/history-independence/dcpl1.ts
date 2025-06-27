@@ -1,15 +1,15 @@
 import type { QuestionData } from '../../interfaces';
 
 export const question: QuestionData = {
-    question:
-      '¿Cómo se conocen las leyes impulsadas por  Juan Álvarez, Ignacio Comonfort y Benito Juárez para separar a la Iglesia del Estado?',
-    answer: 'Leyes de Reforma',
-    options: [
-      'Nuevas Leyes',
-      'Leyes Separatistas',
-      'Sentimientos de la Nacion'
-    ],
-    note: `<ul>
+  question:
+    '¿Cómo se conocen las leyes impulsadas por  Juan Álvarez, Ignacio Comonfort y Benito Juárez para separar a la Iglesia del Estado?',
+  answer: 'Leyes de Reforma',
+  options: [
+    'Nuevas Leyes',
+    'Leyes Separatistas',
+    'Sentimientos de la Nacion'
+  ],
+  note: `<ul>
         <li><strong>Leyes de Reforma:</strong> 
             <p>Este conjunto de leyes fue promulgado en la segunda mitad del siglo XIX. Establecieron la separación entre la Iglesia y el Estado, nacionalizaron los bienes eclesiásticos y promovieron la libertad de culto. Estas reformas fueron fundamentales para la modernización del Estado mexicano.</p>
         </li>
@@ -23,14 +23,23 @@ export const question: QuestionData = {
             <p>Es un documento de 1813 redactado por José María Morelos, donde se establecen principios independentistas y sociales para México, pero no tiene relación con las Leyes de Reforma.</p>
         </li>
     </ul>`,
-    type: 'choice',
-    id: 'dcpl1',
-    ru: {
-      question:
-        'Как называются законы, продвигаемые Хуаном Альваресом, Игнасио Комонфортом и Бенито Хуаресом для отделения церкви от государства?',
-      answer: 'Законы о реформах',
-      options: ['Новые законы', 'Законы сепаратистов', 'Чувства Нации'],
-      note: `<ul>
+  type: 'choice',
+  id: 'dcpl1',
+  en: {
+    question: 'How are the laws promoted by Juan Álvarez, Ignacio Comonfort, and Benito Juárez to separate the Church from the State known?',
+    answer: 'Reform Laws',
+    options: [
+      "New Laws",
+      "Separatist Laws",
+      "Sentiments of the Nation"
+    ]
+  },
+  ru: {
+    question:
+      'Как называются законы, продвигаемые Хуаном Альваресом, Игнасио Комонфортом и Бенито Хуаресом для отделения церкви от государства?',
+    answer: 'Законы о реформах',
+    options: ['Новые законы', 'Законы сепаратистов', 'Чувства Нации'],
+    note: `<ul>
         <li><strong>Законы Реформы (Leyes de Reforma):</strong> 
             <p>Эти законы были приняты во второй половине XIX века и установили разделение церкви и государства, национализацию церковной собственности и свободу вероисповедания. Они сыграли важную роль в модернизации мексиканского государства.</p>
         </li>
@@ -44,5 +53,5 @@ export const question: QuestionData = {
             <p>Документ 1813 года, составленный Хосе Марией Морелосом, описывает принципы независимости и социальной справедливости, но не связан с Законами Реформы.</p>
         </li>
       </ul>`
-    }
-  };
+  }
+};

@@ -7,6 +7,15 @@ export const question: QuestionData = {
   options: ['Dramático', 'Lírico', 'Didáctico'],
   type: 'choice',
   id: 'wyunxcc',
+  en: {
+    question: 'What genres did the following authors write: Juan Rulfo, Mario Bellatin, and Jorge Volpi?',
+    answer: 'Narrative, novel',
+    options: [
+      "Dramatic",
+      "Lyric",
+      "Didactic"
+    ]
+  },
   ru: {
     question:
       'Какие жанры писали следующие авторы: Хуан Рульфо, Марио Беллатин и Хорхе Вольпи?',

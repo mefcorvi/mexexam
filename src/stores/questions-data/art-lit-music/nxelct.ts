@@ -7,6 +7,16 @@ export const question: QuestionData = {
   options: ['Octavio Paz', 'Elena Poniatowska', 'Carlos Fuentes'],
   type: 'choice',
   id: 'nxelct',
+  en: {
+    question: 'Who wrote "Las Voces de Tlatelolco"?',
+    answer: 'José Emilio Pacheco',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ],
+    note: 'Do not confuse "Las Voces de Tlatelolco" with "La Noche de Tlatelolco"; note that they are different works and authors.'
+  },
   ru: {
     question: 'Кто написал "Голоса Тлателолко"?',
     answer: 'Хосе Эмилио Пачеко',
