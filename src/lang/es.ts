@@ -10,6 +10,7 @@ export const data = {
   'Choose section for exam': 'Elegir sección para examen',
   'Loading exam...': 'Cargando examen...',
   'Finish Exam': 'Finalizar examen',
+  'Check Unanswered Questions': 'Revisar preguntas sin responder',
   'Exam Results': 'Resultados del examen',
   Correct: 'Correcto',
   Wrong: 'Incorrecto',

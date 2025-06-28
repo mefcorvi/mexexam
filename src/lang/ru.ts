@@ -12,6 +12,7 @@ export const data: LocalizationData = {
   'Choose section for exam': 'Выбрать раздел для экзамена',
   'Loading exam...': 'Загрузка экзамена...',
   'Finish Exam': 'Завершить экзамен',
+  'Check Unanswered Questions': 'Проверить неотвеченные вопросы',
   'Exam Results': 'Результаты экзамена',
   Correct: 'Правильно',
   Wrong: 'Неправильно',

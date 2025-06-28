@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
@@ -26,10 +26,13 @@ const {
   getRandomizedOptions,
   getAnswerById,
   formattedTimeRemaining,
-  isTimeRunningOut
+  isTimeRunningOut,
+  isAllQuestionsAnswered
 } = useExamStore();
 
 const sectionId = computed(() => $route.params.sectionId as string | undefined);
+const questionRefs = ref<Map<string, HTMLElement>>(new Map());
+const isCheckingUnanswered = ref(false);
 
 onMounted(async () => {
   if (!isExamStarted.value) {
@@ -39,11 +42,40 @@ onMounted(async () => {
 
 const onOptionSelect = (questionId: string, optionId: number) => {
   selectAnswer(questionId, optionId);
+  // Clear the checking state when user selects an answer
+  isCheckingUnanswered.value = false;
+};
+
+const findFirstUnansweredQuestion = () => {
+  for (const question of examQuestions.value) {
+    if (getSelectedAnswer(question.id) === null) {
+      return question.id;
+    }
+  }
+  return null;
+};
+
+const scrollToQuestion = (questionId: string) => {
+  const questionElement = questionRefs.value.get(questionId);
+  if (questionElement) {
+    questionElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
 };
 
 const onFinishExam = () => {
-  finishExam();
-  window.scrollTo(0, 0);
+  if (isAllQuestionsAnswered.value) {
+    finishExam();
+    window.scrollTo(0, 0);
+  } else {
+    isCheckingUnanswered.value = true;
+    const firstUnansweredId = findFirstUnansweredQuestion();
+    if (firstUnansweredId) {
+      scrollToQuestion(firstUnansweredId);
+    }
+  }
 };
 
 const onStartNewExam = async () => {
@@ -91,6 +123,18 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
   return '';
 };
+
+const setQuestionRef = (questionId: string, element: HTMLElement | null) => {
+  if (element) {
+    questionRefs.value.set(questionId, element);
+  } else {
+    questionRefs.value.delete(questionId);
+  }
+};
+
+const isQuestionUnanswered = (questionId: string) => {
+  return getSelectedAnswer(questionId) === null;
+};
 </script>
 
 <template>
@@ -110,8 +154,11 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
     <div v-else-if="!isExamFinished" class="exam-content">
       <div class="questions-list">
-        <div v-for="(question, index) in examQuestions" :key="question.id"
-          :class="['question-item', getQuestionClass(question.id)]">
+        <div v-for="(question, index) in examQuestions" :key="question.id" :class="[
+          'question-item',
+          getQuestionClass(question.id),
+          { 'unanswered-highlight': isCheckingUnanswered && isQuestionUnanswered(question.id) }
+        ]" :ref="(el) => setQuestionRef(question.id, el as HTMLElement)">
           <div class="question-header">
             <span class="question-number">{{ index + 1 }}.</span>
             <span class="question-text">{{ question.question }}</span>
@@ -131,7 +178,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
       <div class="finish-section">
         <GeneralButton @click="onFinishExam" class="finish-button">
-          {{ t('Finish Exam') }}
+          {{ isAllQuestionsAnswered ? t('Finish Exam') : t('Check Unanswered Questions') }}
         </GeneralButton>
       </div>
     </div>
@@ -270,10 +317,11 @@ const getOptionClass = (questionId: string, optionId: number) => {
   max-width: 600px;
   padding: var(--gap);
 
-  background: var(--bg-color);
+  background: var(--negative-color-alpha-5);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
 
+  backdrop-filter: blur(30px);
   transition: all 0.2s ease;
 
   &.correct {
@@ -284,6 +332,28 @@ const getOptionClass = (questionId: string, optionId: number) => {
   &.wrong {
     background: var(--error-bg-color-alpha-10);
     border-color: var(--error-color);
+  }
+
+  &.unanswered-highlight {
+    background: var(--warning-bg-color-alpha-10);
+    border-color: var(--warning-color);
+    box-shadow: 0 0 0 2px var(--warning-color-20);
+
+    animation: pulse-warning 1.5s ease-in-out;
+  }
+}
+
+@keyframes pulse-warning {
+  0% {
+    box-shadow: 0 0 0 2px var(--warning-color-20);
+  }
+
+  50% {
+    box-shadow: 0 0 0 4px var(--warning-color-40);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px var(--warning-color-20);
   }
 }
 

@@ -10,6 +10,7 @@ export const data = {
   'Choose section for exam': 'Choose section for exam',
   'Loading exam...': 'Loading exam...',
   'Finish Exam': 'Finish Exam',
+  'Check Unanswered Questions': 'Check Unanswered Questions',
   'Exam Results': 'Exam Results',
   Correct: 'Correct',
   Wrong: 'Wrong',
