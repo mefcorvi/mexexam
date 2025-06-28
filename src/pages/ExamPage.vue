@@ -96,7 +96,6 @@ const getOptionClass = (questionId: string, optionId: number) => {
   <GeneralPage>
     <template #topBar>
       <div class="exam-header">
-        <div class="exam-title">{{ t('Exam Mode') }}</div>
         <div v-if="isExamStarted && !isExamFinished" class="progress">
           {{ answeredQuestionsCount }}/{{ examQuestions.length }}
         </div>
@@ -140,19 +139,19 @@ const getOptionClass = (questionId: string, optionId: number) => {
         <h2>{{ t('Exam Results') }}</h2>
         <div class="results-summary">
           <div class="result-item correct">
-            <span class="result-label">{{ t('Correct') }}:</span>
+            <span class="result-label">{{ t('Correct') }}</span>
             <span class="result-value">{{ examResults?.correctAnswers }}</span>
           </div>
           <div class="result-item wrong">
-            <span class="result-label">{{ t('Wrong') }}:</span>
+            <span class="result-label">{{ t('Wrong') }}</span>
             <span class="result-value">{{ examResults?.wrongAnswers }}</span>
           </div>
           <div class="result-item total">
-            <span class="result-label">{{ t('Total') }}:</span>
+            <span class="result-label">{{ t('Total') }}</span>
             <span class="result-value">{{ examResults?.totalQuestions }}</span>
           </div>
           <div class="result-item percentage">
-            <span class="result-label">{{ t('Score') }}:</span>
+            <span class="result-label">{{ t('Score') }}</span>
             <span class="result-value">{{ examResults?.percentage }}%</span>
           </div>
         </div>
@@ -196,7 +195,6 @@ const getOptionClass = (questionId: string, optionId: number) => {
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
   padding: var(--gap);
 }
 
@@ -275,8 +273,11 @@ const getOptionClass = (questionId: string, optionId: number) => {
 }
 
 .question-number {
+  width: 16px;
+
   font-weight: 600;
-  color: var(--secondary-color);
+  text-align: right;
+  color: var(--secondary-color)
 }
 
 .question-text {
@@ -296,9 +297,10 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   align-items: center;
 
+  margin-left: -12px;
   padding: var(--gap-s);
 
-  line-height: 100%;
+  line-height: 120%;
 
   border-radius: var(--border-radius);
 
@@ -311,7 +313,50 @@ const getOptionClass = (questionId: string, optionId: number) => {
   }
 
   input[type="radio"] {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
     margin: 0;
+
+    background: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    appearance: none;
+
+    &:checked {
+      background: var(--main-color);
+      border-color: var(--main-color);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 17px;
+        height: 17px;
+
+        background: var(--main-color);
+        border: 2px solid var(--bg-color);
+        border-radius: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 3px var(--primary-color-20);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--primary-color-20);
+    }
   }
 
   .option-text {
@@ -324,12 +369,30 @@ const getOptionClass = (questionId: string, optionId: number) => {
     color: var(--success-text-color);
 
     background: var(--success-bg-color);
+
+    input[type="radio"] {
+      background: var(--success-color);
+      border-color: var(--success-color);
+
+      &:checked::after {
+        background: var(--success-bg-color);
+      }
+    }
   }
 
   &.wrong-answer {
     color: var(--error-text-color);
 
     background: var(--error-bg-color);
+
+    input[type="radio"] {
+      background: var(--error-color);
+      border-color: var(--error-color);
+
+      &:checked::after {
+        background: var(--error-bg-color);
+      }
+    }
   }
 }
 
@@ -337,10 +400,8 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   justify-content: center;
 
-  margin-top: var(--gap);
   padding: var(--gap);
-
-  border-top: 1px solid var(--border-color);
+  padding-bottom: 0;
 }
 
 .finish-button {
@@ -376,7 +437,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--gap);
+  gap: var(--gap-s);
 }
 
 .result-item {
@@ -384,7 +445,6 @@ const getOptionClass = (questionId: string, optionId: number) => {
   flex-direction: column;
   align-items: center;
 
-  min-width: 80px;
   padding: var(--gap);
 
   border-radius: var(--border-radius);
@@ -411,6 +471,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
     color: var(--primary-color);
 
     background: var(--primary-color-20);
+    border: 1px solid var(--border-color);
   }
 }
 
@@ -429,13 +490,14 @@ const getOptionClass = (questionId: string, optionId: number) => {
   flex: 1;
   flex-direction: column;
   gap: var(--gap);
+
+  max-width: 600px;
 }
 
 .result-question {
   padding: var(--gap);
 
   background: var(--bg-color);
-  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
 
   transition: all 0.2s ease;
@@ -478,10 +540,9 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   justify-content: center;
 
-  margin-top: var(--gap);
   padding: var(--gap);
+  padding-bottom: 0;
 
-  border-top: 1px solid var(--border-color);
   gap: var(--gap);
 }
 
