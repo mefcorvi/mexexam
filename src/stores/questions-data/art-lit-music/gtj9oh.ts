@@ -30,5 +30,15 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Mariano Azuela'
     }
-  ]
+  ],
+  zh: {
+    question: '革命文学的代表 / 革命的重要作家',
+    answer: '马里亚诺·阿苏埃拉',
+    options: [
+      "奥克塔维奥·帕斯",
+      "埃莱娜·波尼亚托夫斯卡",
+      "卡洛斯·富恩特斯"
+    ],
+    note: '医生，反对波费里奥政权。'
+  }
 };

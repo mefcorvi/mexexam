@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Victoriano Huerta",
       "Venustiano Carranza"
     ]
+  },
+  zh: {
+    question: '谁被称为北方的半人马？',
+    answer: '潘乔·维拉',
+    options: [
+      "埃米利亚诺·萨帕塔",
+      "维克托里亚诺·韦尔塔",
+      "韦努斯蒂亚诺·卡兰萨"
+    ]
   }
 };

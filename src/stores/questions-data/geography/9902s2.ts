@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой город 4 раза героический или 3 раза триумфальный?',
     answer: 'Веракрус',
     options: ['Куэдад-дель-Кармен', 'Пуэбла', 'Сакатекас']
+  },
+  zh: {
+    question: '哪座城市被称为四次英雄或三次胜利？',
+    answer: 'Veracruz',
+    options: [
+      "Cuidad del Carmen",
+      "Puebla",
+      "Zacatecas"
+    ]
   }
 };

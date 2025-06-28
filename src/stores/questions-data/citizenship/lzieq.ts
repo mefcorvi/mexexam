@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Во сколько лет можно голосовать в Мексике?',
     answer: '18 лет',
     options: ['16 лет', '21 год', '19 лет']
+  },
+  zh: {
+    question: '在墨西哥，投票的年龄是多少？',
+    answer: '18岁',
+    options: [
+      "16岁",
+      "21岁",
+      "19岁"
+    ]
   }
 };

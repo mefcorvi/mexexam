@@ -32,5 +32,15 @@ export const question: QuestionData = {
       "Document in which the Independence of Mexico is agreed upon"
     ],
     note: 'October 5, 1910.'
+  },
+  zh: {
+    question: '圣路易斯波托西计划是关于什么的？',
+    answer: '该计划由弗朗西斯科·I·马德罗颁布，旨在防止波费里奥·迪亚斯连任，并推翻波费里奥统治。目标是实现自由和民主的选举。',
+    options: [
+      "核武器不扩散",
+      "由阿德里安·弗洛伦西奥·比利亚雷亚尔宣布，旨在结束圣安娜的独裁统治",
+      "关于墨西哥独立的协议文件"
+    ],
+    note: '1910年10月5日。'
   }
 };

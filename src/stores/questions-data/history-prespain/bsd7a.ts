@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Коренное племя Дуранго',
     answer: 'Тепеуаны',
     options: ['Майя', 'Сапотеки', 'Мексика']
+  },
+  zh: {
+    question: '杜兰戈的土著部落',
+    answer: '特佩瓦内斯',
+    options: [
+      "玛雅人",
+      "萨波特克人",
+      "墨西哥人"
+    ]
   }
 };

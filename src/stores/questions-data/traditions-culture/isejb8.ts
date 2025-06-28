@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Coahuila",
       "Nuevo León"
     ]
+  },
+  zh: {
+    question: '查尔奇胡伊特斯或阿尔塔维斯塔的考古区在哪里？',
+    answer: '萨卡特卡斯',
+    options: [
+      "奇瓦瓦",
+      "科阿韦拉",
+      "新莱昂"
+    ]
   }
 };

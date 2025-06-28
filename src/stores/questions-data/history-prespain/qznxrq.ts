@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Tonatiuh"
     ],
     note: 'As tribute, sacrificed children and dogs were offered to him.'
+  },
+  zh: {
+    question: '阿兹特克的雨神和闪电神',
+    answer: '特拉洛克',
+    options: [
+      "羽蛇神",
+      "科阿特利库",
+      "托纳提乌"
+    ],
+    note: '作为贡品，献上被牺牲的儿童和狗。'
   }
 };

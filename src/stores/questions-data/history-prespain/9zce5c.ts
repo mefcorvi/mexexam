@@ -20,5 +20,14 @@ export const question: QuestionData = {
       'Какой еще термин используется для обозначения мексиканских императоров?',
     answer: 'Тлатоани',
     options: ['Тонатиу', 'Уицилопочтли', 'Уитлакоче']
+  },
+  zh: {
+    question: '另一个指代墨西哥皇帝的术语是什么？',
+    answer: 'Tlatoani',
+    options: [
+      "Tonatiuh",
+      "Huitzilopochtli",
+      "Huitlacoche"
+    ]
   }
 };

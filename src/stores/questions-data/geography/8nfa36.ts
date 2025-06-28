@@ -12,5 +12,9 @@ export const question: QuestionData = {
   ru: {
     question: 'Три самых крупных и населенных города страны',
     answer: 'Мехико, Гвадалахара и Монтеррей'
+  },
+  zh: {
+    question: '该国最大的三个城市是',
+    answer: 'CDMX, Guadalajara 和 Monterrey'
   }
 };

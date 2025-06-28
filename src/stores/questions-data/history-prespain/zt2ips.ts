@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Trade, craftsmanship, and architecture",
       "Astronomy, politics, art, and religion"
     ]
+  },
+  zh: {
+    question: '阿兹特克人因为什么活动而闻名？',
+    answer: '战士、农业、贸易、宗教崇拜和人祭',
+    options: [
+      "天文学、农业和数学",
+      "贸易、手工艺和建筑",
+      "天文学、政治、艺术和宗教"
+    ]
   }
 };

@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "200 meters hurdles in 19.4 seconds",
       "400 meters flat in 48.98 seconds"
     ]
+  },
+  zh: {
+    question: '安娜·加布里埃拉·格瓦拉·埃斯皮诺萨在2003年赢得的比赛纪录是什么？',
+    answer: '300米跑，35.30秒',
+    options: [
+      "100米跑，11.13秒",
+      "200米跨栏，19.4秒",
+      "400米跑，48.98秒"
+    ]
   }
 };

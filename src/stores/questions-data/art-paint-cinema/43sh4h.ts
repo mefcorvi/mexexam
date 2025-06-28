@@ -22,5 +22,15 @@ export const question: QuestionData = {
     answer: 'Санта',
     options: ['Вамонес', 'Президент Республики', 'Борьба'],
     note: 'Записана в 1931 году и выпущена в 1932 году.'
+  },
+  zh: {
+    question: '墨西哥第一部有声电影是什么？',
+    answer: 'Santa',
+    options: [
+      "Vámonos",
+      "El presidente de la república",
+      "La lucha"
+    ],
+    note: '拍摄于1931年，并于1932年首映。'
   }
 };

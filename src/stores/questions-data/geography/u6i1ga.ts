@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'В каком штате республики находится "Каньон Сумидеро"?',
     answer: 'Чьяпас',
     options: ['Оахака', 'Герреро', 'Табаско']
+  },
+  zh: {
+    question: '“苏米德罗峡谷”位于哪个州？',
+    answer: '恰帕斯',
+    options: [
+      "瓦哈卡",
+      "格雷罗",
+      "塔巴斯科"
+    ]
   }
 };

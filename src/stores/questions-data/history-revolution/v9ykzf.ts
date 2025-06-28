@@ -32,5 +32,15 @@ export const question: QuestionData = {
       "Document agreeing to the Independence of Mexico"
     ],
     note: 'Signed on March 26, 1913, at the Hacienda Guadalupe in Coahuila.'
+  },
+  zh: {
+    question: '瓜达卢佩计划是关于什么的？',
+    answer: '一个计划，用于否认维克托里亚诺·乌埃尔塔政府对弗朗西斯科·I·马德罗的背叛。由韦努斯蒂亚诺·卡兰萨创建。',
+    options: [
+      "核武器不扩散",
+      "墨西哥在北方增加领土",
+      "一份关于墨西哥独立的协议文件"
+    ],
+    note: '于1913年3月26日在科阿韦拉的瓜达卢佩庄园签署。'
   }
 };

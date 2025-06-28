@@ -1,0 +1,23 @@
+export const data = {
+  Start: '开始',
+  Settings: '设置',
+  Language: '语言',
+  'Dark theme': '深色主题',
+  'Choose section': '训练章节',
+  'All questions': '训练所有问题',
+  'Exam mode': '参加考试',
+  'Section Exam': '章节考试',
+  'Choose section for exam': '选择考试章节',
+  'Loading exam...': '正在加载考试...',
+  'Finish Exam': '完成考试',
+  'Check Unanswered Questions': '检查未回答问题',
+  'Exam Results': '考试结果',
+  Correct: '正确',
+  Wrong: '错误',
+  Total: '总计',
+  Score: '分数',
+  'Start New Exam': '开始新考试',
+  'Go Home': '返回首页',
+  'Time remaining': '剩余时间',
+  'Time is running out!': '时间快到了！'
+};

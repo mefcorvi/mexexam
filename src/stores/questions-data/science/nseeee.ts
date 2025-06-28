@@ -35,5 +35,15 @@ export const question: QuestionData = {
       part of mission STS-61-B. Neri Vela became the first and so far\n\
       only Mexican to have traveled to space.\n\
     '
+  },
+  zh: {
+    question: '第一位墨西哥宇航员的名字',
+    answer: '罗道尔福·内里·维拉',
+    options: [
+      "加布里埃尔·门多萨·索萨",
+      "埃里克·奥乔亚·维莱斯",
+      "哈维尔·德尔·托罗·阿梅斯夸"
+    ],
+    note: '第一位墨西哥宇航员的名字是罗道尔福·内里·维拉。他于1985年乘坐“亚特兰蒂斯”号航天飞机执行STS-61-B任务，进行了太空飞行。内里·维拉成为第一位也是迄今为止唯一一位前往太空的墨西哥人。'
   }
 };

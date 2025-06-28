@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Félix Fulgencio Palavicini",
       "Bernardo J. Gastélum"
     ]
+  },
+  zh: {
+    question: '1901年至1911年间，谁是公共教育和美术的秘书？',
+    answer: '胡斯托·西埃拉',
+    options: [
+      "何塞·瓦斯孔塞洛斯",
+      "费利克斯·富尔亨西奥·帕拉维奇尼",
+      "贝尔纳多·J·加斯特伦"
+    ]
   }
 };

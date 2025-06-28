@@ -25,5 +25,14 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Sor Juana Inés de la Cruz'
     }
-  ]
+  ],
+  zh: {
+    question: '索尔·胡安娜·伊内斯·德拉克鲁斯为什么出名？',
+    answer: '新西班牙时期最重要的作家',
+    options: [
+      "革命时期的演员",
+      "翻译家",
+      "歌手"
+    ]
+  }
 };

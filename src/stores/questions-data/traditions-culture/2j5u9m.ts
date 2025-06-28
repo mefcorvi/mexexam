@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "The Virgin of the Valley",
       "The Virgin of Carmen"
     ]
+  },
+  zh: {
+    question: '在墨西哥最受尊敬的宗教图像',
+    answer: '瓜达卢佩圣母',
+    options: [
+      "萨波潘圣母",
+      "谷圣母",
+      "卡门圣母"
+    ]
   }
 };

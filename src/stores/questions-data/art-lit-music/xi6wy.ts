@@ -43,5 +43,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1945'
     }
-  ]
+  ],
+  zh: {
+    question: '国家美术学院颁发的奖项叫什么？',
+    answer: '美术奖',
+    options: [
+      "何塞·瓦斯孔塞洛斯",
+      "墨西哥先驱报",
+      "奥特利奖"
+    ]
+  }
 };

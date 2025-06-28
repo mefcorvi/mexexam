@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой университет является самым старым в Мексике?',
     answer: 'УНАМ',
     options: ['БУАП', 'УГТО', 'УДГ']
+  },
+  zh: {
+    question: '墨西哥最古老的大学是什么？',
+    answer: 'UNAM',
+    options: [
+      "BUAP",
+      "UGTO",
+      "UDG"
+    ]
   }
 };

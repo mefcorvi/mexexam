@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Bernardo J. Gastélum",
       "Plutarco Elías Calles"
     ]
+  },
+  zh: {
+    question: '墨西哥第一任公共教育部长是谁（1921年）？',
+    answer: 'José Vasconcelos',
+    options: [
+      "Elba Esther Gordillo",
+      "Bernardo J. Gastélum",
+      "Plutarco Elías Calles"
+    ]
   }
 };

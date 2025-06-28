@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Go to a local party",
       "Share a dish of mole poblano"
     ]
+  },
+  zh: {
+    question: '这句谚语“要开始做吧，因为这是锅里的摩尔”是什么意思？',
+    answer: '邀请以良好的心情和不拖延地去做某事',
+    options: [
+      "尽早开始吃",
+      "去参加当地的派对",
+      "分享一盘波布拉诺摩尔"
+    ]
   }
 };

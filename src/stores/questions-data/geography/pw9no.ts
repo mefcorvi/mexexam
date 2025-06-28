@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Волшебный город штата Мехико',
     answer: 'Вилья-дель-Карбон',
     options: ['Чигнауапан', 'Чолула', 'Текила']
+  },
+  zh: {
+    question: '墨西哥州的魔法小镇',
+    answer: '卡尔博镇',
+    options: [
+      "奇纳瓦潘",
+      "乔卢拉",
+      "特基拉"
+    ]
   }
 };

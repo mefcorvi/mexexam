@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Gabriela Isler"
     ],
     note: 'Better known as Lupita Jones in the year 1991.'
+  },
+  zh: {
+    question: '第一位墨西哥环球小姐是谁？',
+    answer: 'Maria Guadalupe Jones',
+    options: [
+      "Dayana Mendoza",
+      "Stefania Fernández",
+      "Gabriela Isler"
+    ],
+    note: '更广为人知的是1991年的Lupita Jones。'
   }
 };

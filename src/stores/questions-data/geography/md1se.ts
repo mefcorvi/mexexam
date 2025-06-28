@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'В каком штате находится Калакмуль',
     answer: 'Кампече',
     options: ['Оахака', 'Веракрус', 'Табаско']
+  },
+  zh: {
+    question: '卡拉克穆尔的状态是什么？',
+    answer: '坎佩切',
+    options: [
+      "瓦哈卡",
+      "韦拉克鲁斯",
+      "塔巴斯科"
+    ]
   }
 };

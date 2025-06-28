@@ -30,5 +30,15 @@ export const question: QuestionData = {
       "A traitor of the Mexican Revolution"
     ],
     note: 'He came onto the scene when Venustiano Carranza called to form the constitutionalist army.'
+  },
+  zh: {
+    question: '潘乔·维拉是谁？',
+    answer: '墨西哥革命的领袖',
+    options: [
+      "独立领袖",
+      "西班牙总督",
+      "墨西哥革命的叛徒"
+    ],
+    note: '当韦努斯蒂亚诺·卡兰萨呼吁组建宪法军时，他出现在舞台上。'
   }
 };

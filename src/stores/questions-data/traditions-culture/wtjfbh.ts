@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "La Jarana",
       "The Dance of the Old Men"
     ]
+  },
+  zh: {
+    question: '哈利斯科舞蹈',
+    answer: '塔帕蒂奥舞曲',
+    options: [
+      "华潘戈舞",
+      "哈拉纳舞",
+      "老头舞"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "La Norteña",
       "Ranchera"
     ]
+  },
+  zh: {
+    question: '属于韦拉克鲁斯州的音乐类型',
+    answer: 'Son Jarocho',
+    options: [
+      "Corridos",
+      "La Norteña",
+      "Ranchera"
+    ]
   }
 };

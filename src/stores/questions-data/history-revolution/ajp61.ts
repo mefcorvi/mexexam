@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "La Valentina",
       "El Barzón"
     ]
+  },
+  zh: {
+    question: '著名革命歌曲的名称',
+    answer: 'La Adelita',
+    options: [
+      "El Caballo Blanco",
+      "La Valentina",
+      "El Barzón"
+    ]
   }
 };

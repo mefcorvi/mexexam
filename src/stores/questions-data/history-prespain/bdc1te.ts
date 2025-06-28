@@ -27,5 +27,14 @@ export const question: QuestionData = {
       'Священный, священное место',
       'Цветы, место цветов'
     ]
+  },
+  zh: {
+    question: 'Aztlán是什么意思？',
+    answer: 'Garza，鹭鸟之地',
+    options: [
+      "Dios，神之地",
+      "Sagrado，圣地",
+      "Flores，花之地"
+    ]
   }
 };

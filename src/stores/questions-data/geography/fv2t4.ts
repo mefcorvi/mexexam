@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Порт Акапулько находится в',
     answer: 'Герреро',
     options: ['Колима', 'Наярит', 'Оахака']
+  },
+  zh: {
+    question: '阿卡普尔科港在',
+    answer: '格雷罗',
+    options: [
+      "科利马",
+      "纳亚里特",
+      "瓦哈卡"
+    ]
   }
 };

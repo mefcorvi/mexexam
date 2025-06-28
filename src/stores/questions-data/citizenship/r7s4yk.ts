@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Национальное дерево',
     answer: 'Агуэхуэте или тулевое дерево',
     options: ['Авокадо', 'Парота', 'Агаве']
+  },
+  zh: {
+    question: '国家树',
+    answer: '阿韦赫特树或图莱树',
+    options: [
+      "鳄梨树",
+      "帕罗塔树",
+      "龙舌兰"
+    ]
   }
 };

@@ -33,5 +33,14 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Juan Gabriel'
     }
-  ]
+  ],
+  zh: {
+    question: '胡安·加布里埃尔（胡亚雷斯的迪沃）叫什么名字？',
+    answer: '阿尔贝托·阿吉莱拉·瓦拉德斯',
+    options: [
+      "何塞·罗穆洛·索萨·奥尔蒂斯",
+      "安赫尔·阿古斯丁·玛丽亚·卡洛斯·法乌斯托",
+      "马里奥·福尔蒂诺·阿方索·莫雷诺·雷耶斯"
+    ]
+  }
 };

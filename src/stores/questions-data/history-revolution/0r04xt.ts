@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "Independence of Mexico",
       "Flag Day"
     ]
+  },
+  zh: {
+    question: '11月20日庆祝什么？',
+    answer: '墨西哥革命日',
+    options: [
+      "亡灵节",
+      "墨西哥独立日",
+      "国旗日"
+    ]
   }
 };

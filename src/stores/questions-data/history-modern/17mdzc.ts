@@ -23,5 +23,14 @@ export const question: QuestionData = {
     question: 'Когда был создан Национальный политехнический институт (IPN)?',
     answer: '1 января 1936 года',
     options: ['1 января 1956 года', '1 декабря 1996 года', '1 июля 1936 года']
+  },
+  zh: {
+    question: '国家 Polytechnic Institute (IPN) 是什么时候成立的？',
+    answer: '1936年1月1日',
+    options: [
+      "1956年1月1日",
+      "1996年12月1日",
+      "1936年7月1日"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Мексиканский пейзажист',
     answer: 'Хосе Мария Веласко',
     options: ['Фрида Кало', 'Диего Ривера', 'Руфино Тамайо']
+  },
+  zh: {
+    question: '墨西哥风景画家',
+    answer: 'Jose Maria Velazco',
+    options: [
+      "Frida Khalo",
+      "Diego Rivera",
+      "Rufino Tamayo"
+    ]
   }
 };

@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Uxmal"
     ],
     note: 'Located in Guatemala. What is a remnant? A sign or trace left of something or someone that has passed or has disappeared.'
+  },
+  zh: {
+    question: '在哪里发现了特奥蒂瓦坎文化的遗迹？',
+    answer: '蒂卡尔',
+    options: [
+      "蒙特阿尔班",
+      "奇琴伊察",
+      "乌克斯马尔"
+    ],
+    note: '位于危地马拉。什么是遗迹？是指某个已经过去或消失的事物或人的痕迹或印记。'
   }
 };

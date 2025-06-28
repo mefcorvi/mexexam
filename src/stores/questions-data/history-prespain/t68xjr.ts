@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Chichén Itzá, Yucatán",
       "Pyramid of the Moon, Teotihuacán"
     ]
+  },
+  zh: {
+    question: '奥尔梅克文化最古老的仪式中心',
+    answer: '圣洛伦索，韦拉克鲁斯',
+    options: [
+      "拉文塔，塔巴斯科",
+      "奇琴伊察，尤卡坦",
+      "月亮金字塔，特奥蒂瓦坎"
+    ]
   }
 };

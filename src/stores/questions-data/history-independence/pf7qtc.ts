@@ -27,5 +27,14 @@ export const question: QuestionData = {
       'Игнасио Гарсия Теллес',
       'Хусто Сьерра'
     ]
+  },
+  zh: {
+    question: '谁说过“我的种族将由精神来发言”这句话？',
+    answer: 'Jose Vasconcelos',
+    options: [
+      "José María Pino Suárez",
+      "Ignacio García Téllez",
+      "Justo Sierra"
+    ]
   }
 };

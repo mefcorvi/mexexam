@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой город известен как Жемчужина Бахио?',
     answer: 'Леон',
     options: ['Мичоакан', 'Гвадалахара', 'Агуаскальентес']
+  },
+  zh: {
+    question: '哪个城市被称为巴希奥的明珠？',
+    answer: 'León',
+    options: [
+      "米却肯",
+      "瓜达拉哈拉",
+      "阿瓜斯卡连特斯"
+    ]
   }
 };

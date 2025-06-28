@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Когда началось Сапатистское движение?',
     answer: '1994',
     options: ['1992', '1990', '1980']
+  },
+  zh: {
+    question: '扎帕塔主义运动是什么时候开始的？',
+    answer: '1994',
+    options: [
+      "1992",
+      "1990",
+      "1980"
+    ]
   }
 };

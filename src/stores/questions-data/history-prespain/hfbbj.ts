@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Амфибия, изображенная рядом с богом Шолотлем',
     answer: 'Аксолотль',
     options: ['Dermophiidae', 'Жаба', 'Лягушка']
+  },
+  zh: {
+    question: '与神Xólotl一起表现的两栖动物',
+    answer: '阿霍洛特',
+    options: [
+      "皮肤蛇科",
+      "蟾蜍",
+      "青蛙"
+    ]
   }
 };

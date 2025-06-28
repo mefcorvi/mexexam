@@ -26,10 +26,14 @@ const schema = z.object({
 async function translateText<T extends z.ZodTypeAny>(
   schema: T,
   data: z.infer<T>,
-  targetLanguage: 'English' | 'Russian' = 'English'
+  targetLanguage: 'English' | 'Russian' | 'Chinese' = 'English'
 ): Promise<z.infer<T>> {
   const languageDirection =
-    targetLanguage === 'English' ? 'Spanish to English' : 'Spanish to Russian';
+    targetLanguage === 'English'
+      ? 'Spanish to English'
+      : targetLanguage === 'Russian'
+        ? 'Spanish to Russian'
+        : 'Spanish to Chinese';
   const prompt = `Translate fields of the following object from Spanish to ${targetLanguage}. Keep proper nouns (names, places) as they are unless they have a common ${targetLanguage} equivalent. Maintain the original meaning and tone.
 
 Object to translate: ${JSON.stringify(
@@ -87,8 +91,8 @@ async function translateAndAddProperty(
     options: string[];
     note: string;
   },
-  language: 'en' | 'ru',
-  targetLanguage: 'English' | 'Russian'
+  language: 'en' | 'ru' | 'zh',
+  targetLanguage: 'English' | 'Russian' | 'Chinese'
 ): Promise<void> {
   console.log(`Translating question to ${targetLanguage}...`);
 
@@ -155,13 +159,14 @@ async function addEnglishTranslation(filePath: string): Promise<void> {
       return;
     }
 
-    // Check if English translation already exists
+    // Check if translations already exist
     const existingEn = objectLiteral.getProperty('en');
     const existingRu = objectLiteral.getProperty('ru');
+    const existingZh = objectLiteral.getProperty('zh');
 
-    if (existingEn && existingRu) {
+    if (existingEn && existingRu && existingZh) {
       console.log(
-        `Skipping ${filePath} - already has both English and Russian translations`
+        `Skipping ${filePath} - already has English, Russian, and Chinese translations`
       );
       return;
     }
@@ -234,6 +239,16 @@ async function addEnglishTranslation(filePath: string): Promise<void> {
         questionData,
         'ru',
         'Russian'
+      );
+    }
+
+    // Translate to Chinese if not exists
+    if (!existingZh) {
+      await translateAndAddProperty(
+        objectLiteral,
+        questionData,
+        'zh',
+        'Chinese'
       );
     }
 

@@ -40,5 +40,15 @@ export const question: QuestionData = {
       type: 'state',
       value: 'Jalisco'
     }
-  ]
+  ],
+  zh: {
+    question: '胡安·鲁尔福是什么？',
+    answer: '作家',
+    options: [
+      "画家",
+      "壁画家",
+      "雕塑家"
+    ],
+    note: '被公认为20世纪西班牙美洲叙事文学的伟大大师之一。'
+  }
 };

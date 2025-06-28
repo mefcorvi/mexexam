@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Какая статья конституции говорит о свободе слова?',
     answer: 'Статья 6',
     options: ['Статья 9', 'Статья 1', 'Статья 7']
+  },
+  zh: {
+    question: '哪一条宪法条款谈到了言论自由？',
+    answer: '第6条',
+    options: [
+      "第9条",
+      "第1条",
+      "第7条"
+    ]
   }
 };

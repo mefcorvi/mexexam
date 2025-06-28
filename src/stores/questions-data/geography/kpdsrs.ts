@@ -24,5 +24,14 @@ export const question: QuestionData = {
       "Мексиканский залив",
       "Южный Тихий океан"
     ]
+  },
+  zh: {
+    question: '在墨西哥观察座头鲸和海狮的地方',
+    answer: '科尔特斯海',
+    options: [
+      "加勒比海",
+      "墨西哥湾",
+      "南太平洋"
+    ]
   }
 };

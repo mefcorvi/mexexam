@@ -23,5 +23,14 @@ export const question: QuestionData = {
     question: 'Революционная газета в эпоху Порфириата',
     answer: 'El hijo de Ahuizote',
     options: ['Сын своей мамы', 'Сын Ажолоте', 'Газета Мексики']
+  },
+  zh: {
+    question: '波尔菲里奥时期的革命报纸',
+    answer: '阿维索特之子',
+    options: [
+      "他妈妈的儿子",
+      "阿霍洛特之子",
+      "墨西哥公报"
+    ]
   }
 };

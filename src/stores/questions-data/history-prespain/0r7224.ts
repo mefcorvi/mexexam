@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Год падения Мехико-Теночтитлана',
     answer: '1521',
     options: ['1512', '1525', '1520']
+  },
+  zh: {
+    question: '墨西哥特诺奇提特兰陷落的年份',
+    answer: '1521',
+    options: [
+      "1512",
+      "1525",
+      "1520"
+    ]
   }
 };

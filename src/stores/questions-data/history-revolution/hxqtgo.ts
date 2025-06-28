@@ -20,5 +20,14 @@ export const question: QuestionData = {
       "Doroteo Arango",
       "Emiliano Zapata"
     ]
+  },
+  zh: {
+    question: '谁在革命期间领导了宪法军？',
+    answer: '维努斯蒂亚诺·卡兰萨',
+    options: [
+      "弗朗西斯科·I·马德罗",
+      "多罗特奥·阿兰戈",
+      "埃米利亚诺·萨帕塔"
+    ]
   }
 };

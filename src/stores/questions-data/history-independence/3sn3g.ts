@@ -29,5 +29,14 @@ export const question: QuestionData = {
       'Игнасио Гарсия Теллес',
       'Хусто Сьерра'
     ]
+  },
+  zh: {
+    question: '谁说过“我不是来为大学工作，而是来要求大学为人民工作”这句话？',
+    answer: 'Jose Vasconcelos',
+    options: [
+      "José María Pino Suárez",
+      "Ignacio García Téllez",
+      "Justo Sierra"
+    ]
   }
 };

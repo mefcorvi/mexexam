@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Porfirio Díaz",
       "Venustiano Carranza"
     ]
+  },
+  zh: {
+    question: '谁是弗朗西斯科·I·马德罗背叛的作者？',
+    answer: '维克托里亚诺·乌埃尔塔',
+    options: [
+      "埃米利亚诺·萨帕塔",
+      "波费里奥·迪亚斯",
+      "韦努斯蒂亚诺·卡兰萨"
+    ]
   }
 };

@@ -36,5 +36,15 @@ export const question: QuestionData = {
       type: 'event',
       value: 'Decena Trágica'
     }
-  ]
+  ],
+  zh: {
+    question: '《秃鹰季节》是关于什么的？',
+    answer: '悲惨的十天',
+    options: [
+      "特拉特洛尔科学生大屠杀",
+      "对总统波菲里奥·迪亚斯的批评",
+      "革命诗"
+    ],
+    note: '由维克多里亚诺·韦尔塔领导的十天军事政变（1913年2月9日至19日），旨在推翻弗朗西斯科·I·马德罗。'
+  }
 };

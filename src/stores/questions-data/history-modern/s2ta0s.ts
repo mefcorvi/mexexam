@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Штат, изменивший свое название в 2016 году',
     answer: 'Мехико',
     options: ['Кинтана-Роо', 'Халиско', 'Колима']
+  },
+  zh: {
+    question: '2016年更改名称的州',
+    answer: '墨西哥城',
+    options: [
+      "金塔纳罗奥",
+      "哈利斯科",
+      "科利马"
+    ]
   }
 };

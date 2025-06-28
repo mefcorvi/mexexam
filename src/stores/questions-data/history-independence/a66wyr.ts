@@ -22,5 +22,15 @@ export const question: QuestionData = {
     answer: 'Франсиско Маркес',
     options: ['Фернандо Монтес де Ока', 'Висенте Суарес', 'Хуан Эскутия'],
     note: '12 лет.'
+  },
+  zh: {
+    question: '最小的英雄男孩是谁？',
+    answer: 'Francisco Márquez',
+    options: [
+      "Fernando Montes de Oca",
+      "Vicente Suárez",
+      "Juan Escutia"
+    ],
+    note: '12岁。'
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'В каком штате находится Ла Вента',
     answer: 'Табаско',
     options: ['Кампече', 'Оахака', 'Веракрус']
+  },
+  zh: {
+    question: 'La Venta 现在处于什么状态？',
+    answer: '塔巴斯科',
+    options: [
+      "坎佩切",
+      "瓦哈卡",
+      "韦拉克鲁斯"
+    ]
   }
 };

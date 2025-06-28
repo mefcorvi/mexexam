@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Какая статья конституции говорит о свободе труда?',
     answer: 'Статья 5',
     options: ['Статья 1', 'Статья 4', 'Статья 2']
+  },
+  zh: {
+    question: '宪法的哪一条款谈到了工作自由？',
+    answer: '第5条',
+    options: [
+      "第1条",
+      "第4条",
+      "第2条"
+    ]
   }
 };

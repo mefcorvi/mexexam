@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой штат является крупнейшим производителем обуви?',
     answer: 'Гуанахуато',
     options: ['Халиско', 'Нуэво-Леон', 'Штат Мехико']
+  },
+  zh: {
+    question: '哪个州的鞋子生产量最大？',
+    answer: 'Guanajuato',
+    options: [
+      "哈利斯科",
+      "新莱昂",
+      "墨西哥州"
+    ]
   }
 };

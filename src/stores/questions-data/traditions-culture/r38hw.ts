@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Celebrate a birthday",
       "Celebrate a triumph"
     ]
+  },
+  zh: {
+    question: '通常唱《燕子》是为了',
+    answer: '送别某人',
+    options: [
+      "迎接某人",
+      "庆祝生日",
+      "庆祝胜利"
+    ]
   }
 };

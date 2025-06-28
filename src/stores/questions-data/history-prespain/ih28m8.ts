@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Из какой части страны тараумары?',
     answer: 'Чихуахуа',
     options: ['Дуранго', 'Сонора', 'Баха Калифорния']
+  },
+  zh: {
+    question: '塔拉乌马拉人来自哪个地区？',
+    answer: '奇瓦瓦',
+    options: [
+      "杜兰戈",
+      "索诺拉",
+      "下加利福尼亚"
+    ]
   }
 };

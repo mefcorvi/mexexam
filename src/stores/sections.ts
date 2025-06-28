@@ -11,6 +11,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'Искусство I: Литература и музыка'
     },
+    zh: {
+      title: '艺术I：文学与音乐'
+    },
     questions: () =>
       import(`./questions-data/art-lit-music`).then((x) => x.questions)
   },
@@ -23,6 +26,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'Искусство II: Живопись и кино'
+    },
+    zh: {
+      title: '艺术II：绘画与电影'
     },
     questions: () =>
       import(`./questions-data/art-paint-cinema`).then((x) => x.questions)
@@ -37,6 +43,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'Гражданство'
     },
+    zh: {
+      title: '公民教育'
+    },
     questions: () =>
       import(`./questions-data/citizenship`).then((x) => x.questions)
   },
@@ -49,6 +58,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'Гастрономия'
+    },
+    zh: {
+      title: '美食'
     },
     questions: () =>
       import(`./questions-data/gastronomy`).then((x) => x.questions)
@@ -63,6 +75,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'География и население'
     },
+    zh: {
+      title: '地理与人口'
+    },
     questions: () =>
       import(`./questions-data/geography`).then((x) => x.questions)
   },
@@ -74,6 +89,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'История: Завоевание и колония'
+    },
+    zh: {
+      title: '历史：征服与殖民'
     },
     questions: () =>
       import(`./questions-data/history-colony`).then((x) => x.questions)
@@ -88,6 +106,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'История: Независимость'
     },
+    zh: {
+      title: '历史：独立'
+    },
     questions: () =>
       import(`./questions-data/history-independence`).then((x) => x.questions)
   },
@@ -100,6 +121,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'История: Современная Мексика'
+    },
+    zh: {
+      title: '历史：现代墨西哥'
     },
     questions: () =>
       import(`./questions-data/history-modern`).then((x) => x.questions)
@@ -114,6 +138,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'История: Доколумбова Мексика'
     },
+    zh: {
+      title: '历史：前西班牙时期墨西哥'
+    },
     questions: () =>
       import(`./questions-data/history-prespain`).then((x) => x.questions)
   },
@@ -126,6 +153,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'История: Революция'
+    },
+    zh: {
+      title: '历史：革命'
     },
     questions: () =>
       import(`./questions-data/history-revolution`).then((x) => x.questions)
@@ -140,6 +170,9 @@ const sections: SectionData[] = [
     ru: {
       title: 'Наука и спорт'
     },
+    zh: {
+      title: '科学与体育'
+    },
     questions: () => import(`./questions-data/science`).then((x) => x.questions)
   },
   {
@@ -151,6 +184,9 @@ const sections: SectionData[] = [
     },
     ru: {
       title: 'Традиции и культура'
+    },
+    zh: {
+      title: '传统与文化'
     },
     questions: () =>
       import(`./questions-data/traditions-culture`).then((x) => x.questions)

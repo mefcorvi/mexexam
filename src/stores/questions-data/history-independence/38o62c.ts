@@ -24,5 +24,15 @@ export const question: QuestionData = {
     answer: 'План Ла Нория или Революция Ла Нория',
     options: ['План Игала', 'План Аютла', 'План Тустепек'],
     note: '1871 год.'
+  },
+  zh: {
+    question: '波菲里奥·迪亚斯（Porfirio Diaz）为了避免贝尼托·华雷斯（Benito Juárez）的连任，提出的计划叫什么？',
+    answer: '拉诺里亚计划（Plan de La Noria）或拉诺里亚革命（Revolución de La Noria）',
+    options: [
+      "伊瓜拉计划（Plan de Iguala）",
+      "阿尤特拉计划（Plan de Ayutla）",
+      "图斯特佩克计划（Plan de Tuxtepec）"
+    ],
+    note: '1871年。'
   }
 };

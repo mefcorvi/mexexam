@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "La Jarana",
       "La Danza de los Viejitos"
     ]
+  },
+  zh: {
+    question: '墨西哥的国舞是什么？',
+    answer: 'Jarabe Tapatío',
+    options: [
+      "El Huapango",
+      "La Jarana",
+      "La Danza de los Viejitos"
+    ]
   }
 };

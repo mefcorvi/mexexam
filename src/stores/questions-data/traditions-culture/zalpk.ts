@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Parrot",
       "Tomato"
     ]
+  },
+  zh: {
+    question: 'papalote是什么意思？',
+    answer: '在纳瓦特尔语中是“蝴蝶”的意思',
+    options: [
+      "Papa",
+      "Papagayo",
+      "Jitomate"
+    ]
   }
 };

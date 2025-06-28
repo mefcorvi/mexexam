@@ -20,5 +20,15 @@ export const question: QuestionData = {
       "1352",
       "1330"
     ]
+  },
+  zh: {
+    question: '特诺奇提特兰（Tenochtitlán）是什么时候成立的？',
+    answer: '1325',
+    options: [
+      "1350",
+      "1315",
+      "1352",
+      "1330"
+    ]
   }
 };

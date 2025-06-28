@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Dahlia",
       "Magnolia"
     ]
+  },
+  zh: {
+    question: '典型的红色圣诞花',
+    answer: '夜来香',
+    options: [
+      "万寿菊",
+      "大丽花",
+      "木兰"
+    ]
   }
 };

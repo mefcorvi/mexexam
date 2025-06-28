@@ -30,5 +30,14 @@ export const question: QuestionData = {
       "To a sacred ritual and dance of the Zapotecs",
       "To a sacred dancer"
     ]
+  },
+  zh: {
+    question: '蒙特阿尔班的舞者建筑名称来源于什么？',
+    answer: '因为雕刻在其墓碑上的人物似乎在移动或扭动',
+    options: [
+      "与一个前西班牙时期的传说有关",
+      "与萨波特克人的一个神圣仪式和舞蹈有关",
+      "与一个神圣的舞者有关"
+    ]
   }
 };

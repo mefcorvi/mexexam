@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Originating from Chaparro",
       "Sanctimonious"
     ]
+  },
+  zh: {
+    question: '词汇“chaparro”的意思是',
+    answer: '矮小的身材',
+    options: [
+      "高",
+      "源自Chaparro",
+      "伪善者"
+    ]
   }
 };

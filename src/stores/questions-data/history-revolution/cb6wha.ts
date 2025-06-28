@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "In Puebla on March 10, 1918",
       "At the Carmen estate in Hidalgo on April 27, 1919"
     ]
+  },
+  zh: {
+    question: '埃米利亚诺·萨帕塔（Emiliano Zapata）是在什么时候和哪里被杀的？',
+    answer: '在莫雷洛斯州的奇纳梅卡（Chinameca）庄园，1919年4月10日',
+    options: [
+      "在墨西哥城，1920年2月14日",
+      "在普埃布拉，1918年3月10日",
+      "在伊达尔戈的卡门庄园，1919年4月27日"
+    ]
   }
 };

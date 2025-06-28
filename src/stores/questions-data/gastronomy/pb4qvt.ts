@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Типичное блюдо Монтеррея',
     answer: 'Эль Кабрито',
     options: ['Биррия', 'Барбакоа', 'Дискада']
+  },
+  zh: {
+    question: '蒙特雷的典型菜肴',
+    answer: '小山羊肉',
+    options: [
+      "牛肉汤",
+      "烤肉",
+      "混合炒菜"
+    ]
   }
 };

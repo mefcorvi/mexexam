@@ -27,5 +27,14 @@ export const question: QuestionData = {
       '"Так любят в Агуаскальентесе" в 1950 году',
       '"Так любят в Мексике" в 1932 году'
     ]
+  },
+  zh: {
+    question: '在墨西哥拍摄的第一部彩色电影是什么？',
+    answer: '《Así se quiere en Jalisco》，1942年',
+    options: [
+      "《Así se quiere en Guanajuato》，1930年",
+      "《Así se quiere en Aguascalientes》，1950年",
+      "《Así se quiere en México》，1932年"
+    ]
   }
 };

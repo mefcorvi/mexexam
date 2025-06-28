@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какая мексиканская актриса всегда играла бабушек?',
     answer: 'Сара (Сарита) Гарсия',
     options: ['Мария Феликс', 'Долорес дель Рио', 'Кармен Салинас']
+  },
+  zh: {
+    question: '哪个墨西哥女演员总是演奶奶角色？',
+    answer: 'Sara (Sarita) García',
+    options: [
+      "María Félix",
+      "Dolores del Río",
+      "Carmen Salinas"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Национальное животное',
     answer: 'Королевский орел',
     options: ['Осел', 'Лошадь', 'Змея']
+  },
+  zh: {
+    question: '国家动物',
+    answer: '金雕',
+    options: [
+      "驴",
+      "马",
+      "蛇"
+    ]
   }
 };

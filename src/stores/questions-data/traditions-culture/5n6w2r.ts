@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "A store for opossums",
       "A type of restaurant"
     ]
+  },
+  zh: {
+    question: '在墨西哥，tlapalería 是',
+    answer: '一家油漆和溶剂商店，五金店',
+    options: [
+      "一家冰淇淋店",
+      "一家tlacuaches商店",
+      "一种餐厅类型"
+    ]
   }
 };

@@ -23,6 +23,7 @@ export const useTranslations = createSharedComposable(() => {
 
   add('es', "I don't know", 'No sé');
   add('ru', "I don't know", 'Не знаю');
+  add('zh', "I don't know", '我不知道');
 
   return {
     add,

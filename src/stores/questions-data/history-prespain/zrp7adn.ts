@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Rarámuri",
       "Zapotec"
     ]
+  },
+  zh: {
+    question: '瓜纳华托的民族',
+    answer: '奇奇梅卡·霍纳斯',
+    options: [
+      "托尔特克",
+      "拉拉穆里",
+      "萨波特克"
+    ]
   }
 };

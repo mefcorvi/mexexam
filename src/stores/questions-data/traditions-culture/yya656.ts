@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Techichi",
       "Calupoh"
     ]
+  },
+  zh: {
+    question: '源自墨西哥的狗或前哥伦布时期的短毛犬种名称',
+    answer: 'Xoloitzcuintle',
+    options: [
+      "吉娃娃",
+      "Techichi",
+      "Calupoh"
+    ]
   }
 };

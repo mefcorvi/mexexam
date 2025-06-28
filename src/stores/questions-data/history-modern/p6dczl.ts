@@ -30,5 +30,15 @@ export const question: QuestionData = {
       'Альваро Обрегон'
     ],
     note: '10 октября 1942 года, это монументальный фонтан, расположенный на авеню Пасео-де-ла-Реформа в Мехико.'
+  },
+  zh: {
+    question: '哪位总统 inauguró la Diana Cazadora？',
+    answer: 'Manuel Ávila Camacho',
+    options: [
+      "Abelardo Rodríguez Lujan",
+      "Emilio Portes Gil",
+      "Álvaro Obregón"
+    ],
+    note: '1942年10月10日，是位于墨西哥城改革大道的一座纪念性喷泉。'
   }
 };

@@ -20,5 +20,14 @@ export const question: QuestionData = {
       "1968 and 1974",
       "1974 and 1982"
     ]
+  },
+  zh: {
+    question: '墨西哥在哪些年份举办了世界杯足球赛？',
+    answer: '1970年和1986年',
+    options: [
+      "1970年和1968年",
+      "1968年和1974年",
+      "1974年和1982年"
+    ]
   }
 };

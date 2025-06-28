@@ -30,5 +30,15 @@ export const question: QuestionData = {
       Radio Experimenters in Mexico City. The video signal was transmitted at a \n\
       frequency of 115 MHz, and the sound in the 40-meter band.\n\
     '
+  },
+  zh: {
+    question: '谁发明了彩色电视？',
+    answer: 'Guillermo González Camarena',
+    options: [
+      "Guillermo Rivera",
+      "Guillermo Aparicio",
+      "Gabino Barreda"
+    ],
+    note: 'Guillermo González Camarena来自哈利斯科州的瓜达拉哈拉，是电视机的色彩适配器的发明者，这是第一个用于传输彩色电视的系统。在第二次世界大战期间，他仅17岁时就创造了这个设备。Camarena于1941年8月14日申请了专利，并于1942年9月15日获得了专利。后来，他的发明被用于“旅行者1号”宇宙飞船。1946年8月31日，他在墨西哥城的墨西哥无线电实验者联盟办公室的实验室进行了第一次彩色广播。视频信号以115 MHz的频率传输，声音在40米波段。'
   }
 };

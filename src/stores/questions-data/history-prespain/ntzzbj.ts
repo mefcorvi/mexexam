@@ -24,5 +24,15 @@ export const question: QuestionData = {
       "Itacatl"
     ],
     note: 'It was a structure similar to an abacus where each crossbar was formed by a row of human heads. The most well-known, according to various ancient estimates, had nearly 60,000 human skulls at the time of the Spaniards\' arrival in 1521.'
+  },
+  zh: {
+    question: '一个前西班牙文化建造的祭坛名称，其基础装饰有雕刻的头骨和用于串联牺牲者头颅的木桩',
+    answer: 'Tzompantli',
+    options: [
+      "Izquitl",
+      "Tiyānquiztli",
+      "Itacatl"
+    ],
+    note: '这是一种类似于算盘的结构，每个横梁由一排人头组成。根据不同的古代估计，在1521年西班牙人到达时，最著名的祭坛大约有60,000个头骨。'
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Где находится Национальный парк Лос-Асуфрес?',
     answer: 'Мичоакан',
     options: ['Герреро', 'Оахака', 'Коауила']
+  },
+  zh: {
+    question: '洛斯阿苏弗雷斯国家公园在哪里？',
+    answer: '米却肯',
+    options: [
+      "格雷罗",
+      "瓦哈卡",
+      "科阿韦拉"
+    ]
   }
 };

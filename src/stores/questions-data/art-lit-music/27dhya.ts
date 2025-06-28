@@ -38,5 +38,15 @@ export const question: QuestionData = {
       type: 'state',
       value: 'CDMX'
     }
-  ]
+  ],
+  zh: {
+    question: '在阿贝拉多·罗德里格斯·卢汉总统任期内 inauguró 了什么？',
+    answer: '美术宫',
+    options: [
+      "IMSS",
+      "狩猎女神",
+      "光之纪念碑"
+    ],
+    note: '1934年9月29日。'
+  }
 };

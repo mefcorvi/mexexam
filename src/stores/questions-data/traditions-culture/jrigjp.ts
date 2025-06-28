@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "Alley of the Dead Dog",
       "Alley of the Souls"
     ]
+  },
+  zh: {
+    question: '著名的瓜纳华托小巷',
+    answer: '吻之巷',
+    options: [
+      "地狱小巷",
+      "死狗小巷",
+      "灵魂小巷"
+    ]
   }
 };

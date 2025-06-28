@@ -24,5 +24,15 @@ export const question: QuestionData = {
       "Holy Week"
     ],
     note: 'January 6.'
+  },
+  zh: {
+    question: '环形面包，装饰着水果，里面有小玩偶，在庆祝时食用，',
+    answer: '三王节',
+    options: [
+      "圣诞节",
+      "新年",
+      "复活节"
+    ],
+    note: '1月6日。'
   }
 };

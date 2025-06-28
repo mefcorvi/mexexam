@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Божество древней Мексики, известное как Пернатый змей',
     answer: 'Кецалькоатль',
     options: ['Куаутемок', 'Монтесума', 'Эк Чуах']
+  },
+  zh: {
+    question: '古代墨西哥的神祇，被称为羽蛇神',
+    answer: 'Quetzalcóatl',
+    options: [
+      "Cuauhtémoc",
+      "Moctezuma",
+      "Ek Chuah"
+    ]
   }
 };

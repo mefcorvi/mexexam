@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Что означает Куаутемок?',
     answer: 'Орёл, который спускается или садится',
     options: ['Волосок', 'Левша колибри', 'Колючее существо']
+  },
+  zh: {
+    question: 'Cuauhtémoc是什么意思？',
+    answer: '下降的鹰或栖息的鹰',
+    options: [
+      "头发的细杆",
+      "左撇子蜂鸟",
+      "刺状生物"
+    ]
   }
 };

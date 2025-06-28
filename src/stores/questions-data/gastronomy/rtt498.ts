@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Типичный напиток Мексики',
     answer: 'Текила',
     options: ['Водка', 'Виски', 'Мохито']
+  },
+  zh: {
+    question: '墨西哥的典型饮料',
+    answer: '龙舌兰',
+    options: [
+      "伏特加",
+      "威士忌",
+      "莫吉托"
+    ]
   }
 };

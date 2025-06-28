@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Iztacalco",
       "Cuajimalpa"
     ]
+  },
+  zh: {
+    question: '基督的受难在墨西哥城的哪里庆祝？',
+    answer: '伊斯塔帕拉帕',
+    options: [
+      "科约阿坎",
+      "伊斯塔卡尔科",
+      "库阿希马尔帕"
+    ]
   }
 };

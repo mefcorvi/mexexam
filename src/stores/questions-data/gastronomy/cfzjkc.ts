@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой основной ингредиент у моле?',
     answer: 'Горький шоколад',
     options: ['Кунжут', 'Перец', 'Молоко']
+  },
+  zh: {
+    question: '摩尔的主要成分是什么？',
+    answer: '苦巧克力',
+    options: [
+      "芝麻",
+      "胡椒",
+      "牛奶"
+    ]
   }
 };

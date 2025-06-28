@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Plant",
       "Taximeter"
     ]
+  },
+  zh: {
+    question: '在墨西哥，出租车的基地或地点的另一种叫法',
+    answer: '站点',
+    options: [
+      "停车场",
+      "工厂",
+      "计价器"
+    ]
   }
 };

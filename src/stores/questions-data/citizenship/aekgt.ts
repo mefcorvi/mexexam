@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Статья конституции, говорящая о праве на обращение',
     answer: 'Статья 8',
     options: ['Статья 10', 'Статья 5', 'Статья 6']
+  },
+  zh: {
+    question: '关于请愿权的宪法条款',
+    answer: '第8条',
+    options: [
+      "第10条",
+      "第5条",
+      "第6条"
+    ]
   }
 };

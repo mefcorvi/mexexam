@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Статья конституции о обязанностях граждан',
     answer: 'Статья 31',
     options: ['Статья 13', 'Статья 30', 'Статья 33']
+  },
+  zh: {
+    question: '关于公民义务的宪法条款',
+    answer: '第31条',
+    options: [
+      "第13条",
+      "第30条",
+      "第33条"
+    ]
   }
 };

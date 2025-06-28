@@ -23,5 +23,14 @@ export const question: QuestionData = {
     question: 'Каков девиз Национального политехнического института (IPN)?',
     answer: 'Техника на службе Родины',
     options: ['Служба Родине', 'Я служу Родине', 'Техника Родины']
+  },
+  zh: {
+    question: '国家 Polytechnic Institute (IPN) 的座右铭是什么？',
+    answer: '技术为祖国服务',
+    options: [
+      "为祖国服务",
+      "我为祖国服务",
+      "祖国的技术"
+    ]
   }
 };

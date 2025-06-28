@@ -23,5 +23,14 @@ export const question: QuestionData = {
       'Премия изящных искусств',
       'Премия Охтли'
     ]
+  },
+  zh: {
+    question: '墨西哥电影学院的最高奖项',
+    answer: '阿里尔奖',
+    options: [
+      "安帕罗·达维拉奖",
+      "美术奖",
+      "奥特利奖"
+    ]
   }
 };

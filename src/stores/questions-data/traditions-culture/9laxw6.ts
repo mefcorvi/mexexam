@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Barges",
       "Ships"
     ]
+  },
+  zh: {
+    question: '在Xochimilco使用的五彩缤纷的花船，游客们很喜欢的名字是什么？',
+    answer: 'Trajineras',
+    options: [
+      "Chinampa",
+      "Barcazas",
+      "Buques"
+    ]
   }
 };

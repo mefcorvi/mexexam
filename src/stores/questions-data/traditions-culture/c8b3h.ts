@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "25"
     ],
     note: 'Inscribed on the World Heritage List, of which 6 are natural sites (N), 27 are cultural sites, and 2 are mixed (m).'
+  },
+  zh: {
+    question: '墨西哥有多少个联合国教科文组织世界遗产？',
+    answer: '35',
+    options: [
+      "15",
+      "20",
+      "25"
+    ],
+    note: '被列入世界遗产名录，其中6项为自然遗产（N），27项为文化遗产，2项为混合遗产（m）。'
   }
 };

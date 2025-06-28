@@ -14,5 +14,9 @@ export const question: QuestionData = {
   en: {
     question: 'What is the metate?',
     answer: 'It is a kitchen utensil used in various cultures (Maya, Mexica, etc.) and still in use today. It consists of two elements: the metate, which is a rectangular slab, and the metlapile, the cylindrical roller that is held with both hands. It is used to grind corn, chiles, spices, etc.'
+  },
+  zh: {
+    question: '什么是metate？',
+    answer: '它是一种在多种文化（玛雅、墨西哥等）中使用的厨房用具，直到今天仍在使用。它由两个部分组成：metate，即一个矩形的平板，以及metlapile，一个用双手握住的圆柱形杵。它用于研磨玉米、辣椒、香料等。'
   }
 };

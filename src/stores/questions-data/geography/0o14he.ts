@@ -24,5 +24,15 @@ export const question: QuestionData = {
     answer: 'Попокатепетль',
     options: ['Серро Прието', 'Такана', 'Гуадалупе'],
     note: 'На языке науатль "дымящийся холм", popoca "дымить"; tepētl, "холм".'
+  },
+  zh: {
+    question: '位于莫雷洛斯、普埃布拉和墨西哥州之间的火山名称',
+    answer: 'Popocatépetl',
+    options: [
+      "Cerro Prieto",
+      "Tacana",
+      "Guadalupe"
+    ],
+    note: '在纳瓦特尔语中意为“冒烟的山”，popoca意为“冒烟”；tepētl意为“山”。'
   }
 };

@@ -28,5 +28,14 @@ export const question: QuestionData = {
       'Земля и свобода',
       'Дух говорит за мою расу'
     ]
+  },
+  zh: {
+    question: '墨西哥国立自治大学（UAM）的座右铭是什么？',
+    answer: '在Calli Ixcahuicopa（开放于时间的家）',
+    options: [
+      "技术为祖国服务",
+      "土地与自由",
+      "我的种族将由精神发声"
+    ]
   }
 };

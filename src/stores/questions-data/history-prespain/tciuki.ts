@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Xochiquetzal",
       "Omecíhuatl"
     ]
+  },
+  zh: {
+    question: '墨西哥丰饶女神',
+    answer: '科阿特利库',
+    options: [
+      "西瓦科阿特尔",
+      "索奇夸茨尔",
+      "奥梅西华特"
+    ]
   }
 };

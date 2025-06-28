@@ -25,5 +25,14 @@ export const question: QuestionData = {
       "Canción Mixteca",
       "El Huapango de Moncayo"
     ]
+  },
+  zh: {
+    question: '韦拉克鲁斯市的民歌或韦拉克鲁斯的民谣',
+    answer: '拉班巴',
+    options: [
+      "美丽而亲爱的墨西哥",
+      "米斯特卡之歌",
+      "蒙卡约的华潘戈"
+    ]
   }
 };

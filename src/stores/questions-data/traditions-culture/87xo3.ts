@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Día de la Candelaria",
       "Mexican wrestling"
     ]
+  },
+  zh: {
+    question: '一种被认定为人类非物质文化遗产的节日或被列入文化遗产的节日',
+    answer: '亡灵节',
+    options: [
+      "韦拉克鲁斯狂欢节",
+      "烛光节",
+      "墨西哥摔跤"
+    ]
   }
 };

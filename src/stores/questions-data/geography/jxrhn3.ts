@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какой город известен как Золотые Ворота Бахио?',
     answer: 'Селайя, Гуанахуато',
     options: ['Мичоакан', 'Гвадалахара', 'Агуаскальентес']
+  },
+  zh: {
+    question: '哪个城市被称为巴希奥的黄金之门？',
+    answer: 'Celaya, Guanajuato',
+    options: [
+      "米却肯",
+      "瓜达拉哈拉",
+      "阿瓜斯卡连特斯"
+    ]
   }
 };

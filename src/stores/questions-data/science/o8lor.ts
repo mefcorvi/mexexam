@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "La Princesa azteca, Jackie Nava",
       "La Barbie, Mariana Juarez"
     ]
+  },
+  zh: {
+    question: '被国际拳击联合会（FIB）认定为年度最佳女拳击手的墨西哥女拳击手的绰号',
+    answer: 'La Rusita, Yazmín Rivas Hernandez',
+    options: [
+      "La Guerrera, Ana Maria Torres Ramirez",
+      "La Princesa azteca, Jackie Nava",
+      "La Barbie, Mariana Juarez"
+    ]
   }
 };

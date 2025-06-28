@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Дата начала голосования мексиканцев за границей',
     answer: '2005',
     options: ['2000', '2003', '2010']
+  },
+  zh: {
+    question: '墨西哥海外投票开始日期',
+    answer: '2005',
+    options: [
+      "2000",
+      "2003",
+      "2010"
+    ]
   }
 };

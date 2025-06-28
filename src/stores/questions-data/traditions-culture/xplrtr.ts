@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Mexique",
       "Oxte"
     ]
+  },
+  zh: {
+    question: '便宜吃饭的地方',
+    answer: '小吃店',
+    options: [
+      "Pujol",
+      "Mexique",
+      "Oxte"
+    ]
   }
 };

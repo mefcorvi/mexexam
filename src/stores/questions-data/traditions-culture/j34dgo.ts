@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "A small car",
       "A popular neighborhood"
     ]
+  },
+  zh: {
+    question: '什么叫做fondas？',
+    answer: '指的是一家小型经济餐厅',
+    options: [
+      "一家旅馆",
+      "一辆小车",
+      "一个受欢迎的社区"
+    ]
   }
 };

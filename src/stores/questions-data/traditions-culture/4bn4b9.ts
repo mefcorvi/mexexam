@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Campeche"
     ],
     note: 'It is notable for the well-preserved murals.'
+  },
+  zh: {
+    question: '考古遗址Cacaxtla在哪里？',
+    answer: '特拉斯卡拉',
+    options: [
+      "恰帕斯",
+      "尤卡坦",
+      "坎佩切"
+    ],
+    note: '以其保存完好的壁画而闻名。'
   }
 };

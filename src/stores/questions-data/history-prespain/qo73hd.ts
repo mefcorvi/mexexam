@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "53",
       "65"
     ]
+  },
+  zh: {
+    question: '墨西哥有多少种土著语言？',
+    answer: '68',
+    options: [
+      "63",
+      "53",
+      "65"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Tepeyollotl",
       "Chalchitlicue"
     ]
+  },
+  zh: {
+    question: '墨西哥战争之神是谁？',
+    answer: '惠提兹洛波奇特利',
+    options: [
+      "羽蛇神",
+      "特佩约洛特尔",
+      "查尔奇特利库"
+    ]
   }
 };

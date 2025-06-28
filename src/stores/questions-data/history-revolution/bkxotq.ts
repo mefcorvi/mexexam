@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Revolution, Conquest, and Independence",
       "Independence, Revolution, Conquest"
     ]
+  },
+  zh: {
+    question: '事件的时间顺序',
+    answer: '征服、独立和革命',
+    options: [
+      "征服、革命和独立",
+      "革命、征服和独立",
+      "独立、革命、征服"
+    ]
   }
 };

@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "1530 - 1660",
       "1800 - 1960"
     ]
+  },
+  zh: {
+    question: '殖民阶段何时巩固？',
+    answer: '1530 - 1560',
+    options: [
+      "1510 - 1540",
+      "1530 - 1660",
+      "1800 - 1960"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "November 20",
       "May 10"
     ]
+  },
+  zh: {
+    question: '瓜达卢佩圣母日',
+    answer: '12月12日',
+    options: [
+      "9月16日",
+      "11月20日",
+      "5月10日"
+    ]
   }
 };

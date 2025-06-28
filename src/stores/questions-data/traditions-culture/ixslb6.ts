@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Oaxaca",
       "Nuevo León"
     ]
+  },
+  zh: {
+    question: '老年人的舞蹈来自哪里？',
+    answer: '米却肯',
+    options: [
+      "萨卡特卡斯",
+      "瓦哈卡",
+      "新莱昂"
+    ]
   }
 };

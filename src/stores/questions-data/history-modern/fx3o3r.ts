@@ -12,5 +12,9 @@ export const question: QuestionData = {
   ru: {
     question: 'Научное название нефти',
     answer: 'Сырая нефть, нефтяной сырец или сырая нефть'
+  },
+  zh: {
+    question: '石油的科学名称',
+    answer: '原油、石油原料或原油'
   }
 };

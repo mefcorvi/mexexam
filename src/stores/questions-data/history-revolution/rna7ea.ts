@@ -30,5 +30,15 @@ export const question: QuestionData = {
       "February 10, 1923 in Nuevo León"
     ],
     note: 'He was shot multiple times in his vehicle and his corpse was decapitated.'
+  },
+  zh: {
+    question: '潘乔·维拉（Pancho Villa）是在什么时候和哪里被杀的？',
+    answer: '1923年7月20日在奇瓦瓦州的帕拉尔（Parral, Chihuahua）',
+    options: [
+      "1923年7月5日在克雷塔罗（Querétaro）",
+      "1923年12月20日在科阿韦拉（Coahuila）",
+      "1923年2月10日在新莱昂（Nuevo León）"
+    ],
+    note: '他在车辆中被多次射击，尸体被斩首。'
   }
 };

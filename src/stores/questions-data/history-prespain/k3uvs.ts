@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Коренное племя Коауилы',
     answer: 'Кикапу',
     options: ['Майя', 'Сапотеки', 'Мексика']
+  },
+  zh: {
+    question: '科阿韦拉的土著部落',
+    answer: '基卡普',
+    options: [
+      "玛雅",
+      "萨波特克",
+      "墨西哥"
+    ]
   }
 };

@@ -16,5 +16,10 @@ export const question: QuestionData = {
     question: 'Mixed heritage goods of humanity according to UNESCO in Mexico',
     answer: 'Ancient Maya City and protected tropical forests of Calakmul, Campeche (2002, 2014)\n\
 Tehuacán-Cuicatlán Valley: original habitat of Mesoamerica (2018)'
+  },
+  zh: {
+    question: '联合国教科文组织在墨西哥的混合遗产',
+    answer: '卡拉克穆尔的古玛雅城市和受保护的热带森林，坎佩切（2002，2014）\n\
+特瓦坎-库卡特兰谷：中美洲的原始栖息地（2018）'
   }
 };

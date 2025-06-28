@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Комик, представлявший мексиканца из народных классов в кино',
     answer: 'Кантифлас',
     options: ['Педро Инфанте', 'Луис Агилар', 'Хоакин Пардаве']
+  },
+  zh: {
+    question: '在电影中代表墨西哥平民阶层的喜剧演员',
+    answer: 'Cantinflas',
+    options: [
+      "Pedro Infante",
+      "Luis Aguilar",
+      "Joaquín Pardavé"
+    ]
   }
 };

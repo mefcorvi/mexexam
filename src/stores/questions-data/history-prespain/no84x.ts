@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "City of flowers",
       "On the hill written or painted"
     ]
+  },
+  zh: {
+    question: 'Tula在纳瓦特尔语中是什么意思？',
+    answer: '芦苇丛，或靠近芦苇丛的地方',
+    options: [
+      "土狼之地",
+      "花之城",
+      "在山上写的或画的"
+    ]
   }
 };

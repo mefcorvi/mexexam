@@ -23,5 +23,14 @@ export const question: QuestionData = {
       "Sacred building",
       "Building of the triumphant"
     ]
+  },
+  zh: {
+    question: '蒙特阿尔班的公共建筑',
+    answer: '舞者建筑',
+    options: [
+      "神明建筑",
+      "神圣建筑",
+      "胜利者建筑"
+    ]
   }
 };

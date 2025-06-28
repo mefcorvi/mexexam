@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Venustiano Carranza",
       "Francisco I. Madero"
     ]
+  },
+  zh: {
+    question: '谁说过“土地与自由”？',
+    answer: '埃米利亚诺·萨帕塔',
+    options: [
+      "多罗特奥·阿兰戈",
+      "韦努斯蒂亚诺·卡兰萨",
+      "弗朗西斯科·I·马德罗"
+    ]
   }
 };

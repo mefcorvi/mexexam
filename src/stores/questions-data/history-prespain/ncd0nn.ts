@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Islet",
       "Artificial cultivation system"
     ]
+  },
+  zh: {
+    question: '在墨西哥谷的湖泊上建造的土地，为中部高原的生产系统提供了基础。目前可以在Xochimilco找到它。',
+    answer: '奇南帕',
+    options: [
+      "岛",
+      "小岛",
+      "人工种植系统"
+    ]
   }
 };

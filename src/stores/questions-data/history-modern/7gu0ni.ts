@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какое место занимает Мексика в мировой экономике?',
     answer: '16',
     options: ['20', '25', '28']
+  },
+  zh: {
+    question: '墨西哥在全球经济中占据什么位置？',
+    answer: '16',
+    options: [
+      "20",
+      "25",
+      "28"
+    ]
   }
 };

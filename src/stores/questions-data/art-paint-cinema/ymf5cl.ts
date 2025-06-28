@@ -21,5 +21,14 @@ export const question: QuestionData = {
       'Мексиканский кукольник и художник пластического искусства движения эстридентизм, автор скульптуры "Бегущий человек"',
     answer: 'Герман Куэто',
     options: ['Хосе Мария Веласко', 'Диего Ривера', 'Руфино Тамайо']
+  },
+  zh: {
+    question: '墨西哥的木偶师和塑料艺术家，属于尖锐主义运动，创作了雕塑《奔跑的人》',
+    answer: 'German Cueto',
+    options: [
+      "Jose Maria Velazco",
+      "Diego Rivera",
+      "Rufino Tamayo"
+    ]
   }
 };

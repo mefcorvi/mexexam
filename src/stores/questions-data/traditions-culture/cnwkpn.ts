@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Campeche",
       "Oaxaca"
     ]
+  },
+  zh: {
+    question: 'Jarana是一种舞蹈还是Jarana是一种表现形式？',
+    answer: '尤卡坦',
+    options: [
+      "恰帕斯",
+      "坎佩切",
+      "瓦哈卡"
+    ]
   }
 };

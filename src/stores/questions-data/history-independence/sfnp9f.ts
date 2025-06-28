@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Где находится замок Чапультепек?',
     answer: 'Мехико',
     options: ['Сакатекас', 'Морелос', 'Халиско']
+  },
+  zh: {
+    question: '查普尔特佩克城堡位于哪里？',
+    answer: '墨西哥城',
+    options: [
+      "萨卡特卡斯",
+      "莫雷洛斯",
+      "哈利斯科"
+    ]
   }
 };

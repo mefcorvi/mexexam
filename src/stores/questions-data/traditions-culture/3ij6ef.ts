@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Affordable clothing store",
       "Where you buy shoes wholesale"
     ]
+  },
+  zh: {
+    question: '什么是杂货店？',
+    answer: '出售日常用品、食品、清洁用品等的地方',
+    options: [
+      "香火销售",
+      "经济服装店",
+      "批发鞋子"
+    ]
   }
 };

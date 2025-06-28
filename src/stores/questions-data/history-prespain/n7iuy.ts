@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Коренная культура, сохраняющаяся на севере страны',
     answer: 'Тараумара',
     options: ['Майя', 'Сапотека', 'Мексика']
+  },
+  zh: {
+    question: '在国家北部持续存在的土著文化',
+    answer: '塔拉乌马拉',
+    options: [
+      "玛雅",
+      "扎波特克",
+      "墨西哥"
+    ]
   }
 };

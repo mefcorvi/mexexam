@@ -30,5 +30,15 @@ export const question: QuestionData = {
       'Чичен Ица (принадлежит культуре Майя)'
     ],
     note: 'Её высота составляет более 75 метров.'
+  },
+  zh: {
+    question: '墨西哥最高的金字塔是什么？',
+    answer: 'Toniná（属于玛雅文化）',
+    options: [
+      "La Venta（属于奥尔梅克文化）",
+      "El sol（属于特奥蒂瓦坎文化）",
+      "Chichén Itzá（属于玛雅文化）"
+    ],
+    note: '高超过75米。'
   }
 };

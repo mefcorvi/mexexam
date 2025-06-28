@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Typical dish of Papantla",
       "Fireworks of Papantla"
     ]
+  },
+  zh: {
+    question: '帕潘特拉的飞行者是什么？',
+    answer: '韦拉克鲁斯的土著舞蹈',
+    options: [
+      "帕潘特拉的飞机",
+      "帕潘特拉的传统菜肴",
+      "帕潘特拉的烟花"
+    ]
   }
 };

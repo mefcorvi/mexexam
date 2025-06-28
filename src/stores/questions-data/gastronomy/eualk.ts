@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Откуда происходит менонитский сыр?',
     answer: 'Чиуауа',
     options: ['Коауила', 'Сонора', 'Колима']
+  },
+  zh: {
+    question: '梅农奶酪来自哪里？',
+    answer: '奇瓦瓦',
+    options: [
+      "科阿韦拉",
+      "索诺拉",
+      "科利马"
+    ]
   }
 };

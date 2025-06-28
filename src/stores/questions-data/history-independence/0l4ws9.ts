@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Что открыл Порфирио Диас 17 февраля 1907 года?',
     answer: 'Почтовый дворец',
     options: ['Трамвай', 'Большой канал', 'Кино']
+  },
+  zh: {
+    question: '波菲里奥·迪亚斯在1907年2月17日 inauguró什么？',
+    answer: '邮政宫',
+    options: [
+      "电车",
+      "大运河",
+      "电影院"
+    ]
   }
 };

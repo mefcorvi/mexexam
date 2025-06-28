@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Газета во время движения за независимость',
     answer: 'El Despertador Americano',
     options: ['El Informador', 'El Americano', 'La Gaceta']
+  },
+  zh: {
+    question: '独立运动期间的报纸',
+    answer: '美洲觉醒者',
+    options: [
+      "信息员",
+      "美洲人",
+      "公报"
+    ]
   }
 };

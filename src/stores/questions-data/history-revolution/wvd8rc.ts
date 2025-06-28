@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "The Hard Blow",
       "The Sad Night"
     ]
+  },
+  zh: {
+    question: '1913年2月9日至19日发生的政变的名称，旨在推翻弗朗西斯科·I·马德罗',
+    answer: '悲惨十天',
+    options: [
+      "秃鹰季节",
+      "硬打击",
+      "悲伤之夜"
+    ]
   }
 };

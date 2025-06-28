@@ -29,5 +29,14 @@ export const question: QuestionData = {
       'Желтые осы, черви магея',
       'Эскамолес, пауки'
     ]
+  },
+  zh: {
+    question: '哪些昆虫是可食用的？',
+    answer: 'Chapulines（蚱蜢）、escamoles（蚂蚁卵）、jumiles、maguey虫',
+    options: [
+      "虎蚊、jumiles",
+      "黄蜂、maguey虫",
+      "escamoles、蜘蛛"
+    ]
   }
 };

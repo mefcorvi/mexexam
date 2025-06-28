@@ -29,5 +29,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1953-09-01'
     }
-  ]
+  ],
+  zh: {
+    question: '谁写了《火焰中的平原》？',
+    answer: '胡安·鲁尔福',
+    options: [
+      "奥克塔维奥·帕斯",
+      "卡洛斯·富恩特斯",
+      "埃琳娜·波尼亚托夫斯卡"
+    ]
+  }
 };

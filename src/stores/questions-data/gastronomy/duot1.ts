@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Типичный десерт из пшеничной муки',
     answer: 'Буньюэлос',
     options: ['Чонгос заморанос', 'Алегрия', 'Ате']
+  },
+  zh: {
+    question: '以小麦粉为基础的典型甜点',
+    answer: '布纽埃洛斯',
+    options: [
+      "乔戈斯·萨莫拉诺斯",
+      "阿莱格里亚",
+      "阿特"
+    ]
   }
 };

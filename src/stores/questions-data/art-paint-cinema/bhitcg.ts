@@ -21,5 +21,14 @@ export const question: QuestionData = {
       'Имя скульптора, чьи работы основаны на больших геометрических фигурах',
     answer: 'Энрике Карбахаль',
     options: ['Хосе Мария Веласко', 'Диего Ривера', 'Руфино Тамайо']
+  },
+  zh: {
+    question: '以大型几何图形为基础的雕塑家的名字',
+    answer: 'Enrique Carbajal',
+    options: [
+      "Jose Maria Velazco",
+      "Diego Rivera",
+      "Rufino Tamayo"
+    ]
   }
 };

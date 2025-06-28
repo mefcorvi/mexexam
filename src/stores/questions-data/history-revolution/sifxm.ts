@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "The Cristero War",
       "The Battle of Puebla"
     ]
+  },
+  zh: {
+    question: '"Las Adelitas" 陪伴她们的男人参加了战斗，在',
+    answer: '1910年的革命',
+    options: [
+      "独立战争",
+      "克里斯特战争",
+      "普埃布拉战役"
+    ]
   }
 };

@@ -32,5 +32,15 @@ export const question: QuestionData = {
       "Javier Del Toro Amezcua"
     ],
     note: 'The STS-61-B mission had as its main objective to place three satellites into orbit: Mexico\'s Morelos II, Australia\'s AUSSAT-2, and the United States\' SATCOM KU-2. Rodolfo Neri Vela was part of the crew as a payload specialist.'
+  },
+  zh: {
+    question: '参与航天飞机亚特兰蒂斯STS-61-B任务的墨西哥宇航员',
+    answer: '罗多尔福·内里·维拉',
+    options: [
+      "加布里埃尔·门多萨·索萨",
+      "埃里克·奥乔亚·维莱斯",
+      "哈维尔·德尔·托罗·阿梅斯夸"
+    ],
+    note: 'STS-61-B任务的主要目标是将三个卫星送入轨道：墨西哥的莫雷洛斯II号、澳大利亚的AUSSAT-2号和美国的SATCOM KU-2号。罗多尔福·内里·维拉作为载荷专家参与了这次任务的机组。'
   }
 };

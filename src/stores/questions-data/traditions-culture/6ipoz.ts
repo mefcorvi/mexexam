@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Campeche",
       "Oaxaca"
     ]
+  },
+  zh: {
+    question: '维拉德雷耶斯考古区在哪里？',
+    answer: '圣路易斯波托西',
+    options: [
+      "恰帕斯",
+      "坎佩切",
+      "瓦哈卡"
+    ]
   }
 };

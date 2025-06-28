@@ -14,5 +14,9 @@ export const question: QuestionData = {
   en: {
     question: 'What is the Guelaguetza?',
     answer: 'It is a festival known as the Mondays of the Hill that is celebrated on two Mondays in July close to the day of the Virgin of Carmen in Oaxaca. Guelaguetza is a Zapotec word that denotes the act of participating by cooperating; it is a free gift that carries with it no obligation other than that of reciprocity. It refers to the courtesy and attention with which one should treat others, and it is related to sharing, courtesy, cooperation, and gifts or presents.'
+  },
+  zh: {
+    question: '什么是Guelaguetza？',
+    answer: '这是一个被称为“山丘的星期一”的节日，在Oaxaca的7月两个接近圣母卡门日的星期一庆祝。Guelaguetza是一个扎波特克语单词，表示参与合作的行为；这是一种无偿的赠予，不带有任何其他义务，只有互惠的责任。它指的是对待他人时应有的礼貌和关注，涉及分享、礼貌、合作以及赠品或礼物。'
   }
 };

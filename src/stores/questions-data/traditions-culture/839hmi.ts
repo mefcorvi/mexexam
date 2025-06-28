@@ -21,5 +21,14 @@ Islands and Protected Areas of the Gulf of California (2005)\n\
 Biosphere Reserve of the Monarch Butterfly, Michoacán/State of Mexico (2008)\n\
 Biosphere Reserve El Pinacate and Gran Desierto de Altar, Sonora (2013)\n\
 Revillagigedo Archipelago (2016)'
+  },
+  zh: {
+    question: '联合国教科文组织在墨西哥的世界自然遗产',
+    answer: '锡安卡安，金塔纳罗奥（1987）\n\
+埃尔维斯卡伊诺鲸鱼保护区，下加利福尼亚州（1993）\n\
+加利福尼亚湾的岛屿和保护区（2005）\n\
+帝王蝶生物圈保护区，米却肯/墨西哥州（2008）\n\
+埃尔皮纳卡特和阿尔塔大沙漠生物圈保护区，索诺拉（2013）\n\
+雷维拉吉赫多群岛（2016）'
   }
 };

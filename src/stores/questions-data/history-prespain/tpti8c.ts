@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Preclassical",
       "Colonial period"
     ]
+  },
+  zh: {
+    question: '中美洲文化的最大发展发生在',
+    answer: '经典时期',
+    options: [
+      "后经典",
+      "前经典",
+      "殖民时期"
+    ]
   }
 };

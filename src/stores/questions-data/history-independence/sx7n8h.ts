@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Где была колыбель независимости?',
     answer: 'Гуанахуато',
     options: ['Керетаро', 'Идальго', 'Сакатекас']
+  },
+  zh: {
+    question: '独立的摇篮在哪里？',
+    answer: 'Guanajuato',
+    options: [
+      "Querétaro",
+      "Hidalgo",
+      "Zacatecas"
+    ]
   }
 };

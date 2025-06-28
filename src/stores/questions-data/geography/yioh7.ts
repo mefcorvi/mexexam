@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько штатов или федеративных единиц в Мексике?',
     answer: '32',
     options: ['38', '25', '29']
+  },
+  zh: {
+    question: '墨西哥有多少个州或联邦实体？',
+    answer: '32',
+    options: [
+      "38",
+      "25",
+      "29"
+    ]
   }
 };

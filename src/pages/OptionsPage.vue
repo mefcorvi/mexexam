@@ -12,7 +12,8 @@ const { t, locale, saveLanguage } = useLocalization();
 const uiLanguages = [
   { value: 'en', label: 'English' },
   { value: 'es', label: 'Español' },
-  { value: 'ru', label: 'Русский' }
+  { value: 'ru', label: 'Русский' },
+  { value: 'zh', label: '中文' }
 ];
 
 // Save language preference when it changes

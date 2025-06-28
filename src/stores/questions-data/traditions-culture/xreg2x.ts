@@ -12,5 +12,9 @@ export const question: QuestionData = {
   en: {
     question: 'What does Mexico mean?',
     answer: 'In the navel of the moon / In the center of the Lake of the Moon'
+  },
+  zh: {
+    question: '墨西哥是什么意思？',
+    answer: '在月亮的肚脐 / 在月亮湖的中心'
   }
 };

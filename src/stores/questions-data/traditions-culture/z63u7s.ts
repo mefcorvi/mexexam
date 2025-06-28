@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Children's Day",
       "Candlemas"
     ]
+  },
+  zh: {
+    question: '5月10日庆祝什么？',
+    answer: '母亲节',
+    options: [
+      "父亲节",
+      "儿童节",
+      "烛光节"
+    ]
   }
 };

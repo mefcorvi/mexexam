@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Руины Монте-Альбан находятся в',
     answer: 'Оахака',
     options: ['Герреро', 'Табаско', 'Веракрус']
+  },
+  zh: {
+    question: '蒙特阿尔班的遗址位于',
+    answer: '瓦哈卡',
+    options: [
+      "格雷罗",
+      "塔巴斯科",
+      "韦拉克鲁斯"
+    ]
   }
 };

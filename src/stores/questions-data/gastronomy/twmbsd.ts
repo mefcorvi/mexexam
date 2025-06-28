@@ -27,5 +27,14 @@ export const question: QuestionData = {
       'Сладость из амаранта с медом',
       'Сладость из молока с кокосом'
     ]
+  },
+  zh: {
+    question: '什么是cajeta？',
+    answer: '焦糖山羊奶糖',
+    options: [
+      "糖饼干",
+      "蜜饯苋菜",
+      "椰子牛奶糖"
+    ]
   }
 };

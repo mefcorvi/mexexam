@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Javier Lozano Herrera",
       "Ernesto Silva Jimenez"
     ]
+  },
+  zh: {
+    question: '2000年悉尼奥运会举重比赛中，谁获得了金牌？',
+    answer: '索拉雅·希门尼斯·门迪维尔',
+    options: [
+      "阿纳斯塔西娅·拉米雷斯·维拉",
+      "哈维尔·洛萨诺·埃雷拉",
+      "埃内斯托·西尔瓦·希门尼斯"
+    ]
   }
 };

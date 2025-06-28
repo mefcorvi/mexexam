@@ -128,6 +128,30 @@ export const useQuestionsStore = createSharedComposable(() => {
                 }
               }
 
+              if (questionData.zh) {
+                translations.add(
+                  'zh',
+                  questionData.answer,
+                  questionData.zh.answer
+                );
+                translations.add(
+                  'zh',
+                  questionData.question,
+                  questionData.zh.question
+                );
+                translations.add('zh', questionData.note, questionData.zh.note);
+
+                if (questionData.zh.options && questionData.options) {
+                  for (let i = 0; i < questionData.zh.options.length; i++) {
+                    translations.add(
+                      'zh',
+                      questionData.options[i],
+                      questionData.zh.options[i]
+                    );
+                  }
+                }
+              }
+
               if (question.type === 'choice' && question.options) {
                 question.options.push(
                   markRaw({
@@ -151,6 +175,7 @@ export const useQuestionsStore = createSharedComposable(() => {
 
       translations.add('ru', sectionData.title, sectionData.ru.title);
       translations.add('en', sectionData.title, sectionData.en.title);
+      translations.add('zh', sectionData.title, sectionData.zh.title);
       isLoaded.value = true;
     }
   };

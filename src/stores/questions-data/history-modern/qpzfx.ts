@@ -29,5 +29,14 @@ export const question: QuestionData = {
       'Медицинское страхование',
       'Здоровье для всех'
     ]
+  },
+  zh: {
+    question: '2004年成立的帮助失业者或独立工作者的健康保险叫什么？',
+    answer: 'Seguro Popular de Salud',
+    options: [
+      "人民健康保险",
+      "健康保险",
+      "全民健康"
+    ]
   }
 };

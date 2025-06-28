@@ -45,5 +45,14 @@ Sergio Pitol'
       type: 'person',
       name: 'Sergio Pitol'
     }
-  ]
+  ],
+  zh: {
+    question: '获得塞万提斯奖的墨西哥人',
+    answer: '奥克塔维奥·帕斯\n\
+卡洛斯·富恩特斯\n\
+埃莱娜·波尼亚托夫斯卡\n\
+何塞·埃米利奥·帕切科\n\
+费尔南多·德尔·帕索\n\
+塞尔吉奥·皮托尔'
+  }
 };

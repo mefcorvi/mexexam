@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Где находится волшебный город Изамаль?',
     answer: 'Юкатан',
     options: ['Сакатекас', 'Мичоакан', 'Веракрус']
+  },
+  zh: {
+    question: '伊萨马尔，魔法小镇在哪里？',
+    answer: '尤卡坦',
+    options: [
+      "萨卡特卡斯",
+      "米却肯",
+      "韦拉克鲁斯"
+    ]
   }
 };

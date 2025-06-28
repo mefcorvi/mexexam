@@ -28,5 +28,14 @@ export const question: QuestionData = {
       "On New Year's",
       "During summer vacation"
     ]
+  },
+  zh: {
+    question: '"posadas"是私人或邻里庆祝的节日，',
+    answer: '在圣诞节前的几天',
+    options: [
+      "在复活节期间",
+      "在新年期间",
+      "在暑假期间"
+    ]
   }
 };

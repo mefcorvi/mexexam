@@ -29,5 +29,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1986'
     }
-  ]
+  ],
+  zh: {
+    question: '谁写了《Aura》？',
+    answer: '卡洛斯·富恩特斯',
+    options: [
+      "奥克塔维奥·帕斯",
+      "胡安·鲁尔福",
+      "埃琳娜·波尼亚托夫斯卡"
+    ]
+  }
 };

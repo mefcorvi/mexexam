@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Национальный цветок',
     answer: 'Далия',
     options: ['Цемпазучитль', 'Роза', 'Маргаритка']
+  },
+  zh: {
+    question: '国家花',
+    answer: '大丽花',
+    options: [
+      "万寿菊",
+      "玫瑰",
+      "雏菊"
+    ]
   }
 };

@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Porfirio Díaz",
       "Vicente Guerrero"
     ]
+  },
+  zh: {
+    question: '口号“有效选举，不连任”是的政治旗帜',
+    answer: '弗朗西斯科·I·马德罗',
+    options: [
+      "贝尼托·华雷斯",
+      "波费里奥·迪亚斯",
+      "维森特·格雷罗"
+    ]
   }
 };

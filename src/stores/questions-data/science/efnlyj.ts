@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Rafa Hernandez and Hugo Marquez",
       "Luis Garcia and Hugo Sanchez"
     ]
+  },
+  zh: {
+    question: '在西班牙著名的墨西哥足球运动员名字',
+    answer: '乌戈·桑切斯和拉法·马尔克斯',
+    options: [
+      "乌戈·桑切斯和奇查里托·埃尔南德斯",
+      "拉法·埃尔南德斯和乌戈·马尔克斯",
+      "路易斯·加西亚和乌戈·桑切斯"
+    ]
   }
 };

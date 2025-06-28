@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Где находятся Пещеры Какуамильпа?',
     answer: 'Герреро',
     options: ['Оахака', 'Юкатан', 'Кампече']
+  },
+  zh: {
+    question: 'Cacahuamilpa洞穴在哪里？',
+    answer: '格雷罗',
+    options: [
+      "瓦哈卡",
+      "尤卡坦",
+      "坎佩切"
+    ]
   }
 };

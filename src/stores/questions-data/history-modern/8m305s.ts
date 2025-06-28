@@ -24,5 +24,17 @@ export const question: QuestionData = {
       'Какая из следующих аббревиатур относится к институту здравоохранения?',
     answer: 'IMSS',
     options: ['PROFECO', 'INM', 'ACNUR', 'ONU', 'CFE', 'COMAR']
+  },
+  zh: {
+    question: '以下哪个缩写对应于一个健康机构？',
+    answer: 'IMSS',
+    options: [
+      "PROFECO",
+      "INM",
+      "ACNUR",
+      "ONU",
+      "CFE",
+      "COMAR"
+    ]
   }
 };

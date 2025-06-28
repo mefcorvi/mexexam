@@ -53,5 +53,14 @@ export const question: QuestionData = {
       type: 'state',
       value: 'Guanajuato'
     }
-  ]
+  ],
+  zh: {
+    question: '胡亚雷斯剧院位于哪里？',
+    answer: '瓜纳华托',
+    options: [
+      "萨卡特卡斯",
+      "哈利斯科",
+      "墨西哥城"
+    ]
+  }
 };

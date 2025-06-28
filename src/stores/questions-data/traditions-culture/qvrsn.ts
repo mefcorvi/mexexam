@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Magnolia"
     ],
     note: 'Commonly yellow or orange.'
+  },
+  zh: {
+    question: '在亡灵节使用的花的名称',
+    answer: 'Cempasúchil',
+    options: [
+      "圣诞红",
+      "大丽花",
+      "木兰"
+    ],
+    note: '通常是黄色或橙色。'
   }
 };

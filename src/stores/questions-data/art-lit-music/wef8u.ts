@@ -40,5 +40,13 @@ Jaime Sabines'
       type: 'person',
       name: 'Jaime Sabines'
     }
-  ]
+  ],
+  zh: {
+    question: '墨西哥诗人的名字',
+    answer: '奥克塔维奥·帕斯\n\
+阿马多·内尔沃\n\
+何塞·埃米利奥·帕切科\n\
+罗萨里奥·卡斯特利亚诺斯\n\
+哈梅·萨宾斯'
+  }
 };

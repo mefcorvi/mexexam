@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "20",
       "25"
     ]
+  },
+  zh: {
+    question: '墨西哥有多少个联合国教科文组织文化遗产？',
+    answer: '27',
+    options: [
+      "15",
+      "20",
+      "25"
+    ]
   }
 };

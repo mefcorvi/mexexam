@@ -32,5 +32,15 @@ export const question: QuestionData = {
       "Document in which the Independence of Mexico is agreed upon"
     ],
     note: 'November 28, 1911.'
+  },
+  zh: {
+    question: '阿亚拉计划是关于什么的？',
+    answer: '由埃米利亚诺·萨帕塔宣布，旨在否认弗朗西斯科·I·马德罗的政府，并将土地归还给农民。它的口号是："改革、自由、正义和法律"',
+    options: [
+      "核武器不扩散",
+      "由阿德里安·弗洛伦西奥·维拉雷亚尔宣布，旨在结束圣安娜的独裁统治",
+      "关于墨西哥独立的协议文件"
+    ],
+    note: '1911年11月28日。'
   }
 };

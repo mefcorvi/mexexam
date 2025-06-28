@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Какого персонажа сыграл Педро Инфанте?',
     answer: 'Пепе эль Торо',
     options: ['Тин Тан', 'Тисок', 'Ресортес']
+  },
+  zh: {
+    question: '哪个角色是由Pedro Infante饰演的？',
+    answer: 'Pepe el Toro',
+    options: [
+      "Tin Tan",
+      "Tizoc",
+      "Resortes"
+    ]
   }
 };

@@ -21,5 +21,14 @@ export const question: QuestionData = {
       'Как зовут Дитя Героя, который бросился с замка, завернувшись в флаг?',
     answer: 'Хуан Эскутия',
     options: ['Фернандо Монтес де Ока', 'Висенте Суарес', 'Франсиско Маркес']
+  },
+  zh: {
+    question: '从城堡上卷着国旗跳下来的英雄男孩叫什么名字？',
+    answer: 'Juan Escutia',
+    options: [
+      "Fernando Montes de Oca",
+      "Vicente Suárez",
+      "Francisco Márquez"
+    ]
   }
 };

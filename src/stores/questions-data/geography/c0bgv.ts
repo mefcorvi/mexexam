@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Штат республики с самой большой территорией',
     answer: 'Чиуауа',
     options: ['Коауила', 'Дуранго', 'Веракрус']
+  },
+  zh: {
+    question: '面积最大的共和国是',
+    answer: 'Chihuahua',
+    options: [
+      "Coahuila",
+      "Durango",
+      "Veracruz"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько сенаторов в Мексике?',
     answer: '128',
     options: ['500', '11', '158']
+  },
+  zh: {
+    question: '墨西哥有多少名参议员？',
+    answer: '128',
+    options: [
+      "500",
+      "11",
+      "158"
+    ]
   }
 };

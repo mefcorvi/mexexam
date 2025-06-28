@@ -20,5 +20,14 @@ export const question: QuestionData = {
       "The Baptism",
       "The Judgment"
     ]
+  },
+  zh: {
+    question: '在伊斯塔帕拉帕进行的宗教活动是什么？',
+    answer: '基督的受难',
+    options: [
+      "天使报喜",
+      "洗礼",
+      "审判"
+    ]
   }
 };

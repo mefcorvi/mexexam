@@ -38,5 +38,18 @@ export const question: QuestionData = {
       Chemistry in 1995 for his research on the threat to the Earth\'s ozone layer from \n\
       chlorofluorocarbon (CFC) gases. Molina was the first Mexican scientist to receive the Nobel Prize in Chemistry.\n\
     '
+  },
+  zh: {
+    question: '因研究臭氧层而获得诺贝尔化学奖的墨西哥人',
+    answer: '何塞·马里奥·莫利纳·帕斯克尔与恩里克斯于1995年',
+    options: [
+      "路易斯·埃内斯托·米拉蒙特斯·卡德纳斯于1994年",
+      "罗多尔福·内里·维拉于1992年",
+      "吉列尔莫·冈萨雷斯·卡梅拉纳于1995年"
+    ],
+    note: '\n\
+      马里奥·何塞·莫利纳·帕斯克尔·恩里克斯（1943年3月19日 - 2020年10月7日）\n\
+      是一位墨西哥物理化学家。他在发现南极臭氧洞方面发挥了关键作用，并于1995年因其对地球臭氧层受到氯氟烃（CFC）气体威胁的研究而共同获得诺贝尔化学奖。莫利纳是第一位获得诺贝尔化学奖的墨西哥科学家。\n\
+    '
   }
 };

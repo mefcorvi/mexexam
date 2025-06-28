@@ -20,5 +20,15 @@ export const question: QuestionData = {
       "Michoacán",
       "Guanajuato"
     ]
+  },
+  zh: {
+    question: '玛丽亚奇起源于哪里？',
+    answer: '哈利斯科',
+    options: [
+      "瓦哈卡",
+      "萨卡特卡斯",
+      "米却肯",
+      "瓜纳华托"
+    ]
   }
 };

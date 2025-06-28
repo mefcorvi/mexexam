@@ -32,5 +32,15 @@ export const question: QuestionData = {
       'Трудовая партия (PT)'
     ],
     note: '1930 - 2000'
+  },
+  zh: {
+    question: '在20世纪统治了七十年的政党名称',
+    answer: '制度革命党（PRI）',
+    options: [
+      "国家行动党（PAN）",
+      "市民运动",
+      "劳动党（PT）"
+    ],
+    note: '1930 - 2000'
   }
 };

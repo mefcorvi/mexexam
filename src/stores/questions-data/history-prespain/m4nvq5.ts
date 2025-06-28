@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Богиня Луны у майя',
     answer: 'Ишчель',
     options: ['Чаак', 'Ах Мун', 'Эк Чуах']
+  },
+  zh: {
+    question: '玛雅月亮女神',
+    answer: 'Ixchel',
+    options: [
+      "Chaac",
+      "Ah Mun",
+      "Ek Chuah"
+    ]
   }
 };

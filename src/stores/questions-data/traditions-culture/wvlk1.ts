@@ -28,5 +28,15 @@ export const question: QuestionData = {
       "The Flyers of Colima"
     ],
     note: 'Fertility is represented by the descent of the dancers, symbolizing the fall of rain. A trunk or "flying pole" over 20 meters tall is used. At the top of the structure, the caporal is situated, a character who plays a drum and a flute, and coordinates the ritual.'
+  },
+  zh: {
+    question: '与生育相关的仪式，由四名舞者执行，他们代表四个方向和指挥者。',
+    answer: '帕潘特拉的飞人',
+    options: [
+      "瓦哈卡的飞人",
+      "萨卡特卡斯的飞人",
+      "科利马的飞人"
+    ],
+    note: '生育通过舞者的下降来表现，象征着雨水的降落。使用一根超过20米的树干或“飞杆”。在结构的顶部，指挥者的位置，演奏鼓和长笛，协调仪式。'
   }
 };

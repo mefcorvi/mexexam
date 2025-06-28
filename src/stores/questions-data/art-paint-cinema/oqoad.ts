@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Что рисовал Хосе Мария Веласко?',
     answer: 'Пейзажи',
     options: ['Женщин', 'Аллегории', 'Автопортреты']
+  },
+  zh: {
+    question: '何塞·玛丽亚·贝拉斯科画了什么？',
+    answer: '风景',
+    options: [
+      "女性",
+      "寓言",
+      "自画像"
+    ]
   }
 };

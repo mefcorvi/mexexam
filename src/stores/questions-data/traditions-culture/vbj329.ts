@@ -24,5 +24,15 @@ export const question: QuestionData = {
       "Posada"
     ],
     note: 'The seven peaks symbolize the seven deadly sins: sloth, envy, gluttony, wrath, lust, greed, and pride.'
+  },
+  zh: {
+    question: '它呈星形，里面装满了糖果和玩具，通常在生日和圣诞节前使用，用棍子击打。',
+    answer: '皮纳塔',
+    options: [
+      "保罗",
+      "派昌加",
+      "波萨达"
+    ],
+    note: '七个尖顶象征着七宗罪：懒惰、嫉妒、贪吃、愤怒、淫欲、贪婪和傲慢。'
   }
 };

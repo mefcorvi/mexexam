@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Столица штата Нуэво-Леон',
     answer: 'Монтеррей',
     options: ['Хуарес', 'Санта-Каталина', 'Сантьяго']
+  },
+  zh: {
+    question: '新莱昂州的首府',
+    answer: 'Monterrey',
+    options: [
+      "华雷斯",
+      "圣卡塔琳娜",
+      "圣地亚哥"
+    ]
   }
 };

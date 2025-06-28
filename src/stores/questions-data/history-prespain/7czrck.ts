@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Основой питания мезоамериканских народов был',
     answer: 'Кукуруза',
     options: ['Авокадо', 'Пшеница', 'Помидоры']
+  },
+  zh: {
+    question: '中美洲人民的主要食物是',
+    answer: '玉米',
+    options: [
+      "鳄梨",
+      "小麦",
+      "番茄"
+    ]
   }
 };

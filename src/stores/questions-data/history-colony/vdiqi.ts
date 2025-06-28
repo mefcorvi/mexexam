@@ -22,5 +22,15 @@ export const question: QuestionData = {
     answer: '1539',
     options: ['1510', '1500', '1545'],
     note: 'Во время правления Дона Антонио де Мендоса в Новой Испании.'
+  },
+  zh: {
+    question: '墨西哥第一台印刷机成立的年份',
+    answer: '1539',
+    options: [
+      "1510",
+      "1500",
+      "1545"
+    ],
+    note: '在新西班牙的安东尼奥·德·门多萨（Don Antonio de Mendoza）统治期间。'
   }
 };

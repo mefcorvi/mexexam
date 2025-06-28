@@ -21,5 +21,14 @@ export const question: QuestionData = {
       'Как называется мексиканский суп, приготовленный из кукурузных зерен?',
     answer: 'Позоле',
     options: ['Татемадо', 'Биррия', 'Ацтекский суп']
+  },
+  zh: {
+    question: '墨西哥用玉米粒制作的汤叫什么名字？',
+    answer: 'Pozole',
+    options: [
+      "Tatemado",
+      "Birria",
+      "Sopa azteca"
+    ]
   }
 };

@@ -26,5 +26,15 @@ export const question: QuestionData = {
       "Оахака"
     ],
     note: 'В штате Идальго.'
+  },
+  zh: {
+    question: '被称为“美丽的微风之城”的城市是哪个？',
+    answer: '帕丘卡',
+    options: [
+      "瓜达拉哈拉",
+      "哈拉帕",
+      "瓦哈卡"
+    ],
+    note: '位于伊达尔戈州。'
   }
 };

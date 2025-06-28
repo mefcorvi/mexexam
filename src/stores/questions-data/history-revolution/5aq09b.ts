@@ -28,5 +28,14 @@ export const question: QuestionData = {
       "December 12 in Mexico City",
       "January 3 in Nuevo León"
     ]
+  },
+  zh: {
+    question: '我们现在遵循的宪法是哪一年签署的？',
+    answer: '1917年2月5日在克雷塔罗',
+    options: [
+      "1917年3月7日在哈利斯科",
+      "12月12日在墨西哥城",
+      "1月3日在新莱昂"
+    ]
   }
 };

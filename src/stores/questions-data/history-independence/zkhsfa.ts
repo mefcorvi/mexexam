@@ -29,5 +29,14 @@ export const question: QuestionData = {
       'El Americano в 1510 году',
       'La Gaceta в 1710 году'
     ]
+  },
+  zh: {
+    question: '独立运动时期，叛乱者的第一份报纸是什么？',
+    answer: '《美国觉醒者》在1810年',
+    options: [
+      "《美国信息者》在1910年",
+      "《美国人》在1510年",
+      "《公报》在1710年"
+    ]
   }
 };

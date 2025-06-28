@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Дворцы",
       "Город Вечности"
     ]
+  },
+  zh: {
+    question: 'CDMX的历史中心被称为什么？',
+    answer: '宫殿之城',
+    options: [
+      "英雄之城",
+      "宫殿",
+      "永恒之城"
+    ]
   }
 };

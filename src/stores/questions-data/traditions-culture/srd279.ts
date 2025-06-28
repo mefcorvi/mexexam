@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "La vaquita",
       "El corral"
     ]
+  },
+  zh: {
+    question: '喝酒司机们最终去哪里？',
+    answer: '小公牛',
+    options: [
+      "小牛仔",
+      "小奶牛",
+      "牛圈"
+    ]
   }
 };

@@ -20,5 +20,14 @@ export const question: QuestionData = {
       "Pipope",
       "Regios"
     ]
+  },
+  zh: {
+    question: '墨西哥城的居民通常被称为什么？',
+    answer: 'Chilangos',
+    options: [
+      "波尔特尼奥斯",
+      "皮波佩",
+      "雷吉奥斯"
+    ]
   }
 };

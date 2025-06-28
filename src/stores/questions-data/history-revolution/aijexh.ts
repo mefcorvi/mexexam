@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Venustiano Carranza",
       "Francisco I. Madero"
     ]
+  },
+  zh: {
+    question: '在莫雷洛斯州领导墨西哥革命的农业领袖的名字',
+    answer: '埃米利亚诺·萨帕塔',
+    options: [
+      "多罗特奥·阿兰戈",
+      "韦努斯蒂亚诺·卡兰萨",
+      "弗朗西斯科·I·马德罗"
+    ]
   }
 };

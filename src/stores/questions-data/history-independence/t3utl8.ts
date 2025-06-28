@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Независимость Мексики началась в',
     answer: '1810',
     options: ['1811', '1812', '1800']
+  },
+  zh: {
+    question: '墨西哥独立战争始于',
+    answer: '1810',
+    options: [
+      "1811",
+      "1812",
+      "1800"
+    ]
   }
 };

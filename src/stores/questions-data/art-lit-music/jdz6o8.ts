@@ -33,5 +33,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '2009'
     }
-  ]
+  ],
+  zh: {
+    question: '他写了关于弗朗西斯科·I·马德罗的文章',
+    answer: '帕科·伊格纳西奥·泰博二世',
+    options: [
+      "奥克塔维奥·帕斯",
+      "埃琳娜·波尼亚托夫斯卡",
+      "卡洛斯·富恩特斯"
+    ]
+  }
 };

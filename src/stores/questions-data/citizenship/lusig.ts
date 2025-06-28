@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько депутатов в конгрессе?',
     answer: '500',
     options: ['11', '32', '128']
+  },
+  zh: {
+    question: '国会有多少名议员？',
+    answer: '500',
+    options: [
+      "11",
+      "32",
+      "128"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Год начала новой эпохи мексиканского кино',
     answer: '1990',
     options: ['1930', '1920', '1955']
+  },
+  zh: {
+    question: '墨西哥电影新时代开始的年份',
+    answer: '1990',
+    options: [
+      "1930",
+      "1920",
+      "1955"
+    ]
   }
 };

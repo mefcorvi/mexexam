@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Teotihuacán",
       "San Lorenzo"
     ]
+  },
+  zh: {
+    question: '使用可怕的Tzompantli的城市是哪里？',
+    answer: '图拉',
+    options: [
+      "奇琴伊察",
+      "特奥蒂瓦坎",
+      "圣洛伦索"
+    ]
   }
 };

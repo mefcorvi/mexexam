@@ -35,5 +35,14 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Amparo Dávila'
     }
-  ]
+  ],
+  zh: {
+    question: '美术学院颁发的故事或文学奖叫什么？',
+    answer: '安帕罗·达维拉',
+    options: [
+      "何塞·瓦斯孔塞洛斯",
+      "墨西哥先驱报",
+      "奥特利奖"
+    ]
+  }
 };

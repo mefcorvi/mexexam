@@ -18,6 +18,12 @@ export type QuestionData = {
     options?: string[];
     note?: string;
   };
+  zh?: {
+    question: string;
+    answer: string;
+    options?: string[];
+    note?: string;
+  };
   tags?: Tag[];
 };
 
@@ -29,6 +35,9 @@ export type SectionData = {
     title: string;
   };
   ru: {
+    title: string;
+  };
+  zh: {
     title: string;
   };
   questions: () => Promise<QuestionData[]>;

@@ -27,5 +27,14 @@ export const question: QuestionData = {
       'Куаутемок, назывался Paseo del Imperio',
       'Гвадалупе Виктория, назывался Paseo Guadalupe'
     ]
+  },
+  zh: {
+    question: '谁设计了改革大道，它的名字是什么？',
+    answer: '马克西米连·哈布斯堡，他叫做皇后大道',
+    options: [
+      "奥古斯丁·伊图尔比德，他叫做皇帝大道",
+      "库阿乌特莫克，他叫做帝国大道",
+      "瓜达卢佩·维多利亚，他叫做瓜达卢佩大道"
+    ]
   }
 };

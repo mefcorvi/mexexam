@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Минерал, который больше всего добывался в Новой Испании',
     answer: 'Серебро',
     options: ['Золото', 'Медь', 'Свинец']
+  },
+  zh: {
+    question: '在新西班牙提取最多的矿物是',
+    answer: '白银',
+    options: [
+      "黄金",
+      "铜",
+      "铅"
+    ]
   }
 };

@@ -29,5 +29,14 @@ export const question: QuestionData = {
       'Колледж Сан-Ильдефонсо',
       'Колледж Сан-Мартин'
     ]
+  },
+  zh: {
+    question: '殖民时期为土著人设立的第一所高等教育机构或维尔雷纳托时期的土著贵族学校',
+    answer: '圣十字学院（Colegio de la Santa Cruz de Santiago Tlatelolco）',
+    options: [
+      "圣尼古拉斯主教学院（Colegio de San Nicolás Obispo）",
+      "圣伊尔德丰索学院（Colegio de San Ildefonso）",
+      "圣马丁学院（Colegio de San Martín）"
+    ]
   }
 };

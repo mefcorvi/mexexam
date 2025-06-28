@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Откуда родом рождественский салат?',
     answer: 'Мичоакан',
     options: ['Халиско', 'Чиуауа', 'Юкатан']
+  },
+  zh: {
+    question: '圣诞沙拉起源于哪里？',
+    answer: '米却肯',
+    options: [
+      "哈利斯科",
+      "奇瓦瓦",
+      "尤卡坦"
+    ]
   }
 };

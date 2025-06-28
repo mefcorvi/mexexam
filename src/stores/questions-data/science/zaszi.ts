@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Soccer",
       "Equestrianism"
     ]
+  },
+  zh: {
+    question: '1933年被宣布为国家运动的是哪个？',
+    answer: '马术',
+    options: [
+      "拳击",
+      "足球",
+      "骑马"
+    ]
   }
 };

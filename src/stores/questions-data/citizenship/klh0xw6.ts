@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько лет длится начальное образование в Мексике?',
     answer: '6 лет',
     options: ['5 лет', '3 года', '1 год']
+  },
+  zh: {
+    question: '墨西哥的小学教育持续多少年？',
+    answer: '6年',
+    options: [
+      "5年",
+      "3年",
+      "1年"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "The Mexicas",
       "The Zapotecs"
     ]
+  },
+  zh: {
+    question: '谁被认为是零的创造者？',
+    answer: '玛雅人',
+    options: [
+      "特奥蒂瓦坎人",
+      "墨西哥人",
+      "扎波特克人"
+    ]
   }
 };

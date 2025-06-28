@@ -21,5 +21,14 @@ export const question: QuestionData = {
       'Как звали иностранную актрису золотой эпохи мексиканского кино?',
     answer: 'Либертад Ламарке',
     options: ['Сара Гарсия', 'Эльза Агирре', 'Мария Феликс']
+  },
+  zh: {
+    question: '黄金时代墨西哥电影的外国女演员叫什么？',
+    answer: 'Libertad Lamarque',
+    options: [
+      "Sara Garcia",
+      "Elsa Aguirre",
+      "Maria Félix"
+    ]
   }
 };

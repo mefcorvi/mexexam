@@ -29,5 +29,14 @@ export const question: QuestionData = {
       "Silver medal in 200m flat in 48.89 sec",
       "Silver medal in 300m flat in 48.89 sec"
     ]
+  },
+  zh: {
+    question: '安娜·加布里埃拉·格瓦拉在2004年雅典奥运会中获得的比赛纪录',
+    answer: '400米平跑银牌，时间为48.89秒',
+    options: [
+      "100米平跑银牌，时间为48.89秒",
+      "200米平跑银牌，时间为48.89秒",
+      "300米平跑银牌，时间为48.89秒"
+    ]
   }
 };

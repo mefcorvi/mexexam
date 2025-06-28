@@ -33,5 +33,14 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Francisco Gabilondo Soler'
     }
-  ]
+  ],
+  zh: {
+    question: '著名的墨西哥儿童音乐作家',
+    answer: 'Francisco Gabilondo Soler，别名Cri Cri',
+    options: [
+      "Octavio Paz，别名Lagrimita",
+      "Juan Rulfo，别名Cepillín",
+      "Carlos Fuentes，别名Crin Crin"
+    ]
+  }
 };

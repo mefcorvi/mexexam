@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Доиспанский напиток, известный как курадо',
     answer: 'Пульке',
     options: ['Текила', 'Техуино', 'Жококе']
+  },
+  zh: {
+    question: '被称为curado的前西班牙饮料',
+    answer: 'Pulque',
+    options: [
+      "龙舌兰",
+      "Tejuino",
+      "Jocoque"
+    ]
   }
 };

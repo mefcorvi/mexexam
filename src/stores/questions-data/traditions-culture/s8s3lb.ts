@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Happy Birthday",
       "Serenades"
     ]
+  },
+  zh: {
+    question: '在生日聚会上通常会唱歌以致敬庆祝者',
+    answer: 'Las mañanitas',
+    options: [
+      "Las golondrinas",
+      "Cumpleaños feliz",
+      "Serenatas"
+    ]
   }
 };

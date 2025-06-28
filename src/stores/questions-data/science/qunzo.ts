@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Eleonor Gutierrez in 1908",
       "Anastacia Brizuela in 1888"
     ]
+  },
+  zh: {
+    question: '谁是墨西哥第一位女医生？',
+    answer: '马蒂尔德·蒙托亚于1887年',
+    options: [
+      "加布里埃拉·巴拉甘于1775年",
+      "埃莱诺尔·古铁雷斯于1908年",
+      "阿纳斯塔西娅·布里苏埃拉于1888年"
+    ]
   }
 };

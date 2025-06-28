@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Guadalajara, October 14, 1986",
       "Monterrey, October 28, 1956 "
     ]
+  },
+  zh: {
+    question: '墨西哥举办奥运会的地点和日期',
+    answer: '墨西哥城，1968年10月12日',
+    options: [
+      "墨西哥城，1970年10月6日",
+      "瓜达拉哈拉，1986年10月14日",
+      "蒙特雷，1956年10月28日"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Что означает Теотиуакан?',
     answer: 'Город богов',
     options: ['Священный город', 'Город кукурузы', 'Вечный город']
+  },
+  zh: {
+    question: 'Teotihuacán是什么意思？',
+    answer: '神之城',
+    options: [
+      "神圣之城",
+      "玉米之城",
+      "永恒之城"
+    ]
   }
 };

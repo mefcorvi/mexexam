@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Yucatecan Bombas",
       "Rhymes"
     ]
+  },
+  zh: {
+    question: '为了亡灵节而在十一月写的节日诗句',
+    answer: '骷髅诗或小骷髅诗',
+    options: [
+      "诗歌",
+      "尤卡坦的炸弹",
+      "韵律"
+    ]
   }
 };

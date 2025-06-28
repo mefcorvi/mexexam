@@ -36,5 +36,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1958'
     }
-  ]
+  ],
+  zh: {
+    question: '卡洛斯·富恩特斯在1958年写了哪部关于墨西哥生活的作品？',
+    answer: '最透明的区域',
+    options: [
+      "秃鹰季节",
+      "燃烧的平原",
+      "特拉特洛尔科的声音"
+    ]
+  }
 };

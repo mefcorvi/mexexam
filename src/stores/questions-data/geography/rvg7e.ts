@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько волшебных городов существует?',
     answer: '132',
     options: ['156', '152', '119']
+  },
+  zh: {
+    question: '有多少个魔法小镇？',
+    answer: '132',
+    options: [
+      "156",
+      "152",
+      "119"
+    ]
   }
 };

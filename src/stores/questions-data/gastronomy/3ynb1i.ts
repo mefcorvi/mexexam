@@ -20,5 +20,14 @@ export const question: QuestionData = {
     question: 'Место, где традиционны сырные тамалес на День мертвых',
     answer: 'Сан-Луис-Потоси',
     options: ['Табаско', 'Сакатекас', 'Мичоакан']
+  },
+  zh: {
+    question: '亡灵节传统的奶酪玉米饼的地方',
+    answer: 'San Luis Potosí',
+    options: [
+      "塔巴斯科",
+      "萨卡特卡斯",
+      "米却肯"
+    ]
   }
 };

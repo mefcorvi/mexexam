@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Chespirito",
       "Cholito"
     ]
+  },
+  zh: {
+    question: '墨西哥足球运动员哈维尔·埃尔南德斯的绰号是什么？',
+    answer: '小豌豆',
+    options: [
+      "小个子",
+      "小丑",
+      "小胖子"
+    ]
   }
 };

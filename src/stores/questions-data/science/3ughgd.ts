@@ -38,5 +38,15 @@ export const question: QuestionData = {
       300 million women. In 2005, the Mexican Academy of Sciences recognized this\n\
       discovery as Mexico\'s most significant contribution to world science.\n\
     '
+  },
+  zh: {
+    question: '谁发明了避孕药？',
+    answer: '路易斯·埃内斯托·米拉蒙特斯·卡尔登纳斯于1951年10月15日',
+    options: [
+      "路易斯·埃切维利亚于1960年9月13日",
+      "路易斯·蒙特瓦列于1948年11月10日",
+      "哈维尔·奥乔亚·埃尔南德斯于1948年5月12日"
+    ],
+    note: '墨西哥化学家路易斯·埃内斯托·米拉蒙特斯·卡尔登纳斯发明了第一种口服避孕药。1951年，他还是学生时合成了诺雷德龙，一种合成的孕酮类似物。诺雷德龙的专利由米拉蒙特斯与乔治·罗森克兰茨和卡尔·杰拉西共同获得。这种物质成为世界上第一种口服避孕药的基础，约有3亿女性使用。2005年，墨西哥科学院承认这一发现是墨西哥对世界科学的最重要贡献。'
   }
 };

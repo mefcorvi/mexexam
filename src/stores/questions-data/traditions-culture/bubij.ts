@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Coahuila",
       "Nuevo León"
     ]
+  },
+  zh: {
+    question: 'Guelaguetza 是哪里来的？',
+    answer: '瓦哈卡',
+    options: [
+      "奇瓦瓦",
+      "科阿韦拉",
+      "新莱昂"
+    ]
   }
 };

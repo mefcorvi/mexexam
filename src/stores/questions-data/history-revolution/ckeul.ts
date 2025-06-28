@@ -28,5 +28,15 @@ export const question: QuestionData = {
       "Industrial Strike"
     ],
     note: 'It was a strike that took place in the copper mining city of Cananea, Sonora, which set precedents for the revolution, and the city is known as the cradle of the revolution.'
+  },
+  zh: {
+    question: '与矿业和革命相关的事件',
+    answer: '卡纳内亚罢工',
+    options: [
+      "矿业罢工",
+      "索诺拉罢工",
+      "工业罢工"
+    ],
+    note: '这是发生在索诺拉的铜矿城市卡纳内亚的罢工，为革命奠定了先例，因此这座城市被称为革命的摇篮。'
   }
 };

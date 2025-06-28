@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Quetzalcoatl",
       "Chalchitlicue"
     ]
+  },
+  zh: {
+    question: '与太阳相关的阿兹特克神祇',
+    answer: 'Tonatiuh',
+    options: [
+      "Huitzilopochtli",
+      "Quetzalcoatl",
+      "Chalchitlicue"
+    ]
   }
 };

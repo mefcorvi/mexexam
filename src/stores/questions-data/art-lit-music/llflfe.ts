@@ -31,5 +31,14 @@ export const question: QuestionData = {
       type: 'state',
       value: 'CDMX'
     }
-  ]
+  ],
+  zh: {
+    question: '建造美术宫的古老剧院的名称',
+    answer: '国家剧院',
+    options: [
+      "古老剧院",
+      "墨西哥城剧院",
+      "大都会剧院"
+    ]
+  }
 };

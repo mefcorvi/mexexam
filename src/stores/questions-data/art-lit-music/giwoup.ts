@@ -32,5 +32,15 @@ export const question: QuestionData = {
       type: 'date',
       value: '1908'
     }
-  ]
+  ],
+  zh: {
+    question: '由弗朗西斯科·I·马德罗撰写的书籍',
+    answer: '总统继承',
+    options: [
+      "第一梦",
+      "孤独的迷宫",
+      "阴谋"
+    ],
+    note: '这是一本书，马德罗批评当时总统波费里奥·迪亚斯在长达34年的任期后。'
+  }
 };

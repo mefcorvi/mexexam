@@ -20,5 +20,14 @@ export const question: QuestionData = {
       "Teotihuacan",
       "Toltec"
     ]
+  },
+  zh: {
+    question: '公元950年 - 公元1521年后古典时期发展最为成熟的文化',
+    answer: '阿兹特克/墨西卡',
+    options: [
+      "奥尔梅克",
+      "特奥蒂瓦坎",
+      "托尔特克"
+    ]
   }
 };

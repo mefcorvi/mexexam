@@ -29,5 +29,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1964'
     }
-  ]
+  ],
+  zh: {
+    question: '谁写了《八月的闪电》？',
+    answer: 'Jorge Ibargüengoitia',
+    options: [
+      "Octavio Paz",
+      "Elena Poniatowska",
+      "Carlos Fuentes"
+    ]
+  }
 };

@@ -30,5 +30,15 @@ export const question: QuestionData = {
       "Merchant of Tepexpan"
     ],
     note: 'Found in 1947 on the shores of Lake Texcoco, it is the oldest in Mesoamerica discovered to date.'
+  },
+  zh: {
+    question: '被称为特佩斯潘人的是谁？',
+    answer: '这是一个前哥伦布时期的骨骼',
+    options: [
+      "前哥伦布幽灵",
+      "杀手传说",
+      "特佩斯潘商人"
+    ],
+    note: '于1947年在特斯科科湖岸边发现，是迄今为止发现的中美洲最古老的遗骸。'
   }
 };

@@ -23,5 +23,15 @@ export const question: QuestionData = {
       "Uxmal"
     ],
     note: 'It is in Guatemala.'
+  },
+  zh: {
+    question: '哪个考古遗址不是墨西哥的联合国教科文组织世界遗产？',
+    answer: '蒂卡尔国家公园',
+    options: [
+      "蒙特阿尔班",
+      "奇琴伊察",
+      "乌克斯马尔"
+    ],
+    note: '它在危地马拉。'
   }
 };

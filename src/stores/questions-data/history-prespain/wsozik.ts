@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "Mexica goddess of fertility",
       "God of the wind"
     ]
+  },
+  zh: {
+    question: '查尔丘特利库是谁？',
+    answer: '墨西哥人的湖泊和水流女神',
+    options: [
+      "天空和大地之神",
+      "墨西哥的丰饶女神",
+      "风神"
+    ]
   }
 };

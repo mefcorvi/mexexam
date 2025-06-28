@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Напиток из магея',
     answer: 'Пульке',
     options: ['Техуино', 'Жококе', 'Техуикаль']
+  },
+  zh: {
+    question: '从龙舌兰提取的饮料',
+    answer: '普尔克',
+    options: [
+      "特胡伊诺",
+      "霍科克",
+      "特乌伊卡尔"
+    ]
   }
 };

@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Luis Garcia",
       "Luis Hernandez"
     ]
+  },
+  zh: {
+    question: '在90年代，哪位墨西哥足球运动员在欧洲表现突出？',
+    answer: 'Hugo Sanchez',
+    options: [
+      "Jorge Campos",
+      "Luis Garcia",
+      "Luis Hernandez"
+    ]
   }
 };

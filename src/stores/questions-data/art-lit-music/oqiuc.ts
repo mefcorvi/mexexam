@@ -37,5 +37,14 @@ export const question: QuestionData = {
       type: 'state',
       value: 'CDMX'
     }
-  ]
+  ],
+  zh: {
+    question: '墨西哥城最有声望的剧院是',
+    answer: '美术宫',
+    options: [
+      "大剧院",
+      "华雷斯剧院",
+      "艺术与文化宫"
+    ]
+  }
 };

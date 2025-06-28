@@ -35,5 +35,14 @@ export const question: QuestionData = {
       type: 'person',
       name: 'Jorge Volpi'
     }
-  ]
+  ],
+  zh: {
+    question: '以下作者：Juan Rulfo、Mario Bellatin 和 Jorge Volpi 写了什么类型的作品？',
+    answer: '叙事，小说',
+    options: [
+      "戏剧",
+      "抒情",
+      "教学"
+    ]
+  }
 };

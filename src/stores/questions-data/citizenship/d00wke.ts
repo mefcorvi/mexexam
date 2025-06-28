@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Статья конституции, говорящая об иностранцах',
     answer: 'Статья 33',
     options: ['Статья 13', 'Статья 23', 'Статья 31']
+  },
+  zh: {
+    question: '关于外国人的宪法条款',
+    answer: '第33条',
+    options: [
+      "第13条",
+      "第23条",
+      "第31条"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Другое название храма Кукулькана в Чичен-Ице',
     answer: 'Замок',
     options: ['Пирамида', 'Великий храм', 'Луна']
+  },
+  zh: {
+    question: '库库尔坎神庙的另一个名字，奇琴伊察',
+    answer: '城堡',
+    options: [
+      "金字塔",
+      "大庙",
+      "月亮"
+    ]
   }
 };

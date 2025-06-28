@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Monte Albán",
       "Chichen Itzá"
     ]
+  },
+  zh: {
+    question: '1992年被联合国教科文组织宣布为世界遗产的地方',
+    answer: '塔欣',
+    options: [
+      "帕伦克",
+      "阿尔班山",
+      "奇琴伊察"
+    ]
   }
 };

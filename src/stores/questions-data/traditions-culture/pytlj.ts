@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Paquimé",
       "Palenque"
     ]
+  },
+  zh: {
+    question: '莫雷洛斯考古区',
+    answer: '索奇卡尔科',
+    options: [
+      "蒙特阿尔班",
+      "帕基梅",
+      "帕伦克"
+    ]
   }
 };

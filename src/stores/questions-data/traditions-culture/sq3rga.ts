@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Chiapas",
       "Campeche"
     ]
+  },
+  zh: {
+    question: '考古遗址El Tajín位于哪里？',
+    answer: '帕潘特拉，韦拉克鲁斯',
+    options: [
+      "瓦哈卡",
+      "恰帕斯",
+      "坎佩切"
+    ]
   }
 };

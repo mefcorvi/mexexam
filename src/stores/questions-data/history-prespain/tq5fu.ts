@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Tenochitlán",
       "San Lorenzo"
     ]
+  },
+  zh: {
+    question: '神话中的地方，墨西哥人或阿兹特克人出发的地方',
+    answer: '阿兹特兰',
+    options: [
+      "特奥蒂瓦坎",
+      "特诺奇蒂特兰",
+      "圣洛伦索"
+    ]
   }
 };

@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Материнская культура',
     answer: 'Ольмеки',
     options: ['Майя', 'Теотиуаканская', 'Мексика']
+  },
+  zh: {
+    question: '母文化',
+    answer: '奥尔梅克文化',
+    options: [
+      "玛雅",
+      "特奥蒂瓦坎",
+      "墨西哥"
+    ]
   }
 };

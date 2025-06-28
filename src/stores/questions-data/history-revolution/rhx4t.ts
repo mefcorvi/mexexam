@@ -27,5 +27,14 @@ export const question: QuestionData = {
       "November 15, 1710",
       "November 30, 1910"
     ]
+  },
+  zh: {
+    question: '墨西哥革命的日期',
+    answer: '1910年11月20日',
+    options: [
+      "1810年11月5日",
+      "1710年11月15日",
+      "1910年11月30日"
+    ]
   }
 };

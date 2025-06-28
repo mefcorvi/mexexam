@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Типичная сладость из Гуанахуато',
     answer: 'Чарамускас',
     options: ['Облеас', 'Кокадас', 'Альфенике']
+  },
+  zh: {
+    question: '瓜纳华托的传统甜点',
+    answer: '查拉穆斯卡斯',
+    options: [
+      "奥布莱斯",
+      "可可达斯",
+      "阿尔费尼基糖"
+    ]
   }
 };

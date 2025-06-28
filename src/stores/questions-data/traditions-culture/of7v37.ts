@@ -23,5 +23,16 @@ export const question: QuestionData = {
       "Heidi"
     ],
     note: 'It started in 1948 and the last issue appeared in 2009, more than 60 years of uninterrupted publication. It addresses the adventures of a lower-class family from Mexico City.'
+  },
+  zh: {
+    question: '由加布里埃尔·巴尔加斯创作的墨西哥漫画',
+    answer: '拉·法米利亚·布隆',
+    options: [
+      "阿奇",
+      "玛法尔达",
+      "蜘蛛侠",
+      "海蒂"
+    ],
+    note: '始于1948年，最后一期于2009年出版，超过60年的不间断出版。讲述了墨西哥城一个低收入家庭的冒险故事。'
   }
 };

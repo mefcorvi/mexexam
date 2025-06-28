@@ -35,5 +35,14 @@ export const question: QuestionData = {
       type: 'event',
       value: 'Decena Trágica'
     }
-  ]
+  ],
+  zh: {
+    question: '秃鹰季节：一部关于悲惨十天的叙事故事，作者是谁？',
+    answer: '帕科·伊格纳西奥·泰博二世',
+    options: [
+      "奥克塔维奥·帕斯",
+      "埃莱娜·波尼亚托夫斯卡",
+      "卡洛斯·富恩特斯"
+    ]
+  }
 };

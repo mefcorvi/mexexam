@@ -34,5 +34,25 @@ José Mario Molina Pasquel y Henríquez, Nobel Prize in Chemistry in 1995',
       <p>The third laureate is Mario J. Molina, who won the Nobel Prize in Chemistry in 1995 along with Paul Crutzen and Frank Sherwood Rowland. Molina was recognized for his research on atmospheric chemistry, particularly for his work in discovering the thinning of the ozone layer due to chlorofluorocarbons (CFCs). His studies led to the creation of the Montreal Protocol, an international treaty for the protection of the ozone layer. \n\
       <a href="https://es.wikipedia.org/wiki/Mario_Molina" target="_blank">More information</a></p>          \n\
     '
+  },
+  zh: {
+    question: '墨西哥诺贝尔奖得主有哪些？',
+    answer: '阿方索·加西亚·罗布莱斯，1982年诺贝尔和平奖得主\n\
+奥克塔维奥·帕斯，1990年诺贝尔文学奖得主\n\
+何塞·马里奥·莫利纳·帕斯克尔·亨利克斯，1995年诺贝尔化学奖得主',
+    note: '<h1>墨西哥诺贝尔奖得主</h1>\n\
+<p>墨西哥有三位诺贝尔奖得主，他们在各自的领域留下了深远的印记。</p>\n\
+\n\
+<h2>奥克塔维奥·帕斯</h2>\n\
+<p>第一位获得此荣誉的是奥克塔维奥·帕斯，他于1990年获得诺贝尔文学奖。帕斯因其诗歌和散文作品而受到认可，这些作品涉及孤独、爱情和墨西哥身份等主题。他最杰出的作品包括《孤独的迷宫》和众多诗歌集。\n\
+<a href="https://es.wikipedia.org/wiki/Octavio_Paz" target="_blank">更多信息</a></p>\n\
+\n\
+<h2>阿方索·加西亚·罗布莱斯</h2>\n\
+<p>第二位获得诺贝尔奖的墨西哥人是阿方索·加西亚·罗布莱斯，他于1982年获得诺贝尔和平奖。加西亚·罗布莱斯因其在1967年谈判和签署《特拉特洛尔科条约》中的努力而获奖，该条约在拉丁美洲和加勒比地区建立了无核武器区。他的外交工作对促进该地区的和平与安全至关重要。\n\
+<a href="https://es.wikipedia.org/wiki/Alfonso_Garc%C3%ADa_Robles" target="_blank">更多信息</a></p>\n\
+\n\
+<h2>马里奥·J·莫利纳</h2>\n\
+<p>第三位获奖者是马里奥·J·莫利纳，他与保罗·克鲁岑和弗兰克·舍伍德·罗兰共同于1995年获得诺贝尔化学奖。莫利纳因其在大气化学方面的研究而受到认可，特别是他在发现氯氟烃（CFC）导致臭氧层变薄方面的工作。他的研究促成了《蒙特利尔议定书》的制定，这是一个保护臭氧层的国际条约。\n\
+<a href="https://es.wikipedia.org/wiki/Mario_Molina" target="_blank">更多信息</a></p>'
   }
 };

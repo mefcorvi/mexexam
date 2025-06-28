@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Дворец Аксаятль также известен как',
     answer: 'Старые дома',
     options: ['Новые дома', 'Дом дворец', 'Священный дом']
+  },
+  zh: {
+    question: '阿萨亚卡特宫也被称为',
+    answer: '旧房子',
+    options: [
+      "新房子",
+      "宫殿之家",
+      "神圣之家"
+    ]
   }
 };

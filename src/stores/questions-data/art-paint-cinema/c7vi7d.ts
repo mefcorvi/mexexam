@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Фигура национального кино, воплотившая мексиканского чародея',
     answer: 'Хорхе Негрете',
     options: ['Педро Инфанте', 'Луис Агилар', 'Хоакин Пардаве']
+  },
+  zh: {
+    question: '代表墨西哥的国家电影人物',
+    answer: 'Jorge Negrete',
+    options: [
+      "Pedro Infante",
+      "Luis Aguilar",
+      "Joaquín Pardavé"
+    ]
   }
 };

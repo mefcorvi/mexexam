@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Самый населенный город Мексики',
     answer: 'Мехико',
     options: ['Сакатекас', 'Колима', 'Гуанахуато']
+  },
+  zh: {
+    question: '墨西哥人口最多的城市',
+    answer: '墨西哥城',
+    options: [
+      "萨卡特卡斯",
+      "科利马",
+      "瓜纳华托"
+    ]
   }
 };

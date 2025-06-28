@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Сколько избирательных округов в Мексике?',
     answer: '300',
     options: ['32', '500', '128']
+  },
+  zh: {
+    question: '墨西哥有多少个选区？',
+    answer: '300',
+    options: [
+      "32",
+      "500",
+      "128"
+    ]
   }
 };

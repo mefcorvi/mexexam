@@ -30,5 +30,14 @@ export const question: QuestionData = {
       "An art seller",
       "A dancer"
     ]
+  },
+  zh: {
+    question: '在墨西哥的口语中，术语 "marchante(a)" 指的是',
+    answer: '一个在集市上使用的术语，可以不加区分地指代卖家或顾客',
+    options: [
+      "一个非常乐观的人",
+      "艺术品的销售员",
+      "舞者"
+    ]
   }
 };

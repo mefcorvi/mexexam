@@ -19,5 +19,14 @@ export const question: QuestionData = {
       "Campeche",
       "Oaxaca"
     ]
+  },
+  zh: {
+    question: '“Jarocho”这个词指的是它属于',
+    answer: '韦拉克鲁斯',
+    options: [
+      "恰帕斯",
+      "坎佩切",
+      "瓦哈卡"
+    ]
   }
 };

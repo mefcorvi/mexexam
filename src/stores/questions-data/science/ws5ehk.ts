@@ -21,5 +21,14 @@ export const question: QuestionData = {
       "Javier Aguirre",
       "Joaquín Martinez"
     ]
+  },
+  zh: {
+    question: '1980年获得普利兹克奖（通常被称为建筑界的诺贝尔奖）的墨西哥人',
+    answer: 'Luis Barragán',
+    options: [
+      "Armando Mendoza",
+      "Javier Aguirre",
+      "Joaquín Martinez"
+    ]
   }
 };

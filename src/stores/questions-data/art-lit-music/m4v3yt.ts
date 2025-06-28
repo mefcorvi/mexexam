@@ -31,5 +31,14 @@ export const question: QuestionData = {
       type: 'date',
       value: '1604'
     }
-  ]
+  ],
+  zh: {
+    question: '贝尔纳多·巴尔布埃纳在1604年写的关于新西班牙的诗',
+    answer: '墨西哥的伟大',
+    options: [
+      "失恋",
+      "停下",
+      "夜曲片段"
+    ]
+  }
 };

@@ -22,5 +22,15 @@ export const question: QuestionData = {
       "Las Mañanitas"
     ],
     note: 'Popular narrative in the form of a song about political, historical themes, etc.'
+  },
+  zh: {
+    question: '革命时代的音乐作品',
+    answer: 'El Corrido',
+    options: [
+      "Las Golondrinas",
+      "La Bikina",
+      "Las Mañanitas"
+    ],
+    note: '以歌曲形式叙述的关于政治、历史等主题的民间叙事。'
   }
 };

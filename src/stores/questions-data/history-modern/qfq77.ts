@@ -24,5 +24,15 @@ export const question: QuestionData = {
     answer: '2016',
     options: ['2015', '2010', '2000'],
     note: '29 января 2016 года.'
+  },
+  zh: {
+    question: '墨西哥联邦区改名为墨西哥城是哪一年？',
+    answer: '2016',
+    options: [
+      "2015",
+      "2010",
+      "2000"
+    ],
+    note: '2016年1月29日。'
   }
 };

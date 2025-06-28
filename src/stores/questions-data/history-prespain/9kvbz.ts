@@ -19,5 +19,14 @@ export const question: QuestionData = {
     question: 'Племя, родом из Мичоакана',
     answer: 'Пурепеча',
     options: ['Тотонаки', 'Рарамуру', 'Уастеки']
+  },
+  zh: {
+    question: '米却肯州的原住民部落',
+    answer: '普雷佩查人',
+    options: [
+      "托托纳克人",
+      "拉拉穆里人",
+      "瓦斯特克人"
+    ]
   }
 };
