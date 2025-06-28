@@ -62,7 +62,6 @@ const selectLanguage = (langCode: string) => {
   padding: var(--gap-s);
 
   background: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
 
   .languageScroll {
     display: flex;
@@ -88,7 +87,6 @@ const selectLanguage = (langCode: string) => {
       white-space: nowrap;
 
       background: var(--bg-color);
-      border: 1px solid var(--border-color);
       border-radius: var(--border-radius);
 
       cursor: pointer;
