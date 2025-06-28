@@ -19,5 +19,7 @@ export const data = {
   'Start New Exam': '开始新考试',
   'Go Home': '返回首页',
   'Time remaining': '剩余时间',
-  'Time is running out!': '时间快到了！'
+  'Time is running out!': '时间快到了！',
+  Description:
+    'MexExam是一个用于准备墨西哥入籍考试的应用。它包含考试中会出现的问题，并允许您在考试模式下练习。'
 };

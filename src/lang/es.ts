@@ -19,5 +19,7 @@ export const data = {
   'Start New Exam': 'Comenzar nuevo examen',
   'Go Home': 'Ir al inicio',
   'Time remaining': 'Tiempo restante',
-  'Time is running out!': '¡Se está agotando el tiempo!'
+  'Time is running out!': '¡Se está agotando el tiempo!',
+  Description:
+    'MexExam es una aplicación para prepararse para el examen de naturalización en México. Contiene preguntas sobre temas que estarán en el examen y permite practicar en modo examen.'
 };

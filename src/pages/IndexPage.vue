@@ -40,6 +40,7 @@ const selectLanguage = (langCode: string) => {
       </div>
     </div>
     <LogoBig />
+    <div :class="$style.description" v-html="t('Description')" />
     <GeneralMenu>
       <GeneralButton @click="start">{{ t('Start') }}</GeneralButton>
       <GeneralButton @click="openSettings">{{ t('Settings') }}</GeneralButton>
@@ -112,5 +113,16 @@ const selectLanguage = (langCode: string) => {
 
 .menu {
   margin-top: var(--gap);
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 var(--gap);
+  padding: var(--gap);
+
+  text-align: center;
+
+  background: var(--negative-color-alpha-5);
+  border-radius: var(--border-radius);
 }
 </style>

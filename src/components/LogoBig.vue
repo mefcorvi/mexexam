@@ -2,12 +2,19 @@
 </script>
 <template>
   <div :class="$style.logo">
-    <img src="/logo.svg" width="192" height="192" />
+    <img src="/logo.svg" width="96" height="96" />
     <h3>MexExam</h3>
   </div>
 </template>
 <style module lang="less">
 .logo {
+  display: flex;
+  gap: var(--gap);
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
   h3 {
     margin: 0;
 
