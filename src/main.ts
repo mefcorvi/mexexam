@@ -13,16 +13,17 @@ app.use(router);
 app.mount('#app');
 
 if (!import.meta.env.DEV) {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(() => console.log('Service Worker registered'))
-      .catch(console.error);
+  // Preload questions data
+  (async () => {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('/sw.js');
+      } catch (error) {
+        console.error('Service Worker registration failed', error);
+      }
+    }
 
-    // Preload questions data
-    (async () => {
-      const sections = await loadSectionsData();
-      await Promise.all(sections.map((section) => section.questions()));
-    })();
-  }
+    const sections = await loadSectionsData();
+    await Promise.all(sections.map((section) => section.questions()));
+  })();
 }
