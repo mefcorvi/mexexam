@@ -19,6 +19,8 @@ defineProps<{
   cursor: pointer;
 
   &:disabled {
+    opacity: 0.9;
+
     pointer-events: none;
   }
 }

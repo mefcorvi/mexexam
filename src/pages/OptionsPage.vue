@@ -21,20 +21,38 @@ watch(locale, (newLocale) => {
 });
 </script>
 <template>
-  <GeneralPage :class="$style.page">
-    <div :class="$style.setting">
-      <label>{{ t('Dark theme') }}:</label>
-      <ToggleSwitch v-model="isDarkTheme" size="16px" />
-    </div>
-    <div :class="$style.setting">
-      <label>{{ t('Language') }}:</label>
-      <CustomSelect v-model="locale" :options="uiLanguages" />
+  <GeneralPage :class="$style.page" :title="t('Settings')">
+    <div :class="$style.settings">
+      <div :class="$style.setting">
+        <label>{{ t('Dark theme') }}</label>
+        <ToggleSwitch v-model="isDarkTheme" size="16px" />
+      </div>
+      <div :class="$style.setting">
+        <label>{{ t('Language') }}</label>
+        <CustomSelect v-model="locale" :options="uiLanguages" />
+      </div>
     </div>
   </GeneralPage>
 </template>
 <style module lang="less">
 .page {
-  justify-content: center;
+  justify-content: flex-start;
+
+  margin-top: var(--gap-l);
+  padding-top: var(--gap-l);
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  padding: var(--gap);
+
+  background: var(--negative-color-alpha-5);
+  border-radius: var(--border-radius);
+
+  backdrop-filter: blur(10px);
 }
 
 .setting {
@@ -42,7 +60,6 @@ watch(locale, (newLocale) => {
   align-items: center;
 
   width: 360px;
-  margin-top: 1.5em;
   gap: 0.5em;
 
   label {
@@ -50,7 +67,8 @@ watch(locale, (newLocale) => {
 
     width: 10em;
 
-    text-align: right;
+    font-weight: 500;
+    text-align: left;
   }
 }
 </style>

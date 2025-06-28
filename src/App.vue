@@ -9,11 +9,9 @@ useRippleController();
 
 <template>
   <RouterView v-slot="{ Component }">
-    <Transition name="fade">
-      <KeepAlive>
-        <component :is="Component" />
-      </KeepAlive>
-    </Transition>
+    <KeepAlive>
+      <component :is="Component" />
+    </KeepAlive>
   </RouterView>
 </template>
 
