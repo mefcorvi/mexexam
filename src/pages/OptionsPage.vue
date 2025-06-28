@@ -51,8 +51,6 @@ watch(locale, (newLocale) => {
 
   background: var(--negative-color-alpha-5);
   border-radius: var(--border-radius);
-
-  backdrop-filter: blur(10px);
 }
 
 .setting {

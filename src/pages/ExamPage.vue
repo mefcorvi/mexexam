@@ -4,14 +4,12 @@ import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import { useExamStore } from '@/stores/exam';
-import { useTranslations } from '@/stores/translations';
 import { useLocalization } from '@/stores/localization';
 import { RouteName } from '@/router/names';
 
 const $router = useRouter();
 const $route = useRoute();
-const translations = useTranslations();
-const { locale } = useLocalization();
+const { t } = useLocalization();
 
 const {
   examQuestions,
@@ -101,10 +99,6 @@ const onStartNewExam = async () => {
 const onGoHome = () => {
   resetExam();
   $router.push({ name: RouteName.Home });
-};
-
-const t = (key: string) => {
-  return translations.t(locale.value, key);
 };
 
 const getQuestionClass = (questionId: string) => {
@@ -335,7 +329,6 @@ const isQuestionUnanswered = (questionId: string) => {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
 
-  backdrop-filter: blur(30px);
   transition: all 0.2s ease;
 
   &.correct {
@@ -558,7 +551,6 @@ input[type="radio"] {
 
   border-radius: var(--border-radius);
 
-  backdrop-filter: blur(5px);
 
   &.correct {
     color: var(--success-text-color);
@@ -611,7 +603,6 @@ input[type="radio"] {
   background: var(--bg-color);
   border-radius: var(--border-radius);
 
-  backdrop-filter: blur(10px);
   transition: all 0.2s ease;
 
   &.correct {

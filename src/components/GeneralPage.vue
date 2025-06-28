@@ -50,7 +50,6 @@ const back = () => {
         <div :class="$style.backBtn" @click="back">
           <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
         </div>
-        <div :class="$style.separator"></div>
         <div :class="[$style.logo, $style.logoFadeOut]" @click="openHome">
           <img src="/logo.svg" width="32" height="32" />
           <div :class="$style.logoTitle">MexExam</div>
@@ -91,7 +90,6 @@ const back = () => {
   height: 100%;
 
   background: url('@/assets/coat.svg') no-repeat center center;
-  background-attachment: fixed;
 
   opacity: 0.05;
 }
@@ -116,7 +114,6 @@ const back = () => {
 
   background: var(--bg-color-alpha-50);
 
-  backdrop-filter: blur(30px);
   gap: var(--gap);
 
   &>* {
@@ -134,14 +131,12 @@ const back = () => {
 }
 
 .backBtn {
+  line-height: 100%;
+
   cursor: pointer;
 }
 
 .logo {
-
-  position: absolute;
-  left: 50%;
-
   display: flex;
   align-items: center;
 
@@ -149,7 +144,6 @@ const back = () => {
 
   line-height: 100%;
 
-  transform: translateX(-50%);
   cursor: pointer;
 
   img {
@@ -164,7 +158,7 @@ const back = () => {
   }
 
   &.logoFadeOut {
-    opacity: 0.3;
+    opacity: 0.7;
     transition: opacity 200ms;
 
     .onHover({

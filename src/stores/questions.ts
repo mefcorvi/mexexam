@@ -173,7 +173,6 @@ export const useQuestionsStore = createSharedComposable(() => {
 
   const reset = () => {
     isLoaded.value = false;
-    sections.clear();
     questions.clear();
   };
 
