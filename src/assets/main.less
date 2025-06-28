@@ -21,6 +21,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -73,9 +74,14 @@ button {
 
   appearance: none;
 
-  &:hover {
-    background: var(--main-color-30);
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
+
+  .onHover({
+    background: var(--main-color-30);
+  });
 }
 
 .scroll {

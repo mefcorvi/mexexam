@@ -92,21 +92,21 @@ const selectLanguage = (langCode: string) => {
       cursor: pointer;
       transition: all 0.2s ease;
 
-      &:hover {
+      .onHover({
         background: var(--secondary-color-10);
         border-color: var(--secondary-color);
-      }
+      });
 
-      &.active {
-        opacity: 0.5;
-      }
+    &.active {
+      opacity: 0.5;
+    }
 
-      .languageName {
-        font-size: var(--font-size-a1);
-        font-weight: 500;
-      }
+    .languageName {
+      font-size: var(--font-size-a1);
+      font-weight: 500;
     }
   }
+}
 }
 
 

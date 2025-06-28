@@ -12,3 +12,11 @@
 @sm-and-up: ~'only screen and (min-width: 600px)';
 @md-and-up: ~'only screen and (min-width: 960px)';
 @lg-and-up: ~'only screen and (min-width: 1264px)';
+
+.onHover(@rules) {
+  @media (hover: hover) {
+    &:hover {
+      @rules();
+    }
+  }
+}

@@ -90,8 +90,8 @@ const { t } = useLocalization();
   cursor: pointer;
   transition: background var(--transition-duration);
 
-  &:hover {
+  .onHover({
     background: var(--secondary-color);
-  }
+  });
 }
 </style>

@@ -46,17 +46,18 @@ defineEmits<{
 
   appearance: none;
 
-  &:hover {
-    background: var(--main-color-20);
-    border-color: var(--main-color-30);
-  }
-
   &:focus {
     background: var(--main-color-20);
     border-color: var(--main-color);
     outline: none;
     box-shadow: 0 0 0 3px var(--main-color-alpha-20);
   }
+
+  .onHover({
+    background: var(--main-color-20);
+    border-color: var(--main-color-30);
+  });
+
 }
 
 .selectWrapper::after {

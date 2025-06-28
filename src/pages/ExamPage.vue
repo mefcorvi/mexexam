@@ -48,6 +48,7 @@ const onFinishExam = () => {
 
 const onStartNewExam = async () => {
   resetExam();
+  window.scrollTo(0, 0);
   await startExam(sectionId.value);
 };
 
@@ -112,7 +113,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
           :class="['question-item', getQuestionClass(question.id)]">
           <div class="question-header">
             <span class="question-number">{{ index + 1 }}.</span>
-            <span class="question-text">{{ t(question.question) }}</span>
+            <span class="question-text">{{ question.question }}</span>
           </div>
 
           <div class="options-list">
@@ -121,7 +122,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
               <input type="radio" :name="`question-${question.id}`" :value="option.id"
                 :checked="getSelectedAnswer(question.id) === option.id" @change="onOptionSelect(question.id, option.id)"
                 :disabled="isExamFinished" />
-              <span class="option-text">{{ t(option.value) }}</span>
+              <span class="option-text">{{ option.value }}</span>
             </label>
           </div>
         </div>
@@ -162,7 +163,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
           :class="['result-question', getQuestionClass(question.id)]">
           <div class="question-header">
             <span class="question-number">{{ index + 1 }}.</span>
-            <span class="question-text">{{ t(question.question) }}</span>
+            <span class="question-text">{{ question.question }}</span>
             <span :class="['result-indicator', getAnswerById(question.id)?.isCorrect ? 'correct' : 'wrong']">
               {{ getAnswerById(question.id)?.isCorrect ? '✓' : '✗' }}
             </span>
@@ -171,7 +172,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
           <div class="options-list">
             <div v-for="option in getRandomizedOptions(question)" :key="option.id"
               :class="['option-item', getOptionClass(question.id, option.id)]">
-              <span class="option-text">{{ t(option.value) }}</span>
+              <span class="option-text">{{ option.value }}</span>
             </div>
           </div>
         </div>
@@ -219,7 +220,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
   justify-content: center;
   align-items: center;
 
-  height: 100%;
+  height: calc(100vh - var(--gap-l));
 
   font-size: var(--font-size-2);
 }
@@ -231,7 +232,6 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
   margin-top: var(--gap-l);
   padding: var(--gap);
-  overflow-y: auto;
 }
 
 .questions-list {
@@ -285,6 +285,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
   font-size: var(--font-size-2);
   line-height: 1.4;
+  font-weight: 500;
 }
 
 .options-list {
@@ -297,6 +298,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   align-items: center;
 
+  margin-right: -12px;
   margin-left: -12px;
   padding: var(--gap-s);
 
@@ -308,100 +310,99 @@ const getOptionClass = (questionId: string, optionId: number) => {
   transition: all 0.2s ease;
   gap: var(--gap-s);
 
-  &:hover {
+  .onHover({
     background: var(--secondary-color-10);
+  });
+
+input[type="radio"] {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  appearance: none;
+
+  &:checked {
+    background: var(--main-color);
+    border-color: var(--main-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 17px;
+      height: 17px;
+
+      background: var(--main-color);
+      border: 2px solid var(--bg-color);
+      border-radius: 50%;
+
+      transform: translate(-50%, -50%);
+    }
   }
+
+  .onHover({
+    box-shadow: 0 0 0 3px var(--primary-color-20);
+  });
+
+&:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-color-20);
+}
+}
+
+.option-text {
+  flex: 1;
+
+  font-size: var(--font-size-1);
+}
+
+&.correct-answer {
+  color: var(--success-text-color);
+
+  background: var(--success-bg-color);
 
   input[type="radio"] {
-    position: relative;
+    background: var(--success-color);
+    border-color: var(--success-color);
 
-    width: 20px;
-    height: 20px;
-    margin: 0;
-
-    background: var(--bg-color);
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    appearance: none;
-
-    &:checked {
-      background: var(--main-color);
-      border-color: var(--main-color);
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 17px;
-        height: 17px;
-
-        background: var(--main-color);
-        border: 2px solid var(--bg-color);
-        border-radius: 50%;
-
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    &:hover {
-      box-shadow: 0 0 0 3px var(--primary-color-20);
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px var(--primary-color-20);
+    &:checked::after {
+      background: var(--success-bg-color);
     }
   }
+}
 
-  .option-text {
-    flex: 1;
+&.wrong-answer {
+  color: var(--error-text-color);
 
-    font-size: var(--font-size-1);
-  }
+  background: var(--error-bg-color);
 
-  &.correct-answer {
-    color: var(--success-text-color);
+  input[type="radio"] {
+    background: var(--error-color);
+    border-color: var(--error-color);
 
-    background: var(--success-bg-color);
-
-    input[type="radio"] {
-      background: var(--success-color);
-      border-color: var(--success-color);
-
-      &:checked::after {
-        background: var(--success-bg-color);
-      }
+    &:checked::after {
+      background: var(--error-bg-color);
     }
   }
-
-  &.wrong-answer {
-    color: var(--error-text-color);
-
-    background: var(--error-bg-color);
-
-    input[type="radio"] {
-      background: var(--error-color);
-      border-color: var(--error-color);
-
-      &:checked::after {
-        background: var(--error-bg-color);
-      }
-    }
-  }
+}
 }
 
 .finish-section {
   display: flex;
   justify-content: center;
 
-  padding: var(--gap);
-  padding-bottom: 0;
+  padding-top: var(--gap);
 }
 
 .finish-button {
@@ -417,11 +418,10 @@ const getOptionClass = (questionId: string, optionId: number) => {
 
   margin-top: var(--gap-l);
   padding: var(--gap);
-  overflow-y: auto;
 }
 
 .results-header {
-  margin-bottom: var(--gap-l);
+  margin-bottom: var(--gap);
 
   text-align: center;
 
@@ -445,9 +445,11 @@ const getOptionClass = (questionId: string, optionId: number) => {
   flex-direction: column;
   align-items: center;
 
-  padding: var(--gap);
+  padding: var(--gap-s) var(--gap);
 
   border-radius: var(--border-radius);
+
+  backdrop-filter: blur(5px);
 
   &.correct {
     color: var(--success-text-color);
@@ -500,6 +502,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
   background: var(--bg-color);
   border-radius: var(--border-radius);
 
+  backdrop-filter: blur(10px);
   transition: all 0.2s ease;
 
   &.correct {
@@ -540,8 +543,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
   display: flex;
   justify-content: center;
 
-  padding: var(--gap);
-  padding-bottom: 0;
+  padding-top: var(--gap);
 
   gap: var(--gap);
 }

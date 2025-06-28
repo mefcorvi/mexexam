@@ -91,6 +91,7 @@ const back = () => {
   height: 100%;
 
   background: url('@/assets/coat.svg') no-repeat center center;
+  background-attachment: fixed;
 
   opacity: 0.05;
 }
@@ -120,16 +121,16 @@ const back = () => {
 
   &>* {
     opacity: 0.7;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   .separator {
     flex-grow: 1;
     flex-shrink: 1;
   }
+
+  .onHover({
+    opacity: 1;
+  });
 }
 
 .backBtn {
@@ -166,10 +167,10 @@ const back = () => {
     opacity: 0.3;
     transition: opacity 200ms;
 
-    &:hover {
+    .onHover({
       opacity: 1;
-    }
-  }
+    });
+}
 }
 
 .title {

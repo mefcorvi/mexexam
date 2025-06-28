@@ -562,14 +562,14 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
   user-select: none;
 
-  &:hover {
+  .onHover({
     opacity: 1;
-  }
+  });
 
-  .languageLabel {
-    flex-grow: 1;
+.languageLabel {
+  flex-grow: 1;
 
-    font-size: var(--font-size-a1);
-  }
+  font-size: var(--font-size-a1);
+}
 }
 </style>
