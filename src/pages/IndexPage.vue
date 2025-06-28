@@ -21,13 +21,7 @@ const openSettings = () => {
   })
 };
 
-const { t, locale, saveLanguage } = useLocalization();
-
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'ru', name: 'Русский' }
-];
+const { t, locale, saveLanguage, languages } = useLocalization();
 
 const selectLanguage = (langCode: string) => {
   saveLanguage(langCode as 'en' | 'es' | 'ru');

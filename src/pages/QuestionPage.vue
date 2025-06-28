@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { mdiCog, mdiTranslate } from '@mdi/js';
-import { nextTick, ref, useCssModule, watch } from 'vue';
+import { mdiCog } from '@mdi/js';
+import { computed, nextTick, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
@@ -16,7 +16,7 @@ import { useLocalization } from '@/stores/localization';
 const $style = useCssModule();
 const $router = useRouter();
 const translations = useTranslations();
-const { locale } = useLocalization();
+const { locale, getLanguageName } = useLocalization();
 
 const {
   startAll,
@@ -213,8 +213,12 @@ const onOptionClick = (option: QuestionOption) => {
   }, 1000);
 }
 
+const isQuestionLanguageSwitched = ref(false);
+
 // Question language: 'es' or current UI language
-const questionLocale = ref<'es' | 'ru' | 'en'>('es');
+const questionLocale = computed(() => {
+  return isQuestionLanguageSwitched.value ? 'es' : locale.value;
+});
 
 const onPageClick = (ev: MouseEvent) => {
   if (isButtonOrLinkClick(ev)) {
@@ -229,11 +233,7 @@ const toggleQuestionLanguage = () => {
     return;
   }
 
-  if (questionLocale.value === 'es') {
-    questionLocale.value = locale.value;
-  } else {
-    questionLocale.value = 'es';
-  }
+  isQuestionLanguageSwitched.value = !isQuestionLanguageSwitched.value;
 }
 
 const t = (key: string) => {
@@ -256,10 +256,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }">
     <template #topBar>
       <div :class="$style.navigation">
-        <div @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
-          <SvgIcon type="mdi" :path="mdiTranslate" />
-          <span :class="$style.languageLabel">{{ questionLocale.toUpperCase() }}</span>
-        </div>
         <div @click.stop="openSettings">
           <SvgIcon type="mdi" :path="mdiCog" />
         </div>
@@ -276,6 +272,12 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         <div>
           <div :class="$style.sectionTitle">{{ t(currentQuestion.section.title) }}</div>
           <div> {{ t(currentQuestion.question) }}</div>
+        </div>
+      </div>
+      <div :class="$style.languageButtonContainer">
+        <div v-if="locale !== 'es'" @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
+          <span :class="$style.languageLabel">→ {{ questionLocale === locale ? getLanguageName('es') :
+            getLanguageName(locale) }}</span>
         </div>
       </div>
       <div :class="$style.answers">
@@ -357,6 +359,16 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
     border-radius: var(--border-radius);
   }
+}
+
+.languageButtonContainer {
+  position: relative;
+  left: 50%;
+  z-index: 1;
+
+  max-width: 400px;
+
+  transform: translateX(-50%);
 }
 
 
@@ -471,6 +483,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 .progress {
   position: absolute;
   top: var(--topbar-height);
+  z-index: 2;
 
   display: flex;
 
@@ -528,29 +541,33 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 }
 
 .languageButton {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+
   display: flex;
   align-items: center;
 
-  width: 64px;
   padding: var(--gap-s);
 
+  font-size: var(--font-size-a1);
   line-height: 100%;
 
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+
   cursor: pointer;
+  opacity: 0.7;
   transition: opacity 200ms;
 
-  &:hover {
-    opacity: 0.7;
-  }
+  user-select: none;
 
-  svg {
-    flex-shrink: 0;
+  &:hover {
+    opacity: 1;
   }
 
   .languageLabel {
     flex-grow: 1;
-
-    margin-left: var(--gap-s);
 
     font-size: var(--font-size-a1);
   }

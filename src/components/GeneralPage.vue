@@ -99,7 +99,7 @@ const back = () => {
 .topBar {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 
   display: flex;
   flex-shrink: 0;

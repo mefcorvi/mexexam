@@ -44,6 +44,12 @@ export const useLocalization = createSharedComposable(() => {
     ru: ruData
   };
 
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Español' },
+    { code: 'ru', name: 'Русский' }
+  ];
+
   const locale = ref<Locale>(getInitialLanguage());
 
   // Watch for changes and save to localStorage
@@ -53,12 +59,16 @@ export const useLocalization = createSharedComposable(() => {
 
   return {
     locale,
+    languages,
     t: (key: LocalizationKey) => {
       if (!dict[locale.value]) {
         return key;
       }
 
       return dict[locale.value][key] || key;
+    },
+    getLanguageName: (code: Locale) => {
+      return languages.find((lang) => lang.code === code)?.name || 'Unknown';
     },
     saveLanguage
   };
