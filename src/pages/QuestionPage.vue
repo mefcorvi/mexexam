@@ -471,7 +471,6 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 .progress {
   position: absolute;
   top: var(--topbar-height);
-  z-index: 3;
 
   display: flex;
 
