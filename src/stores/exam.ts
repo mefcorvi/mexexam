@@ -20,6 +20,9 @@ export type ExamResult = {
   answers: ExamAnswer[];
 };
 
+const EXAM_DURATION_MINUTES = 10;
+const EXAM_DURATION_MS = EXAM_DURATION_MINUTES * 60 * 1000;
+
 export const useExamStore = createSharedComposable(() => {
   const { questions, loadAll, loadSection } = useQuestionsStore();
 
@@ -29,6 +32,9 @@ export const useExamStore = createSharedComposable(() => {
   const isExamStarted = ref(false);
   const isExamFinished = ref(false);
   const examResults = ref<ExamResult | null>(null);
+  const examStartTime = ref<number | null>(null);
+  const timeRemaining = ref<number>(EXAM_DURATION_MS);
+  const timerInterval = ref<number | null>(null);
 
   const choiceQuestions = computed(() => {
     const result: Question[] = [];
@@ -62,6 +68,37 @@ export const useExamStore = createSharedComposable(() => {
     return shuffled;
   };
 
+  const startTimer = () => {
+    examStartTime.value = Date.now();
+    timeRemaining.value = EXAM_DURATION_MS;
+
+    timerInterval.value = window.setInterval(() => {
+      if (examStartTime.value) {
+        const elapsed = Date.now() - examStartTime.value;
+        timeRemaining.value = Math.max(0, EXAM_DURATION_MS - elapsed);
+
+        if (timeRemaining.value <= 0) {
+          stopTimer();
+          finishExam();
+        }
+      }
+    }, 1000);
+  };
+
+  const stopTimer = () => {
+    if (timerInterval.value) {
+      clearInterval(timerInterval.value);
+      timerInterval.value = null;
+    }
+  };
+
+  const formatTime = (milliseconds: number): string => {
+    const totalSeconds = Math.ceil(milliseconds / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   const startExam = async (sectionId?: string) => {
     if (sectionId) {
       await loadSection(sectionId);
@@ -86,6 +123,7 @@ export const useExamStore = createSharedComposable(() => {
     isExamStarted.value = true;
     isExamFinished.value = false;
     examResults.value = null;
+    startTimer();
   };
 
   const selectAnswer = (questionId: string, optionId: number) => {
@@ -100,6 +138,8 @@ export const useExamStore = createSharedComposable(() => {
 
   const finishExam = () => {
     if (isExamFinished.value) return;
+
+    stopTimer();
 
     const answers: ExamAnswer[] = [];
     let correctCount = 0;
@@ -137,12 +177,15 @@ export const useExamStore = createSharedComposable(() => {
   };
 
   const resetExam = () => {
+    stopTimer();
     examQuestions.value = [];
     randomizedOptions.value.clear();
     userAnswers.value.clear();
     isExamStarted.value = false;
     isExamFinished.value = false;
     examResults.value = null;
+    examStartTime.value = null;
+    timeRemaining.value = EXAM_DURATION_MS;
   };
 
   const getRandomizedOptions = (question: Question): QuestionOption[] => {
@@ -168,12 +211,23 @@ export const useExamStore = createSharedComposable(() => {
     return userAnswers.value.size;
   });
 
+  const formattedTimeRemaining = computed(() => {
+    return formatTime(timeRemaining.value);
+  });
+
+  const isTimeRunningOut = computed(() => {
+    return timeRemaining.value <= 30000; // 30 seconds or less
+  });
+
   return {
     examQuestions,
     userAnswers,
     isExamStarted,
     isExamFinished,
     examResults,
+    timeRemaining,
+    formattedTimeRemaining,
+    isTimeRunningOut,
     startExam,
     selectAnswer,
     getSelectedAnswer,

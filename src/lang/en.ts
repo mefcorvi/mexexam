@@ -16,5 +16,7 @@ export const data = {
   Total: 'Total',
   Score: 'Score',
   'Start New Exam': 'Start New Exam',
-  'Go Home': 'Go Home'
+  'Go Home': 'Go Home',
+  'Time remaining': 'Time remaining',
+  'Time is running out!': 'Time is running out!'
 };

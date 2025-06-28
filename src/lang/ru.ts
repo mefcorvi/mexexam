@@ -18,5 +18,7 @@ export const data: LocalizationData = {
   Total: 'Всего',
   Score: 'Оценка',
   'Start New Exam': 'Начать новый экзамен',
-  'Go Home': 'На главную'
+  'Go Home': 'На главную',
+  'Time remaining': 'Оставшееся время',
+  'Time is running out!': 'Время истекает!'
 };

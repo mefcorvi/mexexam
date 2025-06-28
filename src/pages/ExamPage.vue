@@ -25,8 +25,8 @@ const {
   resetExam,
   getRandomizedOptions,
   getAnswerById,
-  isAllQuestionsAnswered,
-  answeredQuestionsCount
+  formattedTimeRemaining,
+  isTimeRunningOut
 } = useExamStore();
 
 const sectionId = computed(() => $route.params.sectionId as string | undefined);
@@ -97,8 +97,9 @@ const getOptionClass = (questionId: string, optionId: number) => {
   <GeneralPage>
     <template #topBar>
       <div class="exam-header">
-        <div v-if="isExamStarted && !isExamFinished" class="progress">
-          {{ answeredQuestionsCount }}/{{ examQuestions.length }}
+        <div v-if="isExamStarted && !isExamFinished" :class="['timer', { 'time-running-out': isTimeRunningOut }]"
+          :title="isTimeRunningOut ? t('Time is running out!') : t('Time remaining')">
+          {{ formattedTimeRemaining }}
         </div>
       </div>
     </template>
@@ -129,7 +130,7 @@ const getOptionClass = (questionId: string, optionId: number) => {
       </div>
 
       <div class="finish-section">
-        <GeneralButton @click="onFinishExam" :disabled="!isAllQuestionsAnswered" class="finish-button">
+        <GeneralButton @click="onFinishExam" class="finish-button">
           {{ t('Finish Exam') }}
         </GeneralButton>
       </div>
@@ -204,15 +205,39 @@ const getOptionClass = (questionId: string, optionId: number) => {
   font-weight: 600;
 }
 
-.progress {
+.timer {
   padding: var(--gap-s) var(--gap);
 
   font-size: var(--font-size-2);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-color);
 
   background: var(--secondary-color-20);
   border-radius: var(--border-radius);
+
+  transition: all 0.3s ease;
+
+  &.time-running-out {
+    color: var(--error-text-color);
+
+    background: var(--error-bg-color);
+
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .loading {

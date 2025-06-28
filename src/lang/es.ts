@@ -16,5 +16,7 @@ export const data = {
   Total: 'Total',
   Score: 'Puntuación',
   'Start New Exam': 'Comenzar nuevo examen',
-  'Go Home': 'Ir al inicio'
+  'Go Home': 'Ir al inicio',
+  'Time remaining': 'Tiempo restante',
+  'Time is running out!': '¡Se está agotando el tiempo!'
 };
