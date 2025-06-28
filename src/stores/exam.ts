@@ -24,7 +24,12 @@ const EXAM_DURATION_MINUTES = 10;
 const EXAM_DURATION_MS = EXAM_DURATION_MINUTES * 60 * 1000;
 
 export const useExamStore = createSharedComposable(() => {
-  const { questions, loadAll, loadSection } = useQuestionsStore();
+  const {
+    questions,
+    loadAll,
+    loadSection,
+    reset: resetQuestions
+  } = useQuestionsStore();
 
   const examQuestions = ref<Question[]>([]);
   const randomizedOptions = ref<Map<string, QuestionOption[]>>(new Map());
@@ -186,6 +191,7 @@ export const useExamStore = createSharedComposable(() => {
     examResults.value = null;
     examStartTime.value = null;
     timeRemaining.value = EXAM_DURATION_MS;
+    resetQuestions();
   };
 
   const getRandomizedOptions = (question: Question): QuestionOption[] => {
@@ -237,6 +243,7 @@ export const useExamStore = createSharedComposable(() => {
     getQuestionById,
     getAnswerById,
     isAllQuestionsAnswered,
-    answeredQuestionsCount
+    answeredQuestionsCount,
+    stopTimer
   };
 });

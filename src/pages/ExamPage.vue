@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { computed, onUnmounted, ref, onActivated } from 'vue';
+import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import { useExamStore } from '@/stores/exam';
@@ -27,17 +27,31 @@ const {
   getAnswerById,
   formattedTimeRemaining,
   isTimeRunningOut,
-  isAllQuestionsAnswered
+  isAllQuestionsAnswered,
+  stopTimer
 } = useExamStore();
 
 const sectionId = computed(() => $route.params.sectionId as string | undefined);
 const questionRefs = ref<Map<string, HTMLElement>>(new Map());
 const isCheckingUnanswered = ref(false);
 
-onMounted(async () => {
-  if (!isExamStarted.value) {
-    await startExam(sectionId.value);
+// Navigation guard to handle when user leaves the exam page
+onBeforeRouteLeave((_to, _from, next) => {
+  resetExam();
+  next();
+});
+
+onActivated(() => {
+  if (isExamStarted.value) {
+    resetExam();
   }
+
+  startExam(sectionId.value).catch(console.error);
+})
+
+// Cleanup when component is unmounted
+onUnmounted(() => {
+  stopTimer();
 });
 
 const onOptionSelect = (questionId: string, optionId: number) => {
