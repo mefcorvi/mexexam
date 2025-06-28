@@ -489,10 +489,14 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   }
 
   .correctAnswers {
+    color: var(--success-text-color);
+
     background: var(--success-bg-color);
   }
 
   .wrongAnswers {
+    color: var(--error-text-color);
+
     background: var(--error-bg-color);
   }
 
