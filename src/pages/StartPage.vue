@@ -23,6 +23,19 @@ const chooseSection = () => {
   })
 };
 
+const startExam = () => {
+  $router.push({
+    name: RouteName.Exam
+  })
+};
+
+const chooseSectionExam = () => {
+  $router.push({
+    name: RouteName.ChooseSection,
+    query: { mode: 'exam' }
+  })
+};
+
 const { t } = useLocalization();
 </script>
 <template>
@@ -30,6 +43,8 @@ const { t } = useLocalization();
     <GeneralMenu>
       <GeneralButton @click="allQuestions">{{ t('All questions') }}</GeneralButton>
       <GeneralButton @click="chooseSection">{{ t('Choose section') }}</GeneralButton>
+      <GeneralButton @click="startExam">{{ t('Exam mode') }}</GeneralButton>
+      <GeneralButton @click="chooseSectionExam">{{ t('Section Exam') }}</GeneralButton>
     </GeneralMenu>
   </GeneralPage>
 </template>

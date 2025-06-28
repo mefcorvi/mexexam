@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import { useLocalization } from '@/stores/localization';
 import { useQuestionsStore } from '@/stores/questions';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import { RouteName } from '@/router/names';
 import { useTranslations } from '@/stores/translations';
 
@@ -13,26 +14,39 @@ const {
 
 const translations = useTranslations();
 const { locale } = useLocalization();
-
+const $route = useRoute();
 
 loadSections();
 
 const $router = useRouter();
 
+const isExamMode = computed(() => {
+  return $route.name === RouteName.ChooseSection && $route.query.mode === 'exam';
+});
+
 const startSection = (sectionId: string) => {
-  $router.push({
-    name: RouteName.SectionQuestions,
-    params: {
-      sectionId,
-      id: 'init'
-    }
-  })
+  if (isExamMode.value) {
+    $router.push({
+      name: RouteName.SectionExam,
+      params: {
+        sectionId
+      }
+    });
+  } else {
+    $router.push({
+      name: RouteName.SectionQuestions,
+      params: {
+        sectionId,
+        id: 'init'
+      }
+    });
+  }
 };
 
 const { t } = useLocalization();
 </script>
 <template>
-  <GeneralPage :class="$style.page" :title="t('Choose section')">
+  <GeneralPage :class="$style.page" :title="isExamMode ? t('Choose section for exam') : t('Choose section')">
     <div :class="$style.tilesMenu">
       <div :class="$style.tile" v-for="section of sections.values()" :key="section.id"
         @click="startSection(section.id)">

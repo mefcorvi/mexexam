@@ -5,5 +5,16 @@ export const data = {
   'Dark theme': 'Dark theme',
   'Choose section': 'Choose section',
   'All questions': 'All questions',
-  'Exam mode': 'Exam mode'
+  'Exam mode': 'Exam mode',
+  'Section Exam': 'Section Exam',
+  'Choose section for exam': 'Choose section for exam',
+  'Loading exam...': 'Loading exam...',
+  'Finish Exam': 'Finish Exam',
+  'Exam Results': 'Exam Results',
+  Correct: 'Correct',
+  Wrong: 'Wrong',
+  Total: 'Total',
+  Score: 'Score',
+  'Start New Exam': 'Start New Exam',
+  'Go Home': 'Go Home'
 };

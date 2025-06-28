@@ -25,6 +25,16 @@ const router = createRouter({
       ]
     },
     {
+      path: '/exam',
+      name: RouteName.Exam,
+      component: () => import('../pages/ExamPage.vue')
+    },
+    {
+      path: '/exam/:sectionId',
+      name: RouteName.SectionExam,
+      component: () => import('../pages/ExamPage.vue')
+    },
+    {
       path: '/all/:id',
       name: RouteName.AllQuestions,
       component: () => import('../pages/QuestionPage.vue')

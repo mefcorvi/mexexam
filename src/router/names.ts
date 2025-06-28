@@ -4,5 +4,7 @@ export enum RouteName {
   Start = 'Start',
   ChooseSection = 'ChooseSection',
   AllQuestions = 'AllQuestions',
-  SectionQuestions = 'SectionQuestions'
+  SectionQuestions = 'SectionQuestions',
+  Exam = 'Exam',
+  SectionExam = 'SectionExam'
 }

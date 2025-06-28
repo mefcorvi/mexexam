@@ -5,5 +5,16 @@ export const data = {
   'Dark theme': 'Tema oscuro',
   'Choose section': 'Elegir sección',
   'All questions': 'Todas las preguntas',
-  'Exam mode': 'Modo de examen'
+  'Exam mode': 'Modo de examen',
+  'Section Exam': 'Examen de sección',
+  'Choose section for exam': 'Elegir sección para examen',
+  'Loading exam...': 'Cargando examen...',
+  'Finish Exam': 'Finalizar examen',
+  'Exam Results': 'Resultados del examen',
+  Correct: 'Correcto',
+  Wrong: 'Incorrecto',
+  Total: 'Total',
+  Score: 'Puntuación',
+  'Start New Exam': 'Comenzar nuevo examen',
+  'Go Home': 'Ir al inicio'
 };
