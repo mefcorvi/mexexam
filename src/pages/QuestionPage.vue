@@ -300,7 +300,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 </template>
 
 <style module lang="less">
-@pageFadeOutDuration: 200ms;
+@pageFadeOutDuration: 100ms;
 
 :export {
   pageFadeOutDuration: @pageFadeOutDuration;

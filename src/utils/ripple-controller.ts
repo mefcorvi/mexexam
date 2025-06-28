@@ -69,7 +69,7 @@ export function useRippleController() {
     }
 
     const delayNum = +(target.dataset.rplDelay || NaN);
-    const delay = Number.isInteger(delayNum) ? delayNum : 100;
+    const delay = Number.isInteger(delayNum) ? delayNum : 50;
     const enabled = target.dataset.rplEnabled !== 'false';
 
     const isEventDelayed =
