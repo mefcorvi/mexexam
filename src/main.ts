@@ -1,8 +1,3 @@
-// Preload images
-(async () => {
-  import('./assets/coat.svg');
-})();
-
 import './assets/main.less';
 
 import { createApp } from 'vue';
