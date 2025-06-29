@@ -43,7 +43,7 @@ const back = () => {
   <div :class="$style.page">
     <div :class="$style.topBar" v-if="!hideTopBar">
       <div :class="$style.logo" @click="openHome" v-if="!hasBack">
-        <img src="/logo.svg" width="32" height="32" />
+        <img src="/logo.svg" width="32" height="32" alt="Logo" />
         <div :class="$style.logoTitle">MexExam</div>
       </div>
       <template v-else>
@@ -51,7 +51,7 @@ const back = () => {
           <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
         </div>
         <div :class="[$style.logo, $style.logoFadeOut]" @click="openHome">
-          <img src="/logo.svg" width="32" height="32" />
+          <img src="/logo.svg" width="32" height="32" alt="Logo" />
           <div :class="$style.logoTitle">MexExam</div>
         </div>
       </template>

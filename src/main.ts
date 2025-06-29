@@ -17,7 +17,7 @@ if (!import.meta.env.DEV) {
   (async () => {
     if ('serviceWorker' in navigator) {
       try {
-        await navigator.serviceWorker.register('/sw.js?v=3');
+        await navigator.serviceWorker.register('/sw.js?v=4');
       } catch (error) {
         console.error('Service Worker registration failed', error);
       }

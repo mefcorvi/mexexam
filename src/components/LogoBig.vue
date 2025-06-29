@@ -2,7 +2,7 @@
 </script>
 <template>
   <div :class="$style.logo">
-    <img src="/logo.svg" width="96" height="96" />
+    <img src="/logo.svg" width="96" height="96" alt="Logo" />
     <h3>MexExam</h3>
   </div>
 </template>

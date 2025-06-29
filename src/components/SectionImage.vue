@@ -6,6 +6,6 @@ defineProps<{
 }>();
 </script>
 <template>
-  <img :src="`/sections/${section.image}`" v-if="section.image" />
+  <img :src="`/sections/${section.image}`" v-if="section.image" alt="Section Image" />
 </template>
 <style module lang="less"></style>
