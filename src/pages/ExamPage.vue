@@ -509,8 +509,6 @@ input[type="radio"] {
 
 .finish-button {
   padding: var(--gap) var(--gap-l);
-
-  font-size: var(--font-size-2);
 }
 
 .results-content {
@@ -651,7 +649,5 @@ input[type="radio"] {
 .new-exam-button,
 .home-button {
   padding: var(--gap) var(--gap-l);
-
-  font-size: var(--font-size-2);
 }
 </style>
