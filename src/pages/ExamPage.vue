@@ -611,6 +611,13 @@ input[type="radio"] {
   &.wrong {
     background: var(--error-bg-color-alpha-10);
     border-color: var(--error-color);
+
+    .option-item.correct-answer {
+      color: unset;
+
+      background: var(--success-bg-color-alpha-10);
+      border: 2px solid var(--success-bg-color);
+    }
   }
 
   .option-item {
