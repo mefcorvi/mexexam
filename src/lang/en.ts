@@ -7,7 +7,10 @@ export const data = {
   'All questions': 'Train all questions',
   'Exam mode': 'Take exam',
   'Section Exam': 'Section exam',
+  'Flash Cards': 'Flash Cards',
+  'Flash cards mode': 'Flash cards by section',
   'Choose section for exam': 'Choose section for exam',
+  'Choose section for flash cards': 'Choose section for flash cards',
   'Loading exam...': 'Loading exam...',
   'Finish Exam': 'Finish Exam',
   'Check Unanswered Questions': 'Check Unanswered Questions',
@@ -20,6 +23,16 @@ export const data = {
   'Go Home': 'Go Home',
   'Time remaining': 'Time remaining',
   'Time is running out!': 'Time is running out!',
+  Question: 'Question',
+  Answer: 'Answer',
+  Note: 'Note',
+  Previous: 'Previous',
+  Next: 'Next',
+  Home: 'Home',
+  'Show Question': 'Show Question',
+  'Show Answer': 'Show Answer',
+  'Tap to see answer': 'Tap to see answer',
+  'Tap to see question': 'Tap to see question',
   Description:
     'MexExam is an application for preparing for the naturalization exam in Mexico. It contains questions on topics that will be on the exam and allows you to practice in exam mode.'
 };

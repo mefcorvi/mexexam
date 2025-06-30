@@ -6,5 +6,6 @@ export enum RouteName {
   AllQuestions = 'AllQuestions',
   SectionQuestions = 'SectionQuestions',
   Exam = 'Exam',
-  SectionExam = 'SectionExam'
+  SectionExam = 'SectionExam',
+  FlashCards = 'FlashCards'
 }

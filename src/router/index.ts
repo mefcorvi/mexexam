@@ -35,6 +35,11 @@ const router = createRouter({
       component: () => import('../pages/ExamPage.vue')
     },
     {
+      path: '/flashcards/:sectionId/:id',
+      name: RouteName.FlashCards,
+      component: () => import('../pages/FlashCardsPage.vue')
+    },
+    {
       path: '/all/:id',
       name: RouteName.AllQuestions,
       component: () => import('../pages/QuestionPage.vue')

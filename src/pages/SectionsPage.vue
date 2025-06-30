@@ -24,12 +24,34 @@ const isExamMode = computed(() => {
   return $route.name === RouteName.ChooseSection && $route.query.mode === 'exam';
 });
 
+const isFlashCardsMode = computed(() => {
+  return $route.name === RouteName.ChooseSection && $route.query.mode === 'flashcards';
+});
+
+const pageTitle = computed(() => {
+  if (isExamMode.value) {
+    return t('Choose section for exam');
+  } else if (isFlashCardsMode.value) {
+    return t('Choose section for flash cards');
+  } else {
+    return t('Choose section');
+  }
+});
+
 const startSection = (sectionId: string) => {
   if (isExamMode.value) {
     $router.push({
       name: RouteName.SectionExam,
       params: {
         sectionId
+      }
+    });
+  } else if (isFlashCardsMode.value) {
+    $router.push({
+      name: RouteName.FlashCards,
+      params: {
+        sectionId,
+        id: 'init'
       }
     });
   } else {
@@ -46,7 +68,7 @@ const startSection = (sectionId: string) => {
 const { t } = useLocalization();
 </script>
 <template>
-  <GeneralPage :class="$style.page" :title="isExamMode ? t('Choose section for exam') : t('Choose section')">
+  <GeneralPage :class="$style.page" :title="pageTitle">
     <div :class="$style.tilesMenu">
       <div :class="$style.tile" v-for="section of sections.values()" :key="section.id"
         @click="startSection(section.id)">

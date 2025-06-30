@@ -36,6 +36,23 @@ const chooseSectionExam = () => {
   })
 };
 
+const startFlashCards = () => {
+  $router.push({
+    name: RouteName.FlashCards,
+    params: {
+      sectionId: 'all',
+      id: 'init'
+    }
+  })
+};
+
+const chooseSectionFlashCards = () => {
+  $router.push({
+    name: RouteName.ChooseSection,
+    query: { mode: 'flashcards' }
+  })
+};
+
 const { t } = useLocalization();
 </script>
 <template>
@@ -45,6 +62,8 @@ const { t } = useLocalization();
       <GeneralButton @click="chooseSection">{{ t('Choose section') }}</GeneralButton>
       <GeneralButton @click="startExam">{{ t('Exam mode') }}</GeneralButton>
       <GeneralButton @click="chooseSectionExam">{{ t('Section Exam') }}</GeneralButton>
+      <GeneralButton @click="startFlashCards">{{ t('Flash Cards') }}</GeneralButton>
+      <GeneralButton @click="chooseSectionFlashCards">{{ t('Flash cards mode') }}</GeneralButton>
     </GeneralMenu>
   </GeneralPage>
 </template>
