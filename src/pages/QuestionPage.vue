@@ -377,6 +377,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   flex-grow: 1;
   flex-direction: column;
   align-items: center;
+  gap: var(--gap-s);
 
   padding: var(--gap);
 

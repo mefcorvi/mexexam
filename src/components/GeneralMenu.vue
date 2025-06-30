@@ -13,5 +13,7 @@
 .menu {
   display: flex;
   flex-direction: column;
+
+  gap: var(--gap-s);
 }
 </style>

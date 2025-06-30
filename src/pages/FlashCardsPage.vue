@@ -3,7 +3,7 @@ import { ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
-import { mdiCog, mdiChevronLeft, mdiChevronRight, mdiRotate3d } from '@mdi/js';
+import { mdiCog, mdiRotate3d } from '@mdi/js';
 import { useRouteParams } from '@vueuse/router';
 import { useRouter } from 'vue-router';
 import { useFreeSessionStore } from '@/stores/free-session';
@@ -97,31 +97,19 @@ const flipCard = () => {
 /**
  * Selects a next question.
  */
-const nextQuestion = () => {
+const nextQuestion = async () => {
   isFlipped.value = false;
 
-  $router.replace({
-    params: {
-      id: getRandomQuestionId(),
-      sectionId: sectionParamId.value,
-    },
-  });
+  setTimeout(() => {
+    $router.replace({
+      params: {
+        id: getRandomQuestionId(),
+        sectionId: sectionParamId.value,
+      },
+    });
+  }, 200);
 }
 
-/**
- * Selects a previous question.
- */
-const previousQuestion = () => {
-  isFlipped.value = false;
-
-  // For now, just get a random question since we don't have history
-  $router.replace({
-    params: {
-      id: getRandomQuestionId(),
-      sectionId: sectionParamId.value,
-    },
-  })
-}
 
 const openSettings = () => {
   $router.push({
@@ -148,10 +136,6 @@ const qt = (text: string) => {
     </template>
 
     <div :class="$style.cardContainer" v-if="currentQuestion">
-      <GeneralButton @click="previousQuestion" variant="outlined">
-        <SvgIcon :path="mdiChevronLeft" />
-      </GeneralButton>
-
       <div :class="[$style.card, { [$style.flipped]: isFlipped }]" @click="flipCard">
         <div :class="$style.cardInner">
           <!-- Question Side -->
@@ -175,21 +159,23 @@ const qt = (text: string) => {
               <div :class="$style.answerText">
                 {{ qt(currentQuestion.answer) }}
               </div>
-              <div v-if="currentQuestion?.note" :class="$style.note">
-                <strong>{{ t('Note') }}:</strong> {{ qt(currentQuestion.note) }}
+              <div v-if="currentQuestion?.note" :class="$style.note" v-html="qt(currentQuestion.note)">
               </div>
-              <div :class="$style.flipHint">
-                <SvgIcon :path="mdiRotate3d" />
-                {{ t('Tap to see question') }}
+              <div :class="$style.answerButtons">
+                <div :class="$style.flipHint">
+                  <SvgIcon :path="mdiRotate3d" />
+                  {{ t('Tap to see question') }}
+                </div>
+                <GeneralButton @click.stop="nextQuestion" variant="outlined">
+                  {{ t('Next') }}
+                </GeneralButton>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <GeneralButton @click="nextQuestion" variant="outlined">
-        <SvgIcon :path="mdiChevronRight" />
-      </GeneralButton>
+
     </div>
   </GeneralPage>
 </template>
@@ -243,18 +229,6 @@ const qt = (text: string) => {
   padding: var(--gap);
 
   gap: var(--gap-s);
-
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-s);
-
-    width: 32px;
-    padding: var(--gap-s);
-
-    line-height: 100%;
-  }
 }
 
 .card {
@@ -344,6 +318,7 @@ const qt = (text: string) => {
   padding: var(--gap-s);
 
   font-size: var(--font-size-a2);
+  text-align: left;
   color: var(--secondary-color);
 
   background: var(--secondary-color-10);
@@ -351,11 +326,22 @@ const qt = (text: string) => {
   border-radius: var(--border-radius);
 }
 
+.answerButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-s);
+
+  width: 100%;
+
+  button {
+    max-width: 150px;
+  }
+}
+
 .flipHint {
   display: flex;
   align-items: center;
-
-  margin-top: var(--gap);
 
   font-size: var(--font-size-a2);
   color: var(--text-color-60);

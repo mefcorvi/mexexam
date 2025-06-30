@@ -11,7 +11,6 @@ defineProps<{
 <style module lang="less">
 .button {
   width: 100%;
-  margin-bottom: var(--gap-s);
 
   text-align: center;
   letter-spacing: 0.02em;
