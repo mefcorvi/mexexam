@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, useCssModule, watch } from 'vue';
+import { ref, useCssModule, watch, computed } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
@@ -117,15 +117,26 @@ const openSettings = () => {
   })
 };
 
-const { t, locale } = useLocalization();
+const { t, locale, getLanguageName } = useLocalization();
+
+const isQuestionLanguageSwitched = ref(true);
+
+// Question language: 'es' or current UI language
+const questionLocale = computed(() => {
+  return isQuestionLanguageSwitched.value ? 'es' : locale.value;
+});
+
+const toggleQuestionLanguage = () => {
+  isQuestionLanguageSwitched.value = !isQuestionLanguageSwitched.value;
+}
 
 const qt = (text: string) => {
-  return translations.t(locale.value, text);
+  return translations.t(questionLocale.value, text);
 }
 </script>
 
 <template>
-  <GeneralPage :class="[$style.page]" :title="sectionParamId ? currentQuestion?.section.title : t('Flash Cards')">
+  <GeneralPage :class="[$style.page]">
     <template #topBar>
       <div :class="$style.topBar">
         <div :class="$style.spacer"></div>
@@ -138,6 +149,10 @@ const qt = (text: string) => {
     <div :class="$style.cardContainer" v-if="currentQuestion">
       <div :class="[$style.card, { [$style.flipped]: isFlipped }]" @click="flipCard">
         <div :class="$style.cardInner">
+          <div v-if="locale !== 'es'" @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
+            <span :class="$style.languageLabel">→ {{ questionLocale === locale ? getLanguageName('es') :
+              getLanguageName(locale) }}</span>
+          </div>
           <!-- Question Side -->
           <div :class="$style.cardFront">
             <div :class="$style.questionContent">
@@ -329,7 +344,7 @@ const qt = (text: string) => {
 .answerButtons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: var(--gap-s);
 
   width: 100%;
@@ -344,7 +359,47 @@ const qt = (text: string) => {
   align-items: center;
 
   font-size: var(--font-size-a2);
-  color: var(--text-color-60);
+  color: var(--negative-color-alpha-60);
   gap: var(--gap-s);
+}
+
+.languageButton {
+  position: absolute;
+  top: -32px;
+  right: var(--gap);
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: var(--gap-s);
+
+  font-size: var(--font-size-a1);
+  line-height: 100%;
+
+  background: var(--negative-color-alpha-5);
+  border-radius: var(--border-radius);
+
+  transform-style: preserve-3d;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.6s, opacity 0.2s;
+
+  user-select: none;
+  will-change: transform, opacity;
+
+  .onHover({
+    opacity: 1;
+  });
+
+.languageLabel {
+  flex-grow: 1;
+
+  font-size: var(--font-size-a1);
+}
+}
+
+.flipped .languageButton {
+  transform: rotateY(180deg);
 }
 </style>

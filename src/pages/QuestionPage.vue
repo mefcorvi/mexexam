@@ -213,7 +213,7 @@ const onOptionClick = (option: QuestionOption) => {
   }, 1000);
 }
 
-const isQuestionLanguageSwitched = ref(false);
+const isQuestionLanguageSwitched = ref(true);
 
 // Question language: 'es' or current UI language
 const questionLocale = computed(() => {
