@@ -317,6 +317,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
   width: 100%;
   height: 100%;
+  margin-top: var(--gap-l);
 }
 
 .text {
