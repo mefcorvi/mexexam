@@ -10,17 +10,30 @@ export const useFreeSessionStore = createSharedComposable(() => {
   const correctQuestions = ref(new Map<string, number>());
   const wrongQuestions = ref(new Map<string, number>());
 
-  const {
-    questions,
-    loadAll: loadAllQuestions,
-    loadSection,
-    reset: resetQuestions
-  } = useQuestionsStore();
+  const { questions, loadSections } = useQuestionsStore();
+
+  const sectionId = ref<string | null>(null);
+
+  const sectionQuestions = computed(() => {
+    if (sectionId.value) {
+      const result = new Map<string, Question>();
+
+      for (const question of questions.values()) {
+        if (question.section.id === sectionId.value) {
+          result.set(question.id, question);
+        }
+      }
+
+      return result;
+    }
+
+    return questions;
+  });
 
   const choiceQuestions = computed(() => {
     const result = new Map<string, Question>();
 
-    for (const question of questions.values()) {
+    for (const question of sectionQuestions.value.values()) {
       if (question.type === 'choice') {
         result.set(question.id, question);
       }
@@ -63,7 +76,7 @@ export const useFreeSessionStore = createSharedComposable(() => {
       return null;
     }
 
-    const question = questions.get(currentQuestionId.value);
+    const question = sectionQuestions.value.get(currentQuestionId.value);
 
     if (!question) {
       return null;
@@ -89,7 +102,7 @@ export const useFreeSessionStore = createSharedComposable(() => {
   };
 
   const hasQuestion = (id: string) => {
-    return questions.has(id);
+    return sectionQuestions.value.has(id);
   };
 
   const selectAnswer = (option: QuestionOption) => {
@@ -253,7 +266,8 @@ export const useFreeSessionStore = createSharedComposable(() => {
    * Starts session with all questions.
    */
   const startAll = async () => {
-    await loadAllQuestions();
+    await loadSections();
+    sectionId.value = null;
 
     // clear all counters
     correctQuestions.value.clear();
@@ -263,9 +277,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
   /**
    * Starts session with a specific section.
    */
-  const startSection = async (sectionId: string) => {
-    resetQuestions();
-    await loadSection(sectionId);
+  const startSection = async (id: string) => {
+    await loadSections();
+    sectionId.value = id;
 
     // clear all counters
     correctQuestions.value.clear();

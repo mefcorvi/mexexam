@@ -162,7 +162,7 @@ const isQuestionUnanswered = (questionId: string) => {
 
     <div v-else-if="!isExamFinished" class="exam-content">
       <div class="questions-list">
-        <div v-for="(question, index) in examQuestions" :key="question.id" :class="[
+        <div v-for="(question, index) in examQuestions" :key="question.id" :data-question-id="question.id" :class="[
           'question-item',
           getQuestionClass(question.id),
           { 'unanswered-highlight': isCheckingUnanswered && isQuestionUnanswered(question.id) }

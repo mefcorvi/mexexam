@@ -12,6 +12,7 @@ import { useFreeSessionStore } from '@/stores/free-session';
 import { useTranslations } from '@/stores/translations';
 import { RouteName } from '@/router/names';
 import { useLocalization } from '@/stores/localization';
+import { useActivatableEffect } from '@/composables/activatable-effect';
 
 const $style = useCssModule();
 const $router = useRouter();
@@ -68,34 +69,35 @@ const onQuestionIdChanged = () => {
 
 const isAllStarted = ref(false);
 
-watch(() => [questionParamId.value, sectionParamId.value], async (newValue, oldValue) => {
-  if (!oldValue) {
-    oldValue = ['', ''];
-  }
+useActivatableEffect(() => {
+  watch(() => [questionParamId.value, sectionParamId.value], async (newValue, oldValue) => {
+    if (!oldValue) {
+      oldValue = ['', ''];
+    }
 
-  if (!newValue[0] && !newValue[1]) {
-    return;
-  }
+    if (!newValue[0] && !newValue[1]) {
+      return;
+    }
 
-  if (newValue[0] === oldValue[0] && newValue[1] === oldValue[1]) {
-    return;
-  }
+    if (newValue[0] === oldValue[0] && newValue[1] === oldValue[1]) {
+      return;
+    }
 
-  if (newValue[1] !== oldValue[1] || !oldValue[1]) {
-    if (newValue[1]) {
-      isAllStarted.value = false;
-      await startSection(newValue[1]);
-    } else {
-      if (!isAllStarted.value) {
-        isAllStarted.value = true;
-        await startAll();
+    if (newValue[1] !== oldValue[1] || !oldValue[1]) {
+      if (newValue[1]) {
+        isAllStarted.value = false;
+        await startSection(newValue[1]);
+      } else {
+        if (!isAllStarted.value) {
+          isAllStarted.value = true;
+          await startAll();
+        }
       }
     }
-  }
 
-  onQuestionIdChanged();
+    onQuestionIdChanged();
+  }, { immediate: true });
 }, { immediate: true });
-
 
 let blinkingTimeout: number | undefined;
 

@@ -1,8 +1,11 @@
 import { markRaw, ref, shallowReactive } from 'vue';
-import { loadSectionsData } from './sections';
 import { createSharedComposable } from '@vueuse/core';
 import { useTranslations } from './translations';
-import { LoadingStatus, wrapLoading } from '@/utils/loading-status';
+import { LoadingStatus } from '@/utils/loading-status';
+import type { Package } from '@/utils/questions-schema';
+import mexexamPackage from '../../data/mexexam.json';
+
+const pkg = mexexamPackage as Package;
 
 export type QuestionOption = {
   id: number;
@@ -18,16 +21,13 @@ export type Question = {
   answer: string;
   options?: QuestionOption[];
   note?: string;
-  noteImage?: string;
 };
 
 export type QuestionsSection = {
   id: string;
   title: string;
   questions: Question[];
-  image?: string;
   loadingStatus: LoadingStatus;
-  load: () => Promise<void>;
 };
 
 export const useQuestionsStore = createSharedComposable(() => {
@@ -41,171 +41,85 @@ export const useQuestionsStore = createSharedComposable(() => {
       return;
     }
 
-    const sectionsData = await loadSectionsData();
-
-    for (const sectionData of sectionsData) {
+    for (const sectionData of pkg.sections) {
       const section: QuestionsSection = {
         id: sectionData.id,
-        title: sectionData.title,
+        title: sectionData.title.es ?? '',
         questions: [],
-        image: sectionData.image,
-        loadingStatus: LoadingStatus.Idle,
-        load: wrapLoading(
-          () => section,
-          async () => {
-            if (section.loadingStatus === LoadingStatus.Loaded) {
-              return;
-            }
-
-            const questionsData = await sectionData.questions();
-
-            for (const questionData of questionsData) {
-              const question: Question = {
-                id: questionData.id,
-                section,
-                answer: questionData.answer,
-                question: questionData.question,
-                note: questionData.note,
-                noteImage:
-                  'noteImage' in questionData
-                    ? questionData.noteImage
-                    : undefined,
-                options: questionData.options?.map((x, idx) =>
-                  markRaw({
-                    id: idx,
-                    value: x,
-                    isAnswer: false
-                  })
-                ),
-                type: questionData.type === 'text' ? 'text' : 'choice'
-              };
-
-              if (questionData.ru) {
-                translations.add(
-                  'ru',
-                  questionData.answer,
-                  questionData.ru.answer
-                );
-                translations.add(
-                  'ru',
-                  questionData.question,
-                  questionData.ru.question
-                );
-                translations.add('ru', questionData.note, questionData.ru.note);
-
-                if (questionData.ru.options && questionData.options) {
-                  for (let i = 0; i < questionData.ru.options.length; i++) {
-                    translations.add(
-                      'ru',
-                      questionData.options[i],
-                      questionData.ru.options[i]
-                    );
-                  }
-                }
-              }
-
-              if (questionData.en) {
-                translations.add(
-                  'en',
-                  questionData.answer,
-                  questionData.en.answer
-                );
-                translations.add(
-                  'en',
-                  questionData.question,
-                  questionData.en.question
-                );
-                translations.add('en', questionData.note, questionData.en.note);
-
-                if (questionData.en.options && questionData.options) {
-                  for (let i = 0; i < questionData.en.options.length; i++) {
-                    translations.add(
-                      'en',
-                      questionData.options[i],
-                      questionData.en.options[i]
-                    );
-                  }
-                }
-              }
-
-              if (questionData.zh) {
-                translations.add(
-                  'zh',
-                  questionData.answer,
-                  questionData.zh.answer
-                );
-                translations.add(
-                  'zh',
-                  questionData.question,
-                  questionData.zh.question
-                );
-                translations.add('zh', questionData.note, questionData.zh.note);
-
-                if (questionData.zh.options && questionData.options) {
-                  for (let i = 0; i < questionData.zh.options.length; i++) {
-                    translations.add(
-                      'zh',
-                      questionData.options[i],
-                      questionData.zh.options[i]
-                    );
-                  }
-                }
-              }
-
-              if (question.type === 'choice' && question.options) {
-                question.options.push(
-                  markRaw({
-                    id: question.options.length,
-                    isAnswer: true,
-                    value: question.answer
-                  })
-                );
-              }
-
-              const q = markRaw(question);
-
-              questions.set(question.id, q);
-              section.questions.push(q);
-            }
-          }
-        )
+        loadingStatus: LoadingStatus.Loaded
       };
+
+      for (const questionData of sectionData.questions) {
+        const question: Question = {
+          id: questionData.id,
+          section,
+          answer: questionData.answer.es ?? '',
+          question: questionData.question.es ?? '',
+          note: questionData.note.es ?? '',
+          options: questionData.options?.map((x, idx) =>
+            markRaw({
+              id: idx,
+              value: x.es ?? '',
+              isAnswer: false
+            })
+          ),
+          type: questionData.type === 'text' ? 'text' : 'choice'
+        };
+
+        for (const language of ['ru', 'en', 'zh'] as const) {
+          translations.add(
+            language,
+            questionData.answer.es,
+            questionData.answer[language]
+          );
+          translations.add(
+            language,
+            questionData.question.es,
+            questionData.question[language]
+          );
+          translations.add(
+            language,
+            questionData.note.es,
+            questionData.note[language]
+          );
+
+          for (const option of questionData.options) {
+            translations.add(language, option.es, option[language]);
+          }
+        }
+
+        if (question.type === 'choice' && question.options) {
+          question.options.push(
+            markRaw({
+              id: question.options.length,
+              isAnswer: true,
+              value: question.answer
+            })
+          );
+        }
+
+        const q = markRaw(question);
+
+        questions.set(question.id, q);
+        section.questions.push(q);
+      }
 
       sections.set(section.id, markRaw(section));
 
-      translations.add('ru', sectionData.title, sectionData.ru.title);
-      translations.add('en', sectionData.title, sectionData.en.title);
-      translations.add('zh', sectionData.title, sectionData.zh.title);
-      isLoaded.value = true;
-    }
-  };
-
-  const loadAll = async () => {
-    await loadSections();
-    await Promise.all([...sections.values()].map((x) => x.load()));
-  };
-
-  const loadSection = async (sectionId: string) => {
-    await loadSections();
-    const section = sections.get(sectionId);
-
-    if (!section) {
-      return;
+      for (const language of ['ru', 'en', 'zh'] as const) {
+        translations.add(
+          language,
+          sectionData.title.es,
+          sectionData.title[language]
+        );
+      }
     }
 
-    await section.load();
-  };
-
-  const reset = () => {
-    isLoaded.value = false;
-    questions.clear();
+    isLoaded.value = true;
   };
 
   return {
-    loadAll,
-    loadSection,
     loadSections,
-    reset,
     isLoaded,
     questions,
     sections

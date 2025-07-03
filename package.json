@@ -12,7 +12,8 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "generate-sitemap": "node scripts/generate-sitemap.ts"
+    "generate-sitemap": "node scripts/generate-sitemap.ts",
+    "bundle-json": "node scripts/bundle-json.ts"
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",

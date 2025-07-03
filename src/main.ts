@@ -5,8 +5,6 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-import { loadSectionsData } from './stores/sections';
-
 const app = createApp(App);
 
 app.use(router);
@@ -23,9 +21,6 @@ if (!import.meta.env.DEV) {
         console.error('Service Worker registration failed', error);
       }
     }
-
-    const sections = await loadSectionsData();
-    await Promise.all(sections.map((section) => section.questions()));
   })();
 
   // Preload all route components

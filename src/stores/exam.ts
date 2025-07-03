@@ -24,12 +24,7 @@ const EXAM_DURATION_MINUTES = 10;
 const EXAM_DURATION_MS = EXAM_DURATION_MINUTES * 60 * 1000;
 
 export const useExamStore = createSharedComposable(() => {
-  const {
-    questions,
-    loadAll,
-    loadSection,
-    reset: resetQuestions
-  } = useQuestionsStore();
+  const { questions, loadSections } = useQuestionsStore();
 
   const examQuestions = ref<Question[]>([]);
   const randomizedOptions = ref<Map<string, QuestionOption[]>>(new Map());
@@ -40,10 +35,21 @@ export const useExamStore = createSharedComposable(() => {
   const examStartTime = ref<number | null>(null);
   const timeRemaining = ref<number>(EXAM_DURATION_MS);
   const timerInterval = ref<number | null>(null);
+  const sectionId = ref<string | null>(null);
+
+  const sectionQuestions = computed(() => {
+    if (sectionId.value === null) {
+      return [...questions.values()];
+    }
+
+    return [...questions.values()].filter(
+      (x) => x.section.id === sectionId.value
+    );
+  });
 
   const choiceQuestions = computed(() => {
     const result: Question[] = [];
-    for (const question of questions.values()) {
+    for (const question of sectionQuestions.value) {
       if (question.type === 'choice') {
         result.push(question);
       }
@@ -104,13 +110,10 @@ export const useExamStore = createSharedComposable(() => {
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  const startExam = async (sectionId?: string) => {
-    if (sectionId) {
-      await loadSection(sectionId);
-    } else {
-      await loadAll();
-    }
+  const startExam = async (id?: string) => {
+    await loadSections();
 
+    sectionId.value = id ?? null;
     examQuestions.value = getRandomQuestions(10);
     randomizedOptions.value.clear();
 
@@ -191,7 +194,6 @@ export const useExamStore = createSharedComposable(() => {
     examResults.value = null;
     examStartTime.value = null;
     timeRemaining.value = EXAM_DURATION_MS;
-    resetQuestions();
   };
 
   const getRandomizedOptions = (question: Question): QuestionOption[] => {

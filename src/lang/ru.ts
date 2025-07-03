@@ -19,7 +19,7 @@ export const data: LocalizationData = {
   Correct: 'Правильно',
   Wrong: 'Неправильно',
   Remember: 'Помню',
-  Forgot: 'Забыл',
+  Forgot: 'Не помню',
   Total: 'Всего',
   Score: 'Балл',
   'Start New Exam': 'Начать новый экзамен',
