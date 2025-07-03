@@ -4,10 +4,9 @@ export const data = {
   Language: '语言',
   'Dark theme': '深色主题',
   'Choose section': '训练章节',
-  'All questions': '训练所有问题',
+  'Train all questions': '训练所有问题',
   'Exam mode': '参加考试',
   'Section Exam': '章节考试',
-  'Flash Cards': '闪卡',
   'Flash cards mode': '闪卡按章节',
   'Choose section for exam': '选择考试章节',
   'Choose section for flash cards': '选择闪卡章节',
@@ -33,6 +32,15 @@ export const data = {
   'Show Answer': '显示答案',
   'Tap to see answer': '点击查看答案',
   'Tap to see question': '点击查看问题',
+  'Choose mode': '选择模式',
+  'Choose questions': '选择问题',
+  Training: '训练',
+  'Flash Cards': '闪卡',
+  Exam: '考试',
+  'All questions': '所有问题',
+  'Training mode description': '逐个练习问题。您可以在每个问题后看到正确答案。',
+  'Flash cards mode description': '使用闪卡学习。点击在问题和答案之间翻转。',
+  'Exam mode description': '参加限时多项选择题考试。您有10分钟完成。',
   Description:
     'MexExam 是一个用于准备墨西哥入籍考试的应用。它包含考试中会出现的问题，并允许您在考试模式下练习。'
 };

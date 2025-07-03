@@ -33,5 +33,18 @@ export default defineConfig({
         `
       }
     }
+  },
+  build: {
+    // Optimize for Cloudflare
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router'],
+          utils: ['@vueuse/core', '@vueuse/router']
+        }
+      }
+    },
+    // Generate source maps for better debugging
+    sourcemap: false
   }
 });

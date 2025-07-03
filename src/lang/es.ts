@@ -4,10 +4,9 @@ export const data = {
   Language: 'Idioma',
   'Dark theme': 'Tema oscuro',
   'Choose section': 'Entrenar sección',
-  'All questions': 'Entrenar todas las preguntas',
+  'Train all questions': 'Entrenar todas las preguntas',
   'Exam mode': 'Tomar examen',
   'Section Exam': 'Examen de sección',
-  'Flash Cards': 'Tarjetas de Memoria',
   'Flash cards mode': 'Tarjetas de memoria por sección',
   'Choose section for exam': 'Elegir sección para examen',
   'Choose section for flash cards': 'Elegir sección para tarjetas',
@@ -33,6 +32,18 @@ export const data = {
   'Show Answer': 'Mostrar Respuesta',
   'Tap to see answer': 'Toca para ver la respuesta',
   'Tap to see question': 'Toca para ver la pregunta',
+  'Choose mode': 'Elegir modo',
+  'Choose questions': 'Elegir preguntas',
+  Training: 'Entrenamiento',
+  'Flash Cards': 'Tarjetas de Memoria',
+  Exam: 'Examen',
+  'All questions': 'Todas las preguntas',
+  'Training mode description':
+    'Practica con preguntas una por una. Puedes ver la respuesta correcta después de cada pregunta.',
+  'Flash cards mode description':
+    'Estudia con tarjetas de memoria. Toca para cambiar entre pregunta y respuesta.',
+  'Exam mode description':
+    'Toma un examen cronometrado con preguntas de opción múltiple. Tienes 10 minutos para completarlo.',
   Description:
     'MexExam es una aplicación para prepararse para el examen de naturalización en México. Contiene preguntas sobre temas que estarán en el examen y te permite practicar en modo examen.'
 };

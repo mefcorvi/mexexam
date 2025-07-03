@@ -6,10 +6,9 @@ export const data: LocalizationData = {
   Language: 'Язык',
   'Dark theme': 'Темная тема',
   'Choose section': 'Тренировать раздел',
-  'All questions': 'Тренировать все вопросы',
+  'Train all questions': 'Тренировать все вопросы',
   'Exam mode': 'Сдать экзамен',
   'Section Exam': 'Экзамен по разделу',
-  'Flash Cards': 'Карточки',
   'Flash cards mode': 'Карточки по разделам',
   'Choose section for exam': 'Выбрать раздел для экзамена',
   'Choose section for flash cards': 'Выбрать раздел для карточек',
@@ -35,6 +34,18 @@ export const data: LocalizationData = {
   'Show Answer': 'Показать ответ',
   'Tap to see answer': 'Нажмите, чтобы увидеть ответ',
   'Tap to see question': 'Нажмите, чтобы увидеть вопрос',
+  'Choose mode': 'Выбрать режим',
+  'Choose questions': 'Выбрать вопросы',
+  Training: 'Тренировка',
+  'Flash Cards': 'Карточки',
+  Exam: 'Экзамен',
+  'All questions': 'Все вопросы',
+  'Training mode description':
+    'Тренируйтесь с вопросами по одному. Вы можете увидеть правильный ответ после каждого вопроса.',
+  'Flash cards mode description':
+    'Изучайте с помощью карточек. Нажмите, чтобы перевернуть между вопросом и ответом.',
+  'Exam mode description':
+    'Сдайте экзамен с ограничением по времени с вопросами с множественным выбором. У вас есть 10 минут на завершение.',
   Description:
     'MexExam - это приложение для подготовки к экзамену на натурализацию в Мексике. Оно содержит вопросы по темам, которые будут на экзамене, и позволяет практиковаться в режиме экзамена.'
 };

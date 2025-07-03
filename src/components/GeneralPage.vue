@@ -10,11 +10,14 @@ defineSlots<{
   default: {};
 }>();
 
-defineProps<{
+const {
+  hideTopBar = false,
+  title = '',
+  reserveSpace = true
+} = defineProps<{
   hideTopBar?: boolean;
-  hideBackButton?: boolean;
-  hideTitle?: boolean;
   title?: string;
+  reserveSpace?: boolean;
 }>();
 
 const $router = useRouter();
@@ -50,16 +53,12 @@ const back = () => {
         <div :class="$style.backBtn" @click="back">
           <SvgIcon type="mdi" :path="mdiArrowLeft" size="24" />
         </div>
-        <div :class="[$style.logo, $style.logoFadeOut]" @click="openHome">
-          <img src="/logo.svg" width="32" height="32" alt="Logo" />
-          <div :class="$style.logoTitle">MexExam</div>
+        <div v-if="title" :class="$style.title">
+          {{ title }}
         </div>
       </template>
       <div :class="$style.separator"></div>
       <slot name="topBar" />
-    </div>
-    <div v-if="!hideTitle" :class="$style.title">
-      {{ title }}
     </div>
     <slot />
   </div>
@@ -67,6 +66,8 @@ const back = () => {
 </template>
 <style module lang="less">
 .page {
+  --general-page-gap: var(--page-gap, var(--gap));
+
   position: relative;
 
   display: flex;
@@ -74,7 +75,17 @@ const back = () => {
   align-items: center;
 
   width: 100%;
+  max-width: 100vw;
   min-height: 100%;
+  padding: var(--gap);
+  padding-top: calc(var(--topbar-height) + var(--gap-s));
+  gap: var(--general-page-gap);
+
+  --topbar-height: 48px;
+
+  @media @md-and-up {
+    --topbar-height: 64px;
+  }
 }
 
 .topBar {
@@ -90,11 +101,16 @@ const back = () => {
   width: 100%;
   height: var(--topbar-height);
   margin: 0 auto;
-  padding: var(--gap-s) var(--gap);
+  padding: 0 var(--gap);
 
   font-size: var(--font-size-1);
+  line-height: 100%;
 
-  background: var(--bg-color-alpha-50);
+  background: var(--bg-color);
+
+  @media @md-and-up {
+    background: transparent;
+  }
 
   gap: var(--gap);
 
@@ -113,6 +129,9 @@ const back = () => {
 }
 
 .backBtn {
+  width: 24px;
+  height: 24px;
+
   line-height: 100%;
 
   cursor: pointer;
@@ -150,9 +169,6 @@ const back = () => {
 }
 
 .title {
-  margin-bottom: var(--gap);
-
-  font-size: var(--font-size-4);
   font-weight: 500;
   text-align: center;
 }

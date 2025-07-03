@@ -253,7 +253,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 </script>
 
 <template>
-  <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }">
+  <GeneralPage @click="onPageClick" :class="{ [$style.fadeOut]: isPageFadeOut }" :reserveSpace="false">
     <template #topBar>
       <div :class="$style.navigation">
         <div @click.stop="openSettings">
@@ -261,13 +261,13 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         </div>
       </div>
     </template>
-    <div :class="$style.progress">
-      <div :class="$style.correctAnswers">{{ stat.correctQuestions }}
-      </div>
-      <div :class="$style.wrongAnswers">{{ stat.wrongQuestions }}</div>
-      <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
-    </div>
     <div :class="$style.question" v-if="currentQuestion">
+      <div :class="$style.progress">
+        <div :class="$style.correctAnswers">{{ stat.correctQuestions }}
+        </div>
+        <div :class="$style.wrongAnswers">{{ stat.wrongQuestions }}</div>
+        <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
+      </div>
       <div :class="$style.text" @click.stop="toggleQuestionLanguage">
         <div>
           <div :class="$style.sectionTitle">{{ t(currentQuestion.section.title) }}</div>
@@ -313,12 +313,10 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 }
 
 .question {
-  flex-grow: 1;
+  position: relative;
 
   width: 100%;
   height: 100%;
-  padding: var(--gap);
-  padding-top: var(--topbar-height);
 }
 
 .text {
@@ -483,20 +481,24 @@ function isButtonOrLinkClick(ev: MouseEvent) {
 
 .progress {
   position: absolute;
-  top: var(--topbar-height);
+  top: -10px;
+  left: 50%;
   z-index: 2;
 
   display: flex;
 
-  line-height: 120%;
+  transform: translateX(-50%);
 
   gap: var(--gap-s);
 
   &>div {
+    display: flex;
     flex-grow: 0;
     flex-shrink: 0;
+    align-items: center;
 
-    padding: 2px 4px;
+    height: var(--font-size-3);
+    padding: 0 2px;
 
     border-radius: var(--border-radius);
   }

@@ -22,32 +22,28 @@ const types = {
   },
 }
 
-const props = withDefaults(defineProps<{
+const { type = 'mdi', path, size, viewbox, flip = 'none', rotate = 0 } = defineProps<{
   type?: keyof typeof types;
   path: string;
   size?: string | number;
   viewbox?: string;
   flip?: "horizontal" | "vertical" | "both" | "none";
   rotate?: number;
-}>(), {
-  type: "mdi",
-  flip: "none",
-  rotate: 0,
-});
+}>();
 
 const styles = computed(() => {
   return {
-    "--sx": ["both", "horizontal"].includes(props.flip) ? "-1" : "1",
-    "--sy": ["both", "vertical"].includes(props.flip) ? "-1" : "1",
-    "--r": isNaN(props.rotate) ? props.rotate : props.rotate + "deg",
+    "--sx": ["both", "horizontal"].includes(flip) ? "-1" : "1",
+    "--sy": ["both", "vertical"].includes(flip) ? "-1" : "1",
+    "--r": isNaN(rotate) ? rotate : rotate + "deg",
   }
 });
 
-const defaults = types[props.type] || types.default;
+const defaults = types[type] || types.default;
 
-const sizeValue = computed(() => props.size || defaults.size);
+const sizeValue = computed(() => size || defaults.size);
 
-const viewboxValue = computed(() => props.viewbox || defaults.viewbox);
+const viewboxValue = computed(() => viewbox || defaults.viewbox);
 </script>
 
 <style scoped>
