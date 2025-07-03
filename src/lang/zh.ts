@@ -16,6 +16,8 @@ export const data = {
   'Exam Results': '考试成绩',
   Correct: '正确',
   Wrong: '错误',
+  Remember: '记住了',
+  Forgot: '忘记了',
   Total: '总计',
   Score: '分数',
   'Start New Exam': '开始新考试',

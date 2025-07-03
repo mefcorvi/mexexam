@@ -16,6 +16,8 @@ export const data = {
   'Exam Results': 'Exam Results',
   Correct: 'Correct',
   Wrong: 'Wrong',
+  Remember: 'Remember',
+  Forgot: 'Forgot',
   Total: 'Total',
   Score: 'Score',
   'Start New Exam': 'Start New Exam',

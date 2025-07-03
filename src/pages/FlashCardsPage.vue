@@ -22,6 +22,9 @@ const {
   getRandomQuestionId,
   setQuestion,
   hasQuestion,
+  markQuestionCorrect,
+  markQuestionWrong,
+  stat,
 } = useFreeSessionStore();
 
 const questionParamId = useRouteParams<string>('id', '');
@@ -95,9 +98,27 @@ const flipCard = () => {
 }
 
 /**
- * Selects a next question.
+ * Marks the current question as remembered and moves to the next question.
  */
-const nextQuestion = async () => {
+const markAsRemembered = async () => {
+  markQuestionCorrect();
+  isFlipped.value = false;
+
+  setTimeout(() => {
+    $router.replace({
+      params: {
+        id: getRandomQuestionId(),
+        sectionId: sectionParamId.value,
+      },
+    });
+  }, 200);
+}
+
+/**
+ * Marks the current question as not remembered and moves to the next question.
+ */
+const markAsNotRemembered = async () => {
+  markQuestionWrong();
   isFlipped.value = false;
 
   setTimeout(() => {
@@ -147,6 +168,11 @@ const qt = (text: string) => {
     </template>
 
     <div :class="$style.cardContainer" v-if="currentQuestion">
+      <div :class="$style.progress">
+        <div :class="$style.correctAnswers">{{ stat.correctQuestions }}</div>
+        <div :class="$style.wrongAnswers">{{ stat.wrongQuestions }}</div>
+        <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
+      </div>
       <div :class="[$style.card, { [$style.flipped]: isFlipped }]" @click="flipCard">
         <div :class="$style.cardInner">
           <div v-if="locale !== 'es'" @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
@@ -177,12 +203,11 @@ const qt = (text: string) => {
               <div v-if="currentQuestion?.note" :class="$style.note" v-html="qt(currentQuestion.note)">
               </div>
               <div :class="$style.answerButtons">
-                <div :class="$style.flipHint">
-                  <SvgIcon :path="mdiRotate3d" />
-                  {{ t('Tap to see question') }}
-                </div>
-                <GeneralButton @click.stop="nextQuestion" variant="outlined">
-                  {{ t('Next') }}
+                <GeneralButton @click.stop="markAsNotRemembered" variant="outlined">
+                  {{ t('Forgot') }}
+                </GeneralButton>
+                <GeneralButton @click.stop="markAsRemembered" variant="filled">
+                  {{ t('Remember') }}
                 </GeneralButton>
               </div>
             </div>
@@ -233,10 +258,11 @@ const qt = (text: string) => {
 }
 
 .cardContainer {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
-
 
   width: 100%;
   max-width: 600px;
@@ -244,6 +270,47 @@ const qt = (text: string) => {
   padding: var(--gap);
 
   gap: var(--gap-s);
+}
+
+.progress {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  z-index: 2;
+
+  display: flex;
+
+  transform: translateX(-50%);
+
+  gap: var(--gap-s);
+
+  &>div {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+
+    height: var(--font-size-3);
+    padding: 0 2px;
+
+    border-radius: var(--border-radius);
+  }
+
+  .correctAnswers {
+    color: var(--success-text-color);
+
+    background: var(--success-bg-color);
+  }
+
+  .wrongAnswers {
+    color: var(--error-text-color);
+
+    background: var(--error-bg-color);
+  }
+
+  .allAnswers {
+    background: var(--bg-color-alpha-50);
+  }
 }
 
 .card {
@@ -330,7 +397,9 @@ const qt = (text: string) => {
 }
 
 .note {
+  max-height: 100px;
   padding: var(--gap-s);
+  overflow-y: auto;
 
   font-size: var(--font-size-a2);
   text-align: left;
@@ -343,7 +412,7 @@ const qt = (text: string) => {
 
 .answerButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   gap: var(--gap-s);
 

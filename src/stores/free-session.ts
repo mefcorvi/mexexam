@@ -167,6 +167,58 @@ export const useFreeSessionStore = createSharedComposable(() => {
     isAnswerRevealed.value = true;
   };
 
+  /**
+   * Marks the current question as correctly answered.
+   */
+  const markQuestionCorrect = () => {
+    if (!currentQuestion.value) {
+      return;
+    }
+
+    // increase the count of correct answers for this question
+    correctQuestions.value.set(
+      currentQuestion.value.id,
+      (correctQuestions.value.get(currentQuestion.value.id) ?? 0) + 1
+    );
+
+    // decrease the count of wrong answers for this question
+    wrongQuestions.value.set(
+      currentQuestion.value.id,
+      (wrongQuestions.value.get(currentQuestion.value.id) ?? 0) - 1
+    );
+
+    // if wrong count is negative, remove the question from wrong questions
+    if ((wrongQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
+      wrongQuestions.value.delete(currentQuestion.value.id);
+    }
+  };
+
+  /**
+   * Marks the current question as incorrectly answered.
+   */
+  const markQuestionWrong = () => {
+    if (!currentQuestion.value) {
+      return;
+    }
+
+    // increase the count of wrong answers for this question
+    wrongQuestions.value.set(
+      currentQuestion.value.id,
+      (wrongQuestions.value.get(currentQuestion.value.id) ?? 0) + 1
+    );
+
+    // decrease the count of correct answers for this question
+    correctQuestions.value.set(
+      currentQuestion.value.id,
+      (correctQuestions.value.get(currentQuestion.value.id) ?? 0) - 1
+    );
+
+    // if correct count is negative, remove the question from correct questions
+    if ((correctQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
+      correctQuestions.value.delete(currentQuestion.value.id);
+    }
+  };
+
   watch(
     () => currentQuestion.value?.id,
     () => {
@@ -237,7 +289,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
     revealAnswer,
     selectAnswer,
     setQuestion,
-    hasQuestion
+    hasQuestion,
+    markQuestionCorrect,
+    markQuestionWrong
   };
 });
 
