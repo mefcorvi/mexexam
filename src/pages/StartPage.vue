@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
@@ -16,8 +16,30 @@ const { selectedMode, selectedSectionId, showNotes } = usePreferencesStore();
 const { sections, loadSections } = useQuestionsStore();
 const translations = useTranslations();
 
+const modeScrollRef = ref<HTMLElement>();
+
+const scrollToSelectedMode = () => {
+  if (!modeScrollRef.value) return;
+
+  const activeButton = modeScrollRef.value.querySelector('[data-active="true"]') as HTMLElement;
+  if (!activeButton) return;
+
+  const container = modeScrollRef.value;
+  const scrollLeft = activeButton.offsetLeft - (container.clientWidth / 2) + (activeButton.clientWidth / 2);
+
+  container.scrollTo({
+    left: scrollLeft,
+    behavior: 'smooth'
+  });
+};
+
+watch(selectedMode, () => {
+  scrollToSelectedMode();
+});
+
 onMounted(() => {
   loadSections();
+  scrollToSelectedMode();
 });
 
 const orderedSections = computed(() => {
@@ -95,10 +117,10 @@ const startSession = () => {
     <!-- Mode Selection -->
     <div :class="$style.section">
       <h3 :class="$style.sectionTitle">{{ t('Choose mode') }}</h3>
-      <div :class="$style.modeScroll">
+      <div :class="$style.modeScroll" ref="modeScrollRef">
         <button v-for="mode in modes" :key="mode.value"
           :class="[$style.modeOption, { [$style.active]: selectedMode === mode.value }]"
-          @click="selectedMode = mode.value">
+          :data-active="selectedMode === mode.value" @click="selectedMode = mode.value">
           <span :class="$style.modeLabel">{{ mode.label }}</span>
         </button>
       </div>
