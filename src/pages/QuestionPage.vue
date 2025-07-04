@@ -242,6 +242,10 @@ const t = (key: string) => {
   return translations.t(questionLocale.value, key);
 }
 
+const uit = (key: string) => {
+  return translations.t(locale.value, key);
+}
+
 const openSettings = () => {
   $router.push({
     name: RouteName.Settings
@@ -295,6 +299,11 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         <div v-if="currentQuestion.type === 'text'"
           :class="[$style.answer, isAnswerRevealed ? '' : $style.hiddenAnswer]" @click.stop="forward">
           <p :key="idx" v-for="(item, idx) of t(currentQuestion.answer).split('\n')">{{ item }}</p>
+        </div>
+
+        <!-- Note section - only show after answer is selected -->
+        <div v-if="selectedAnswer && currentQuestion.note" :class="$style.note">
+          <p :key="idx" v-for="(item, idx) of uit(currentQuestion.note).split('\n')">{{ item }}</p>
         </div>
       </div>
     </div>
@@ -571,11 +580,41 @@ function isButtonOrLinkClick(ev: MouseEvent) {
   .onHover({
     opacity: 1;
   });
+}
 
 .languageLabel {
   flex-grow: 1;
 
   font-size: var(--font-size-a1);
 }
+
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: var(--gap-s);
+  padding: var(--gap);
+
+  font-size: var(--font-size-1);
+  line-height: 130%;
+  text-align: center;
+
+  background: var(--secondary-color-alpha-5);
+  border-left: 4px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+
+  opacity: 1;
+  transition: opacity @pageFadeOutDuration;
+  gap: var(--gap-s);
+}
+
+.fadeOut {
+  .note {
+    opacity: 0;
+  }
 }
 </style>
