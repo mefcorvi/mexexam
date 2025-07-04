@@ -182,7 +182,7 @@ const startSession = () => {
   display: flex;
   justify-content: flex-start;
 
-  min-width: 100%;
+  max-width: calc(100vw - var(--gap-l));
   overflow-x: auto;
   gap: var(--gap-s);
   scrollbar-width: none;
