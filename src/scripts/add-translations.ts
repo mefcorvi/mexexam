@@ -2,13 +2,13 @@ import OpenAI from 'openai';
 import * as fs from 'fs/promises';
 import * as dotenv from 'dotenv';
 import { zodResponseFormat } from 'openai/helpers/zod.mjs';
-import { removeEmptyFields } from '../src/utils/objects';
+import { removeEmptyFields } from '../utils/objects.ts';
 import { z } from 'zod';
 import {
-  Package,
+  type Package,
   packageSchema,
-  Question
-} from '../src/utils/questions-schema';
+  type Question
+} from '../utils/questions-schema.ts';
 import path from 'path';
 
 const languages = ['en', 'es', 'zh', 'ru'] as const;
