@@ -3,11 +3,13 @@ import GeneralPage from '@/components/GeneralPage.vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import CustomSelect from '@/components/CustomSelect.vue';
 import { useLocalization } from '@/stores/localization';
+import { usePreferencesStore } from '@/stores/preferences';
 import { useDark } from '@vueuse/core';
 import { watch } from 'vue';
 
 const isDarkTheme = useDark();
 const { t, locale, saveLanguage } = useLocalization();
+const { showNotes } = usePreferencesStore();
 
 const uiLanguages = [
   { value: 'en', label: 'English' },
@@ -31,6 +33,10 @@ watch(locale, (newLocale) => {
       <div :class="$style.setting">
         <label>{{ t('Language') }}</label>
         <CustomSelect v-model="locale" :options="uiLanguages" />
+      </div>
+      <div :class="$style.setting">
+        <label>{{ t('Show notes') }}</label>
+        <ToggleSwitch v-model="showNotes" size="16px" />
       </div>
     </div>
   </GeneralPage>

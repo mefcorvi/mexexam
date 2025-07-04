@@ -7,11 +7,13 @@ export type StudyMode = 'training' | 'flashcards' | 'exam';
 interface StartPagePreferences {
   selectedMode: StudyMode;
   selectedSectionId: string | null;
+  showNotes: boolean;
 }
 
 const defaultPreferences: StartPagePreferences = {
   selectedMode: 'training',
-  selectedSectionId: null
+  selectedSectionId: null,
+  showNotes: true
 };
 
 export const usePreferencesStore = createSharedComposable(() => {
@@ -34,6 +36,13 @@ export const usePreferencesStore = createSharedComposable(() => {
     }
   });
 
+  const showNotes = computed({
+    get: () => preferences.value.showNotes,
+    set: (value: boolean) => {
+      preferences.value.showNotes = value;
+    }
+  });
+
   const resetPreferences = () => {
     preferences.value = { ...defaultPreferences };
   };
@@ -41,6 +50,7 @@ export const usePreferencesStore = createSharedComposable(() => {
   return {
     selectedMode,
     selectedSectionId,
+    showNotes,
     resetPreferences
   };
 });

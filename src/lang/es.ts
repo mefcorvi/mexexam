@@ -3,6 +3,7 @@ export const data = {
   Settings: 'Configuración',
   Language: 'Idioma',
   'Dark theme': 'Tema oscuro',
+  'Show notes': 'Mostrar notas',
   'Choose section': 'Entrenar sección',
   'Train all questions': 'Entrenar todas las preguntas',
   'Exam mode': 'Tomar examen',

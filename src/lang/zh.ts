@@ -3,6 +3,7 @@ export const data = {
   Settings: '设置',
   Language: '语言',
   'Dark theme': '深色主题',
+  'Show notes': '显示备注',
   'Choose section': '训练章节',
   'Train all questions': '训练所有问题',
   'Exam mode': '参加考试',

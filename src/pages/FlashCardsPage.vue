@@ -11,10 +11,12 @@ import { useTranslations } from '@/stores/translations';
 import { RouteName } from '@/router/names';
 import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
+import { usePreferencesStore } from '@/stores/preferences';
 
 const $style = useCssModule();
 const $router = useRouter();
 const translations = useTranslations();
+const { showNotes } = usePreferencesStore();
 
 const {
   startAll,
@@ -157,6 +159,10 @@ const toggleQuestionLanguage = () => {
 const qt = (text: string) => {
   return translations.t(questionLocale.value, text);
 }
+
+const uit = (text: string) => {
+  return translations.t(locale.value, text);
+}
 </script>
 
 <template>
@@ -203,7 +209,7 @@ const qt = (text: string) => {
               <div :class="$style.answerText">
                 {{ qt(currentQuestion.answer) }}
               </div>
-              <div v-if="currentQuestion?.note" :class="$style.note" v-html="qt(currentQuestion.note)">
+              <div v-if="showNotes && currentQuestion?.note" :class="$style.note" v-html="uit(currentQuestion.note)">
               </div>
               <div :class="$style.answerButtons">
                 <GeneralButton @click.stop="markAsNotRemembered" variant="outlined">

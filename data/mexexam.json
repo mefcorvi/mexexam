@@ -22400,10 +22400,10 @@
     {
       "id": "u6w4x",
       "title": {
-        "es": "Artes I: Literatura y música",
-        "en": "Arts I: Literature and Music",
-        "ru": "Искусство I: Литература и музыка",
-        "zh": "艺术I：文学与音乐"
+        "es": "Literatura y música",
+        "en": "Literature and Music",
+        "ru": "Литература и музыка",
+        "zh": "文学与音乐"
       },
       "questions": [
         {
@@ -23633,10 +23633,10 @@
     {
       "id": "bzymvt",
       "title": {
-        "es": "Artes II: Pintura y cine",
-        "en": "Arts II: Painting and Cinema",
-        "ru": "Искусство II: Живопись и кино",
-        "zh": "艺术II：绘画与电影"
+        "es": "Pintura y cine",
+        "en": "Painting and Cinema",
+        "ru": "Живопись и кино",
+        "zh": "绘画与电影"
       },
       "questions": [
         {

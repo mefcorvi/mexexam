@@ -13,11 +13,13 @@ import { useTranslations } from '@/stores/translations';
 import { RouteName } from '@/router/names';
 import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
+import { usePreferencesStore } from '@/stores/preferences';
 
 const $style = useCssModule();
 const $router = useRouter();
 const translations = useTranslations();
 const { locale, getLanguageName } = useLocalization();
+const { showNotes } = usePreferencesStore();
 
 const {
   startAll,
@@ -302,7 +304,7 @@ function isButtonOrLinkClick(ev: MouseEvent) {
         </div>
 
         <!-- Note section - only show after answer is selected -->
-        <div v-if="selectedAnswer && currentQuestion.note" :class="$style.note">
+        <div v-if="selectedAnswer && currentQuestion.note && showNotes" :class="$style.note">
           <p :key="idx" v-for="(item, idx) of uit(currentQuestion.note).split('\n')">{{ item }}</p>
         </div>
       </div>

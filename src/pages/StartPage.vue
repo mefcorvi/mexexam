@@ -2,6 +2,7 @@
 import { computed, onMounted } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
+import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import { useRouter } from 'vue-router';
 import { useLocalization } from '@/stores/localization';
 import { usePreferencesStore, type StudyMode } from '@/stores/preferences';
@@ -11,12 +12,19 @@ import { RouteName } from '@/router/names';
 
 const $router = useRouter();
 const { t, locale } = useLocalization();
-const { selectedMode, selectedSectionId } = usePreferencesStore();
+const { selectedMode, selectedSectionId, showNotes } = usePreferencesStore();
 const { sections, loadSections } = useQuestionsStore();
 const translations = useTranslations();
 
 onMounted(() => {
   loadSections();
+});
+
+const orderedSections = computed(() => {
+  return Array.from(sections.values()).map(x => ({
+    ...x,
+    title: translations.t(locale.value, x.title)
+  })).sort((a, b) => a.title.localeCompare(b.title));
 });
 
 const modes: { value: StudyMode; label: string; description: string }[] = [
@@ -97,6 +105,10 @@ const startSession = () => {
       <div :class="$style.modeDescription">
         {{ currentModeDescription }}
       </div>
+      <div v-if="selectedMode !== 'exam'" :class="$style.setting">
+        <label>{{ t('Show notes') }}</label>
+        <ToggleSwitch v-model="showNotes" size="16px" />
+      </div>
     </div>
 
     <!-- Scope Selection -->
@@ -109,10 +121,10 @@ const startSession = () => {
           @click="selectedSectionId = null">
           <span :class="$style.sectionLabel">{{ t('All questions') }}</span>
         </button>
-        <button v-for="section in sections.values()" :key="section.id"
+        <button v-for="section in orderedSections" :key="section.id"
           :class="[$style.sectionOption, { [$style.active]: selectedSectionId === section.id }]"
           @click="selectedSectionId = section.id">
-          <span :class="$style.sectionLabel">{{ translations.t(locale, section.title) }}</span>
+          <span :class="$style.sectionLabel">{{ section.title }}</span>
         </button>
       </div>
     </div>
@@ -141,13 +153,12 @@ const startSession = () => {
 
   font-size: var(--font-size-2);
   font-weight: 600;
-  text-align: center;
   color: var(--text-color);
 }
 
 .modeScroll {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   min-width: 100%;
   overflow-x: auto;
@@ -196,7 +207,7 @@ const startSession = () => {
 
   font-size: var(--font-size-1);
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   color: var(--text-color);
 
   background: var(--negative-color-alpha-5);
@@ -208,7 +219,6 @@ const startSession = () => {
   flex-direction: column;
 
   margin-bottom: 52px;
-  padding: var(--gap-s);
 
   gap: var(--gap-s);
 }
@@ -273,5 +283,18 @@ const startSession = () => {
     cursor: not-allowed;
     opacity: 0.5;
   }
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+
+  padding: var(--gap-s) var(--gap);
+
+  font-size: var(--font-size-1);
+
+  background: var(--negative-color-alpha-5);
+  border-radius: var(--border-radius);
+  gap: var(--gap-s);
 }
 </style>
