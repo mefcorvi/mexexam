@@ -182,12 +182,12 @@ const uit = (text: string) => {
         <div :class="$style.wrongAnswers">{{ stat.wrongQuestions }}</div>
         <div :class="$style.allAnswers">{{ stat.totalQuestions }}</div>
       </div>
+      <div v-if="locale !== 'es'" @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
+        <span :class="$style.languageLabel">→ {{ questionLocale === locale ? getLanguageName('es') :
+          getLanguageName(locale) }}</span>
+      </div>
       <div :class="[$style.card, { [$style.flipped]: isFlipped }]" @click="flipCard">
         <div :class="$style.cardInner">
-          <div v-if="locale !== 'es'" @click.stop="toggleQuestionLanguage" :class="$style.languageButton">
-            <span :class="$style.languageLabel">→ {{ questionLocale === locale ? getLanguageName('es') :
-              getLanguageName(locale) }}</span>
-          </div>
           <!-- Question Side -->
           <div :class="$style.cardFront">
             <div :class="$style.questionContent">
@@ -276,7 +276,6 @@ const uit = (text: string) => {
   width: 100%;
   max-width: 600px;
   min-height: 400px;
-  padding: var(--gap);
 
   gap: var(--gap-s);
 }
@@ -360,11 +359,17 @@ const uit = (text: string) => {
   padding: var(--gap);
 
   background: var(--bg-color);
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--negative-color-alpha-5);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   backface-visibility: hidden;
+
+  @media @sm-and-down {
+    padding: 0;
+    padding-top: var(--gap);
+
+    border: none;
+  }
 }
 
 .cardBack {
@@ -406,11 +411,10 @@ const uit = (text: string) => {
 }
 
 .note {
-  max-height: 100px;
   padding: var(--gap-s);
   overflow-y: auto;
 
-  font-size: var(--font-size-a2);
+  font-size: var(--font-size-a1);
   text-align: left;
   color: var(--secondary-color);
 
@@ -443,7 +447,7 @@ const uit = (text: string) => {
 
 .languageButton {
   position: absolute;
-  top: -32px;
+  top: -16px;
   right: var(--gap);
   z-index: 1;
 

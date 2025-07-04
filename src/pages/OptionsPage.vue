@@ -53,8 +53,11 @@ watch(locale, (newLocale) => {
   display: flex;
   flex-direction: column;
 
-  margin: 0 var(--gap);
+  width: 100%;
+  max-width: 600px;
   padding: var(--gap);
+
+  font-size: var(--font-size-1);
 
   background: var(--negative-color-alpha-5);
   border-radius: var(--border-radius);

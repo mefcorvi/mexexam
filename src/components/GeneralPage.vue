@@ -75,7 +75,6 @@ const back = () => {
   align-items: center;
 
   width: 100%;
-  max-width: calc(100vw - var(--gap));
   min-height: 100%;
   padding: var(--gap);
   padding-top: calc(var(--topbar-height) + var(--gap-s));

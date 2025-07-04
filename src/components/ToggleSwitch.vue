@@ -20,15 +20,15 @@ const toggle = () => {
 <template>
   <div @click.stop="toggle" :class="$style.toggler">
     <div :class="{
-    [$style.outer]: true,
-    [$style.outerOn]: modelValue,
-    [$style.outerOff]: !modelValue,
-  }" :style="{ ['--switch-size']: size }">
+      [$style.outer]: true,
+      [$style.outerOn]: modelValue,
+      [$style.outerOff]: !modelValue,
+    }" :style="{ ['--switch-size']: size }">
       <div :class="{
-    [$style.inner]: true,
-    [$style.innerLeft]: !modelValue,
-    [$style.innerRight]: modelValue,
-  }"></div>
+        [$style.inner]: true,
+        [$style.innerLeft]: !modelValue,
+        [$style.innerRight]: modelValue,
+      }"></div>
     </div>
     <span v-if="label" :class="$style.label">{{ label }}</span>
   </div>
