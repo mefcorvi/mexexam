@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
@@ -18,7 +18,9 @@ const translations = useTranslations();
 
 const modeScrollRef = ref<HTMLElement>();
 
-const scrollToSelectedMode = () => {
+const scrollToSelectedMode = async () => {
+  await nextTick();
+
   if (!modeScrollRef.value) {
     return;
   }
