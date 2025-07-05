@@ -19,18 +19,17 @@ const translations = useTranslations();
 const modeScrollRef = ref<HTMLElement>();
 
 const scrollToSelectedMode = () => {
-  if (!modeScrollRef.value) return;
+  if (!modeScrollRef.value) {
+    return;
+  }
 
   const activeButton = modeScrollRef.value.querySelector('[data-active="true"]') as HTMLElement;
-  if (!activeButton) return;
 
-  const container = modeScrollRef.value;
-  const scrollLeft = activeButton.offsetLeft - (container.clientWidth / 2) + (activeButton.clientWidth / 2);
+  if (!activeButton) {
+    return;
+  }
 
-  container.scrollTo({
-    left: scrollLeft,
-    behavior: 'smooth'
-  });
+  activeButton.scrollIntoView({ block: 'center', inline: 'center', behavior: 'smooth' });
 };
 
 watch(selectedMode, () => {

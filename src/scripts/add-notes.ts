@@ -28,12 +28,7 @@ const openai = new OpenAI({
 });
 
 const noteSchema = z.object({
-  note: z.string(),
-  translations: z.object({
-    es: z.string(),
-    zh: z.string(),
-    ru: z.string()
-  })
+  note: z.string()
 });
 
 async function generateNote(
@@ -41,25 +36,21 @@ async function generateNote(
   answer: string,
   options: string[],
   targetLanguage: 'English' | 'Spanish' | 'Chinese' | 'Russian'
-): Promise<{
-  en: string;
-  es: string;
-  zh: string;
-  ru: string;
-}> {
-  const prompt = `Generate a very short, factual note in ${targetLanguage} that will help memorize the correct answer to this question. The note should be:
-- Only 1-2 short sentences or phrases
-- Pure facts, no explanations
-- Mention some related facts, but do not repeat information from the question or answer
-- Mention some dates or persons if they are not mentioned in the question or answer
+): Promise<string> {
+  const prompt = `You are preparing for the Mexican naturalization exam.  
+Given the question and answer below, write one short note of 1–2 sentences in ${targetLanguage} that *complements* the answer by adding a memorable fact, brief context, or mnemonic.
+Note should follow these rules:
 - Written in ${targetLanguage}
-- Translate the note to Mexican Spanish, Chinese, and Russian
+- Context of the note is mexican history and culture
+- Pure facts, no general information
+- Avoid repeating information from the question or answer
+- Note should be interesting and engaging
 
 Question: ${question}
 Correct Answer: ${answer}
 All Options: ${options.join(', ')}
 
-Educational note in ${targetLanguage} (and translation to Mexican Spanish, Chinese, and Russian):`;
+Educational note in ${targetLanguage}:`;
 
   const response = await openai.chat.completions.create({
     model: 'gpt-4o-mini',
@@ -92,12 +83,7 @@ Educational note in ${targetLanguage} (and translation to Mexican Spanish, Chine
     });
   }
 
-  return {
-    en: parsed.data.note,
-    es: parsed.data.translations.es,
-    zh: parsed.data.translations.zh,
-    ru: parsed.data.translations.ru
-  };
+  return parsed.data.note;
 }
 
 async function loadPackage(packagePath: string): Promise<Package> {
@@ -133,38 +119,29 @@ async function main(): Promise<void> {
   const mexExamPackagePath = path.join(process.cwd(), 'data', 'mexexam.json');
   const packageData = await loadPackage(mexExamPackagePath);
 
+  const totalQuestions = packageData.sections.flatMap(
+    (section) => section.questions
+  ).length;
+
   let i = 0;
-  let found = false;
 
   for (const section of packageData.sections) {
     for (const question of section.questions) {
       i++;
 
-      if (question.id === 'tno9tc') {
-        console.log('Found question', question.id);
-        console.log('Starting from here');
-        found = true;
-      }
+      const questionText = question.question.es;
+      const answerText = question.answer.es;
+      const optionsText = question.options
+        .map((option) => option.es)
+        .filter((x) => x !== undefined);
 
-      if (!found) {
+      if (!questionText || !answerText) {
+        console.log(`Skipping question ${question.id}  - missing content`);
         continue;
       }
 
-      for (const language of ['en'] as const) {
+      for (const language of ['en', 'ru', 'es', 'zh'] as const) {
         if (!needsNote(question, language)) {
-          continue;
-        }
-
-        const questionText = question.question[language];
-        const answerText = question.answer[language];
-        const optionsText = question.options
-          .map((option) => option[language])
-          .filter((x) => x !== undefined);
-
-        if (!questionText || !answerText) {
-          console.log(
-            `Skipping question ${question.id} for ${languageNames[language]} - missing content`
-          );
           continue;
         }
 
@@ -179,15 +156,13 @@ async function main(): Promise<void> {
             | 'Russian'
         );
 
-        question.note = {
-          en: note.en,
-          es: note.es,
-          zh: note.zh,
-          ru: note.ru
-        };
+        question.note[language] = note;
+
+        const progress = (i / totalQuestions) * 100;
+        console.log(`Progress: ${progress.toFixed(2)}%`);
 
         console.log(
-          `✓ Added "${note.en}" note to question "${question.question.en}"`
+          `✓ Added "${note}" note to question "${question.question[language]}"`
         );
       }
 
