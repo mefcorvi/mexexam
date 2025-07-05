@@ -107,7 +107,7 @@ function needsNote(question: Question, targetLanguage: Language): boolean {
   );
   const hasNote = Boolean(question.note[targetLanguage]);
 
-  return true || (hasContent && !hasNote);
+  return hasContent && !hasNote;
 }
 
 async function main(): Promise<void> {
