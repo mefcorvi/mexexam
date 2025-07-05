@@ -5,12 +5,19 @@ import {
   type Question,
   type QuestionOption
 } from './questions';
+import { useStatisticsStore } from './statistics';
 
 export const useFreeSessionStore = createSharedComposable(() => {
   const correctQuestions = ref(new Map<string, number>());
   const wrongQuestions = ref(new Map<string, number>());
 
   const { questions, loadSections } = useQuestionsStore();
+  const {
+    recordCorrectAnswer,
+    recordWrongAnswer,
+    recordSessionStart,
+    getQuestionStats
+  } = useStatisticsStore();
 
   const sectionId = ref<string | null>(null);
 
@@ -148,6 +155,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
       if ((wrongQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
         wrongQuestions.value.delete(currentQuestion.value.id);
       }
+
+      // Record in global statistics
+      recordCorrectAnswer(currentQuestion.value.id);
     } else {
       // increase the count of wrong answers for this question
       wrongQuestions.value.set(
@@ -165,6 +175,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
       if ((correctQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
         correctQuestions.value.delete(currentQuestion.value.id);
       }
+
+      // Record in global statistics
+      recordWrongAnswer(currentQuestion.value.id);
     }
   };
 
@@ -204,6 +217,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
     if ((wrongQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
       wrongQuestions.value.delete(currentQuestion.value.id);
     }
+
+    // Record in global statistics
+    recordCorrectAnswer(currentQuestion.value.id);
   };
 
   /**
@@ -230,6 +246,9 @@ export const useFreeSessionStore = createSharedComposable(() => {
     if ((correctQuestions.value.get(currentQuestion.value.id) ?? 0) <= 0) {
       correctQuestions.value.delete(currentQuestion.value.id);
     }
+
+    // Record in global statistics
+    recordWrongAnswer(currentQuestion.value.id);
   };
 
   watch(
@@ -269,9 +288,25 @@ export const useFreeSessionStore = createSharedComposable(() => {
     await loadSections();
     sectionId.value = null;
 
-    // clear all counters
+    // Restore statistics from global store
     correctQuestions.value.clear();
     wrongQuestions.value.clear();
+
+    // Load global statistics for all questions
+    for (const question of questions.values()) {
+      if (question.type === 'choice') {
+        const stats = getQuestionStats(question.id);
+        if (stats.correctCount > 0) {
+          correctQuestions.value.set(question.id, stats.correctCount);
+        }
+        if (stats.wrongCount > 0) {
+          wrongQuestions.value.set(question.id, stats.wrongCount);
+        }
+      }
+    }
+
+    // Record session start in global statistics
+    recordSessionStart();
   };
 
   /**
@@ -281,9 +316,25 @@ export const useFreeSessionStore = createSharedComposable(() => {
     await loadSections();
     sectionId.value = id;
 
-    // clear all counters
+    // Restore statistics from global store for this section
     correctQuestions.value.clear();
     wrongQuestions.value.clear();
+
+    // Load global statistics for questions in this section
+    for (const question of questions.values()) {
+      if (question.type === 'choice' && question.section.id === id) {
+        const stats = getQuestionStats(question.id);
+        if (stats.correctCount > 0) {
+          correctQuestions.value.set(question.id, stats.correctCount);
+        }
+        if (stats.wrongCount > 0) {
+          wrongQuestions.value.set(question.id, stats.wrongCount);
+        }
+      }
+    }
+
+    // Record session start in global statistics
+    recordSessionStart();
   };
 
   return {

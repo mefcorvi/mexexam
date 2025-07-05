@@ -5,6 +5,7 @@ import {
   type Question,
   type QuestionOption
 } from './questions';
+import { useStatisticsStore } from './statistics';
 
 export type ExamAnswer = {
   questionId: string;
@@ -25,6 +26,8 @@ const EXAM_DURATION_MS = EXAM_DURATION_MINUTES * 60 * 1000;
 
 export const useExamStore = createSharedComposable(() => {
   const { questions, loadSections } = useQuestionsStore();
+  const { recordCorrectAnswer, recordWrongAnswer, recordSessionStart } =
+    useStatisticsStore();
 
   const examQuestions = ref<Question[]>([]);
   const randomizedOptions = ref<Map<string, QuestionOption[]>>(new Map());
@@ -132,6 +135,9 @@ export const useExamStore = createSharedComposable(() => {
     isExamFinished.value = false;
     examResults.value = null;
     startTimer();
+
+    // Record session start in global statistics
+    recordSessionStart();
   };
 
   const selectAnswer = (questionId: string, optionId: number) => {
@@ -168,8 +174,12 @@ export const useExamStore = createSharedComposable(() => {
 
       if (isCorrect) {
         correctCount++;
+        // Record correct answer in global statistics
+        recordCorrectAnswer(question.id);
       } else {
         wrongCount++;
+        // Record wrong answer in global statistics
+        recordWrongAnswer(question.id);
       }
     }
 

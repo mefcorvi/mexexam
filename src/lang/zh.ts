@@ -44,6 +44,15 @@ export const data = {
   'Training mode description': '逐个练习问题。您可以在每个问题后看到正确答案。',
   'Flash cards mode description': '使用闪卡学习。点击在问题和答案之间翻转。',
   'Exam mode description': '参加限时多项选择题考试。您有10分钟完成。',
+  'Reset Statistics': '重置统计',
+  'Are you sure you want to reset all statistics? This action cannot be undone.':
+    '您确定要重置所有统计吗？此操作无法撤销。',
+  'Global Statistics': '统计',
+  'Total Questions Answered': '已回答问题总数',
+  'Average Accuracy': '平均准确率',
+  'Easy Questions': '简单问题',
+  'Medium Questions': '中等问题',
+  'Hard Questions': '困难问题',
   Description:
     'MexExam 是一个用于准备墨西哥入籍考试的应用。它包含考试中会出现的问题，并允许您在考试模式下练习。'
 };

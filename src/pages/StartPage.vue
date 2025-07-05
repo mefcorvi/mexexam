@@ -8,6 +8,7 @@ import { useLocalization } from '@/stores/localization';
 import { usePreferencesStore, type StudyMode } from '@/stores/preferences';
 import { useQuestionsStore } from '@/stores/questions';
 import { useTranslations } from '@/stores/translations';
+import { useStatisticsStore } from '@/stores/statistics';
 import { RouteName } from '@/router/names';
 
 const $router = useRouter();
@@ -15,6 +16,7 @@ const { t, locale } = useLocalization();
 const { selectedMode, selectedSectionId, showNotes } = usePreferencesStore();
 const { sections, loadSections } = useQuestionsStore();
 const translations = useTranslations();
+const { getGlobalStats, resetStatistics } = useStatisticsStore();
 
 const modeScrollRef = ref<HTMLElement>();
 
@@ -111,6 +113,12 @@ const startSession = () => {
     }
   }
 };
+
+const handleResetStatistics = () => {
+  if (confirm(t('Are you sure you want to reset all statistics? This action cannot be undone.'))) {
+    resetStatistics();
+  }
+};
 </script>
 
 <template>
@@ -152,6 +160,36 @@ const startSession = () => {
       </div>
     </div>
 
+    <!-- Statistics Section -->
+    <div :class="$style.section" v-if="getGlobalStats.totalQuestions > 0">
+      <h3 :class="$style.sectionTitle">{{ t('Global Statistics') }}</h3>
+      <div :class="$style.statsGrid">
+        <div :class="$style.statItem">
+          <div :class="$style.statValue">{{ getGlobalStats.totalQuestions }}</div>
+          <div :class="$style.statLabel">{{ t('Total Questions Answered') }}</div>
+        </div>
+        <div :class="$style.statItem">
+          <div :class="$style.statValue">{{ Math.round(getGlobalStats.averageAccuracy) }}%</div>
+          <div :class="$style.statLabel">{{ t('Average Accuracy') }}</div>
+        </div>
+        <div :class="$style.statItem">
+          <div :class="$style.statValue">{{ getGlobalStats.easyQuestions }}</div>
+          <div :class="$style.statLabel">{{ t('Easy Questions') }}</div>
+        </div>
+        <div :class="$style.statItem">
+          <div :class="$style.statValue">{{ getGlobalStats.mediumQuestions }}</div>
+          <div :class="$style.statLabel">{{ t('Medium Questions') }}</div>
+        </div>
+        <div :class="$style.statItem">
+          <div :class="$style.statValue">{{ getGlobalStats.hardQuestions }}</div>
+          <div :class="$style.statLabel">{{ t('Hard Questions') }}</div>
+        </div>
+      </div>
+      <GeneralButton @click="handleResetStatistics" :class="$style.resetButton">
+        {{ t('Reset Statistics') }}
+      </GeneralButton>
+    </div>
+    <div :style="{ height: '52px' }">&nbsp;</div>
     <!-- Start Button -->
     <div :class="$style.startSection">
       <GeneralButton @click="startSession" :class="$style.startButton">
@@ -241,8 +279,6 @@ const startSession = () => {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 52px;
-
   gap: var(--gap-s);
 }
 
@@ -319,5 +355,56 @@ const startSession = () => {
   background: var(--negative-color-alpha-5);
   border-radius: var(--border-radius);
   gap: var(--gap-s);
+}
+
+.statsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--gap-s);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: var(--gap-s);
+
+  text-align: center;
+
+  background: var(--main-color-10);
+  border: 1px solid var(--main-color-20);
+  border-radius: var(--border-radius);
+}
+
+.statValue {
+  margin-bottom: var(--gap-xs);
+
+  font-size: var(--font-size-3);
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.statLabel {
+  font-size: var(--font-size-0);
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.resetButton {
+  width: fit-content;
+
+  font-size: var(--font-size-a1);
+  color: var(--error-text-color);
+
+  background: var(--error-bg-color);
+  border: 1px solid var(--error-color);
+
+  &:hover:not(:disabled) {
+    color: var(--error-text-color);
+
+    background: var(--error-color);
+  }
 }
 </style>

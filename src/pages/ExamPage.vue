@@ -311,7 +311,6 @@ const isQuestionUnanswered = (questionId: string) => {
   flex-direction: column;
 
   margin-top: var(--gap-l);
-  padding: var(--gap);
 }
 
 .questions-list {
@@ -517,7 +516,6 @@ input[type="radio"] {
   flex-direction: column;
 
   margin-top: var(--gap-l);
-  padding: var(--gap);
 }
 
 .results-header {

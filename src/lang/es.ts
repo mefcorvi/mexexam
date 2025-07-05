@@ -47,6 +47,15 @@ export const data = {
     'Estudia con tarjetas de memoria. Toca para cambiar entre pregunta y respuesta.',
   'Exam mode description':
     'Toma un examen cronometrado con preguntas de opción múltiple. Tienes 10 minutos para completarlo.',
+  'Reset Statistics': 'Restablecer Estadísticas',
+  'Are you sure you want to reset all statistics? This action cannot be undone.':
+    '¿Estás seguro de que quieres restablecer todas las estadísticas? Esta acción no se puede deshacer.',
+  'Global Statistics': 'Estadísticas',
+  'Total Questions Answered': 'Total de Preguntas Respondidas',
+  'Average Accuracy': 'Precisión Promedio',
+  'Easy Questions': 'Preguntas Fáciles',
+  'Medium Questions': 'Preguntas Medianas',
+  'Hard Questions': 'Preguntas Difíciles',
   Description:
     'MexExam es una aplicación para prepararse para el examen de naturalización en México. Contiene preguntas sobre temas que estarán en el examen y te permite practicar en modo examen.'
 };
