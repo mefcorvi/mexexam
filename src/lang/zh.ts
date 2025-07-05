@@ -41,14 +41,17 @@ export const data = {
   'Flash Cards': '闪卡',
   Exam: '考试',
   'All questions': '所有问题',
-  'Training mode description': '逐个练习问题。您可以在每个问题后看到正确答案。',
-  'Flash cards mode description': '使用闪卡学习。点击在问题和答案之间翻转。',
-  'Exam mode description': '参加限时多项选择题考试。您有10分钟完成。',
+  'Training mode description':
+    '在训练模式中，您可以回答多个选择题。您可以在每个问题后看到正确答案，并继续下一个问题。',
+  'Flash cards mode description':
+    '在闪卡模式中，您可以看到问题，但答案只有在点击后才会显示。这种格式有助于您更好地记忆和训练您的记忆力。',
+  'Exam mode description':
+    '在考试模式中，您会得到10个问题和10分钟的时间来回答。答案会在最后检查，就像在真正的考试中一样。',
   'Reset Statistics': '重置统计',
   'Are you sure you want to reset all statistics? This action cannot be undone.':
     '您确定要重置所有统计吗？此操作无法撤销。',
   'Global Statistics': '统计',
-  'Total Questions Answered': '已回答问题总数',
+  'Total Questions Answered': '已回答问题',
   'Average Accuracy': '平均准确率',
   'Easy Questions': '简单问题',
   'Medium Questions': '中等问题',

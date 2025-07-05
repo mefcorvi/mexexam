@@ -383,7 +383,7 @@ const handleResetStatistics = () => {
 
   font-size: var(--font-size-3);
   font-weight: 600;
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 .statLabel {

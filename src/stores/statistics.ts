@@ -1,5 +1,5 @@
 import { createSharedComposable } from '@vueuse/core';
-import { computed, ref, watch } from 'vue';
+import { computed } from 'vue';
 import { useStorage } from '@vueuse/core';
 
 export interface QuestionStatistics {

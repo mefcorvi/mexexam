@@ -42,16 +42,16 @@ export const data = {
   Exam: 'Examen',
   'All questions': 'Todas las preguntas',
   'Training mode description':
-    'Practica con preguntas una por una. Puedes ver la respuesta correcta después de cada pregunta.',
+    'En este modo respondes preguntas con múltiples opciones. Puedes ver la respuesta correcta después de cada pregunta y pasar a la siguiente.',
   'Flash cards mode description':
-    'Estudia con tarjetas de memoria. Toca para cambiar entre pregunta y respuesta.',
+    'En este modo ves la pregunta y la respuesta se revela después de tocar. Este formato te ayuda a memorizar y entrenar tu memoria.',
   'Exam mode description':
-    'Toma un examen cronometrado con preguntas de opción múltiple. Tienes 10 minutos para completarlo.',
+    'En este modo obtienes 10 preguntas y 10 minutos para responderlas. Las respuestas se revisan al final, como en el examen real.',
   'Reset Statistics': 'Restablecer Estadísticas',
   'Are you sure you want to reset all statistics? This action cannot be undone.':
     '¿Estás seguro de que quieres restablecer todas las estadísticas? Esta acción no se puede deshacer.',
   'Global Statistics': 'Estadísticas',
-  'Total Questions Answered': 'Total de Preguntas Respondidas',
+  'Total Questions Answered': 'Preguntas respondidas',
   'Average Accuracy': 'Precisión Promedio',
   'Easy Questions': 'Preguntas Fáciles',
   'Medium Questions': 'Preguntas Medianas',

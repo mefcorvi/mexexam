@@ -42,16 +42,16 @@ export const data = {
   Exam: 'Exam',
   'All questions': 'All questions',
   'Training mode description':
-    'Practice with questions one by one. You can see the correct answer after each question.',
+    'In this mode you answer questions with multiple choice. You can see the correct answer after each question and move to the next one.',
   'Flash cards mode description':
-    'Study with flash cards. Tap to flip between question and answer.',
+    'In this mode you see the question and the answer is revealed after tapping. This format helps you better memorize and train your memory.',
   'Exam mode description':
-    'Take a timed exam with multiple choice questions. You have 10 minutes to complete it.',
+    'In this mode you get 10 questions and 10 minutes to answer them. The answers are checked at the end, just like on the real exam.',
   'Reset Statistics': 'Reset Statistics',
   'Are you sure you want to reset all statistics? This action cannot be undone.':
     'Are you sure you want to reset all statistics? This action cannot be undone.',
   'Global Statistics': 'Statistics',
-  'Total Questions Answered': 'Total Questions Answered',
+  'Total Questions Answered': 'Questions answered',
   'Average Accuracy': 'Average Accuracy',
   'Easy Questions': 'Easy Questions',
   'Medium Questions': 'Medium Questions',
