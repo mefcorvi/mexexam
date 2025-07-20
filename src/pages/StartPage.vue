@@ -5,7 +5,7 @@ import GeneralButton from '@/components/GeneralButton.vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import { useRouter } from 'vue-router';
 import { useLocalization } from '@/stores/localization';
-import { usePreferencesStore, type StudyMode } from '@/stores/preferences';
+import { usePreferencesStore } from '@/stores/preferences';
 import { useQuestionsStore } from '@/stores/questions';
 import { useTranslations } from '@/stores/translations';
 import { useStatisticsStore } from '@/stores/statistics';
@@ -52,7 +52,7 @@ const orderedSections = computed(() => {
   })).sort((a, b) => a.title.localeCompare(b.title));
 });
 
-const modes: { value: StudyMode; label: string; description: string }[] = [
+const modes = computed(() => [
   {
     value: 'training',
     label: t('Training'),
@@ -68,10 +68,10 @@ const modes: { value: StudyMode; label: string; description: string }[] = [
     label: t('Exam'),
     description: t('Exam mode description')
   }
-];
+] as const);
 
 const currentModeDescription = computed(() => {
-  const mode = modes.find(m => m.value === selectedMode.value);
+  const mode = modes.value.find(m => m.value === selectedMode.value);
   return mode?.description || '';
 });
 
