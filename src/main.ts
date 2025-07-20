@@ -31,7 +31,8 @@ if (!import.meta.env.DEV) {
       () => import('./pages/StartPage.vue'),
       () => import('./pages/ExamPage.vue'),
       () => import('./pages/QuestionPage.vue'),
-      () => import('./pages/IndexPage.vue')
+      () => import('./pages/IndexPage.vue'),
+      () => import('./pages/AdminPage.vue')
     ];
 
     try {

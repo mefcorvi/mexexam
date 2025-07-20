@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/admin',
+      name: RouteName.Admin,
+      component: () => import('../pages/AdminPage.vue')
+    },
+    {
       path: '/settings',
       name: RouteName.Settings,
       component: () => import('../pages/OptionsPage.vue')

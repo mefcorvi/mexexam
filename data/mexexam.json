@@ -96,7 +96,7 @@
           "note": {
             "es": "La Calzada de los Muertos es famosa por su alineación con el sol y conecta la Pirámide del Sol con la Pirámide de la Luna, simbolizando el camino entre la vida y la muerte en la cosmovisión teotihuacana.",
             "en": "The Calzada de los Muertos, or Avenue of the Dead, is a central feature of Teotihuacán, which was one of the largest cities in the ancient world, known for its massive pyramids and complex urban layout, reflecting the advanced engineering and cultural achievements of its inhabitants.",
-            "ru": "Калсада мертвых в Теотихуакане была центральной улицей, вдоль которой располагались важные храмы и пирамиды, включая Пирамиду Солнца и Пирамиду Луны, что делает её важным культурным и религиозным центром древней Мексики.",
+            "ru": "Дорога мёртвых в Теотиуакане была центральной улицей, вдоль которой располагались важные храмы и пирамиды, включая Пирамиду Солнца и Пирамиду Луны.",
             "zh": "死者之路（Calzada de los Muertos）是特奥蒂瓦坎（Teotihuacán）最重要的街道之一，连接着太阳金字塔和月亮金字塔，象征着古代墨西哥人对生与死的深刻理解。"
           }
         },
@@ -255,7 +255,7 @@
           "question": {
             "es": "Cultura que se estableció en la Ciudad de Palenque",
             "en": "Culture that was established in the City of Palenque",
-            "ru": "Культура, поселившаяся в городе Паленке",
+            "ru": "Культура, зародившаяся в городе Паленке",
             "zh": "在帕伦克市建立的文化"
           },
           "answer": {
@@ -335,7 +335,7 @@
           "note": {
             "es": "Los zapotecas construyeron Monte Albán, uno de los primeros centros urbanos de Mesoamérica, que se considera un símbolo de su avanzada arquitectura y organización social.",
             "en": "The Zapotec civilization is known for its impressive archaeological site, Monte Albán, which served as a major political and cultural center and is one of the earliest cities in Mesoamerica, showcasing advanced urban planning and monumental architecture.",
-            "ru": "Запотекская цивилизация известна своими уникальными архитектурными достижениями, такими как обсерватория в Монте-Альбан, которая была одной из первых в Мексике.",
+            "ru": "Сапотекская цивилизация известна своими уникальными архитектурными достижениями, такими Монте-Альбан, который был спроектирован с учётом знаний сапотеков об астрономии.",
             "zh": "扎波特文明以其精美的建筑和独特的文字系统而闻名，尤其是在蒙特阿尔班遗址，那里有许多保存完好的石碑和墓葬，展示了他们的文化成就。"
           }
         },
@@ -377,7 +377,7 @@
           "note": {
             "es": "Teotihuacán, conocida como la \"Ciudad de los Dioses\", fue una de las civilizaciones más influyentes de Mesoamérica, y su arquitectura monumental, como la Pirámide del Sol, sigue siendo un símbolo de la grandeza prehispánica.",
             "en": "Teotihuacán's decline around the 7th century AD remains a mystery, but its architectural innovations, like the Pyramid of the Sun, influenced later civilizations, including the Aztecs, who revered it as a sacred site.",
-            "ru": "Теотихуакан был одним из крупнейших городов древней Мезоамерики, и его население достигало до 200 000 человек, что делает его одним из самых густонаселенных городов своего времени.",
+            "ru": "Теотиуакан был одним из крупнейших городов древней Мезоамерики, и его население достигало до 200 000 человек, что делает его одним из самых густонаселенных городов своего времени.",
             "zh": "特奥蒂瓦坎是古代墨西哥的文化中心，曾是美洲最大的城市之一，吸引了来自不同地区的民族和商人，促进了多元文化的交流。"
           }
         },
@@ -471,7 +471,7 @@
           "question": {
             "es": "La base alimenticia de los pueblos mesoamericanos fue",
             "en": "The staple food of Mesoamerican peoples was",
-            "ru": "Основой питания мезоамериканских народов был",
+            "ru": "Основа питания мезоамериканских народов",
             "zh": "中美洲人民的主要食物是"
           },
           "answer": {
@@ -503,7 +503,7 @@
           "note": {
             "es": "El maíz no solo era un alimento esencial, sino que también tenía un valor sagrado en las culturas mesoamericanas, simbolizando la vida y la fertilidad. De hecho, la palabra \"maíz\" proviene del taíno \"mahiz\", y su cultivo se remonta a más de 9,000 años.",
             "en": "Maize was not only a staple food but also held significant cultural importance for Mesoamerican civilizations, symbolizing life and fertility, and was often used in religious rituals and ceremonies.",
-            "ru": "Маис был не только основным продуктом питания, но и священным растением для мезоамериканских цивилизаций, таких как ацтеки и майя, которые считали его даром богов.",
+            "ru": "Кукуруза была не только основным продуктом питания, но и священным растением для мезоамериканских цивилизаций, таких как ацтеки и майя, которые считали её даром богов.",
             "zh": "玉米不仅是墨西哥的主食，还被视为神圣的植物，古代玛雅和阿兹特克文明中，玉米象征着生命和丰饶。"
           }
         },
@@ -755,7 +755,7 @@
           "note": {
             "es": "Los Purépechas, conocidos por su resistencia ante los conquistadores, desarrollaron una de las civilizaciones más avanzadas de Mesoamérica y su lengua, el purépecha, aún se habla hoy en día en Michoacán.",
             "en": "The Purépechas were known for their advanced metallurgy and created intricate copper and bronze tools, setting them apart from other indigenous groups in Mexico.",
-            "ru": "Пурépechas, также известные как тараскос, были известны своим мастерством в производстве керамики и металлургии, что сделало их одной из самых развитых культур Мексики до испанского завоевания.",
+            "ru": "Пурепеча, также известные как тараскос, были известны своим мастерством в производстве керамики и металлургии.",
             "zh": "普雷佩查人以其精湛的工艺和独特的青铜器闻名，尤其是在古代的米却肯地区，他们的文化影响深远，至今仍可在当地的节日和传统中看到。"
           }
         },
@@ -1007,7 +1007,7 @@
           "note": {
             "es": "El Templo Mayor fue el corazón de la antigua ciudad azteca y estaba dedicado a los dioses Huitzilopochtli y Tlaloc, simbolizando la dualidad de la guerra y la agricultura en la cultura mexica.",
             "en": "The Templo Mayor was not only the main temple of the Aztec capital but also a significant site for human sacrifices, which were believed to nourish the gods and ensure the continuation of the world.",
-            "ru": "Темпло Майор был не только главным храмом ацтеков, но и символом их мощи; его разрушение испанцами в 1521 году ознаменовало конец ацтекской цивилизации и начало колониального периода в Мексике.",
+            "ru": "Темпло Майор, или пирамида Уицилопочтли, был не только главным храмом ацтеков, но и символом их мощи; его разрушение испанцами в 1521 году ознаменовало конец ацтекской цивилизации и начало колониального периода в Мексике.",
             "zh": "大约在14世纪，特诺奇提特兰成为了阿兹特克帝国的首都，今天的墨西哥城正是建立在这个古代城市的遗址上。"
           }
         },
@@ -1601,7 +1601,7 @@
           "note": {
             "es": "El ajolote, además de ser un símbolo de la cultura mexica, es conocido por su capacidad de regenerar extremidades, lo que lo convierte en un fascinante objeto de estudio en la biología y la medicina regenerativa.",
             "en": "The ajolote, or axolotl, is not only a symbol of Mexican biodiversity but also a key figure in Aztec mythology, believed to be a manifestation of Xólotl, the god of lightning and death, who transformed into this amphibian to escape capture.",
-            "ru": "Ахолоте, известный как \"мексиканская саламандра\", был священным животным для ацтеков и символизировал возрождение и трансформацию благодаря своей способности к регенерации.",
+            "ru": "Аксолотль, известный как \"мексиканская саламандра\", был священным животным для ацтеков и символизировал возрождение и трансформацию благодаря своей способности к регенерации.",
             "zh": "在阿兹特克文化中，阿霍洛特（Ajolote）被视为重生和复活的象征，因其独特的再生能力而受到崇敬。"
           }
         },
@@ -2800,7 +2800,7 @@
           "note": {
             "es": "El Calmecac no solo enseñaba conocimientos religiosos y filosóficos, sino que también formaba a los futuros líderes y sacerdotes, reflejando la importancia de la educación en la estructura social mexica.",
             "en": "The Calmecac was not only a school for the noble class but also a center for training future priests, emphasizing the importance of religion in Mexica society, while the Telpochcalli focused on practical skills and military training, reflecting the community's need for warriors.",
-            "ru": "В Calmecac обучали не только военному делу, но и философии, а также искусствам, что подчеркивало важность образования для элиты ацтеков.",
+            "ru": "В Кальмекак обучали не только военному делу, но и философии, а также искусствам, что подчеркивало важность образования для элиты ацтеков.",
             "zh": "在墨西哥古代，Calmecac和Telpochcalli不仅是教育机构，也是文化传承的中心，培养了许多杰出的战士和祭司，体现了阿兹特克文明对教育的重视。"
           }
         },
@@ -3142,7 +3142,7 @@
           "note": {
             "es": "Huitzilopochtli, además de ser el dios de la guerra, era considerado el protector de Tenochtitlán y se le asociaba con el colibrí, símbolo de la fuerza y el vigor en la cultura Mexica.",
             "en": "Huitzilopochtli, the Mexica god of war, was also associated with the sun and was believed to lead the Mexica people to their promised land, Tenochtitlan, symbolizing the importance of both warfare and survival in their culture.",
-            "ru": "Хуицилопочтли, бог войны, также был покровителем города Теночтитлан и считался основным божеством для древних мексиканцев, что отражает важность войны и жертвоприношений в их культуре.",
+            "ru": "Уицилопочтли, бог войны, также был покровителем города Теночтитлан и считался основным божеством для древних мексиканцев, что отражает важность войны и жертвоприношений в их культуре.",
             "zh": "墨西哥的战争之神惠兹洛波奇特利不仅是战斗的象征，还与太阳的升起密切相关，古代墨西哥人相信他的胜利能确保太阳每天升起。"
           }
         },
@@ -12144,7 +12144,7 @@
           "note": {
             "es": "La Ciudad de México es la capital del país y, además, es una de las ciudades más antiguas de América, fundada en 1325 como Tenochtitlán por los mexicas.",
             "en": "In 2016, the change from Distrito Federal to Ciudad de México symbolized a new era of autonomy for the capital, reflecting its rich history as the heart of the Aztec Empire, Tenochtitlan, which was founded in 1325.",
-            "ru": "В 2016 году, когда название изменилось, Мехико также отметил 500-летие со дня падения Теночтитлана, что подчеркивает важность исторических событий для идентичности города.",
+            "ru": "Федеральный округ Мексики был создан 18 ноября 1824 года, после падения империи Агустина де Итурбиде, для размещения исполнительной, законодательной и судебной власти.\n\nИзменение названия в 2016 году имеет первостепенное значение, поскольку с тех пор Мехико стал 32-м образованием Мексиканских Соединенных Штатов и приобрел новые политические права, такие как собственная Конституция.",
             "zh": "2016年，墨西哥城的名称变更不仅是行政上的改变，还象征着这座城市在文化和历史上的重要性，成为了拉丁美洲最大的城市之一。"
           }
         },
@@ -12690,7 +12690,7 @@
           "note": {
             "es": "El apagón analógico marcó el fin de la transmisión de televisión analógica en México, un cambio que permitió el acceso a la televisión digital, mejorando la calidad de imagen y sonido; este evento fue parte de un proceso global de modernización de las telecomunicaciones.",
             "en": "The analog blackout marked Mexico's transition to digital television, which allowed for better picture quality and more channels; interestingly, this shift was part of a global trend, as many countries adopted digital broadcasting around the same time.",
-            "ru": "В 2015 году, когда в Мексике произошёл аналоговый отключение, страна также активно развивала цифровые технологии, что стало важным шагом к улучшению доступа к информации и образованию для населения.",
+            "ru": "Аналоговый переход ознаменовал переход к цифровому телевидению. Это было частью глобального тренда, когда многие страны также отказались от аналогового вещания в этот же период времени.",
             "zh": "2015年12月31日的模拟信号关闭标志着墨西哥电视广播的重大转型，随后数字电视的普及使得更多家庭能够享受到更清晰的画质和更多的频道选择。"
           }
         },
