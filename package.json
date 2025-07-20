@@ -10,7 +10,7 @@
     "add-translations": "node scripts/add-translations.ts",
     "add-notes": "node src/scripts/add-notes.ts",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
+    "type-check": "npm run lint && vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "generate-sitemap": "node scripts/generate-sitemap.ts",

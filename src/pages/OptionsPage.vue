@@ -4,12 +4,14 @@ import ToggleSwitch from '@/components/ToggleSwitch.vue';
 import CustomSelect from '@/components/CustomSelect.vue';
 import { useLocalization } from '@/stores/localization';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useLanguageSwitcher } from '@/composables/useLanguageSwitcher';
 import { useDark } from '@vueuse/core';
 import { watch } from 'vue';
 
 const isDarkTheme = useDark();
 const { t, locale, saveLanguage } = useLocalization();
 const { showNotes } = usePreferencesStore();
+const { switchLanguage } = useLanguageSwitcher();
 
 const uiLanguages = [
   { value: 'en', label: 'English' },
@@ -21,6 +23,7 @@ const uiLanguages = [
 // Save language preference when it changes
 watch(locale, (newLocale) => {
   saveLanguage(newLocale);
+  switchLanguage(newLocale);
 });
 </script>
 <template>

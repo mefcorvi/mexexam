@@ -3,15 +3,15 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import ToggleSwitch from '@/components/ToggleSwitch.vue';
-import { useRouter } from 'vue-router';
 import { useLocalization } from '@/stores/localization';
 import { usePreferencesStore } from '@/stores/preferences';
 import { useQuestionsStore } from '@/stores/questions';
 import { useTranslations } from '@/stores/translations';
 import { useStatisticsStore } from '@/stores/statistics';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 import { RouteName } from '@/router/names';
 
-const $router = useRouter();
+const { pushLocale } = useLocaleRouter();
 const { t, locale } = useLocalization();
 const { selectedMode, selectedSectionId, showNotes } = usePreferencesStore();
 const { sections, loadSections } = useQuestionsStore();
@@ -79,37 +79,20 @@ const startSession = () => {
   if (!selectedSectionId.value) {
     // Start with all questions
     if (selectedMode.value === 'training') {
-      $router.push({
-        name: RouteName.AllQuestions,
-        params: { id: 'init' }
-      });
+      pushLocale(RouteName.AllQuestions, { id: 'init' });
     } else if (selectedMode.value === 'flashcards') {
-      $router.push({
-        name: RouteName.FlashCards,
-        params: { sectionId: 'all', id: 'init' }
-      });
+      pushLocale(RouteName.FlashCards, { sectionId: 'all', id: 'init' });
     } else if (selectedMode.value === 'exam') {
-      $router.push({
-        name: RouteName.Exam
-      });
+      pushLocale(RouteName.Exam);
     }
   } else {
     // Start with selected section
     if (selectedMode.value === 'training') {
-      $router.push({
-        name: RouteName.SectionQuestions,
-        params: { sectionId: selectedSectionId.value, id: 'init' }
-      });
+      pushLocale(RouteName.SectionQuestions, { sectionId: selectedSectionId.value, id: 'init' });
     } else if (selectedMode.value === 'flashcards') {
-      $router.push({
-        name: RouteName.FlashCards,
-        params: { sectionId: selectedSectionId.value, id: 'init' }
-      });
+      pushLocale(RouteName.FlashCards, { sectionId: selectedSectionId.value, id: 'init' });
     } else if (selectedMode.value === 'exam') {
-      $router.push({
-        name: RouteName.SectionExam,
-        params: { sectionId: selectedSectionId.value }
-      });
+      pushLocale(RouteName.SectionExam, { sectionId: selectedSectionId.value });
     }
   }
 };

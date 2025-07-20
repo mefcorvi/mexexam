@@ -5,16 +5,15 @@ import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import { mdiCog, mdiRotate3d } from '@mdi/js';
 import { useRouteParams } from '@vueuse/router';
-import { useRouter } from 'vue-router';
 import { useFreeSessionStore } from '@/stores/free-session';
 import { useTranslations } from '@/stores/translations';
 import { RouteName } from '@/router/names';
 import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 
 const $style = useCssModule();
-const $router = useRouter();
 const translations = useTranslations();
 const { showNotes } = usePreferencesStore();
 
@@ -29,6 +28,8 @@ const {
   markQuestionWrong,
   stat,
 } = useFreeSessionStore();
+
+const { pushLocale, replaceLocale } = useLocaleRouter();
 
 const questionParamId = useRouteParams<string>('id', '');
 const sectionParamId = useRouteParams<string>('sectionId', '');
@@ -48,18 +49,14 @@ const onQuestionIdChanged = () => {
     const questionId = getRandomQuestionId();
 
     if (!questionId) {
-      $router.replace({
-        name: RouteName.Home,
-      });
+      pushLocale(RouteName.Home);
       return;
     }
 
-    $router.replace({
-      params: {
-        id: questionId,
-        sectionId: sectionParamId.value,
-      }
-    })
+    replaceLocale(RouteName.FlashCards, {
+      sectionId: sectionParamId.value || 'all',
+      id: questionId,
+    });
   }
 }
 
@@ -110,11 +107,9 @@ const markAsRemembered = async () => {
   isFlipped.value = false;
 
   setTimeout(() => {
-    $router.replace({
-      params: {
-        id: getRandomQuestionId(),
-        sectionId: sectionParamId.value,
-      },
+    replaceLocale(RouteName.FlashCards, {
+      sectionId: sectionParamId.value || 'all',
+      id: getRandomQuestionId(),
     });
   }, 200);
 }
@@ -127,20 +122,16 @@ const markAsNotRemembered = async () => {
   isFlipped.value = false;
 
   setTimeout(() => {
-    $router.replace({
-      params: {
-        id: getRandomQuestionId(),
-        sectionId: sectionParamId.value,
-      },
+    replaceLocale(RouteName.FlashCards, {
+      sectionId: sectionParamId.value || 'all',
+      id: getRandomQuestionId(),
     });
   }, 200);
 }
 
 
 const openSettings = () => {
-  $router.push({
-    name: RouteName.Settings
-  })
+  pushLocale(RouteName.Settings);
 };
 
 const { t, locale, getLanguageName } = useLocalization();

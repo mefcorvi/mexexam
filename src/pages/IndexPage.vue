@@ -3,47 +3,30 @@ import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import GeneralMenu from '@/components/GeneralMenu.vue';
 import LogoBig from '@/components/LogoBig.vue';
-import { useRouter } from 'vue-router';
 import { useLocalization } from '@/stores/localization';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
+import { useLanguageSwitcher } from '@/composables/useLanguageSwitcher';
 import { RouteName } from '@/router/names';
 
-const $router = useRouter();
-
-const start = () => {
-  $router.push({
-    name: RouteName.Start
-  })
-};
-
-const openSettings = () => {
-  $router.push({
-    name: RouteName.Settings
-  })
-};
-
-const { t, locale, saveLanguage, languages } = useLocalization();
-
-const selectLanguage = (langCode: string) => {
-  saveLanguage(langCode as 'en' | 'es' | 'ru');
-  locale.value = langCode as 'en' | 'es' | 'ru';
-};
+const { getLocalePath } = useLocaleRouter();
+const { t } = useLocalization();
+const { languageLinks } = useLanguageSwitcher();
 </script>
 <template>
   <GeneralPage :class="$style.page" hideTopBar>
     <div :class="$style.languageSelector">
       <div :class="$style.languageScroll">
-        <button v-for="lang in languages" :key="lang.code"
-          :class="[$style.languageOption, { [$style.active]: locale === lang.code }]"
-          @click="selectLanguage(lang.code)">
+        <a v-for="lang in languageLinks" :key="lang.code" :href="lang.href"
+          :class="[$style.languageOption, { [$style.active]: lang.isActive }]">
           <span :class="$style.languageName">{{ lang.name }}</span>
-        </button>
+        </a>
       </div>
     </div>
     <LogoBig />
     <div :class="$style.description" v-html="t('Description')" />
     <GeneralMenu>
-      <GeneralButton @click="start">{{ t('Start') }}</GeneralButton>
-      <GeneralButton @click="openSettings">{{ t('Settings') }}</GeneralButton>
+      <GeneralButton :href="getLocalePath(RouteName.Start)">{{ t('Start') }}</GeneralButton>
+      <GeneralButton :href="getLocalePath(RouteName.Settings)">{{ t('Settings') }}</GeneralButton>
     </GeneralMenu>
   </GeneralPage>
 </template>
@@ -85,6 +68,7 @@ const selectLanguage = (langCode: string) => {
       padding: var(--gap-s) var(--gap-s);
 
       color: var(--text-color);
+      text-decoration: none;
       white-space: nowrap;
 
       background: var(--bg-color);
@@ -94,12 +78,16 @@ const selectLanguage = (langCode: string) => {
       transition: all 0.2s ease;
 
       .onHover({
+        text-decoration: none;
+
         background: var(--secondary-color-10);
         border-color: var(--secondary-color);
       });
 
     &.active {
       opacity: 0.5;
+
+      pointer-events: none;
     }
 
     .languageName {

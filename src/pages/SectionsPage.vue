@@ -3,9 +3,10 @@ import { computed } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import { useLocalization } from '@/stores/localization';
 import { useQuestionsStore } from '@/stores/questions';
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { RouteName } from '@/router/names';
 import { useTranslations } from '@/stores/translations';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 
 const {
   sections,
@@ -15,10 +16,9 @@ const {
 const translations = useTranslations();
 const { locale } = useLocalization();
 const $route = useRoute();
+const { pushLocale } = useLocaleRouter();
 
 loadSections();
-
-const $router = useRouter();
 
 const isExamMode = computed(() => {
   return $route.name === RouteName.ChooseSection && $route.query.mode === 'exam';
@@ -40,28 +40,11 @@ const pageTitle = computed(() => {
 
 const startSection = (sectionId: string) => {
   if (isExamMode.value) {
-    $router.push({
-      name: RouteName.SectionExam,
-      params: {
-        sectionId
-      }
-    });
+    pushLocale(RouteName.SectionExam, { sectionId });
   } else if (isFlashCardsMode.value) {
-    $router.push({
-      name: RouteName.FlashCards,
-      params: {
-        sectionId,
-        id: 'init'
-      }
-    });
+    pushLocale(RouteName.FlashCards, { sectionId, id: 'init' });
   } else {
-    $router.push({
-      name: RouteName.SectionQuestions,
-      params: {
-        sectionId,
-        id: 'init'
-      }
-    });
+    pushLocale(RouteName.SectionQuestions, { sectionId, id: 'init' });
   }
 };
 

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed, onUnmounted, ref, onActivated } from 'vue';
-import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router';
+import { useRoute, onBeforeRouteLeave } from 'vue-router';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import { useExamStore } from '@/stores/exam';
 import { useLocalization } from '@/stores/localization';
 import { RouteName } from '@/router/names';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 
-const $router = useRouter();
 const $route = useRoute();
 const { t } = useLocalization();
 
@@ -28,6 +28,8 @@ const {
   isAllQuestionsAnswered,
   stopTimer
 } = useExamStore();
+
+const { pushLocale } = useLocaleRouter();
 
 const sectionId = computed(() => $route.params.sectionId as string | undefined);
 const questionRefs = ref<Map<string, HTMLElement>>(new Map());
@@ -98,7 +100,7 @@ const onStartNewExam = async () => {
 
 const onGoHome = () => {
   resetExam();
-  $router.push({ name: RouteName.Home });
+  pushLocale(RouteName.Home);
 };
 
 const getQuestionClass = (questionId: string) => {

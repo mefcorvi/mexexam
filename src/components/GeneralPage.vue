@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 import { mdiArrowLeft } from '@mdi/js';
 import SvgIcon from './SvgIcon.vue';
 import { RouteName } from '@/router/names';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 
 defineSlots<{
   topBar: {};
@@ -12,8 +13,7 @@ defineSlots<{
 
 const {
   hideTopBar = false,
-  title = '',
-  reserveSpace = true
+  title = ''
 } = defineProps<{
   hideTopBar?: boolean;
   title?: string;
@@ -21,11 +21,10 @@ const {
 }>();
 
 const $router = useRouter();
+const { pushLocale } = useLocaleRouter();
 
 const openHome = () => {
-  $router.push({
-    name: RouteName.Home
-  });
+  pushLocale(RouteName.Home);
 };
 
 const hasBack = ref(false);

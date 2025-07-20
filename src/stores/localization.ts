@@ -1,6 +1,6 @@
 import type { Locale, LocalizationData, LocalizationKey } from '@/lang';
 import { createSharedComposable } from '@vueuse/core';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { data as enData } from '@/lang/en';
 import { data as ruData } from '@/lang/ru';
 import { data as esData } from '@/lang/es';
@@ -62,8 +62,18 @@ export const useLocalization = createSharedComposable(() => {
   const locale = ref<Locale>(getInitialLanguage());
 
   // Watch for changes and save to localStorage
+  watch(locale, (newLocale) => {
+    localStorage.setItem('uiLanguage', newLocale);
+  });
+
   const saveLanguage = (newLocale: Locale) => {
     localStorage.setItem('uiLanguage', newLocale);
+  };
+
+  const setLocale = (newLocale: Locale) => {
+    if (['en', 'es', 'ru', 'zh'].includes(newLocale)) {
+      locale.value = newLocale;
+    }
   };
 
   return {
@@ -79,6 +89,7 @@ export const useLocalization = createSharedComposable(() => {
     getLanguageName: (code: Locale) => {
       return languages.find((lang) => lang.code === code)?.name || 'Unknown';
     },
-    saveLanguage
+    saveLanguage,
+    setLocale
   };
 });

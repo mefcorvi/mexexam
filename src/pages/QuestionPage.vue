@@ -6,7 +6,6 @@ import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import { type QuestionOption } from '@/stores/questions';
 import { useRouteParams } from '@vueuse/router';
-import { useRouter } from 'vue-router';
 import { until } from '@vueuse/core';
 import { useFreeSessionStore } from '@/stores/free-session';
 import { useTranslations } from '@/stores/translations';
@@ -14,9 +13,9 @@ import { RouteName } from '@/router/names';
 import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useLocaleRouter } from '@/composables/useLocaleRouter';
 
 const $style = useCssModule();
-const $router = useRouter();
 const translations = useTranslations();
 const { locale, getLanguageName } = useLocalization();
 const { showNotes } = usePreferencesStore();
@@ -37,6 +36,8 @@ const {
   hasQuestion,
 } = useFreeSessionStore();
 
+const { pushLocale, replaceLocale } = useLocaleRouter();
+
 const questionParamId = useRouteParams<string>('id', '');
 const sectionParamId = useRouteParams<string>('sectionId', '');
 
@@ -55,17 +56,14 @@ const onQuestionIdChanged = () => {
     const questionId = getRandomQuestionId();
 
     if (!questionId) {
-      $router.replace({
-        name: RouteName.Home,
-      });
+      replaceLocale(RouteName.Home);
       return;
     }
 
-    $router.replace({
-      params: {
-        id: questionId,
-      }
-    })
+    replaceLocale(RouteName.SectionQuestions, {
+      sectionId: sectionParamId.value || 'all',
+      id: questionId,
+    });
   }
 }
 
@@ -86,7 +84,7 @@ useActivatableEffect(() => {
     }
 
     if (newValue[1] !== oldValue[1] || !oldValue[1]) {
-      if (newValue[1]) {
+      if (newValue[1] && newValue[1] !== 'all') {
         isAllStarted.value = false;
         await startSection(newValue[1]);
       } else {
@@ -121,11 +119,10 @@ const nextQuestion = () => {
   changeQuestionTimeout = window.setTimeout(async () => {
     changeQuestionTimeout = undefined;
 
-    await $router.replace({
-      params: {
-        id: getRandomQuestionId(),
-      },
-    })
+    await replaceLocale(RouteName.SectionQuestions, {
+      sectionId: sectionParamId.value || 'all',
+      id: getRandomQuestionId(),
+    });
 
     await until(selectedAnswer).toBeUndefined();
     await nextTick();
@@ -249,9 +246,7 @@ const uit = (key: string) => {
 }
 
 const openSettings = () => {
-  $router.push({
-    name: RouteName.Settings
-  });
+  pushLocale(RouteName.Settings);
 }
 
 function isButtonOrLinkClick(ev: MouseEvent) {
