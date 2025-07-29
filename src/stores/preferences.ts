@@ -2,7 +2,7 @@ import { createSharedComposable } from '@vueuse/core';
 import { computed } from 'vue';
 import { useStorage } from '@vueuse/core';
 
-export type StudyMode = 'training' | 'flashcards' | 'exam';
+export type StudyMode = 'training' | 'flashcards' | 'exam' | 'texts';
 
 interface StartPagePreferences {
   selectedMode: StudyMode;

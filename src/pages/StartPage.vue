@@ -10,6 +10,7 @@ import { useTranslations } from '@/stores/translations';
 import { useStatisticsStore } from '@/stores/statistics';
 import { useLocaleRouter } from '@/composables/useLocaleRouter';
 import { RouteName } from '@/router/names';
+import { useTextsStore } from '@/stores/texts';
 
 const { pushLocale } = useLocaleRouter();
 const { t, locale } = useLocalization();
@@ -17,6 +18,7 @@ const { selectedMode, selectedSectionId, showNotes } = usePreferencesStore();
 const { sections, loadSections } = useQuestionsStore();
 const translations = useTranslations();
 const { getGlobalStats, resetStatistics } = useStatisticsStore();
+const { texts } = useTextsStore();
 
 const modeScrollRef = ref<HTMLElement>();
 
@@ -36,8 +38,12 @@ const scrollToSelectedMode = async () => {
   activeButton.scrollIntoView({ block: 'center', inline: 'center', behavior: 'smooth' });
 };
 
-watch(selectedMode, () => {
+watch(selectedMode, (newValue, oldValue) => {
   scrollToSelectedMode();
+
+  if (newValue === 'texts' || oldValue === 'texts') {
+    selectedSectionId.value = null;
+  }
 });
 
 onMounted(() => {
@@ -67,6 +73,11 @@ const modes = computed(() => [
     value: 'exam',
     label: t('Exam'),
     description: t('Exam mode description')
+  },
+  {
+    value: 'texts',
+    label: t('Texts'),
+    description: t('Texts mode description')
   }
 ] as const);
 
@@ -93,9 +104,19 @@ const startSession = () => {
       pushLocale(RouteName.FlashCards, { sectionId: selectedSectionId.value, id: 'init' });
     } else if (selectedMode.value === 'exam') {
       pushLocale(RouteName.SectionExam, { sectionId: selectedSectionId.value });
+    } else if (selectedMode.value === 'texts') {
+      pushLocale(RouteName.Text, { id: selectedSectionId.value });
     }
   }
 };
+
+const isStartDisabled = computed(() => {
+  if (selectedMode.value === 'texts') {
+    return !selectedSectionId.value;
+  }
+
+  return false;
+});
 
 const handleResetStatistics = () => {
   if (confirm(t('Are you sure you want to reset all statistics? This action cannot be undone.'))) {
@@ -119,14 +140,14 @@ const handleResetStatistics = () => {
       <div :class="$style.modeDescription">
         {{ currentModeDescription }}
       </div>
-      <div v-if="selectedMode !== 'exam'" :class="$style.setting">
+      <div v-if="selectedMode !== 'exam' && selectedMode !== 'texts'" :class="$style.setting">
         <label>{{ t('Show notes') }}</label>
         <ToggleSwitch v-model="showNotes" size="16px" />
       </div>
     </div>
 
     <!-- Scope Selection -->
-    <div :class="$style.section">
+    <div :class="$style.section" v-if="selectedMode !== 'texts'">
       <h3 :class="$style.sectionTitle">{{ t('Choose questions') }}</h3>
 
       <!-- Section Selection (only shown when scope is 'section') -->
@@ -143,8 +164,20 @@ const handleResetStatistics = () => {
       </div>
     </div>
 
+    <!-- Text Selection (only shown when mode is 'texts') -->
+    <div :class="$style.section" v-if="selectedMode === 'texts'">
+      <h3 :class="$style.sectionTitle">{{ t('Choose text') }}</h3>
+      <div :class="$style.sectionSelection">
+        <button v-for="text in texts" :key="text.id"
+          :class="[$style.sectionOption, { [$style.active]: selectedSectionId === text.id }]"
+          @click="selectedSectionId = text.id">
+          <span :class="$style.sectionLabel">{{ text.title[locale] }}</span>
+        </button>
+      </div>
+    </div>
+
     <!-- Statistics Section -->
-    <div :class="$style.section" v-if="getGlobalStats.totalQuestions > 0">
+    <div :class="$style.section" v-if="getGlobalStats.totalQuestions > 0 && selectedMode !== 'texts'">
       <h3 :class="$style.sectionTitle">{{ t('Global Statistics') }}</h3>
       <div :class="$style.statsGrid">
         <div :class="$style.statItem">
@@ -175,7 +208,7 @@ const handleResetStatistics = () => {
     <div :style="{ height: '52px' }">&nbsp;</div>
     <!-- Start Button -->
     <div :class="$style.startSection">
-      <GeneralButton @click="startSession" :class="$style.startButton">
+      <GeneralButton @click="startSession" :class="$style.startButton" :disabled="isStartDisabled">
         {{ t('Start') }}
       </GeneralButton>
     </div>
@@ -321,7 +354,6 @@ const handleResetStatistics = () => {
   }
 
   &:disabled {
-    transform: translateX(-50%);
     cursor: not-allowed;
     opacity: 0.5;
   }

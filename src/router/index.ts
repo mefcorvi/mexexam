@@ -55,9 +55,14 @@ const router = createRouter({
           ]
         },
         {
+          path: 'texts',
+          name: RouteName.Texts,
+          component: () => import('../pages/TextsPage.vue')
+        },
+        {
           path: 'texts/:id',
           name: RouteName.Text,
-          component: () => import('../pages/TextQuestionsPage.vue')
+          component: () => import('../pages/TextPage.vue')
         },
         {
           path: 'exam',
