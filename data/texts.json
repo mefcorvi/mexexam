@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": "8a927135cf6ae",
+      "title": {
+        "ru": "Легенда о рождественском цветке (пуансеттия)",
+        "es": "Legend"
+      },
+      "summary": {
+        "ru": "Легенда времён завоевания рассказывает о бедной девочке из Герреро, которая грустила перед Рождеством, так как не могла принести подношение младенцу Иисусу. Услышав голос, призывающий её собрать зелёные растения, она принесла их в церковь. Чудесным образом эти растения превратились в ярко-красные звёздообразные цветы, которые прихожане признали самыми красивыми. С тех пор цветок пуансеттия (nochebuena) стал символом Рождества и распространился по всей Мексике.",
+        "es": "Legent conquest"
+      },
+      "text": {
+        "es": [
+          "Una historia de la época de la Conquista, cuenta que en un pueblo de Guerrero habitaba una niña muy humilde que cada año esperaba con ansias la llegada de la Navidad. Pero su padre se había quedado sin trabajo ese año, y no tenía dinero para ofrendar frutas, dulces o juguetes al niño Jesús durante la misa de Nochebuena, por lo que se encontraba muy preocupada y triste.",
+          "Al llegar la hora de la misa, caminó hacia la iglesia junto con sus padres. Sin embargo, al ver que todos los niños cargaban las mejores ofrendas, se llenó de vergüenza por ir con las manos vacías. Corrió hacia los arbustos y se puso a llorar.",
+          "De pronto, escuchó una voz de un niño que le dijo:",
+          "— Ya no llores. Arranca esas plantas verdes que están ahí y llévalas al altar del niño Jesús.",
+          "Decidió hacerle caso al niño y agarró un manojo de aquellas plantas silvestres. Aún llena de pena, por pensar que su ofrenda era simple y lamentable, caminó lentamente hacia el interior de la iglesia.",
+          "Al llegar, los parroquianos lanzaron una expresión de sorpresa pues eran las flores más hermosas que habían visto sus ojos. La planta había cambiado sus hojas de color milagrosamente y ahora resplandecían un color rojo intenso y tenían forma de estrellas.",
+          "—¡Feliz Navidad, niño Jesús!— dijo la niña al depositar su maravillosa ofrenda frente al altar.",
+          "Desde ese día, la flor de nochebuena, creció en todas partes de México durante la Navidad."
+        ],
+        "ru": [
+          "История времен завоевания рассказывает об очень скромной девушке из деревни в штате Герреро, которая каждый год с нетерпением ждала Рождества. Но в тот год ее отец потерял работу, и у нее не было денег, чтобы предложить фрукты, сладости или игрушки младенцу Иисусу во время рождественской мессы, поэтому она очень переживала и грустила.",
+          "Когда пришло время мессы, она пошла в церковь вместе с родителями. Однако, когда она увидела, что все дети несут лучшие подношения, ей стало стыдно идти с пустыми руками. Она убежала в кусты и начала плакать.",
+          "Вдруг она услышала, как детский голос сказал ей:",
+          "- Не плачь больше. Выдерни вон те зеленые растения и отнеси их к алтарю младенца Иисуса.",
+          "Она решила послушать ребенка и нарвала кучу этих диких растений. Все еще полная печали, думая, что ее приношение простое и жалкое, она медленно вошла в церковь.",
+          "Когда она появилась, прихожане удивленно переглянулись, потому что это были самые красивые цветы, которые когда-либо видели их глаза. Растение чудесным образом изменило свои листья, и теперь они светились насыщенным красным цветом и по форме напоминали звезды.",
+          "- Счастливого Рождества, малыш Иисус, - сказала девочка, ставя свое чудесное подношение перед алтарем.",
+          "С того дня рожденственский цветок пуансеттия стал повсеместно выращиваться в Мексике во время Рождества."
+        ]
+      },
+      "questions": [
+        {
+          "text": {
+            "es": "¿Por qué estaba triste y preocupada la niña?",
+            "ru": "Почему девочка была грустной и обеспокоенной?"
+          },
+          "answer": {
+            "es": "Porque la niña no tenía dinero para ofrendar frutas, dulces o juguetes al niño Jesús.",
+            "ru": "Потому что у девочки не было денег, чтобы предложить фрукты, сладости или игрушки младенцу Иисусу."
+          }
+        },
+        {
+          "text": {
+            "es": "¿Qué escuchó de pronto la niña?",
+            "ru": "Что внезапно услышала девочка?"
+          },
+          "answer": {
+            "es": "La voz de un niño.",
+            "ru": "Голос ребёнка."
+          }
+        },
+        {
+          "text": {
+            "es": "¿Qué le pidió el niño?",
+            "ru": "Что попросил ребёнок?"
+          },
+          "answer": {
+            "es": "Que arrancara unas plantas verdes.",
+            "ru": "Сорвать зелёные растения."
+          }
+        },
+        {
+          "text": {
+            "es": "¿Qué le pasó al manojo de plantas silvestres en la iglesia?",
+            "ru": "Что случилось с пучком диких растений в церкви?"
+          },
+          "answer": {
+            "es": "Cambiaron de color y forma.",
+            "ru": "Они изменили цвет и форму."
+          }
+        },
+        {
+          "text": {
+            "es": "¿Dónde crece la flor de nochebuena?",
+            "ru": "Где растёт цветок пуансеттия?"
+          },
+          "answer": {
+            "es": "En todo México.",
+            "ru": "По всей Мексике."
+          }
+        }
+      ]
+    }
+  ]
+}

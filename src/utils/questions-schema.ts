@@ -7,6 +7,13 @@ export const localizedStringSchema = z.object({
   zh: z.string().optional()
 });
 
+export const localizedStringsSchema = z.object({
+  es: z.array(z.string()).optional(),
+  en: z.array(z.string()).optional(),
+  ru: z.array(z.string()).optional(),
+  zh: z.array(z.string()).optional(),
+})
+
 export const questionSchema = z.object({
   id: z.string(),
   type: z.string(),
@@ -29,6 +36,7 @@ export const packageSchema = z.object({
 });
 
 export type LocalizedString = z.infer<typeof localizedStringSchema>;
+export type LocalizedStrings = z.infer<typeof localizedStringsSchema>;
 export type Question = z.infer<typeof questionSchema>;
 export type Section = z.infer<typeof sectionSchema>;
 export type Package = z.infer<typeof packageSchema>;

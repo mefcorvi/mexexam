@@ -1,0 +1,57 @@
+import { createSharedComposable } from '@vueuse/core';
+import textsPackage from '../../data/texts.json';
+import type {
+  LocalizedString,
+  LocalizedStrings
+} from '@/utils/questions-schema';
+import { useTranslations } from './translations';
+
+export type Text = {
+  id: string;
+  title: LocalizedString;
+  summary: LocalizedString;
+  text: LocalizedStrings;
+  questions: TextQuestion[];
+};
+
+export type TextQuestion = {
+  text: LocalizedString;
+  answer: LocalizedString;
+};
+
+export type TextsPackage = {
+  data: Text[];
+};
+
+const pkg = textsPackage as TextsPackage;
+
+export const useTextsStore = createSharedComposable(() => {
+  const texts = pkg.data;
+  const translations = useTranslations();
+
+  const map = new Map<string, Text>();
+
+  for (const text of texts) {
+    translations.addLocalizedString(text.summary);
+    translations.addLocalizedString(text.title);
+    translations.addLocalizedStrings(text.text);
+
+    for (const q of text.questions) {
+      translations.addLocalizedString(q.answer);
+      translations.addLocalizedString(q.text);
+    }
+
+    if (map.has(text.id)) {
+      throw new Error(`Duplicated id for text id=${text.id}`);
+    }
+
+    map.set(text.id, text);
+  }
+
+  const getText = (id: string) => map.get(id) ?? null;
+
+  return {
+    texts,
+    getText
+  };
+});

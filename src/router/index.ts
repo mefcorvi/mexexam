@@ -5,7 +5,6 @@ import type { Locale } from '@/lang';
 // Define supported locales
 const supportedLocales: Locale[] = ['en', 'es', 'ru', 'zh'];
 
-
 // Helper function to get default locale
 const getDefaultLocale = (): Locale => {
   const saved = localStorage.getItem('uiLanguage') as Locale;
@@ -54,6 +53,11 @@ const router = createRouter({
               component: () => import('../pages/StartPage.vue')
             }
           ]
+        },
+        {
+          path: 'texts/:id',
+          name: RouteName.Text,
+          component: () => import('../pages/TextQuestionsPage.vue')
         },
         {
           path: 'exam',
