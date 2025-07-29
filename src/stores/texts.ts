@@ -17,6 +17,7 @@ export type Text = {
 export type TextQuestion = {
   text: LocalizedString;
   answer: LocalizedString;
+  options: LocalizedString[];
 };
 
 export type TextsPackage = {
@@ -39,6 +40,11 @@ export const useTextsStore = createSharedComposable(() => {
     for (const q of text.questions) {
       translations.addLocalizedString(q.answer);
       translations.addLocalizedString(q.text);
+      if (q.options) {
+        for (const option of q.options) {
+          translations.addLocalizedString(option);
+        }
+      }
     }
 
     if (map.has(text.id)) {

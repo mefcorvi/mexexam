@@ -33,14 +33,15 @@ export const useTranslations = createSharedComposable(() => {
     }
 
     for (const l of locales) {
-      if (arr[l]) {
-        if (arr[l].length !== arr.es.length) {
+      const langArray = arr[l];
+      if (langArray) {
+        if (langArray.length !== arr.es.length) {
           throw new Error(`Length of localization array for language ${l} does not match with Spanish`);
         }
 
-        for (let i = 0; i < arr[l].length; i++) {
+        for (let i = 0; i < langArray.length; i++) {
           const original = arr.es[i];
-          const translated = arr[l][i];
+          const translated = langArray[i];
 
           if (!original || !translated) {
             throw new Error(`Either Spanish or localized string is empty locale=${l} idx=${i}`);

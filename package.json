@@ -11,7 +11,7 @@
     "add-notes": "node src/scripts/add-notes.ts",
     "build-only": "vite build",
     "type-check": "npm run lint && vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.ts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "generate-sitemap": "node scripts/generate-sitemap.ts",
     "bundle-json": "node scripts/bundle-json.ts"

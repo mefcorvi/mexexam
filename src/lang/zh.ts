@@ -57,5 +57,9 @@ export const data = {
   'Medium Questions': '中等问题',
   'Hard Questions': '困难问题',
   Description:
-    'MexExam 是一个用于准备墨西哥入籍考试的应用。它包含考试中会出现的问题，并允许您在考试模式下练习。'
+    'MexExam 是一个用于准备墨西哥入籍考试的应用。它包含考试中会出现的问题，并允许您在考试模式下练习。',
+  'Questions': '问题',
+  'Texts': '文本',
+  'Choose text': '选择文本',
+  'Texts mode description': '在此模式下，您将获得一个长文本和6个关于文本的问题来回答'
 };

@@ -1,10 +1,28 @@
 import { writeFileSync } from 'fs';
-import { loadSectionsData } from '../src/stores/sections.ts';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import type { Package } from '../utils/questions-schema';
 
 const BASE_URL = 'https://mexexam.com';
 
+type SectionData = {
+  id: string;
+  title: string;
+};
+
+const loadSectionsData = (): SectionData[] => {
+  const packagePath = join(process.cwd(), 'data', 'mexexam.json');
+  const data = readFileSync(packagePath, 'utf-8');
+  const pkg = JSON.parse(data) as Package;
+  
+  return pkg.sections.map(section => ({
+    id: section.id,
+    title: section.title.es ?? ''
+  }));
+};
+
 const generateSitemap = async () => {
-  const sections = await loadSectionsData();
+  const sections = loadSectionsData();
 
   const urls = [
     // Static pages

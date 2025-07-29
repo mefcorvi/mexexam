@@ -7,7 +7,7 @@ import {
   type Package,
   packageSchema,
   type Question
-} from '../utils/questions-schema.ts';
+} from '../utils/questions-schema';
 import path from 'path';
 
 const languages = ['en', 'es', 'zh', 'ru'] as const;
@@ -205,7 +205,7 @@ async function main(): Promise<void> {
       const answerText = question.answer.es;
       const optionsText = question.options
         .map((option) => option.es)
-        .filter((x) => x !== undefined);
+        .filter((x): x is string => x !== undefined);
 
       if (!questionText || !answerText) {
         console.log(`Skipping question ${question.id}  - missing content`);
@@ -216,29 +216,32 @@ async function main(): Promise<void> {
         let isFactual = true;
 
         if (!needsNote(question, language) && question.note[language]) {
-          const factCheckResult = await factCheckNote(
-            question.note[language],
-            answerText,
-            questionText,
-            languageNames[language] as
-              | 'English'
-              | 'Spanish'
-              | 'Chinese'
-              | 'Russian',
-            false
-          );
-
-          isFactual = factCheckResult.isFactual;
-
-          if (isFactual) {
-            console.log(
-              `✓ Note for question "${question.question[language]}" is factual`
+          const noteText = question.note[language];
+          if (noteText) {
+            const factCheckResult = await factCheckNote(
+              noteText,
+              answerText,
+              questionText,
+              languageNames[language] as
+                | 'English'
+                | 'Spanish'
+                | 'Chinese'
+                | 'Russian',
+              false
             );
-            continue;
-          } else {
-            console.log(
-              `❌ Note for question "${question.question[language]}" is not factual`
-            );
+
+            isFactual = factCheckResult.isFactual;
+
+            if (isFactual) {
+              console.log(
+                `✓ Note for question "${question.question[language]}" is factual`
+              );
+              continue;
+            } else {
+              console.log(
+                `❌ Note for question "${question.question[language]}" is not factual`
+              );
+            }
           }
         }
 

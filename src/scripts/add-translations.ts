@@ -2,13 +2,13 @@ import OpenAI from 'openai';
 import * as fs from 'fs/promises';
 import * as dotenv from 'dotenv';
 import { zodResponseFormat } from 'openai/helpers/zod.mjs';
-import { removeEmptyFields } from '../utils/objects.ts';
+import { removeEmptyFields } from '../utils/objects';
 import { z } from 'zod';
 import {
   type Package,
   packageSchema,
   type Question
-} from '../utils/questions-schema.ts';
+} from '../utils/questions-schema';
 import path from 'path';
 
 const languages = ['en', 'es', 'zh', 'ru'] as const;
@@ -89,9 +89,9 @@ ${targetLanguage} translation:`;
 
   const parsed = schema.safeParse(JSON.parse(responseText));
   if (!parsed.success) {
-    throw new Error('Invalid response from OpenAI', {
-      cause: parsed.error
-    });
+    const error = new Error('Invalid response from OpenAI');
+    (error as any).cause = parsed.error;
+    throw error;
   }
 
   return parsed.data;
@@ -174,11 +174,13 @@ async function main(): Promise<void> {
           continue;
         }
 
+        const spanishOptions = question.options
+          .map((option) => option.es)
+          .filter((x): x is string => x !== undefined);
+        
         const translatedQuestion = await translateText({
           answer: question.answer.es,
-          options: question.options
-            .map((option) => option.es)
-            .filter((x) => x !== undefined),
+          options: spanishOptions,
           question: question.question.es,
           note: question.note.es
         });

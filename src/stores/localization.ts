@@ -1,10 +1,11 @@
-import type { Locale, LocalizationData, LocalizationKey } from '@/lang';
+import { locales, type Locale, type LocalizationData, type LocalizationKey } from '@/lang';
 import { createSharedComposable } from '@vueuse/core';
 import { ref, watch } from 'vue';
 import { data as enData } from '@/lang/en';
 import { data as ruData } from '@/lang/ru';
 import { data as esData } from '@/lang/es';
 import { data as zhData } from '@/lang/zh';
+import { useTranslations } from './translations';
 
 // Function to detect browser language
 const detectBrowserLanguage = (): Locale => {
@@ -51,6 +52,14 @@ export const useLocalization = createSharedComposable(() => {
     ru: ruData,
     zh: zhData
   };
+
+  const translations = useTranslations();
+
+  for (const locale of locales) {
+    for (const key of Object.keys(dict[locale])) {
+      translations.add(locale, key, dict[locale][key as LocalizationKey]);
+    }
+  }
 
   const languages = [
     { code: 'en', name: 'English' },

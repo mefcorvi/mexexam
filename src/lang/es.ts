@@ -57,5 +57,9 @@ export const data = {
   'Medium Questions': 'Preguntas Medianas',
   'Hard Questions': 'Preguntas Difíciles',
   Description:
-    'MexExam es una aplicación para prepararse para el examen de naturalización en México. Contiene preguntas sobre temas que estarán en el examen y te permite practicar en modo examen.'
+    'MexExam es una aplicación para prepararse para el examen de naturalización en México. Contiene preguntas sobre temas que estarán en el examen y te permite practicar en modo examen.',
+  'Questions': 'Preguntas',
+  'Texts': 'Textos',
+  'Choose text': 'Elegir texto',
+  'Texts mode description': 'En este modo obtienes un texto largo y 6 preguntas sobre el texto para responderlas'
 };

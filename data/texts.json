@@ -68,7 +68,7 @@
             "es": "Porque la niña no tenía dinero para ofrendar frutas, dulces o juguetes al niño Jesús.",
             "ru": "Потому что у девочки не было денег, чтобы принести в дар фрукты, сладости или игрушки младенцу Иисусу.",
             "en": "Because the girl had no money to offer fruits, sweets or toys to baby Jesus.",
-            "zh": "因为女孩没有钱给婴儿耶稣献上水果、糖果或玩具。"
+            "zh": "因为女孩没有钱给婴儿耶稣献上水果、糖果或玩具"
           },
           "options": [
             {
@@ -99,29 +99,29 @@
             "zh": "女孩突然听到了什么？"
           },
           "answer": {
-            "es": "La voz de un niño.",
-            "ru": "Голос ребёнка.",
-            "en": "A child's voice.",
-            "zh": "一个孩子的声音。"
+            "es": "La voz de un niño",
+            "ru": "Голос ребёнка",
+            "en": "A child's voice",
+            "zh": "一个孩子的声音"
           },
           "options": [
             {
-              "es": "La voz de un niño.",
-              "ru": "Голос ребёнка.",
-              "en": "A child's voice.",
-              "zh": "一个孩子的声音。"
+              "es": "La voz de su padre",
+              "ru": "Голос отца",
+              "en": "Father's voice",
+              "zh": "父亲的声音"
             },
             {
-              "es": "Su propia voz.",
-              "ru": "Свой собственный голос.",
-              "en": "Her own voice.",
-              "zh": "她自己的声音。"
+              "es": "Su propia voz",
+              "ru": "Свой собственный голос",
+              "en": "Her own voice",
+              "zh": "她自己的声音"
             },
             {
-              "es": "El viento.",
-              "ru": "Ветер.",
-              "en": "The wind.",
-              "zh": "风。"
+              "es": "El viento",
+              "ru": "Ветер",
+              "en": "The wind",
+              "zh": "风"
             }
           ]
         },
@@ -133,10 +133,10 @@
             "zh": "那个孩子让她做什么？"
           },
           "answer": {
-            "es": "Que arrancara unas plantas verdes.",
-            "ru": "Сорвать зелёные растения.",
-            "en": "To pick some green plants.",
-            "zh": "采集一些绿色的植物。"
+            "es": "Que arrancara unas plantas verdes",
+            "ru": "Сорвать зелёные растения",
+            "en": "To pick some green plants",
+            "zh": "采集一些绿色的植物"
           },
           "options": [
             {
@@ -167,17 +167,17 @@
             "zh": "在教堂里，那束野生植物发生了什么？"
           },
           "answer": {
-            "es": "Cambiaron de color y forma.",
-            "ru": "Они изменили цвет и форму.",
-            "en": "They changed color and shape.",
-            "zh": "它们改变了颜色和形状。"
+            "es": "Cambiaron de color y forma",
+            "ru": "Они изменили цвет и форму",
+            "en": "They changed color and shape",
+            "zh": "它们改变了颜色和形状"
           },
           "options": [
             {
-              "es": "Se convirtieron en rosas.",
-              "ru": "Они превратились в розы.",
-              "en": "They turned into roses.",
-              "zh": "它们变成了玫瑰。"
+              "es": "Se convirtieron en rosas",
+              "ru": "Они превратились в розы",
+              "en": "They turned into roses",
+              "zh": "它们变成了玫瑰"
             },
             {
               "es": "Tomaron un aroma especial",
@@ -201,29 +201,29 @@
             "zh": "一品红花在哪里生长？"
           },
           "answer": {
-            "es": "En todo México.",
-            "ru": "По всей Мексике.",
-            "en": "Throughout Mexico.",
-            "zh": "在整个墨西哥。"
+            "es": "En todo México",
+            "ru": "По всей Мексике",
+            "en": "Throughout Mexico",
+            "zh": "在整个墨西哥"
           },
           "options": [
             {
-              "es": "En la Ciudad de México.",
-              "ru": "В Мехико-сити.",
-              "en": "In Mexico City.",
-              "zh": "在墨西哥城。"
+              "es": "En la Ciudad de México",
+              "ru": "В Мехико-сити",
+              "en": "In Mexico City",
+              "zh": "在墨西哥城"
             },
             {
-              "es": "En el cerro de Tepeyac.",
-              "ru": "На холме Тепеяк.",
-              "en": "On Tepeyac Hill.",
-              "zh": "在特佩亚克山上。"
+              "es": "En el cerro de Tepeyac",
+              "ru": "На холме Тепеяк",
+              "en": "On Tepeyac Hill",
+              "zh": "在特佩亚克山上"
             },
             {
-              "es": "En el Valle de México.",
-              "ru": "В долине Мексико.",
-              "en": "In the Valley of Mexico.",
-              "zh": "在墨西哥山谷。"
+              "es": "En el Valle de México",
+              "ru": "В долине Мексико",
+              "en": "In the Valley of Mexico",
+              "zh": "在墨西哥山谷"
             }
           ]
         }
@@ -273,62 +273,206 @@
         {
           "text": {
             "es": "¿De qué se alimentaban los aztecas antes de conseguir el maíz?",
-            "ru": "Чем питались ацтеки до получения маиса?"
+            "ru": "Чем питались ацтеки до получения маиса?",
+            "en": "What did the Aztecs eat before obtaining corn?",
+            "zh": "阿兹特克人在获得玉米之前吃什么？"
           },
           "answer": {
-            "es": "De raíces y animales que cazaban.",
-            "ru": "Кореньями и животными, на которых охотились."
-          }
+            "es": "De raíces y animales que cazaban",
+            "ru": "Кореньями и животными, на которых охотились",
+            "en": "Roots and animals they hunted",
+            "zh": "根和他们猎捕的动物"
+          },
+          "options": [
+            {
+              "es": "De frutas y verduras",
+              "ru": "Фруктами и овощами",
+              "en": "Fruits and vegetables",
+              "zh": "水果和蔬菜"
+            },
+            {
+              "es": "De pescado y mariscos",
+              "ru": "Рыбой и морепродуктами",
+              "en": "Fish and seafood",
+              "zh": "鱼和海鲜"
+            },
+            {
+              "es": "De granos y cereales",
+              "ru": "Зерном и злаками",
+              "en": "Grains and cereals",
+              "zh": "谷物和谷类"
+            }
+          ]
         },
         {
           "text": {
             "es": "¿Para qué Quetzalcóatl hizo el viaje a las montañas?",
-            "ru": "Зачем Кетцалькоатль отправился в горы?"
+            "ru": "Зачем Кетцалькоатль отправился в горы?",
+            "en": "Why did Quetzalcóatl make the journey to the mountains?",
+            "zh": "羽蛇神为什么要去山里？"
           },
           "answer": {
-            "es": "Para conseguir el maíz para su pueblo.",
-            "ru": "Чтобы добыть маис для своего народа."
-          }
+            "es": "Para conseguir el maíz para su pueblo",
+            "ru": "Чтобы добыть маис для своего народа",
+            "en": "To obtain corn for his people",
+            "zh": "为他的人民获取玉米"
+          },
+          "options": [
+            {
+              "es": "Para explorar nuevas tierras",
+              "ru": "Чтобы исследовать новые земли",
+              "en": "To explore new lands",
+              "zh": "探索新的土地"
+            },
+            {
+              "es": "Para encontrar oro y tesoros",
+              "ru": "Чтобы найти золото и сокровища",
+              "en": "To find gold and treasures",
+              "zh": "寻找黄金和珍宝"
+            },
+            {
+              "es": "Para derrotar a otros dioses",
+              "ru": "Чтобы победить других богов",
+              "en": "To defeat other gods",
+              "zh": "击败其他神灵"
+            }
+          ]
         },
         {
           "text": {
             "es": "¿Cómo usó Quetzalcóatl su inteligencia y astucia para conseguir el maíz?",
-            "ru": "Как Кетцалькоатль использовал ум и хитрость, чтобы добыть маис?"
+            "ru": "Как Кетцалькоатль использовал ум и хитрость, чтобы добыть маис?",
+            "en": "How did Quetzalcóatl use his intelligence and cunning to get the corn?",
+            "zh": "羽蛇神是如何运用智慧和狡黐来获得玉米的？"
           },
           "answer": {
-            "es": "Se transformó en una hormiga negra.",
-            "ru": "Он превратился в чёрного муравья."
-          }
+            "es": "Se transformó en una hormiga negra",
+            "ru": "Он превратился в чёрного муравья",
+            "en": "He transformed into a black ant",
+            "zh": "他变成了一只黑蚂蚁"
+          },
+          "options": [
+            {
+              "es": "Usó su fuerza divina",
+              "ru": "Он использовал свою божественную силу",
+              "en": "He used his divine strength",
+              "zh": "他使用了神圣的力量"
+            },
+            {
+              "es": "Convenció a otros dioses",
+              "ru": "Он убедил других богов",
+              "en": "He convinced other gods",
+              "zh": "他说服了其他神灵"
+            },
+            {
+              "es": "Creó un terremoto",
+              "ru": "Он создал землетрясение",
+              "en": "He created an earthquake",
+              "zh": "他造成了地震"
+            }
+          ]
         },
         {
           "text": {
             "es": "¿Qué hizo Quetzalcóatl en la cima de la montaña?",
-            "ru": "Что сделал Кетцалькоатль на вершине горы?"
+            "ru": "Что сделал Кетцалькоатль на вершине горы?",
+            "en": "What did Quetzalcóatl do at the top of the mountain?",
+            "zh": "羽蛇神在山顶做了什么？"
           },
           "answer": {
-            "es": "Cogió entre sus mandíbulas un grano maduro de maíz.",
-            "ru": "Он взял в свои челюсти одно спелое зёрнышко маиса."
-          }
+            "es": "Cogió entre sus mandíbulas un grano maduro de maíz",
+            "ru": "Он взял в свои челюсти одно спелое зёрнышко маиса",
+            "en": "He took a mature grain of corn in his jaws",
+            "zh": "他用下颔夹住了一粒成熟的玉米"
+          },
+          "options": [
+            {
+              "es": "Plantó un árbol sagrado",
+              "ru": "Он посадил священное дерево",
+              "en": "He planted a sacred tree",
+              "zh": "他种了一棵神树"
+            },
+            {
+              "es": "Construyó un templo",
+              "ru": "Он построил храм",
+              "en": "He built a temple",
+              "zh": "他建了一座寺庙"
+            },
+            {
+              "es": "Habló con otros dioses",
+              "ru": "Он говорил с другими богами",
+              "en": "He spoke with other gods",
+              "zh": "他与其他神灵交谈"
+            }
+          ]
         },
         {
           "text": {
             "es": "¿Qué hicieron los indígenas después de que Quetzalcóatl les entregara el prometido grano de maíz?",
-            "ru": "Что сделали индейцы после того, как Кетцалькоатль принёс им обещанное зёрнышко маиса?"
+            "ru": "Что сделали индейцы после того, как Кетцалькоатль принёс им обещанное зёрнышко маиса?",
+            "en": "What did the indigenous people do after Quetzalcóatl delivered the promised grain of corn?",
+            "zh": "在羽蛇神交付了承诺的玉米粒后，土著人做了什么？"
           },
           "answer": {
-            "es": "Plantaron la semilla.",
-            "ru": "Они посадили зёрнышко."
-          }
+            "es": "Plantaron la semilla",
+            "ru": "Они посадили зёрнышко",
+            "en": "They planted the seed",
+            "zh": "他们种下了种子"
+          },
+          "options": [
+            {
+              "es": "Lo guardaron como tesoro",
+              "ru": "Они сохранили его как сокровище",
+              "en": "They kept it as treasure",
+              "zh": "他们将其作为珍宝保存"
+            },
+            {
+              "es": "Se lo comieron inmediatamente",
+              "ru": "Они сразу съели его",
+              "en": "They ate it immediately",
+              "zh": "他们立即吃了它"
+            },
+            {
+              "es": "Lo ofrecieron a otros dioses",
+              "ru": "Они подарили его другим богам",
+              "en": "They offered it to other gods",
+              "zh": "他们将其供奉给其他神灵"
+            }
+          ]
         },
         {
           "text": {
             "es": "¿Por qué los aztecas veneraron al dios Quetzalcóatl?",
-            "ru": "Почему ацтеки поклонялись богу Кетцалькоатлю?"
+            "ru": "Почему ацтеки поклонялись богу Кетцалькоатлю?",
+            "en": "Why did the Aztecs venerate the god Quetzalcóatl?",
+            "zh": "为什么阿兹特克人崇拜羽蛇神？"
           },
           "answer": {
-            "es": "Porque les trajo el maíz.",
-            "ru": "Потому что он принёс им маис."
-          }
+            "es": "Porque les trajo el maíz",
+            "ru": "Потому что он принёс им маис",
+            "en": "Because he brought them corn",
+            "zh": "因为他给他们带来了玉米"
+          },
+          "options": [
+            {
+              "es": "Porque era el dios más poderoso",
+              "ru": "Потому что он был самым могущественным богом",
+              "en": "Because he was the most powerful god",
+              "zh": "因为他是最强大的神"
+            },
+            {
+              "es": "Porque les enseñó a construir ciudades",
+              "ru": "Потому что он научил их строить города",
+              "en": "Because he taught them to build cities",
+              "zh": "因为他教他们建造城市"
+            },
+            {
+              "es": "Porque los protegió de otros dioses",
+              "ru": "Потому что он защищал их от других богов",
+              "en": "Because he protected them from other gods",
+              "zh": "因为他保护他们免受其他神灵的伤害"
+            }
+          ]
         }
       ]
     }

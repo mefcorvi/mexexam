@@ -58,6 +58,7 @@ export const data = {
   'Hard Questions': 'Hard Questions',
   Description:
     'MexExam is an application for preparing for the naturalization exam in Mexico. It contains questions on topics that will be on the exam and allows you to practice in exam mode.',
+  'Questions': 'Questions',
   'Texts': 'Texts',
   'Texts mode description': 'In this mode you get one long text and 6 questions about the text to answer them',
   'Choose text': 'Choose text'

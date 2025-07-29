@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mdiCog } from '@mdi/js';
-import { computed, nextTick, ref, useCssModule, watch } from 'vue';
+import { computed, ref, useCssModule, watch } from 'vue';
 import GeneralPage from '@/components/GeneralPage.vue';
 import GeneralButton from '@/components/GeneralButton.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
@@ -11,6 +11,7 @@ import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
 import { useLocaleRouter } from '@/composables/useLocaleRouter';
 import { useTextsStore, type Text } from '@/stores/texts';
+import type { LocalizedString } from '@/utils/questions-schema';
 
 const $style = useCssModule();
 const translations = useTranslations();
@@ -23,6 +24,8 @@ const { pushLocale } = useLocaleRouter();
 const textId = useRouteParams<string>('id', '');
 
 const selectedText = ref<Text | null>(null);
+const userAnswers = ref<(string | null)[]>([]);
+const shuffledOptions = ref<LocalizedString[][]>([]);
 
 useActivatableEffect(
   () => {
@@ -30,6 +33,11 @@ useActivatableEffect(
       () => textId.value,
       async (newValue) => {
         selectedText.value = getText(newValue);
+        if (selectedText.value) {
+          userAnswers.value = new Array(selectedText.value.questions.length).fill(null);
+          // Initialize shuffled options for each question
+          shuffledOptions.value = selectedText.value.questions.map(q => getShuffledOptions(q));
+        }
       },
       { immediate: true }
     );
@@ -39,16 +47,53 @@ useActivatableEffect(
 
 const shouldShowTranslation = computed(() => locale.value !== 'es');
 
-const t = (key: string | null | undefined) => {
-  return translations.t('es', key);
-};
-
 const uit = (key: string) => {
   return translations.t(locale.value, key);
 };
 
 const openSettings = () => {
   pushLocale(RouteName.Settings);
+};
+
+// Function to shuffle array options
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+};
+
+// Create shuffled options for each question including the correct answer
+const getShuffledOptions = (question: any) => {
+  if (!question.options) return [];
+  const allOptions = [...question.options, question.answer];
+  return shuffleArray(allOptions);
+};
+
+// Get option styling class based on user's selection
+const getOptionClass = (question: any, option: any, questionIdx: number) => {
+  const userAnswer = userAnswers.value[questionIdx];
+
+  if (!userAnswer) {
+    return ''; // No answer selected yet
+  }
+
+  const isCorrectOption = option[locale.value] === question.answer[locale.value];
+  const isSelectedOption = option[locale.value] === userAnswer;
+
+  if (isSelectedOption) {
+    return isCorrectOption ? $style.correct : $style.wrong;
+  }
+
+  if (isCorrectOption && userAnswer !== question.answer[locale.value]) {
+    return $style.correct; // Show correct answer when user selected wrong
+  }
+
+  return userAnswer ? $style.wrongFade : ''; // Fade unselected options when answer is given
 };
 </script>
 
@@ -82,7 +127,7 @@ const openSettings = () => {
         </div>
       </div>
       <div :class="$style.questions">
-        <h2>Questions</h2>
+        <h2>{{ uit('Questions') }}</h2>
         <div :class="$style.questionsList">
           <div v-for="(q, idx) in selectedText.questions" :key="idx" :class="$style.question">
             <div :class="$style.questionText">
@@ -93,12 +138,18 @@ const openSettings = () => {
                 {{ q.text[locale] }}
               </div>
             </div>
-            <div :class="$style.answerText">
-              <div :class="$style.original">
-                {{ q.answer.es }}
-              </div>
-              <div v-if="shouldShowTranslation" :class="$style.translation">
-                {{ q.answer[locale] }}
+            <div :class="$style.answerOptions">
+              <div v-for="(option, optionIdx) in shuffledOptions[idx] || []" :key="optionIdx"
+                :class="$style.optionWrapper">
+                <GeneralButton @click="userAnswers[idx] = option[locale] ?? null"
+                  :class="[$style.optionButton, getOptionClass(q, option, idx)]">
+                  <div :class="$style.original">
+                    {{ option.es }}
+                  </div>
+                  <div v-if="shouldShowTranslation" :class="$style.translation">
+                    {{ option[locale] }}
+                  </div>
+                </GeneralButton>
               </div>
             </div>
           </div>
@@ -135,7 +186,7 @@ const openSettings = () => {
 
   font-size: var(--font-size-a1);
 
-  background: var(--success-bg-color-alpha-5);
+  background: var(--secondary-color-10);
   border-radius: var(--border-radius);
 
   .translation {
@@ -173,12 +224,8 @@ const openSettings = () => {
 
   .question {
     margin-bottom: var(--gap);
-    padding: var(--gap-s);
 
     font-size: var(--font-size-1);
-
-    background-color: var(--negative-color-alpha-5);
-    border-radius: var(--border-radius);
 
     .translation {
       font-size: 80%;
@@ -194,6 +241,53 @@ const openSettings = () => {
 
   .answerText {
     font-size: 95%;
+  }
+
+  .answerOptions {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: var(--gap-s);
+
+    gap: var(--gap-s);
+  }
+
+  .optionWrapper {
+    width: 100%;
+  }
+
+  .optionButton {
+    width: 100%;
+    padding: var(--gap-s) var(--gap-s);
+
+    font-size: var(--font-size-a1);
+    text-align: left;
+
+    .original {
+      font-weight: 500;
+    }
+
+    &.correct {
+      color: var(--success-text-color);
+
+      background: var(--success-bg-color);
+    }
+
+    &.wrong {
+      color: var(--error-text-color);
+
+      background: var(--error-bg-color);
+    }
+
+    &.wrongFade {
+      opacity: 0.3;
+    }
+
+    .translation {
+      color: inherit;
+
+      opacity: 0.5;
+    }
   }
 }
 </style>
