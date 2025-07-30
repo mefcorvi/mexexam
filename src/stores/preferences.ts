@@ -8,12 +8,14 @@ interface StartPagePreferences {
   selectedMode: StudyMode;
   selectedSectionId: string | null;
   showNotes: boolean;
+  hideTranslationsInTexts: boolean;
 }
 
 const defaultPreferences: StartPagePreferences = {
   selectedMode: 'training',
   selectedSectionId: null,
-  showNotes: true
+  showNotes: true,
+  hideTranslationsInTexts: false
 };
 
 export const usePreferencesStore = createSharedComposable(() => {
@@ -43,6 +45,13 @@ export const usePreferencesStore = createSharedComposable(() => {
     }
   });
 
+  const hideTranslationsInTexts = computed({
+    get: () => preferences.value.hideTranslationsInTexts,
+    set: (value: boolean) => {
+      preferences.value.hideTranslationsInTexts = value;
+    }
+  });
+
   const resetPreferences = () => {
     preferences.value = { ...defaultPreferences };
   };
@@ -51,6 +60,7 @@ export const usePreferencesStore = createSharedComposable(() => {
     selectedMode,
     selectedSectionId,
     showNotes,
+    hideTranslationsInTexts,
     resetPreferences
   };
 });

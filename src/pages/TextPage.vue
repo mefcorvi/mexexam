@@ -11,11 +11,13 @@ import { useLocalization } from '@/stores/localization';
 import { useActivatableEffect } from '@/composables/activatable-effect';
 import { useLocaleRouter } from '@/composables/useLocaleRouter';
 import { useTextsStore, type Text } from '@/stores/texts';
+import { usePreferencesStore } from '@/stores/preferences';
 import type { LocalizedString } from '@/utils/questions-schema';
 
 const $style = useCssModule();
 const translations = useTranslations();
 const { locale } = useLocalization();
+const { hideTranslationsInTexts } = usePreferencesStore();
 
 const { getText } = useTextsStore();
 
@@ -45,7 +47,7 @@ useActivatableEffect(
   { immediate: true }
 );
 
-const shouldShowTranslation = computed(() => locale.value !== 'es');
+const shouldShowTranslation = computed(() => locale.value !== 'es' && !hideTranslationsInTexts.value);
 
 const uit = (key: string) => {
   return translations.t(locale.value, key);
@@ -116,7 +118,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
         </div>
       </div>
       <div :class="$style.summary">
-        {{ selectedText.summary[locale] }}
+        {{ selectedText.summary[shouldShowTranslation ? locale : 'es'] }}
       </div>
       <div :class="$style.text" v-if="selectedText.text.es">
         <div :class="$style.part" :key="idx" v-for="(s, idx) in selectedText.text.es">

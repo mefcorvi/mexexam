@@ -1,5 +1,8 @@
 import { createSharedComposable } from '@vueuse/core';
 import textsPackage from '../../data/texts.json';
+import text1Package from '../../data/dia_de_muertos.json';
+import text2Package from '../../data/leyenda_volcanes.json';
+import text3Package from '../../data/leyenda_tequila.json';
 import type {
   LocalizedString,
   LocalizedStrings
@@ -24,10 +27,15 @@ export type TextsPackage = {
   data: Text[];
 };
 
-const pkg = textsPackage as TextsPackage;
+const packages = [
+  textsPackage,
+  text1Package,
+  text2Package,
+  text3Package,
+]
 
 export const useTextsStore = createSharedComposable(() => {
-  const texts = pkg.data;
+  const texts = packages.flatMap(x => x.data);
   const translations = useTranslations();
 
   const map = new Map<string, Text>();

@@ -61,5 +61,6 @@ export const data = {
   'Questions': 'Preguntas',
   'Texts': 'Textos',
   'Choose text': 'Elegir texto',
-  'Texts mode description': 'En este modo obtienes un texto largo y 6 preguntas sobre el texto para responderlas'
+  'Texts mode description': 'En este modo obtienes un texto largo y 6 preguntas sobre el texto para responderlas',
+  'Hide translations': 'Ocultar traducciones'
 };

@@ -63,5 +63,6 @@ export const data: LocalizationData = {
   'Questions': 'Вопросы',
   'Texts': 'Тексты',
   'Texts mode description': 'В режиме текста вы должны прочитать текст и ответить на вопросы по его содержанию.',
-  'Choose text': 'Выберите текст'
+  'Choose text': 'Выберите текст',
+  'Hide translations': 'Скрыть переводы'
 };

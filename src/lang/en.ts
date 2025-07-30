@@ -61,5 +61,6 @@ export const data = {
   'Questions': 'Questions',
   'Texts': 'Texts',
   'Texts mode description': 'In this mode you get one long text and 6 questions about the text to answer them',
-  'Choose text': 'Choose text'
+  'Choose text': 'Choose text',
+  'Hide translations': 'Hide translations'
 };

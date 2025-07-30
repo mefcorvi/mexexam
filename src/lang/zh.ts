@@ -61,5 +61,6 @@ export const data = {
   'Questions': '问题',
   'Texts': '文本',
   'Choose text': '选择文本',
-  'Texts mode description': '在此模式下，您将获得一个长文本和6个关于文本的问题来回答'
+  'Texts mode description': '在此模式下，您将获得一个长文本和6个关于文本的问题来回答',
+  'Hide translations': '隐藏翻译'
 };

@@ -1,0 +1,255 @@
+{
+  "data": [
+    {
+      "id": "a1b2c3d4e5f6g",
+      "title": {
+        "ru": "День мертвых",
+        "es": "Día de Muertos",
+        "en": "Day of the Dead",
+        "zh": "亡灵节"
+      },
+      "summary": {
+        "ru": "Легенда рассказывает о мексиканской традиции Дня мёртвых, когда 1 и 2 ноября души умерших возвращаются к своим семьям для совместного времяпрепровождения. В деревне Микскик, на юге Мехико, особенно значимым событием является \"ночь свечей\", когда местные жители зажигают свечи, окуривают ладаном и украшают могилы, создавая мистическую атмосферу единения живых и мёртвых. В эту ночь люди остаются на кладбище рядом с могилами близких, а свет свечей освещает путь душам обратно.",
+        "es": "La leyenda narra la tradición mexicana del Día de Muertos, cuando el 1 y 2 de noviembre las almas de los difuntos regresan a convivir con sus familias. En el pueblo de Mixquic, al sur de la Ciudad de México, un evento de especial importancia es la \"noche de las velas\", en la que los habitantes encienden velas, queman incienso y adornan las tumbas, creando una atmósfera mística de unión entre vivos y muertos. Esa noche, la gente permanece en el cementerio junto a las tumbas de sus seres queridos, y la luz de las velas ilumina el camino de regreso de las almas.",
+        "en": "The legend tells of the Mexican tradition of the Day of the Dead, when on November 1st and 2nd, the souls of the deceased return to spend time with their families. In the village of Mixquic, south of Mexico City, a particularly significant event is the \"night of the candles,\" when locals light candles, burn incense, and decorate graves, creating a mystical atmosphere of unity between the living and the dead. On this night, people remain in the cemetery next to the graves of their loved ones, and the candlelight illuminates the path for the souls to return.",
+        "zh": "传说讲述了墨西哥的亡灵节传统，即每年的11月1日和2日，逝者的灵魂会回来与家人团聚。在墨西哥城南部的米克斯基克村，一个特别重要的活动是“烛光之夜”，当地人会点燃蜡烛、焚香和装饰坟墓，营造出一种生死共融的神秘氛围。在这一夜，人们会留在墓地里，陪伴在亲人的墓旁，烛光照亮灵魂回家的路。"
+      },
+      "text": {
+        "ru": [
+          "В Мексике День мёртвых — это праздник с доиспанскими корнями, совмещённый с католическим празднованием Дня всех святых. Этот праздник призван почтить предков, поскольку считается, что 1 и 2 ноября души умерших возвращаются, чтобы побыть с живыми.",
+          "Среди самых известных мест празднования Дня мёртвых находятся Пацкуаро в Мичоакане и Сан-Андрес Микскик в Федеральном округе, а также Уастека Потосина, Уакечула в Пуэбле и Окотепек в Морелосе, где удалось сохранить эту древнюю традицию сосуществования живых и мёртвых в домах, на улицах и на кладбищах.",
+          "На юге города Мехико, в Микскике, в муниципии Тлауак, проходит одно из самых впечатляющих празднований, поскольку весь город участвует в празднике, чтобы встретить души умерших. 1 ноября приходят души детей, а 2-го — души взрослых, среди подношений, молитв и звона колоколов.",
+          "Алумбрада или ночь свечей — самое значимое событие празднования. 2 ноября, начиная с 18:00, жители Микскика направляются на кладбище со свечами, ладаном и цветами. На кладбище все могилы освещаются свечами и зажигается ладан, что создаёт мистическую атмосферу общения между живыми и мёртвыми.",
+          "В течение этой ночи, среди молитв и песнопений, жители города Микскик остаются рядом с могилами своих усопших. По мере того как проходит ночь, свет свечей освещает душам путь обратно."
+        ],
+        "es": [
+          "En México, el Día de Muertos es la festividad de raíces prehispánicas, combinada con la celebración católica del Día de Todos los Santos, la celebración busca rendir culto a los antepasados, pues se cree que los días 1 y 2 de noviembre, las almas de los fallecidos regresan para convivir con los vivos.",
+          "Entre los lugares más emblemáticos en la celebración del Día de Muertos están Pátzcuaro, en Michoacán, y San Andrés Mixquic, en el Distrito Federal, así como la Huasteca Potosina, Huaquechula, Puebla y Ocotepec de Morelos, donde se ha logrado mantener esta tradición ancestral de convivencia entre vivos y muertos en casas, calles y cementerios.",
+          "Al sur de la Ciudad de México, Mixquic, en la Delegación Tláhuac, tiene una de las celebraciones más impactantes, pues todo el pueblo participa en la fiesta para recibir a las almas de los difuntos. El 1 de noviembre llegan las ánimas de los niños y el día 2, las de los adultos, en medio de ofrendas, oraciones y el repique de las campanas.",
+          "La alumbrada o noche de las velas es el evento más significativo de la celebración, ya que el 2 de noviembre, a partir de las 18:00 horas, los habitantes de Mixquic se encaminan hacia el panteón con velas, incienso y flores. En el cementerio, todas las tumbas son iluminadas con velas y se hace arder el incienso, lo que crea un ambiente místico, de comunión entre vivos y muertos.",
+          "Durante esa noche, en medio de oraciones y cantos, los habitantes del pueblo de Mixquic permanecen al lado de las tumbas de sus deudos. Mientras transcurre la noche, la luz de las velas es la que alumbrará a las ánimas en su camino de regreso."
+        ],
+        "en": [
+          "In Mexico, the Day of the Dead is a festivity with pre-Hispanic roots, combined with the Catholic celebration of All Saints' Day. The celebration seeks to honor ancestors, as it is believed that on November 1st and 2nd, the souls of the deceased return to coexist with the living.",
+          "Among the most emblematic places for the Day of the Dead celebration are Pátzcuaro in Michoacán, and San Andrés Mixquic in the Federal District, as well as the Huasteca Potosina, Huaquechula, Puebla, and Ocotepec de Morelos, where this ancestral tradition of coexistence between the living and the dead has been preserved in homes, streets, and cemeteries.",
+          "In the south of Mexico City, Mixquic, in the Tláhuac Delegation, has one of the most impressive celebrations, as the entire town participates in the festival to receive the souls of the deceased. On November 1st, the souls of the children arrive, and on the 2nd, those of the adults, amidst offerings, prayers, and the ringing of bells.",
+          "The 'alumbrada' or night of the candles is the most significant event of the celebration. On November 2nd, starting at 6:00 PM, the inhabitants of Mixquic head to the cemetery with candles, incense, and flowers. In the cemetery, all the tombs are illuminated with candles and incense is burned, creating a mystical atmosphere of communion between the living and the dead.",
+          "During that night, amidst prayers and songs, the people of Mixquic remain beside the tombs of their deceased. As the night passes, the candlelight is what will illuminate the souls on their way back."
+        ],
+        "zh": [
+          "在墨西哥，亡灵节是一个源于前西班牙时期并与天主教万圣节相结合的节日。这个节日的目的是为了纪念祖先，因为人们相信在11月1日和2日，逝者的灵魂会回来与生者共存。",
+          "庆祝亡灵节最具代表性的地方包括米却肯州的帕茨夸罗、联邦区的圣安德烈斯·米克斯基克，以及波托西纳瓦斯特卡地区、普埃布拉州的瓦克丘拉和莫雷洛斯州的奥科特佩克。在这些地方，人们在家里、街上和墓地里保留了这种生者与死者共存的古老传统。",
+          "在墨西哥城南部的特拉瓦克区，米克斯基克村的庆祝活动最令人印象深刻，因为全村人都参与到迎接亡灵的节日中。11月1日是儿童灵魂到来的日子，2日是成年人灵魂到来的日子，伴随着祭品、祈祷和钟声。",
+          "“点灯”或“烛光之夜”是庆祝活动中最重要的环节。11月2日下午6点开始，米克斯基克的居民们会带着蜡烛、熏香和鲜花前往墓地。在墓地里，所有的坟墓都被蜡烛照亮，并点燃熏香，营造出一种生者与死者交流的神秘氛围。",
+          "在那一晚，伴随着祈祷和歌声，米克斯基克的村民们会守在逝去亲人的墓旁。随着夜晚的流逝，烛光将照亮灵魂回归的道路。"
+        ]
+      },
+      "questions": [
+        {
+          "text": {
+            "es": "El Día de Muertos es",
+            "ru": "День мертвых это",
+            "en": "The Day of the Dead is",
+            "zh": "亡灵节是"
+          },
+          "answer": {
+            "es": "La festividad de raíces prehispánicas, combinada con la celebración católica del Día de Todos los Santos",
+            "ru": "Праздник с доиспанскими корнями, совмещенный с католическим празднованием Дня всех святых",
+            "en": "A festival with pre-Hispanic roots, combined with the Catholic celebration of All Saints' Day",
+            "zh": "一个源于前西班牙时期并与天主教万圣节相结合的节日"
+          },
+          "options": [
+            {
+              "es": "Una fiesta de disfraces",
+              "ru": "Костюмированная вечеринка",
+              "en": "A costume party",
+              "zh": "一个化装舞会"
+            },
+            {
+              "es": "Un festival de música",
+              "ru": "Музыкальный фестиваль",
+              "en": "A music festival",
+              "zh": "一个音乐节"
+            },
+            {
+              "es": "Una celebración de la cosecha",
+              "ru": "Праздник урожая",
+              "en": "A harvest celebration",
+              "zh": "一个丰收庆典"
+            }
+          ]
+        },
+        {
+          "text": {
+            "es": "¿En qué delegación de la Ciudad de México hay una celebración impactante?",
+            "ru": "В каком районе Мехико проходит впечатляющее празднование?",
+            "en": "In which delegation of Mexico City is there an impressive celebration?",
+            "zh": "墨西哥城的哪个区有令人印象深刻的庆祝活动？"
+          },
+          "answer": {
+            "es": "Tláhuac",
+            "ru": "Тлауак",
+            "en": "Tláhuac",
+            "zh": "特拉瓦克"
+          },
+          "options": [
+            {
+              "es": "Coyoacán",
+              "ru": "Койоакан",
+              "en": "Coyoacán",
+              "zh": "科约阿坎"
+            },
+            {
+              "es": "Xochimilco",
+              "ru": "Сочимилько",
+              "en": "Xochimilco",
+              "zh": "索奇米尔科"
+            },
+            {
+              "es": "Cuauhtémoc",
+              "ru": "Куаутемок",
+              "en": "Cuauhtémoc",
+              "zh": "库奥特莫克"
+            }
+          ]
+        },
+        {
+          "text": {
+            "es": "¿Quién participa en la celebración del Día de Muertos en Mixquic?",
+            "ru": "Кто участвует в праздновании Дня мертвых в Микскике?",
+            "en": "Who participates in the Day of the Dead celebration in Mixquic?",
+            "zh": "谁参加米克斯基克的亡灵节庆祝活动？"
+          },
+          "answer": {
+            "es": "Todo el pueblo",
+            "ru": "Вся деревня",
+            "en": "The entire town",
+            "zh": "整个村庄"
+          },
+          "options": [
+            {
+              "es": "Solo los ancianos",
+              "ru": "Только старики",
+              "en": "Only the elders",
+              "zh": "只有长者"
+            },
+            {
+              "es": "Solo los niños",
+              "ru": "Только дети",
+              "en": "Only the children",
+              "zh": "只有孩子"
+            },
+            {
+              "es": "Solo los turistas",
+              "ru": "Только туристы",
+              "en": "Only the tourists",
+              "zh": "只有游客"
+            }
+          ]
+        },
+        {
+          "text": {
+            "es": "¿Cuál es el evento más significativo de la celebración?",
+            "ru": "Какое событие является самым значимым в праздновании?",
+            "en": "What is the most significant event of the celebration?",
+            "zh": "庆祝活动中最重要的事件是什么？"
+          },
+          "answer": {
+            "es": "La alumbrada o noche de las velas",
+            "ru": "«Алумбрада» или ночь свечей",
+            "en": "The 'alumbrada' or night of the candles",
+            "zh": "“点灯”或“烛光之夜”"
+          },
+          "options": [
+            {
+              "es": "El desfile de calaveras",
+              "ru": "Парад черепов",
+              "en": "The parade of skulls",
+              "zh": "骷髅游行"
+            },
+            {
+              "es": "La preparación de ofrendas",
+              "ru": "Приготовление подношений",
+              "en": "The preparation of offerings",
+              "zh": "准备祭品"
+            },
+            {
+              "es": "El repique de las campanas",
+              "ru": "Звон колоколов",
+              "en": "The ringing of the bells",
+              "zh": "钟声"
+            }
+          ]
+        },
+        {
+          "text": {
+            "es": "¿A quién/quiénes reciben en el 1 y 2 de noviembre?",
+            "ru": "Кого встречают 1 и 2 ноября?",
+            "en": "Who do they receive on November 1st and 2nd?",
+            "zh": "他们在11月1日和2日迎接谁？"
+          },
+          "answer": {
+            "es": "Las almas de los difuntos (niños el 1 y adultos el 2)",
+            "ru": "Души умерших (детей 1-го и взрослых 2-го)",
+            "en": "The souls of the deceased (children on the 1st and adults on the 2nd)",
+            "zh": "逝者的灵魂（1日是儿童，2日是成人）"
+          },
+          "options": [
+            {
+              "es": "A los dioses prehispánicos",
+              "ru": "Доиспанских богов",
+              "en": "The pre-Hispanic gods",
+              "zh": "前西班牙时期的神"
+            },
+            {
+              "es": "A los santos católicos",
+              "ru": "Католических святых",
+              "en": "The Catholic saints",
+              "zh": "天主教圣人"
+            },
+            {
+              "es": "A familiares vivos de otras ciudades",
+              "ru": "Живых родственников из других городов",
+              "en": "Living relatives from other cities",
+              "zh": "来自其他城市的在世亲属"
+            }
+          ]
+        },
+        {
+          "text": {
+            "es": "¿Con qué encaminan los habitantes de Mixquic hacia el panteón?",
+            "ru": "С чем жители Микскика направляются к пантеону?",
+            "en": "With what do the inhabitants of Mixquic head towards the cemetery?",
+            "zh": "米克斯基克的居民带着什么走向墓地？"
+          },
+          "answer": {
+            "es": "Con velas, incienso y flores",
+            "ru": "Со свечами, ладаном и цветами",
+            "en": "With candles, incense, and flowers",
+            "zh": "带着蜡烛、熏香和鲜花"
+          },
+          "options": [
+            {
+              "es": "Con comida y bebida",
+              "ru": "С едой и напитками",
+              "en": "With food and drinks",
+              "zh": "带着食物和饮料"
+            },
+            {
+              "es": "Con música y cantos",
+              "ru": "С музыкой и песнями",
+              "en": "With music and songs",
+              "zh": "带着音乐和歌声"
+            },
+            {
+              "es": "Con fotografías y recuerdos",
+              "ru": "С фотографиями и воспоминаниями",
+              "en": "With photographs and memories",
+              "zh": "带着照片和回忆"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
