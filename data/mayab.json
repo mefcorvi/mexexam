@@ -1,0 +1,223 @@
+{
+  "data": [
+    {
+      "id": "mayab1e2f3g4",
+      "title": {
+        "ru": "Эль-Майяб, земля фазанов и оленей",
+        "es": "El Mayab, tierra de faisanes y venados",
+        "en": "El Mayab, Land of Pheasants and Deer",
+        "zh": "梅亚布，雉鸡与鹿之地"
+      },
+      "summary": {
+        "ru": "Ицамна создал Землю и оставил Эль-Майяб народу майя как наследникам этой земли, обеспечив их всем необходимым.",
+        "es": "Itzamná creó el mundo y dejó el Mayab a los mayas, quienes eran herederos de esa tierra, proveyéndoles de todo lo necesario.",
+        "en": "Itzamná created the Earth and left El Mayab to the Maya, who were heirs to this land, providing them with everything needed.",
+        "zh": "伊察姆那创造了地球，并将梅亚布留给了玛雅人，他们是这片土地的继承者，提供他们所需的一切。"
+      },
+      "text": {
+        "ru": [
+          "Ицамна создал Землю и оставил Эль-Майяб народу майя как наследникам этой земли, обеспечив их всем необходимым для счастья и процветания.",
+          "Для охраны природы он оставил с ними трёх животных: оленя, фазана и гремучую змею.",
+          "Когда майянские предсказатели увидели страшные видения о завоевании, животные изменили своё поведение: олень заплакал, образовав лагуны, фазан стал меньше летать, чтобы не быть замеченным, а змея перестала играть музыку, сохранив её для нападения.",
+          "Предсказание гласило, что майя вернут свои земли, когда животные подадут особые знаки."
+        ],
+        "es": [
+          "Fue Itzamná quien creó todo lo que podemos ver en la tierra, la hizo bien bella para los humanos, pero dejó el Mayab a los mayas que eran los herederos de dicha tierra, les dio todo lo que necesitaban para sembrar y ser muy felices.",
+          "También dejó a su lado a 3 animales que los cuidarían y estarían rondando este sitio de felicidad.",
+          "El venado por la tierra, el faisán por los aires y la serpiente cascabel con su música serían los encargados de preservar la naturaleza junto con el hombre.",
+          "El día llegó en el que los chilam, o sea los adivinos mayas, tuvieron visiones terribles del futuro y le avisaron al hombre maya que tenga cuidado porque vendrían hombres de horrible corazón para llevarse sus tierras.",
+          "La serpiente dejó de hacer música y solamente la empezó a hacer en el momento de atacar, el venado lloró tanto que se hicieron lagunas donde no las había y desde entonces siempre tiene una mirada triste, mientras que el faisán dejó de volar tanto para que no lo vean en los cielos.",
+          "Los chilam también le dijeron al hombre maya que recuperarían sus tierras, pero para esto debían pelear en el momento exacto en donde el faisán se vea con toda su sombra en el Mayab, la serpiente haga una música diferente que se oiga en todas partes sin detenerse y el venado corra tan rápido que recorra todo el lugar en muy poco tiempo."        
+        ],
+        "en": [
+          "Itzamná, who created everything we see on Earth, made it beautiful for humans, but left El Mayab to the Maya, who were the heirs of this land, giving them everything they needed to cultivate and be happy.",
+          "He also left alongside them 3 animals that would guard and roam this place of happiness.",
+          "The deer on the land, the pheasant in the skies, and the rattlesnake with its music would be responsible for preserving nature along with man.",
+          "The day came when the chilam, or Mayan diviners, had terrible visions of the future and warned the Maya people to be cautious because men of terrible heart would come to take their lands.",
+          "The snake stopped making music and only began to make it at the moment of attack, the deer cried so much that lagoons formed where there were none, and since then always has a sad look, while the pheasant stopped flying much so as not to be seen in the skies.",
+          "The chilam also told the Maya people that they would regain their lands, but for this they had to fight at the exact moment when the pheasant would cast its full shadow in the Mayab, the snake would make a different music heard everywhere without stopping, and the deer would run so fast that it would cover the whole place in a very short time."
+        ],
+        "zh": [
+          "伊察姆那创造了我们在地球上看到的一切，为人类创造了美丽，但将梅亚布留给了玛雅人，他们是这片土地的继承者，给了他们耕种和幸福所需的一切。",
+          "他还留下了3只动物，与他们一起守护和巡游这一幸福之地。",
+          "地上的鹿，空中的雉鸡，伴随音乐的响尾蛇，将连同人类一起承担起保护自然的责任。",
+          "有一天，奇拉姆，或玛雅人的占卜者，看到未来可怕的景象，警告玛雅人要小心，因为心怀恶意的人将来抢夺他们的土地。",
+          "蛇停止了音乐，只在攻击的时刻才响起；鹿哭出的眼泪汇成过去从未有过的湖泊，从那时起总是一脸忧愁；而雉鸡则飞得很少，以免在空中被看见。",
+          "奇拉姆还告诉玛雅人，他们会重新获得他们的土地，但为此，他们必须在确切的时刻战斗，就是当雉鸡在玛雅布投射完整的阴影，蛇发出不同的音乐到处回荡，而鹿以极快的速度在短时间内覆盖整个地方时。"
+        ]
+      },
+      "questions": [
+        {
+          "text": {
+            "ru": "Почему Ицамна оставил Эль-Майяб майя?",
+            "es": "¿Por qué Itzamná dejó el Mayab a los mayas?",
+            "en": "Why did Itzamná leave El Mayab to the Maya?",
+            "zh": "为什么伊察姆那将梅亚布留给玛雅人？"
+          },
+          "answer": {
+            "ru": "Потому что они были наследниками этой земли.",
+            "es": "Porque eran los herederos de dicha tierra.",
+            "en": "Because they were the heirs of this land.",
+            "zh": "因为他们是这片土地的继承者。"
+          },
+          "options": [
+            {
+              "ru": "Потому что они были там всегда.",
+              "es": "Porque siempre estuvieron allí.",
+              "en": "Because they were always there.",
+              "zh": "因为他们一直在那里。"
+            },
+            {
+              "ru": "Потому что они были защитниками мира.",
+              "es": "Porque eran los defensores de la paz.",
+              "en": "Because they were the defenders of peace.",
+              "zh": "因为他们是和平的捍卫者。"
+            },
+            {
+              "ru": "Потому что они первыми пришли.",
+              "es": "Porque llegaron primero.",
+              "en": "Because they arrived first.",
+              "zh": "因为他们第一时间抵达。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Кого Ицамна оставил на новой земле с майя?",
+            "es": "¿A quiénes dejó Itzamná en la tierra nueva al lado de los mayas?",
+            "en": "Who did Itzamná leave on the new land with the Maya?",
+            "zh": "伊察姆那与玛雅人一起留在新土地上的是谁？"
+          },
+          "answer": {
+            "ru": "Фазана, оленя и змею.",
+            "es": "Al faisán, al venado y a la serpiente.",
+            "en": "The pheasant, the deer, and the snake.",
+            "zh": "雉鸡，鹿和蛇。"
+          },
+          "options": [
+            {
+              "ru": "Тигра, лебедя и акулу.",
+              "es": "Al tigre, al cisne y al tiburón.",
+              "en": "The tiger, the swan, and the shark. ",
+              "zh": "老虎，天鹅和鲨鱼。"
+            },
+            {
+              "ru": "Орла, медведя и волка.",
+              "es": "Al águila, al oso y al lobo.",
+              "en": "The eagle, the bear, and the wolf.",
+              "zh": "鹰，熊和狼。"
+            },
+            {
+              "ru": "Кейца, ягуара и пуму.",
+              "es": "Al quetzal, al jaguar y al puma.",
+              "en": "The quetzal, the jaguar, and the puma.",
+              "zh": "凤凰，捷豹和美洲狮。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Кто мог видеть страшные видения будущего?",
+            "es": "¿Quiénes podrían ver visiones terribles del futuro?",
+            "en": "Who could see terrible visions of the future?",
+            "zh": "谁能看到未来的可怕愿景？"
+          },
+          "answer": {
+            "ru": "Чилам, предсказатели майя. ",
+            "es": "Los chilam, los adivinos mayas.",
+            "en": "The chilam, the Mayan diviners.",
+            "zh": "奇拉姆，玛雅人的占卜者。"
+          },
+          "options": [
+            {
+              "ru": "Только король майя.",
+              "es": "Solo el rey maya.",
+              "en": "Only the Mayan king.",
+              "zh": "只有玛雅国王。"
+            },
+            {
+              "ru": "Все животные леса.",
+              "es": "Todos los animales del bosque.",
+              "en": "All the animals of the forest.",
+              "zh": "森林里的所有动物。"
+            },
+            {
+              "ru": "Волшебники, жившие в горах.",
+              "es": "Los magos que vivían en las montañas.",
+              "en": "The wizards living in the mountains.",
+              "zh": "住在山中的巫师。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Как появились лагуны?",
+            "es": "¿Cómo aparecieron las lagunas?",
+            "en": "How did the lagoons appear?",
+            "zh": "这些泻湖是如何出现的？"
+          },
+          "answer": {
+            "ru": "Олень слишком много плакал. ",
+            "es": "El venado lloró demasiado.",
+            "en": "The deer cried too much.",
+            "zh": "鹿哭得太多了。"
+          },
+          "options": [
+            {
+              "ru": "Они пролились из облаков.",
+              "es": "Derramaron de las nubes.",
+              "en": "They spilled from the clouds.",
+              "zh": "它们是从云端倾泻而出。"
+            },
+            {
+              "ru": "Созданы змеем и его музыкой.",
+              "es": "Creadas por la serpiente y su música.",
+              "en": "Created by the snake and its music.",
+              "zh": "由蛇和它的音乐创造。"
+            },
+            {
+              "ru": "Выросли после дождя любви.",
+              "es": "Crecieron después de la lluvia de amor.",
+              "en": "Grew after a rain of love.",
+              "zh": "爱之雨之后长出的。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Почему фазан перестал так много летать?",
+            "es": "¿Por qué el faisán dejó de volar tanto?",
+            "en": "Why did the pheasant stop flying so much?",
+            "zh": "为什么雉鸡不再如此频繁地飞行？"
+          },
+          "answer": {
+            "ru": "Чтобы его не видели в небе. ",
+            "es": "Para que no lo vieran en los cielos.",
+            "en": "So as not to be seen in the skies.",
+            "zh": "以免被天空看到。"
+          },
+          "options": [
+            {
+              "ru": "Чтобы подружиться с деревьями.",
+              "es": "Para hacerse amigo de los árboles.",
+              "en": "To make friends with the trees.",
+              "zh": "为了与树交朋友。"
+            },
+            {
+              "ru": "Чтобы не мешать змеям.",
+              "es": "Para no molestar a las serpientes.",
+              "en": "To not disturb the snakes.",
+              "zh": "为了不打扰蛇。"
+            },
+            {
+              "ru": "Чтобы оставить тень на траве.",
+              "es": "Para dejar sombra en la hierba.",
+              "en": "To leave a shadow on the grass.",
+              "zh": "在草地上留影。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

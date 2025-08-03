@@ -3,6 +3,10 @@ import textsPackage from '../../data/texts.json';
 import text1Package from '../../data/dia_de_muertos.json';
 import text2Package from '../../data/leyenda_volcanes.json';
 import text3Package from '../../data/leyenda_tequila.json';
+import text4Package from '../../data/zaci.json';
+import text5Package from '../../data/sumidero.json';
+import text6Package from '../../data/popocatepetl.json';
+import text7Package from '../../data/mayab.json';
 import type {
   LocalizedString,
   LocalizedStrings
@@ -32,6 +36,10 @@ const packages = [
   text1Package,
   text2Package,
   text3Package,
+  text4Package,
+  text5Package,
+  text6Package,
+  text7Package,
 ]
 
 export const useTextsStore = createSharedComposable(() => {

@@ -1,0 +1,240 @@
+{
+  "data": [
+    {
+      "id": "popocatepetl1b2c3d4",
+      "title": {
+        "ru": "Спящая женщина и гора Попокатепетль",
+        "es": "La Mujer Dormida y el Volcán Popocatépetl",
+        "en": "The Sleeping Woman and Popocatépetl Mountain",
+        "zh": "沉睡的女人和波波卡特佩特尔山"
+      },
+      "summary": {
+        "ru": "Легенда повествует о любви Принца Искосауки, сына Бога Солнца, и девушки, встретившейся ему в магическом озере.",
+        "es": "La leyenda narra el amor del príncipe Izcozauhqui, hijo del Dios Sol, y una joven encontrada en un lago mágico.",
+        "en": "The legend tells of Prince Izcozauhqui, the son of the Sun God, and a young woman he met in a magical lake.",
+        "zh": "传说讲述了太阳神的儿子伊斯科萨乌基王子和他在一个魔法湖中遇到的年轻女子的爱情故事。"
+      },
+      "text": {
+        "ru": [
+          "Тонатиу, Бог Солнца, жил со своей семьей на небесах, где не было ни тьмы, ни страданий. Сыном Бога Солнца был принц Искосауки, который любил сады.",
+          "Однажды принц услышал о прекрасных садах владыки Тонакатекутли и отправился посмотреть на них. Растения там казались более зелеными, а луга - свежими и росистыми. Обнаружив мерцающий пруд, он пошел посмотреть на него и там встретил женщину, выходящую из воды, одетую в серебряные одежды.",
+          "Они сразу же полюбили друг друга, получив благословение богов. Они проводили время вместе, путешествовали из одного рая в другой. Но боги запретили им выходить за пределы неба.",
+          "Влюбленные знали всё о небосводе. Но им было любопытно узнать, что находится под небом, так что они решили спуститься вниз и познать землю.",
+          "Принц и принцесса, обнаружив, что земля прекраснее небесного рая, решили остаться и жить там вечно. Место, выбранное для их обители, находилось возле озера, рядом с долинами и горами.",
+          "Боги, разгневанные непослушанием супругов, решили наказать их. Принцесса внезапно заболела, и усилия Искосауки облегчить ее состояние оказались тщетными.",
+          "Женщина знала, что это была кара богов. Принцесса перед смертью попросила Искосауки поднять ее на гору, чтобы она была ближе к облакам.",
+          "Принц шел много дней и ночей, пока не достиг вершины горы. Он зажег возле Истаксиуатль факел, охранял ее, как будто принцесса спала.",
+          "Искосауки оставался рядом с ней, не двигаясь, до самой ее смерти. Она стала Спящей женщиной (Истаксиуатль), а он - Дымящейся горой (Попокатепетль)."
+        ],
+        "es": [
+          "Tonatiuh, el Dios Sol, vivía con su familia en el cielo allí donde no se conocía la oscuridad, ni la angustia. El hijo del Dios Sol era el príncipe Izcozauhqui a quien le encantaban los jardines.",
+          "Un día el príncipe oyó hablar de los lindos jardines del señor Tonacatecuhtli así que curioso fue a conocerlos. Las plantas allí parecían más verdes y los prados frescos y cubiertos de rocío.",
+          "Al descubrir una laguna resplandeciente se acercó a verla y allí se encontró con una mujer que salía de las aguas ataviada con vestidos de plata.",
+          "Se enamoraron de inmediato ante el beneplácito de los dioses. Pasaban el tiempo juntos, recorrían un cielo y otro. Pero los dioses les prohibieron ir más allá del cielo.",
+          "Los enamorados conocían el firmamento. La curiosidad por saber qué había bajo el cielo hizo que descendieran a conocer la tierra.",
+          "Los príncipes, al descubrir que la tierra era más hermosa que los paraísos celestiales decidieron quedarse a vivir en ella para siempre. El lugar escogido para su morada estaba cerca de un lago, al lado de valles y montañas.",
+          "Los dioses, furiosos por la desobediencia de la pareja, decidieron un castigo. La princesa enfermó repentinamente, fueron vanos los esfuerzos de Izcozauhqui por aliviarla.",
+          "La mujer supo que esa era la sanción de los dioses. La princesa, antes de morir, le pidió a Izcozauhqui que la llevara a una montaña con el fin de estar junto a las nubes.",
+          "El príncipe caminó días y noches hasta llegar a la cima de la montaña. Encendió una antorcha cerca de ella, la veló, como si la princesa durmiera.",
+          "Izcozauhqui se quedó junto a ella, sin moverse, hasta morir. Ella se convirtió en la mujer dormida (volcán Iztaccíhuatl) y él en el cerro que humea (volcán Popocatépetl)."
+        ],
+        "en": [
+          "Tonatiuh, the Sun God, lived with his family in the heavens where darkness and anguish were unknown. The son of the Sun God was Prince Izcozauhqui, who loved gardens.",
+          "One day, the prince heard about the beautiful gardens of Lord Tonacatecuhtli and went to see them. The plants there seemed greener, and the meadows fresh and dewy.",
+          "Upon discovering a sparkling lagoon, he went to see it and encountered a woman emerging from the waters, dressed in silver garments.",
+          "They fell in love immediately with the blessings of the gods. They spent time together, traveling from one heaven to another. But the gods forbade them from going beyond the sky.",
+          "The lovers knew the firmament. Curiosity to know what lay below the sky made them descend to explore the earth.",
+          "Discovering that the earth was more beautiful than the celestial paradises, the princes decided to stay and live there forever. Their chosen dwelling was near a lake, beside valleys and mountains.",
+          "The gods, furious at the couple's disobedience, decided on punishment. The princess suddenly fell ill, and Izcozauhqui's efforts to relieve her were in vain.",
+          "The woman knew that this was the gods' punishment. Before dying, the princess asked Izcozauhqui to take her to a mountain to be closer to the clouds.",
+          "The prince walked for days and nights until reaching the top of the mountain. He lit a torch near her, guarding her as if the princess were asleep.",
+          "Izcozauhqui stayed by her side, unmoving, until his death. She became the Sleeping Woman (Iztaccíhuatl), and he the Smoking Hill (Popocatépetl)."
+        ],
+        "zh": [
+          "托纳蒂乌，太阳神，与他的家人在天堂生活，那里没有黑暗和痛苦。太阳神的儿子是伊斯科萨乌基王子，他喜欢花园。",
+          "有一天，王子听说托纳卡特库特利主的美丽花园，便去探访。那里的植物似乎更绿，草地清新露湿。",
+          "在发现一个闪闪发光的湖泊后，他去看它，遇到了一个从水中走出的女人，穿着银色衣服。",
+          "在神的祝福下，他们立即相爱。 他们一起度过时光，从一个天堂游历到另一个。但诸神禁止他们超越天空。",
+          "恋人们了解天空。对知道天空下有什么的好奇心使他们决定去探索地球。",
+          "发现地球比天堂更美丽后，王子们决定留下来，永远住在那里。他们选择的住所靠近一个湖泊，毗邻山谷和山脉。",
+          "诸神对这对夫妇的不服从感到愤怒，决定给予惩罚。公主突然生病，伊斯科萨乌基减轻她痛苦的努力都是徒劳。",
+          "女人知道这是神的惩罚。在死前，公主要求伊斯科萨乌基带她到山上，以便离云更近。",
+          "王子走了几天几夜，直到到达山顶。他在她附近点燃了一支火炬，守护着她，好像公主在睡觉。",
+          "伊斯科萨乌基无动于衷地留在她身边，直到他去世。她变成了沉睡的女人（伊斯塔希瓦特尔），而他则变成了冒烟的山（波波卡特佩特尔）。"
+        ]
+      },
+      "questions": [
+        {
+          "text": {
+            "ru": "Как жил Тонатиу?",
+            "es": "¿Cómo vivía Tonatiuh?",
+            "en": "How did Tonatiuh live?",
+            "zh": "托纳蒂乌如何生活？"
+          },
+          "answer": {
+            "ru": "На небесах, где не было ни тьмы, ни страданий.",
+            "es": "En el cielo donde no había oscuridad ni angustia.",
+            "en": "In the heavens where there was no darkness or anguish.",
+            "zh": "在没有黑暗或痛苦的天堂。"
+          },
+          "options": [
+            {
+              "ru": "На земле, где всегда была тьма.",
+              "es": "En la tierra donde siempre había oscuridad.",
+              "en": "On earth where there was always darkness.",
+              "zh": "在地球上总是黑暗的地方。"
+            },
+            {
+              "ru": "В мире, где время остановилось.",
+              "es": "En un mundo donde el tiempo se detuvo.",
+              "en": "In a world where time stood still.",
+              "zh": "在时间停止的世界中。"
+            },
+            {
+              "ru": "В замке без окон или дверей.",
+              "es": "En un castillo sin ventanas ni puertas.",
+              "en": "In a castle without windows or doors.",
+              "zh": "在没有窗户或门的城堡中。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Почему жизнь на земле была другой?",
+            "es": "¿Por qué la vida en la tierra era diferente?",
+            "en": "Why was life on earth different?",
+            "zh": "为什么地球上的生活是不同的？"
+          },
+          "answer": {
+            "ru": "Потому что солнце не светило всё время.",
+            "es": "Porque el sol no brillaba todo el tiempo.",
+            "en": "Because the sun didn't shine all the time.",
+            "zh": "因为太阳不会一直照耀。"
+          },
+          "options": [
+            {
+              "ru": "Потому что не было изменяющихся времён.",
+              "es": "Porque no había tiempos cambiantes.",
+              "en": "Because there were no changing times.",
+              "zh": "因为没有变化的时间。"
+            },
+            {
+              "ru": "Потому что небо оставалось неизменным.",
+              "es": "Porque el cielo se mantuvo igual.",
+              "en": "Because the sky remained unchanged.",
+              "zh": "因为天空保持不变。"
+            },
+            {
+              "ru": "Потому что всё было тихо и мирно.",
+              "es": "Porque todo estaba tranquilo y pacífico.",
+              "en": "Because everything was calm and peaceful.",
+              "zh": "因为一切都是宁静和安详的。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Почему боги разозлились на пару?",
+            "es": "¿Por qué se enojaron los dioses con la pareja?",
+            "en": "Why were the gods angry with the couple?",
+            "zh": "为什么诸神对这一对感到愤怒？"
+          },
+          "answer": {
+            "ru": "Потому что они спустились на землю.",
+            "es": "Porque descendieron a la tierra.",
+            "en": "Because they descended to the earth.",
+            "zh": "因为他们降临地球。"
+          },
+          "options": [
+            {
+              "ru": "Потому что громко пели песни ночью.",
+              "es": "Porque cantaban canciones fuertes de noche.",
+              "en": "Because they sang loud songs at night.",
+              "zh": "因为他们在晚上唱大声的歌。"
+            },
+            {
+              "ru": "Потому что нарушили священные законы.",
+              "es": "Porque violaron las leyes sagradas.",
+              "en": "Because they broke sacred laws.",
+              "zh": "因为他们违反了神圣法律。"
+            },
+            {
+              "ru": "Потому что рисовали свет на облаках.",
+              "es": "Porque dibujaron luz en las nubes.",
+              "en": "Because they drew light on the clouds.",
+              "zh": "因为他们在云上画上了光。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "Каково было последнее желание принцессы перед смертью?",
+            "es": "¿Cuál fue el último deseo de la princesa antes de morir?",
+            "en": "What was the princess's last wish before dying?",
+            "zh": "公主在死前的最后一个愿望是什么？"
+          },
+          "answer": {
+            "ru": "Чтобы её оставили на вершине горы.",
+            "es": "Que la dejaran en la cima de la montaña.",
+            "en": "To be left on the mountain top.",
+            "zh": "留在山顶上。"
+          },
+          "options": [
+            {
+              "ru": "Вернуться к звездам в ночи.",
+              "es": "Regresar a las estrellas en la noche.",
+              "en": "Return to the stars at night.",
+              "zh": "在夜晚回到星星。"
+            },
+            {
+              "ru": "Стать одной из облаков над горой.",
+              "es": "Ser una de las nubes sobre la montaña.",
+              "en": "Be one of the clouds above the mountain.",
+              "zh": "成为鸟儿并飞翔。"
+            },
+            {
+              "ru": "Быть окружённой водой.",
+              "es": "Ser rodeada de agua.",
+              "en": "Be surrounded by water.",
+              "zh": "被水包围。"
+            }
+          ]
+        },
+        {
+          "text": {
+            "ru": "О чём эта история?",
+            "es": "¿De qué se trata esta historia?",
+            "en": "What is this story about?",
+            "zh": "这个故事是关于什么的？"
+          },
+          "answer": {
+            "ru": "О любви, наказанной богами.",
+            "es": "Sobre un amor castigado por los dioses.",
+            "en": "About a love punished by the gods.",
+            "zh": "关于被诸神惩罚的爱情。"
+          },
+          "options": [
+            {
+              "ru": "О великой вражде и войне.",
+              "es": "Sobre una gran enemistad y guerra.",
+              "en": "About a great enmity and war.",
+              "zh": "关于伟大的敌对和战争。"
+            },
+            {
+              "ru": "О создании мира во вселенной.",
+              "es": "Sobre la creación de paz en el universo.",
+              "en": "About the creation of peace in the universe.",
+              "zh": "关于宇宙中的和平创造。"
+            },
+            {
+              "ru": "О длительном путешествии за сокровищами.",
+              "es": "Sobre un largo viaje en busca de tesoros.",
+              "en": "About a long journey in search of treasures.",
+              "zh": "关于寻找宝藏的漫长旅程。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
