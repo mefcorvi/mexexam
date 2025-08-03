@@ -36,7 +36,7 @@ export const useTranslations = createSharedComposable(() => {
       const langArray = arr[l];
       if (langArray) {
         if (langArray.length !== arr.es.length) {
-          throw new Error(`Length of localization array for language ${l} does not match with Spanish`);
+          throw new Error(`Length of localization array for language ${l} does not match with Spanish text=${arr.es[0]}`);
         }
 
         for (let i = 0; i < langArray.length; i++) {
