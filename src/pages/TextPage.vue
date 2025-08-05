@@ -145,7 +145,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
               <div :class="$style.original">
                 {{ `${idx + 1}. ${q.text.es}` }}
               </div>
-              <div v-if="shouldShowTranslation" :class="$style.translation">
+              <div v-if="userAnswers[idx] !== null && locale !== 'es'" :class="$style.translation">
                 {{ q.text[locale] }}
               </div>
             </div>
@@ -157,7 +157,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
                   <div :class="$style.original">
                     {{ option.es }}
                   </div>
-                  <div v-if="shouldShowTranslation" :class="$style.translation">
+                  <div v-if="userAnswers[idx] !== null && locale !== 'es'" :class="$style.translation">
                     {{ option[locale] }}
                   </div>
                 </GeneralButton>
@@ -219,7 +219,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
 
   .translation {
     font-size: 80%;
-    color: var(--negative-color-alpha-50);
+    color: var(--negative-color-alpha-80);
   }
 }
 
@@ -254,7 +254,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
 
     .translation {
       font-size: 80%;
-      color: var(--negative-color-alpha-50);
+      color: var(--negative-color-alpha-80);
     }
   }
 
@@ -311,7 +311,7 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
     .translation {
       color: inherit;
 
-      opacity: 0.5;
+      opacity: 0.9;
     }
   }
 }

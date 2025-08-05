@@ -61,22 +61,22 @@
           },
           "options": [
             {
-              "es": "Una fiesta de disfraces",
-              "ru": "Костюмированная вечеринка",
-              "en": "A costume party",
-              "zh": "一个化装舞会"
+              "es": "El Día de Todos los Santos en México",
+              "ru": "День всех святых в Мексике",
+              "en": "All Saints' Day in Mexico",
+              "zh": "墨西哥的万圣节"
             },
             {
-              "es": "Un festival de música",
-              "ru": "Музыкальный фестиваль",
-              "en": "A music festival",
-              "zh": "一个音乐节"
+              "es": "Una celebración en la que las almas de los vivos regresan para convivir",
+              "ru": "Праздник, в котором души живых возвращаются, чтобы жить вместе",
+              "en": "A celebration in which the souls of the living return to coexist",
+              "zh": "一个灵魂与生者共存的节日"
             },
             {
-              "es": "Una celebración de la cosecha",
-              "ru": "Праздник урожая",
-              "en": "A harvest celebration",
-              "zh": "一个丰收庆典"
+              "es": "La combinación de la fe católica y las almas de los muertos",
+              "ru": "Сочетание католического вероисповедания и душей умерших",
+              "en": "The combination of Catholic faith and the souls of the dead",
+              "zh": "天主教信仰和逝者的灵魂"
             }
           ]
         },
@@ -166,22 +166,22 @@
           },
           "options": [
             {
-              "es": "El desfile de calaveras",
-              "ru": "Парад черепов",
-              "en": "The parade of skulls",
-              "zh": "骷髅游行"
+              "es": "La noche de las velas, las tumbas y las flores",
+              "ru": "Ночь свечей, могилы и цветы",
+              "en": "The night of the candles, tombs, and flowers",
+              "zh": "烛光之夜、墓地和鲜花"
             },
             {
-              "es": "La preparación de ofrendas",
-              "ru": "Приготовление подношений",
-              "en": "The preparation of offerings",
-              "zh": "准备祭品"
+              "es": "La comunión entre vivos y muertos",
+              "ru": "Общение между живыми и мёртвыми",
+              "en": "The communion between the living and the dead",
+              "zh": "生者与死者的交流"
             },
             {
-              "es": "El repique de las campanas",
-              "ru": "Звон колоколов",
-              "en": "The ringing of the bells",
-              "zh": "钟声"
+              "es": "El arder del incienso en el cementerio",
+              "ru": "Горение ладана в кладбище",
+              "en": "The burning of incense in the cemetery",
+              "zh": "在墓地燃烧熏香"
             }
           ]
         },
@@ -201,27 +201,27 @@
           },
           "options": [
             {
-              "es": "A los dioses prehispánicos",
-              "ru": "Доиспанских богов",
-              "en": "The pre-Hispanic gods",
-              "zh": "前西班牙时期的神"
+              "es": "Los habitantes de la Delegación Tláhuac",
+              "ru": "Жителей делегации Тлауак",
+              "en": "The inhabitants of the Tláhuac Delegation",
+              "zh": "特拉瓦克区的居民"
             },
             {
-              "es": "A los santos católicos",
-              "ru": "Католических святых",
-              "en": "The Catholic saints",
-              "zh": "天主教圣人"
+              "es": "Las almas de los difuntos y a sus ofrendas",
+              "ru": "Души умерших и их подношения",
+              "en": "The souls of the deceased and their offerings",
+              "zh": "逝者的灵魂和他们的祭品"
             },
             {
-              "es": "A familiares vivos de otras ciudades",
-              "ru": "Живых родственников из других городов",
-              "en": "Living relatives from other cities",
-              "zh": "来自其他城市的在世亲属"
+              "es": "Las almas de los niños y las oraciones",
+              "ru": "Души детей и молитвы",
+              "en": "The souls of the children and prayers",
+              "zh": "儿童的灵魂和祈祷"
             }
           ]
         },
         {
-          "paragraph_id": 4,
+          "paragraph_id": [3, 4],
           "text": {
             "es": "¿Con qué encaminan los habitantes de Mixquic hacia el panteón?",
             "ru": "С чем жители Микскика направляются к пантеону?",
