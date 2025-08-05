@@ -46,6 +46,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 0,
           "text": {
             "es": "El Día de Muertos es",
             "ru": "День мертвых это",
@@ -80,6 +81,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿En qué delegación de la Ciudad de México hay una celebración impactante?",
             "ru": "В каком районе Мехико проходит впечатляющее празднование?",
@@ -114,6 +116,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿Quién participa en la celebración del Día de Muertos en Mixquic?",
             "ru": "Кто участвует в праздновании Дня мертвых в Микскике?",
@@ -148,6 +151,7 @@
           ]
         },
         {
+          "paragraph_id": 3,
           "text": {
             "es": "¿Cuál es el evento más significativo de la celebración?",
             "ru": "Какое событие является самым значимым в праздновании?",
@@ -182,6 +186,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿A quién/quiénes reciben en el 1 y 2 de noviembre?",
             "ru": "Кого встречают 1 и 2 ноября?",
@@ -216,6 +221,7 @@
           ]
         },
         {
+          "paragraph_id": 4,
           "text": {
             "es": "¿Con qué encaminan los habitantes de Mixquic hacia el panteón?",
             "ru": "С чем жители Микскика направляются к пантеону?",

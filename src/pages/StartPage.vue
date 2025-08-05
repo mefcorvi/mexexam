@@ -172,8 +172,8 @@ const handleResetStatistics = () => {
     <div :class="$style.section" v-if="selectedMode === 'texts'">
       <h3 :class="$style.sectionTitle">{{ t('Choose text') }}</h3>
       <div :class="$style.sectionSelection">
-        <button v-for="text in texts.sort((a, b) => a.title[locale].localeCompare(b.title[locale]))" :key="text.id"
-          :class="[$style.sectionOption, { [$style.active]: selectedSectionId === text.id }]"
+        <button v-for="text in texts.sort((a, b) => a.title[locale]?.localeCompare(b.title[locale] ?? '') ?? 0)"
+          :key="text.id" :class="[$style.sectionOption, { [$style.active]: selectedSectionId === text.id }]"
           @click="selectedSectionId = text.id">
           <span :class="$style.sectionLabel">{{ text.title[locale] }}</span>
         </button>

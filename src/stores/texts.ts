@@ -1,17 +1,15 @@
 import { createSharedComposable } from '@vueuse/core';
-import textsPackage from '../../data/texts.json';
-import text1Package from '../../data/dia_de_muertos.json';
-import text2Package from '../../data/leyenda_volcanes.json';
-import text3Package from '../../data/leyenda_tequila.json';
-import text4Package from '../../data/zaci.json';
-import text5Package from '../../data/sumidero.json';
-import text6Package from '../../data/popocatepetl.json';
-import text7Package from '../../data/mayab.json';
+
 import type {
   LocalizedString,
   LocalizedStrings
 } from '@/utils/questions-schema';
 import { useTranslations } from './translations';
+
+const texts: Record<string, { default: TextsPackage }> = import.meta.glob(
+  '../../data/legends/*.json',
+  { eager: true }
+);
 
 export type Text = {
   id: string;
@@ -22,6 +20,7 @@ export type Text = {
 };
 
 export type TextQuestion = {
+  paragraph_id?: number | number[];
   text: LocalizedString;
   answer: LocalizedString;
   options: LocalizedString[];
@@ -31,19 +30,10 @@ export type TextsPackage = {
   data: Text[];
 };
 
-const packages = [
-  textsPackage,
-  text1Package,
-  text2Package,
-  text3Package,
-  text4Package,
-  text5Package,
-  text6Package,
-  text7Package,
-]
+const packages = Object.values(texts).map((x) => x.default);
 
 export const useTextsStore = createSharedComposable(() => {
-  const texts = packages.flatMap(x => x.data);
+  const texts = packages.flatMap((x) => x.data);
   const translations = useTranslations();
 
   const map = new Map<string, Text>();

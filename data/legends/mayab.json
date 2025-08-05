@@ -46,6 +46,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 0,
           "text": {
             "ru": "Почему Ицамна оставил Эль-Майяб майя?",
             "es": "¿Por qué Itzamná dejó el Mayab a los mayas?",
@@ -80,6 +81,7 @@
           ]
         },
         {
+          "paragraph_id": 1,
           "text": {
             "ru": "Кого Ицамна оставил на новой земле с майя?",
             "es": "¿A quiénes dejó Itzamná en la tierra nueva al lado de los mayas?",
@@ -114,6 +116,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "ru": "Кто мог видеть страшные видения будущего?",
             "es": "¿Quiénes podrían ver visiones terribles del futuro?",
@@ -148,6 +151,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "ru": "Как появились лагуны?",
             "es": "¿Cómo aparecieron las lagunas?",
@@ -182,6 +186,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "ru": "Почему фазан перестал так много летать?",
             "es": "¿Por qué el faisán dejó de volar tanto?",

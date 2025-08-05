@@ -50,6 +50,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 1,
           "text": {
             "es": "En la época en que Iztaccihuatl y Popocatépetl estaban enamorados, en el Valle de México:",
             "ru": "Во времена, когда Истациуатль и Попокатепетль были влюблены, в Мексиканской долине:",
@@ -84,6 +85,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "La misión que el emperador le confió a Popocatépetl fue:",
             "ru": "Миссия, которую император поручил Попокатепетлю, заключалась в:",
@@ -118,6 +120,7 @@
           ]
         },
         {
+          "paragraph_id": 4,
           "text": {
             "es": "Tras varios meses de combate:",
             "ru": "После нескольких месяцев сражений:",
@@ -152,6 +155,7 @@
           ]
         },
         {
+          "paragraph_id": 5,
           "text": {
             "es": "Cuando Popocatépetl regresó victorioso:",
             "ru": "Когда Попокатепетль вернулся победителем:",
@@ -186,6 +190,7 @@
           ]
         },
         {
+          "paragraph_id": 5,
           "text": {
             "es": "La leyenda se trata:",
             "ru": "Легенда рассказывает:",

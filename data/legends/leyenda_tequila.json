@@ -46,6 +46,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 0,
           "text": {
             "es": "¿Qué tenía en su poder la diosa Mayahuel?",
             "ru": "Что было во владении у богини Майяуэль?",
@@ -80,6 +81,7 @@
           ]
         },
         {
+          "paragraph_id": 1,
           "text": {
             "es": "¿Cuál fue la misión que los dioses encomendaron a Quetzalcóatl?",
             "ru": "Какую миссию боги поручили Кетцалькоатлю?",
@@ -114,6 +116,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿Qué hicieron Mayahuel y Quetzalcóatl para no ser encontrados en su huida?",
             "ru": "Что сделали Майяуэль и Кетцалькоатль, чтобы их не нашли во время бегства?",
@@ -148,6 +151,7 @@
           ]
         },
         {
+          "paragraph_id": 3,
           "text": {
             "es": "¿Qué le hicieron los hermanos a Mayahuel?",
             "ru": "Что сделали братья с Майяуэль?",
@@ -182,6 +186,7 @@
           ]
         },
         {
+          "paragraph_id": 4,
           "text": {
             "es": "¿Qué le pasó al final a Mayahuel?",
             "ru": "Что в итоге произошло с Майяуэль?",
@@ -216,6 +221,7 @@
           ]
         },
         {
+          "paragraph_id": 1,
           "text": {
             "es": "\"Astuto\" en este párrafo significa",
             "ru": "«Astuto» в этом абзаце означает",

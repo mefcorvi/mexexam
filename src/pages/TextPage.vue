@@ -39,6 +39,7 @@ useActivatableEffect(
           userAnswers.value = new Array(selectedText.value.questions.length).fill(null);
           // Initialize shuffled options for each question
           shuffledOptions.value = selectedText.value.questions.map(q => getShuffledOptions(q));
+          window.scrollTo({ top: 0, behavior: 'instant' });
         }
       },
       { immediate: true }
@@ -132,9 +133,17 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
         <h2>{{ uit('Questions') }}</h2>
         <div :class="$style.questionsList">
           <div v-for="(q, idx) in selectedText.questions" :key="idx" :class="$style.question">
+            <div v-if="typeof q.paragraph_id === 'number'" :class="$style.paragraph">
+              {{ selectedText.text.es?.[q.paragraph_id] }}
+            </div>
+            <div v-else :class="$style.paragraph">
+              <div v-for="paragraphId in q.paragraph_id" :key="paragraphId">
+                {{ selectedText.text.es?.[paragraphId] }}
+              </div>
+            </div>
             <div :class="$style.questionText">
               <div :class="$style.original">
-                {{ q.text.es }}
+                {{ `${idx + 1}. ${q.text.es}` }}
               </div>
               <div v-if="shouldShowTranslation" :class="$style.translation">
                 {{ q.text[locale] }}
@@ -216,6 +225,20 @@ const getOptionClass = (question: any, option: any, questionIdx: number) => {
 
 .questions {
   max-width: var(--main-width);
+
+  .paragraph {
+    margin-top: var(--gap-l);
+    margin-bottom: var(--gap-s);
+    padding-left: var(--gap);
+
+    font-size: 90%;
+
+    border-left: 4px solid var(--secondary-color-30);
+  }
+
+  .question:first-child .paragraph {
+    margin-top: 0;
+  }
 
   h2 {
     margin-bottom: var(--gap-s);
