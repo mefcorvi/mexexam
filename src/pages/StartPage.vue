@@ -106,6 +106,7 @@ const startSession = () => {
       pushLocale(RouteName.SectionExam, { sectionId: selectedSectionId.value });
     } else if (selectedMode.value === 'texts') {
       pushLocale(RouteName.Text, { id: selectedSectionId.value });
+      selectedSectionId.value = null;
     }
   }
 };
@@ -174,7 +175,7 @@ const handleResetStatistics = () => {
       <div :class="$style.sectionSelection">
         <button v-for="text in texts.sort((a, b) => a.title[locale]?.localeCompare(b.title[locale] ?? '') ?? 0)"
           :key="text.id" :class="[$style.sectionOption, { [$style.active]: selectedSectionId === text.id }]"
-          @click="selectedSectionId = text.id">
+          @click="selectedSectionId = text.id; startSession();">
           <span :class="$style.sectionLabel">{{ text.title[locale] }}</span>
         </button>
       </div>
@@ -209,9 +210,9 @@ const handleResetStatistics = () => {
         {{ t('Reset Statistics') }}
       </GeneralButton>
     </div>
-    <div :style="{ height: '52px' }">&nbsp;</div>
+    <div v-if="selectedMode !== 'texts'" :style="{ height: '52px' }">&nbsp;</div>
     <!-- Start Button -->
-    <div :class="$style.startSection">
+    <div v-if="selectedMode !== 'texts'" :class="$style.startSection">
       <GeneralButton @click="startSession" :class="$style.startButton" :disabled="isStartDisabled">
         {{ t('Start') }}
       </GeneralButton>
