@@ -61,22 +61,22 @@
           },
           "options": [
             {
-              "ru": "Потому что они были там всегда.",
-              "es": "Porque siempre estuvieron allí.",
-              "en": "Because they were always there.",
-              "zh": "因为他们一直在那里。"
+              "ru": "Потому что они были избранными.",
+              "es": "Porque eran los elegidos.",
+              "en": "Because they were the chosen ones.",
+              "zh": "因为他们是被选择的。"
             },
             {
-              "ru": "Потому что они были защитниками мира.",
-              "es": "Porque eran los defensores de la paz.",
-              "en": "Because they were the defenders of peace.",
-              "zh": "因为他们是和平的捍卫者。"
+              "ru": "Потому что хотели сеять.",
+              "es": "Porque querían sembrar.",
+              "en": "Because they wanted to sow.",
+              "zh": "因为他们想播种。"
             },
             {
-              "ru": "Потому что они первыми пришли.",
-              "es": "Porque llegaron primero.",
-              "en": "Because they arrived first.",
-              "zh": "因为他们第一时间抵达。"
+              "ru": "Потому что они об этом попросили.",
+              "es": "Porque se lo pidieron.",
+              "en": "Because they asked for it.",
+              "zh": "因为他们要求了。"
             }
           ]
         },
@@ -96,22 +96,22 @@
           },
           "options": [
             {
-              "ru": "Тигра, лебедя и акулу.",
-              "es": "Al tigre, al cisne y al tiburón.",
-              "en": "The tiger, the swan, and the shark. ",
-              "zh": "老虎，天鹅和鲨鱼。"
+              "ru": "Оленя, фазана и орла.",
+              "es": "Al venado, al faisán y al águila.",
+              "en": "The deer, the pheasant, and the eagle.",
+              "zh": "鹿，雉鸡和鹰。"
             },
             {
-              "ru": "Орла, медведя и волка.",
-              "es": "Al águila, al oso y al lobo.",
-              "en": "The eagle, the bear, and the wolf.",
-              "zh": "鹰，熊和狼。"
+              "ru": "Трех муравьев.",
+              "es": "A tres hormigas.",
+              "en": "Three ants.",
+              "zh": "三只蚂蚁。"
             },
             {
-              "ru": "Кейца, ягуара и пуму.",
-              "es": "Al quetzal, al jaguar y al puma.",
-              "en": "The quetzal, the jaguar, and the puma.",
-              "zh": "凤凰，捷豹和美洲狮。"
+              "ru": "Гремучую змею и ягуаров.",
+              "es": "A la serpiente de cascabel y a unos jaguares.",
+              "en": "The rattlesnake and some jaguars.",
+              "zh": "响尾蛇和一些美洲豹。"
             }
           ]
         },
@@ -131,22 +131,22 @@
           },
           "options": [
             {
-              "ru": "Только король майя.",
-              "es": "Solo el rey maya.",
-              "en": "Only the Mayan king.",
-              "zh": "只有玛雅国王。"
+              "ru": "Все майя.",
+              "es": "Todos los mayas.",
+              "en": "All the Maya.",
+              "zh": "所有玛雅人。"
             },
             {
-              "ru": "Все животные леса.",
-              "es": "Todos los animales del bosque.",
-              "en": "All the animals of the forest.",
-              "zh": "森林里的所有动物。"
+              "ru": "Боги.",
+              "es": "Los dioses.",
+              "en": "The gods.",
+              "zh": "众神。"
             },
             {
-              "ru": "Волшебники, жившие в горах.",
-              "es": "Los magos que vivían en las montañas.",
-              "en": "The wizards living in the mountains.",
-              "zh": "住在山中的巫师。"
+              "ru": "Животные.",
+              "es": "Los animales.",
+              "en": "The animals.",
+              "zh": "动物们。"
             }
           ]
         },
@@ -166,22 +166,22 @@
           },
           "options": [
             {
-              "ru": "Они пролились из облаков.",
-              "es": "Derramaron de las nubes.",
-              "en": "They spilled from the clouds.",
-              "zh": "它们是从云端倾泻而出。"
+              "ru": "Начался сильный дождь.",
+              "es": "Empezó a llover mucho.",
+              "en": "It started to rain heavily.",
+              "zh": "开始下大雨。"
             },
             {
-              "ru": "Созданы змеем и его музыкой.",
-              "es": "Creadas por la serpiente y su música.",
-              "en": "Created by the snake and its music.",
-              "zh": "由蛇和它的音乐创造。"
+              "ru": "Было сильное наводнение.",
+              "es": "Hubo una inundación fuerte.",
+              "en": "There was a strong flood.",
+              "zh": "有一场强烈的洪水。"
             },
             {
-              "ru": "Выросли после дождя любви.",
-              "es": "Crecieron después de la lluvia de amor.",
-              "en": "Grew after a rain of love.",
-              "zh": "爱之雨之后长出的。"
+              "ru": "Вышли из берегов реки.",
+              "es": "Se salieron los ríos.",
+              "en": "The rivers overflowed.",
+              "zh": "河流溢出。"
             }
           ]
         },
@@ -201,22 +201,22 @@
           },
           "options": [
             {
-              "ru": "Чтобы подружиться с деревьями.",
-              "es": "Para hacerse amigo de los árboles.",
-              "en": "To make friends with the trees.",
-              "zh": "为了与树交朋友。"
+              "ru": "Чтобы майя его не видели.",
+              "es": "Para que no lo vean los mayas.",
+              "en": "So that the Maya would not see him.",
+              "zh": "这样玛雅人就看不到他了。"
             },
             {
-              "ru": "Чтобы не мешать змеям.",
-              "es": "Para no molestar a las serpientes.",
-              "en": "To not disturb the snakes.",
-              "zh": "为了不打扰蛇。"
+              "ru": "Потому что стал грустным.",
+              "es": "Porque se puso triste.",
+              "en": "Because he became sad.",
+              "zh": "因为他变得悲伤。"
             },
             {
-              "ru": "Чтобы оставить тень на траве.",
-              "es": "Para dejar sombra en la hierba.",
-              "en": "To leave a shadow on the grass.",
-              "zh": "在草地上留影。"
+              "ru": "Чтобы атаковать врагов.",
+              "es": "Para atacar a los enemigos.",
+              "en": "To attack the enemies.",
+              "zh": "攻击敌人。"
             }
           ]
         }

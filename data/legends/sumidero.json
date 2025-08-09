@@ -50,6 +50,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 0,
           "text": {
             "ru": "Почему Каньон-дель-Сумидеро был объявлен Национальным парком?",
             "es": "¿Por qué el Cañón del Sumidero fue decretado como Parque Nacional?",
@@ -64,26 +65,27 @@
           },
           "options": [
             {
-              "ru": "Из-за его культурной значимости.",
-              "es": "Por su importancia cultural.",
-              "en": "Due to its cultural significance.",
-              "zh": "由于其文化重要性。"
+              "ru": "Потому что это одно из 7 чудес света.",
+              "es": "Porque es una de las 7 maravillas del mundo.",
+              "en": "Because it is one of the 7 wonders of the world.",
+              "zh": "因为它是世界7大奇迹之一。"
             },
             {
-              "ru": "Из-за его потухших вулканов.",
-              "es": "Por sus volcanes extintos.",
-              "en": "For its extinct volcanoes.",
-              "zh": "由于其死火山。"
+              "ru": "За то, что является популярным туристическим местом.",
+              "es": "Por ser un lugar turístico popular.",
+              "en": "For being a popular tourist place.",
+              "zh": "因为它是一个受欢迎的旅游地。"
             },
             {
-              "ru": "Как место исторических сражений.",
-              "es": "Como lugar de batallas históricas.",
-              "en": "As a site of historical battles.",
-              "zh": "作为历史战役的地点。"
+              "ru": "По решению ЮНЕСКО.",
+              "es": "Por la decisión de la UNESCO.",
+              "en": "By UNESCO's decision.",
+              "zh": "由于联合国教科文组织的决定。"
             }
           ]
         },
         {
+          "paragraph_id": 0,
           "text": {
             "ru": "Каньона-дель-Сумидеро был объявлен Национальным Парком ...",
             "es": "Fue decretado como Parque Nacional ...",
@@ -98,26 +100,27 @@
           },
           "options": [
             {
-              "ru": "15 ноября 1975 года.",
-              "es": "El 15 de noviembre de 1975.",
-              "en": "On November 15, 1975.",
-              "zh": "在1975年11月15日。"
+              "ru": "8 ноября 2004 года.",
+              "es": "El 8 de noviembre de 2004.",
+              "en": "On November 8, 2004.",
+              "zh": "在2004年11月8日。"
             },
             {
-              "ru": "22 марта 1995 года.",
-              "es": "El 22 de marzo de 1995.",
-              "en": "On March 22, 1995.",
-              "zh": "在1995年3月22日。"
+              "ru": "20 апреля 1980 года.",
+              "es": "El 20 de abril de 1980.",
+              "en": "On April 20, 1980.",
+              "zh": "在1980年4月20日。"
             },
             {
-              "ru": "5 июня 2000 года.",
-              "es": "El 5 de junio de 2000.",
-              "en": "On June 5, 2000.",
-              "zh": "在2000年6月5日。"
+              "ru": "4 декабря 1982 года.",
+              "es": "El 04 de diciembre de 1982.",
+              "en": "On December 4, 1982.",
+              "zh": "在1982年12月4日。"
             }
           ]
         },
         {
+          "paragraph_id": 3,
           "text": {
             "ru": "Какие виды являются эндемиками этой зоны?",
             "es": "¿Cuáles de estas especias son endémicas de la zona?",
@@ -132,26 +135,27 @@
           },
           "options": [
             {
-              "ru": "Крокодилы, куийи, орлы.",
-              "es": "Cocodrilos, cuijas, águilas.",
-              "en": "Crocodiles, cuijas, eagles.",
-              "zh": "鳄鱼，壁虎，鹰。"
+              "ru": "Мокричники, медведи, змеи.",
+              "es": "Mojarras, osos, serpientes.",
+              "en": "Mojarra fish, bears, snakes.",
+              "zh": "莫哈拉鱼，熊，蛇。"
             },
             {
-              "ru": "Саламандры, совы, жабы.",
-              "es": "Salamandras, búhos, sapos.",
-              "en": "Salamanders, owls, toads.",
-              "zh": "蝾螈，猫头鹰，蟾蜍。"
+              "ru": "Ягуары, колибри, пчелы.",
+              "es": "Jaguares, chupaflor, abejas.",
+              "en": "Jaguars, hummingbirds, bees.",
+              "zh": "美洲豹，蜂鸟，蜜蜂。"
             },
             {
-              "ru": "Гекконы, пумы, кондоры.",
-              "es": "Cuijas, pumas, cóndores.",
-              "en": "Cuijas, pumas, condors.",
-              "zh": "壁虎，美洲狮，秃鹰。"
+              "ru": "Дубы, игуаны, ксолоитцкуинтле.",
+              "es": "Encinos, iguanas, xoloitzcuintles.",
+              "en": "Oak trees, iguanas, xoloitzcuintles.",
+              "zh": "橡树，鬣蜥，墨西哥无毛犬。"
             }
           ]
         },
         {
+          "paragraph_id": 4,
           "text": {
             "ru": "Какие виды деятельности возможны для посетителей?",
             "es": "¿Qué practican los visitantes?",
@@ -166,26 +170,27 @@
           },
           "options": [
             {
-              "ru": "Зимние виды спорта, парусный спорт, рыбалка.",
-              "es": "Deportes de invierno, vela, pesca.",
-              "en": "Winter sports, sailing, fishing.",
-              "zh": "冬季运动，帆船，钓鱼。"
+              "ru": "Парашютный спорт.",
+              "es": "Paracaídismo.",
+              "en": "Parachuting.",
+              "zh": "跳伞。"
             },
             {
-              "ru": "Трекинг, полёты на параплане, серфинг.",
-              "es": "Trekking, parapente, surf.",
-              "en": "Trekking, paragliding, surfing.",
-              "zh": "徒步旅行，滑翔伞，冲浪。"
+              "ru": "Спортивные игры.",
+              "es": "Juegos deportivos.",
+              "en": "Sports games.",
+              "zh": "体育比赛。"
             },
             {
-              "ru": "Гольф, теннис, волейбол.",
-              "es": "Golf, tenis, voleibol.",
-              "en": "Golf, tennis, volleyball.",
-              "zh": "高尔夫，网球，排球。"
+              "ru": "Горные велосипеды и пешие походы.",
+              "es": "La bicicleta de montaña y caminatas.",
+              "en": "Mountain biking and hiking.",
+              "zh": "山地自行车和徒步。"
             }
           ]
         },
         {
+          "paragraph_id": 5,
           "text": {
             "ru": "Что было классифицировано как инженерное сооружение в этой зоне?",
             "es": "¿Qué fue clasificado como una obra de ingeniería dentro de esta zona?",
@@ -200,22 +205,22 @@
           },
           "options": [
             {
-              "ru": "Подводный туннель.",
-              "es": "Túnel submarino.",
-              "en": "Underwater tunnel.",
-              "zh": "水下隧道。"
+              "ru": "Река Грихальва.",
+              "es": "El río Grijalva.",
+              "en": "The Grijalva River.",
+              "zh": "格里哈尔瓦河。"
             },
             {
-              "ru": "Канатная дорога.",
-              "es": "Teleférico.",
-              "en": "Cable car.",
-              "zh": "缆车。"
+              "ru": "Тустла Гутьеррес.",
+              "es": "Tuxtla Gutiérrez.",
+              "en": "Tuxtla Gutiérrez.",
+              "zh": "图斯特拉·古特雷斯。"
             },
             {
-              "ru": "Парусная регата.",
-              "es": "Regata de vela.",
-              "en": "Sailing regatta.",
-              "zh": "帆船赛。"
+              "ru": "Природный балкон Сумидеро.",
+              "es": "Balcón natural del Sumidero.",
+              "en": "Natural balcony of the Sumidero.",
+              "zh": "苏米德罗的自然阳台。"
             }
           ]
         }

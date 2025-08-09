@@ -54,29 +54,29 @@
             "zh": "玛雅维尔女神拥有什么？"
           },
           "answer": {
-            "es": "Una planta mágica que podía dar alegría y dones al ser humano.",
-            "ru": "Магическое растение, способное дарить людям радость и дары.",
-            "en": "A magical plant that could give joy and gifts to humans.",
-            "zh": "一种能给人类带来欢乐和天赋的魔法植物。"
+            "es": "Una planta mágica",
+            "ru": "Магическое растение",
+            "en": "A magical plant",
+            "zh": "魔法植物"
           },
           "options": [
             {
-              "es": "Una fuente mágica que podía dar vida eterna y juventud al ser humano.",
-              "ru": "Магический источник, способный дарить людям вечную жизнь и молодость.",
-              "en": "A magical fountain that could give eternal life and youth to humans.",
-              "zh": "一个能给人类带来永生和青春的魔法源泉。"
+              "es": "Una planta medicinal",
+              "ru": "Лечебное растение",
+              "en": "A medicinal plant",
+              "zh": "药用植物"
             },
             {
-              "es": "Un ejército sobrenatural que podía proteger y servir al ser humano.",
-              "ru": "Сверхъестественное войско, способное защищать людей и служить им.",
-              "en": "A supernatural army that could protect and serve humans.",
-              "zh": "一支能保护和服务人类的超自然军队。"
+              "es": "El don de la alegría",
+              "ru": "Дар радости",
+              "en": "The gift of joy",
+              "zh": "快乐之礼"
             },
             {
-              "es": "Un cristal sagrado que podía controlar las fuerzas de la naturaleza.",
-              "ru": "Священный кристалл, способный управлять силами природы.",
-              "en": "A sacred crystal that could control the forces of nature.",
-              "zh": "一个能控制自然力量的神圣水晶。"
+              "es": "Una bebida maravillosa",
+              "ru": "Чудесный напиток",
+              "en": "A wonderful drink",
+              "zh": "神奇的饮料"
             }
           ]
         },
@@ -89,29 +89,29 @@
             "zh": "众神托付给羽蛇神的使命是什么？"
           },
           "answer": {
-            "es": "Obtener la planta mágica para compartirla con los seres humanos.",
-            "ru": "Добыть магическое растение, чтобы поделиться им с людьми.",
-            "en": "To obtain the magical plant to share it with human beings.",
-            "zh": "获取魔法植物与人类分享。"
+            "es": "Compartir la planta con los seres humanos",
+            "ru": "Поделиться растением с людьми",
+            "en": "To share the plant with human beings",
+            "zh": "与人类分享植物"
           },
           "options": [
             {
-              "es": "Castigar severamente a la abuela para liberar a Mayahuel de su custodia.",
-              "ru": "Сурово наказать бабушку, чтобы освободить Майяуэль из-под её опеки.",
-              "en": "To severely punish the grandmother to free Mayahuel from her custody.",
-              "zh": "严厉惩罚祖母以使玛雅维尔摆脱她的监护。"
+              "es": "Enamorar a Mayahuel",
+              "ru": "Полюбить Майяуэль",
+              "en": "To love Mayahuel",
+              "zh": "爱上玛雅维尔"
             },
             {
-              "es": "Construir un templo sagrado para honrar a todos los dioses del panteón.",
-              "ru": "Построить священный храм, чтобы почтить всех богов пантеона.",
-              "en": "To build a sacred temple to honor all the gods of the pantheon.",
-              "zh": "建造一座神圣的寺庙来纪念万神殿中的所有神灵。"
+              "es": "Esconderse de los hermanos de Mayahuel",
+              "ru": "Спрятаться от братьев Майяуэль",
+              "en": "To hide from Mayahuel's brothers",
+              "zh": "躲避玛雅维尔的兄弟们"
             },
             {
-              "es": "Encontrar un nuevo reino celestial donde los dioses pudieran vivir en paz.",
-              "ru": "Найти новое небесное царство, где боги могли бы жить в мире.",
-              "en": "To find a new celestial realm where the gods could live in peace.",
-              "zh": "寻找一个新的天界，众神可以在那里和平生活。"
+              "es": "Crear una bebida ritual",
+              "ru": "Создать ритуальный напиток",
+              "en": "To create a ritual drink",
+              "zh": "创造一种仪式饮料"
             }
           ]
         },
@@ -124,29 +124,29 @@
             "zh": "玛雅维尔和羽蛇神在逃亡中做了什么以避免被发现？"
           },
           "answer": {
-            "es": "Tomaron la forma de la planta mágica.",
-            "ru": "Они приняли облик магического растения.",
-            "en": "They took the form of the magical plant.",
-            "zh": "他们变成了魔法植物的形态。"
+            "es": "Tomaron la forma de la planta mágica",
+            "ru": "Они приняли облик магического растения",
+            "en": "They took the form of the magical plant",
+            "zh": "他们变成了魔法植物的形态"
           },
           "options": [
             {
-              "es": "Se escondieron en una cueva profunda y oscura.",
-              "ru": "Они спрятались в глубокой и тёмной пещере.",
-              "en": "They hid in a deep and dark cave.",
-              "zh": "他们躲在一个又深又黑的山洞里。"
+              "es": "Se enamoraron y se escondieron",
+              "ru": "Они влюбились друг в друга и спрятались",
+              "en": "They fell in love and hid",
+              "zh": "他们相爱并躲藏"
             },
             {
-              "es": "Volaron hacia el sol para esconderse en su luz.",
-              "ru": "Они улетели к солнцу, чтобы спрятаться в его свете.",
-              "en": "They flew towards the sun to hide in its light.",
-              "zh": "他们飞向太阳躺藏在它的光芒中。"
+              "es": "Decidieron vivir su amor eterno",
+              "ru": "Они решили жить вечной любовью",
+              "en": "They decided to live their eternal love",
+              "zh": "他们决定永远相爱"
             },
             {
-              "es": "Se disfrazaron como mortales ancianos y sabios.",
-              "ru": "Они переоделись в пожилых и мудрых смертных.",
-              "en": "They disguised themselves as elderly and wise mortals.",
-              "zh": "他们伪装成年老而智慧的凡人。"
+              "es": "Se convertieron en una flor amarilla",
+              "ru": "Они превратились в жёлтый цветок",
+              "en": "They turned into a yellow flower",
+              "zh": "他们变成了黄色的花"
             }
           ]
         },
@@ -159,29 +159,29 @@
             "zh": "兄弟们对玛雅维尔做了什么？"
           },
           "answer": {
-            "es": "La reconocieron como planta diferente y la destruyeron cruelmente.",
-            "ru": "Они узнали её в виде необычного растения и жестоко уничтожили её.",
-            "en": "They recognized her as a different plant and cruelly destroyed her.",
-            "zh": "他们认出她是一株不同的植物，并残忍地摧毁了她。"
+            "es": "La destrozaron",
+            "ru": "Они жестоко уничтожили её",
+            "en": "They cruelly destroyed her",
+            "zh": "他们残忍地摧毁了她"
           },
           "options": [
             {
-              "es": "La perdonaron y la llevaron de vuelta a casa con su abuela.",
-              "ru": "Они простили её и отвели домой к бабушке.",
-              "en": "They forgave her and took her back home to her grandmother.",
-              "zh": "他们原谅了她并带她回家见祖母。"
+              "es": "La perdonaron",
+              "ru": "Они простили её",
+              "en": "They forgave her",
+              "zh": "他们原谅了她"
             },
             {
-              "es": "La ayudaron a escapar de la furia de su abuela para siempre.",
-              "ru": "Они помогли ей навсегда сбежать от гнева бабушки.",
-              "en": "They helped her escape from her grandmother's fury forever.",
-              "zh": "他们帮助她永远摆脱了祖母的愤怒。"
+              "es": "La volvieron a encerrar",
+              "ru": "Они заперли её",
+              "en": "They locked her",
+              "zh": "他们把她锁了起来"
             },
             {
-              "es": "La encerraron en una torre alta para que nunca más escapara.",
-              "ru": "Они заперли её в высокой башне, чтобы она больше никогда не сбежала.",
-              "en": "They locked her in a tall tower so she would never escape again.",
-              "zh": "他们把她锁在一座高塔里，让她再也无法逃脱。"
+              "es": "La regresaron con su abuela",
+              "ru": "Они вернули её к бабушке",
+              "en": "They returned her to her grandmother",
+              "zh": "他们把她送回了祖母身边"
             }
           ]
         },
@@ -194,29 +194,29 @@
             "zh": "玛雅维尔最终怎么样了？"
           },
           "answer": {
-            "es": "No pudo recuperar su forma, pero renació como la planta sagrada del maguey o agave.",
-            "ru": "Она не смогла вернуть свою форму, но возродилась как священное растение магей или агава.",
-            "en": "She could not regain her form, but was reborn as the sacred maguey or agave plant.",
-            "zh": "她无法恢复原形，但重生为神圣的龙舌兰植物。"
+            "es": "Se quedó para siempre en el maguey",
+            "ru": "Она осталась навсегда в магее",
+            "en": "She remained forever in the maguey",
+            "zh": "她永远留在龙舌兰中"
           },
           "options": [
             {
-              "es": "Recuperó su forma original y se casó felizmente con Quetzalcóatl para la eternidad.",
-              "ru": "Она вернула свой исходный облик и счастливо вышла за Кетцалькоатля на вечность.",
-              "en": "She regained her original form and married Quetzalcóatl happily for eternity.",
-              "zh": "她恢复了原始形态，并与羽蛇神幸福地结为夫妻，直到永远。"
+              "es": "Recobró su forma original",
+              "ru": "Она восстановила свой первоначальный облик",
+              "en": "She recovered her original form",
+              "zh": "她恢复了原形"
             },
             {
-              "es": "Se convirtió en una brillante estrella que ilumina el cielo nocturno para siempre.",
-              "ru": "Она стала яркой звездой, которая навсегда освещает ночное небо.",
-              "en": "She became a bright star that illuminates the night sky forever.",
-              "zh": "她变成了一颗明亮的星星，永远照亮着夜空。"
+              "es": "Vivió con Quetzalcóatl",
+              "ru": "Она жила с Кетцалькоатлем",
+              "en": "She lived with Quetzalcóatl",
+              "zh": "她与羽蛇神一起生活"
             },
             {
-              "es": "Regresó a vivir pacificamente con su abuela bajo su protección constante.",
-              "ru": "Она вернулась, чтобы мирно жить с бабушкой под её постоянной защитой.",
-              "en": "She returned to live peacefully with her grandmother under her constant protection.",
-              "zh": "她回家与祖母在她的不断保护下平静地生活。"
+              "es": "Se convirtió en agua",
+              "ru": "Она превратилась в воду",
+              "en": "She turned into water",
+              "zh": "她变成了水"
             }
           ]
         },
@@ -229,10 +229,10 @@
             "zh": "本段中的“Astuto”意为"
           },
           "answer": {
-            "es": "Inteligente, hábil o ingenioso para convencer a Mayahuel.",
-            "ru": "Умный, ловкий или изобретательный в умении убедить Майяуэль.",
-            "en": "Intelligent, skillful, or clever in convincing Mayahuel.",
-            "zh": "聪明、熟练或巧妙地说服玛雅维尔。"
+            "es": "Engañoso, él que sabe convencer con sus palabras",
+            "ru": "Лукавый, тот, кто умеет убеждать своими словами",
+            "en": "Cunning, one who knows how to convince with his words",
+            "zh": "狡献的，懂得用言词说服别人的人"
           },
           "options": [
             {

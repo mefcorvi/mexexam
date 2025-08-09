@@ -42,6 +42,7 @@
       },
       "questions": [
         {
+          "paragraph_id": 0,
           "text": {
             "es": "¿De qué se alimentaban los aztecas antes de conseguir el maíz?",
             "ru": "Чем питались ацтеки до получения маиса?",
@@ -76,6 +77,7 @@
           ]
         },
         {
+          "paragraph_id": 1,
           "text": {
             "es": "¿Para qué Quetzalcóatl hizo el viaje a las montañas?",
             "ru": "Зачем Кетцалькоатль отправился в горы?",
@@ -110,11 +112,12 @@
           ]
         },
         {
+          "paragraph_id": 1,
           "text": {
             "es": "¿Cómo usó Quetzalcóatl su inteligencia y astucia para conseguir el maíz?",
             "ru": "Как Кетцалькоатль использовал ум и хитрость, чтобы добыть маис?",
             "en": "How did Quetzalcóatl use his intelligence and cunning to get the corn?",
-            "zh": "羽蛇神是如何运用智慧和狡黐来获得玉米的？"
+            "zh": "羽蛇神是如何运用智慧和狡阠来获得玉米的？"
           },
           "answer": {
             "es": "Se transformó en una hormiga negra",
@@ -144,6 +147,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿Qué hizo Quetzalcóatl en la cima de la montaña?",
             "ru": "Что сделал Кетцалькоатль на вершине горы?",
@@ -178,6 +182,7 @@
           ]
         },
         {
+          "paragraph_id": 3,
           "text": {
             "es": "¿Qué hicieron los indígenas después de que Quetzalcóatl les entregara el prometido grano de maíz?",
             "ru": "Что сделали индейцы после того, как Кетцалькоатль принёс им обещанное зёрнышко маиса?",
@@ -212,6 +217,7 @@
           ]
         },
         {
+          "paragraph_id": 3,
           "text": {
             "es": "¿Por qué los aztecas veneraron al dios Quetzalcóatl?",
             "ru": "Почему ацтеки поклонялись богу Кетцалькоатлю?",

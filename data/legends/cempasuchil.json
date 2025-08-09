@@ -81,22 +81,22 @@
           },
           "options": [
             {
-              "es": "La celebración más importante en México",
-              "ru": "Самый важный праздник в Мексике",
-              "en": "The most important celebration in Mexico",
-              "zh": "墨西哥最重要的节日"
+              "es": "La flor de nochebuena",
+              "ru": "Цветок пуансеттии",
+              "en": "The poinsettia flower",
+              "zh": "一品红花"
             },
             {
-              "es": "La flor más importante de México",
-              "ru": "Самый важный цветок в Мексике",
-              "en": "The most important flower in Mexico",
-              "zh": "墨西哥最重要的花"
+              "es": "El pan de muerto",
+              "ru": "Хлеб мёртвых",
+              "en": "The bread of the dead",
+              "zh": "亡灵面包"
             },
             {
-              "es": "El festejo más importante del país",
-              "ru": "Самый важный праздник в стране",
-              "en": "The most important celebration in the country",
-              "zh": "国家最重要的节日"
+              "es": "La piñata",
+              "ru": "Пиньята",
+              "en": "The piñata",
+              "zh": "彩球"
             }
           ]
         },
@@ -116,22 +116,22 @@
           },
           "options": [
             {
-              "es": "El sol deslumbraba y había un dios",
-              "ru": "Солнце светило и был бог",
-              "en": "The sun shone and there was a god",
-              "zh": "太阳照耀着，有一位神"
+              "es": "Se juntaban los dioses",
+              "ru": "Боги собирались",
+              "en": "The gods gathered there",
+              "zh": "诸神聚集在那里"
             },
             {
-              "es": "Moraba la amistad, la juventud y el sol",
-              "ru": "Обитала дружба, молодость и солнце",
-              "en": "The friendship, youth and sun dwelt there",
-              "zh": "友谊、青春和太阳住在那里"
+              "es": "Había algo extraño",
+              "ru": "Было что-то странное",
+              "en": "There was something strange",
+              "zh": "有一些奇怪的东西"
             },
             {
-              "es": "El sol tenía una fuerza particular por el amor",
-              "ru": "Солнце имело особую силу из-за любви",
-              "en": "The sun had a particular force because of love",
-              "zh": "太阳因为爱而拥有特殊的力量"
+              "es": "Crecía la flor de cempasúchil",
+              "ru": "Рос цветок семпасучиль",
+              "en": "The cempasúchil flower grew there",
+              "zh": "万寿菊花在那里生长"
             }
           ]
         },
@@ -151,22 +151,22 @@
           },
           "options": [
             {
-              "es": "Para ser bendecidos y amados",
-              "ru": "Чтобы быть благословлёнными и любимыми",
-              "en": "To be blessed and loved",
-              "zh": "被祝福和爱"
+              "es": "Para comprobar su amor",
+              "ru": "Чтобы подтвердить свою любовь",
+              "en": "To prove their love",
+              "zh": "为了证明他们的爱情"
             },
             {
-              "es": "Para pedirle a Tonatiuh un cuidado especial",
-              "ru": "Чтобы попросить Тонатиу о специальном уходе",
-              "en": "To ask Tonatiuh for special care",
-              "zh": "请求托纳蒂乌的特殊照顾"
+              "es": "Para hacer una ofrenda a los dioses",
+              "ru": "Чтобы принести жертву богам",
+              "en": "To make an offering to the gods",
+              "zh": "向诸神供奉"
             },
             {
-              "es": "Para que su unión fuera aprobada",
-              "ru": "Чтобы их союз был одобрен",
-              "en": "So that their union was approved",
-              "zh": "让他们的结合得到批准"
+              "es": "Para pedirle ayuda al dios del sol",
+              "ru": "Чтобы попросить помощи у бога солнца",
+              "en": "To ask the sun god for help",
+              "zh": "向太阳神寻求帮助"
             }
           ]
         },
@@ -186,22 +186,22 @@
           },
           "options": [
             {
-              "es": "En un rayo dorado y una flor de veinte pétalos",
-              "ru": "В золотой луч и цветок с двадцатью лепестками",
-              "en": "In a golden ray and a flower of twenty petals",
-              "zh": "在金色的光芒和二十片花瓣的花朵中"
+              "es": "En un árbol y un jaguar",
+              "ru": "В дерево и ягуара",
+              "en": "In a tree and a jaguar",
+              "zh": "在一棵树和一只美洲豹中"
             },
             {
-              "es": "En un botón de flor y un colibrí, ambos atraídos por un aroma",
-              "ru": "В бутоне цветка и колибри, оба привлечённые ароматом",
-              "en": "In a flower bud and a hummingbird, both attracted by an aroma",
-              "zh": "在花蕾和蜂鸟中，都被香气吸引"
+              "es": "En una rosa y un águila",
+              "ru": "В розу и орла",
+              "en": "In a rose and an eagle",
+              "zh": "在一朵玫瑰和一只鹰中"
             },
             {
-              "es": "En el aroma inconfundible de la flor y en el color amarillo radiante",
-              "ru": "В аромат неразличимого цветка и в ярко-жёлтый цвет",
-              "en": "In the unmistakable aroma of the flower and in the radiant yellow color",
-              "zh": "在独特的香气和金色的光芒中"
+              "es": "En una piedra y una mariposa",
+              "ru": "В камень и бабочку",
+              "en": "In a stone and a butterfly",
+              "zh": "在一块石头和一只蝴蝶中"
             }
           ]
         },
@@ -221,22 +221,22 @@
           },
           "options": [
             {
-              "es": "A reencontrar a las personas que se fueron",
-              "ru": "Чтобы снова встретить ушедших людей",
-              "en": "To re-encounter the people who have departed",
-              "zh": "再次遇见已经离去的人们"
+              "es": "A conectarse con la familia",
+              "ru": "Наладить связь с семьёй",
+              "en": "To connect with family",
+              "zh": "与家人联系"
             },
             {
-              "es": "A guiar el amor de Xóchitl y Huitzilin",
-              "ru": "Чтобы вести любовь Сочитль и Уицилина",
-              "en": "To guide the love of Xóchitl and Huitzilin",
-              "zh": "引导索奇特尔和惠兹林的爱情"
+              "es": "A hacer una ofrenda a Tonatiuh",
+              "ru": "Принести жертву Тонатиу",
+              "en": "To make an offering to Tonatiuh",
+              "zh": "向托纳蒂乌供奉"
             },
             {
-              "es": "A que el aroma regrese a la flor cada año",
-              "ru": "Чтобы аромат возвращался к цветку каждый год",
-              "en": "So that the aroma returns to the flower every year",
-              "zh": "让香气每年都回到花朵"
+              "es": "A celebrar el Día de Muertos",
+              "ru": "Отмечать День мёртвых",
+              "en": "To celebrate the Day of the Dead",
+              "zh": "庆祝亡灵节"
             }
           ]
         }

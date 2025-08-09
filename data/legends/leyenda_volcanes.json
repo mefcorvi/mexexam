@@ -58,34 +58,34 @@
             "zh": "在伊斯塔西瓦特尔和波波卡特佩特尔相爱的时期，在墨西哥谷："
           },
           "answer": {
-            "es": "Se libraban grandes batallas entre diferentes pueblos que luchaban por controlar el territorio.",
-            "ru": "Происходили большие сражения между разными народами за контроль над территорией.",
-            "en": "Great battles were fought between different peoples struggling to control the territory.",
-            "zh": "不同民族之间为争夺领土控制权而进行着大战。"
+            "es": "Era una época de grandes batallas",
+            "ru": "Это была эпоха великих сражений",
+            "en": "It was an era of great battles",
+            "zh": "那是一个大战的时代"
           },
           "options": [
             {
-              "es": "Reinaba una paz duradera.",
-              "ru": "Царил прочный мир.",
-              "en": "A lasting peace reigned.",
-              "zh": "持久的和平统治着。"
+              "es": "Había gran prosperidad",
+              "ru": "Было большое процветание",
+              "en": "There was great prosperity",
+              "zh": "有着巨大的繁荣"
             },
             {
-              "es": "Se construían grandes pirámides.",
-              "ru": "Строились большие пирамиды.",
-              "en": "Great pyramids were being built.",
-              "zh": "正在建造大金字塔。"
+              "es": "El imperio azteca estaba en su apogeo",
+              "ru": "Ацтекская империя была на пике своего могущества",
+              "en": "The Aztec empire was at its peak",
+              "zh": "阿兹特克帝国正处于鼎盛时期"
             },
             {
-              "es": "Se celebraba un festival anual de flores.",
-              "ru": "Проводился ежегодный фестиваль цветов.",
-              "en": "An annual flower festival was celebrated.",
-              "zh": "每年都会庆祝花卉节。"
+              "es": "Se esperaba la llegada de los españoles",
+              "ru": "Ожидалось прибытие испанцев",
+              "en": "The arrival of the Spanish was expected",
+              "zh": "人们期待着西班牙人的到来"
             }
           ]
         },
         {
-          "paragraph_id": 2,
+          "paragraph_id": [2, 3],
           "text": {
             "es": "La misión que el emperador le confió a Popocatépetl fue:",
             "ru": "Миссия, которую император поручил Попокатепетлю, заключалась в:",
@@ -93,29 +93,29 @@
             "zh": "皇帝托付给波波卡特佩特尔的任务是："
           },
           "answer": {
-            "es": "Dirigir a los guerreros del imperio y vencer al enemigo en combate.",
-            "ru": "Командовать воинами империи и победить врага в бою.",
-            "en": "To lead the empire's warriors and defeat the enemy in combat.",
-            "zh": "领导帝国的战士并在战斗中击败敌人。"
+            "es": "Dirigir a los guerreros en los combates",
+            "ru": "Руководить воинами в сражениях",
+            "en": "To lead the warriors in combat",
+            "zh": "在战斗中领导战士"
           },
           "options": [
             {
-              "es": "Construir un nuevo palacio para la princesa.",
-              "ru": "Построить новый дворец для принцессы.",
-              "en": "To build a new palace for the princess.",
-              "zh": "为公主建造一座新宫殿。"
+              "es": "Casarse con Iztaccíhuatl",
+              "ru": "Жениться на Истаксиуатль",
+              "en": "To marry Iztaccíhuatl",
+              "zh": "与伊斯塔希瓦特尔结婚"
             },
             {
-              "es": "Encontrar una cura para la enfermedad del emperador.",
-              "ru": "Найти лекарство от болезни императора.",
-              "en": "To find a cure for the emperor's illness.",
-              "zh": "为皇帝的病寻找治疗方法。"
+              "es": "Ser el soldado más valiente en la guerra",
+              "ru": "Быть самым храбрым воином в войне",
+              "en": "To be the bravest soldier in the war",
+              "zh": "成为战争中最勇敢的士兵"
             },
             {
-              "es": "Negociar un tratado de paz con los enemigos.",
-              "ru": "Провести переговоры о мирном договоре с врагами.",
-              "en": "To negotiate a peace treaty with the enemies.",
-              "zh": "与敌人谈判和平条约。"
+              "es": "Salir victorioso del combate",
+              "ru": "Выйти победителем из боя",
+              "en": "To emerge victorious from combat",
+              "zh": "从战斗中获胜者身份出现"
             }
           ]
         },
@@ -128,29 +128,29 @@
             "zh": "经过几个月的战斗："
           },
           "answer": {
-            "es": "Popocatépetl venció a los enemigos, pero algunos guerreros mintieron al emperador diciendo que había muerto.",
-            "ru": "Попокатепетль победил врагов, но некоторые воины солгали императору, сказав, что он погиб.",
-            "en": "Popocatépetl defeated the enemies, but some warriors lied to the emperor saying he had died.",
-            "zh": "波波卡特佩特尔击败了敌人，但一些战士向皇帝谎称他已经死了。"
+            "es": "Logró vencer a sus enemigos",
+            "ru": "Ему удалось победить своих врагов",
+            "en": "He managed to defeat his enemies",
+            "zh": "他成功击败了敌人"
           },
           "options": [
             {
-              "es": "Popocatépetl fue derrotado y capturado.",
-              "ru": "Попокатепетль был разбит и взят в плен.",
-              "en": "Popocatépetl was defeated and captured.",
-              "zh": "波波卡特佩特尔被击败并被俘。"
+              "es": "Popocatépetl no lograba concluir el combate aunque iba ganando",
+              "ru": "Попокатепетль не мог завершить бой, хотя и побеждал",
+              "en": "Popocatépetl could not conclude the combat although he was winning",
+              "zh": "波波卡特佩特尔无法结束战斗，尽管他正在获胜"
             },
             {
-              "es": "Se firmó un acuerdo de paz y la guerra terminó.",
-              "ru": "Было подписано мирное соглашение, и война закончилась.",
-              "en": "A peace agreement was signed and the war ended.",
-              "zh": "签署了和平协议，战争结束了。"
+              "es": "Le pidió al emperador que lo dejara regresar para casarse con Iztaccíhuatl",
+              "ru": "Он попросил императора позволить ему вернуться, чтобы жениться на Истаксиуатль",
+              "en": "He asked the emperor to let him return to marry Iztaccíhuatl",
+              "zh": "他请求皇帝让他回去与伊斯塔希瓦特尔结婚"
             },
             {
-              "es": "El emperador envió más tropas para ayudar a Popocatépetl.",
-              "ru": "Император послал больше войск на помощь Попокатепетлю.",
-              "en": "The emperor sent more troops to help Popocatépetl.",
-              "zh": "皇帝派了更多的军队去帮助波波卡特佩特尔。"
+              "es": "Tenía la sospecha de que algunos de los guerreros lo traicionarían",
+              "ru": "У него было подозрение, что некоторые воины предадут его",
+              "en": "He suspected that some of the warriors would betray him",
+              "zh": "他怀疑一些战士会背叛他"
             }
           ]
         },
@@ -163,29 +163,29 @@
             "zh": "当波波卡特佩特尔胜利归来时："
           },
           "answer": {
-            "es": "Supo que Iztaccihuatl había caído en un sueño eterno al creer que él había muerto, y la llevó consigo para desaparecer juntos.",
-            "ru": "Он узнал, что Истациуатль впала в вечный сон, поверив в его смерть, и забрал её, чтобы исчезнуть вместе.",
-            "en": "He learned that Iztaccihuatl had fallen into an eternal sleep believing he had died, and he took her with him to disappear together.",
-            "zh": "他得知伊斯塔西瓦特尔因相信他已死而陷入永恒的沉睡，于是他带着她一起消失了。"
+            "es": "Supo lo que le sucedió a su amada",
+            "ru": "Он узнал, что случилось с его возлюбленной",
+            "en": "He learned what had happened to his beloved",
+            "zh": "他得知心爱之人的遭遇"
           },
           "options": [
             {
-              "es": "Se casó inmediatamente con la princesa.",
-              "ru": "Он немедленно женился на принцессе.",
-              "en": "He immediately married the princess.",
-              "zh": "他立即与公主结婚。"
+              "es": "El emperador lo recibió con honores",
+              "ru": "Император принял его с почестями",
+              "en": "The emperor received him with honors",
+              "zh": "皇帝以荣誉接待了他"
             },
             {
-              "es": "Fue nombrado el nuevo emperador.",
-              "ru": "Он был назначен новым императором.",
-              "en": "He was named the new emperor.",
-              "zh": "他被任命为新皇帝。"
+              "es": "Venía muy herido del combate",
+              "ru": "Он вернулся сильно раненным из боя",
+              "en": "He came back badly wounded from combat",
+              "zh": "他从战斗中受了重伤回来"
             },
             {
-              "es": "Celebró su victoria con una gran fiesta.",
-              "ru": "Он отпраздновал свою победу большим праздником.",
-              "en": "He celebrated his victory with a great party.",
-              "zh": "他用一个盛大的派对庆祝他的胜利。"
+              "es": "Escuchó noticias falsas",
+              "ru": "Он услышал ложные новости",
+              "en": "He heard false news",
+              "zh": "他听到了假消息"
             }
           ]
         },
@@ -198,29 +198,29 @@
             "zh": "这个传说是关于："
           },
           "answer": {
-            "es": "Sobre el amor eterno entre Iztaccihuatl y Popocatépetl, quienes tras su trágica historia fueron transformados en dos volcanes.",
-            "ru": "О вечной любви между Истациуатль и Попокатепетлем, которые после своей трагической истории превратились в два вулкана.",
-            "en": "About the eternal love between Iztaccihuatl and Popocatépetl, who after their tragic story were transformed into two volcanoes.",
-            "zh": "关于伊斯塔西瓦特尔和波波卡特佩特尔之间永恒的爱，他们在悲剧性的故事后变成了两座火山。"
+            "es": "Del origen de los volcanes",
+            "ru": "О происхождении вулканов",
+            "en": "About the origin of the volcanoes",
+            "zh": "关于火山的起源"
           },
           "options": [
             {
-              "es": "De una guerra por el control del Valle de México.",
-              "ru": "О войне за контроль над долиной Мехико.",
-              "en": "About a war for control of the Valley of Mexico.",
-              "zh": "关于一场争夺墨西哥谷控制权的战争。"
+              "es": "De la gran batalla que libró Popocatépetl",
+              "ru": "О великой битве, которую вёл Попокатепетль",
+              "en": "About the great battle that Popocatépetl fought",
+              "zh": "关于波波卡特佩特尔进行的大战"
             },
             {
-              "es": "De la fundación de la ciudad de Tenochtitlan.",
-              "ru": "Об основании города Теночтитлан.",
-              "en": "About the founding of the city of Tenochtitlan.",
-              "zh": "关于特诺奇提特兰城的建立。"
+              "es": "De un gran amor frustrado",
+              "ru": "О великой несбывшейся любви",
+              "en": "About a great frustrated love",
+              "zh": "关于一个伟大的挫败爱情"
             },
             {
-              "es": "De la creación del sol y la luna.",
-              "ru": "О сотворении солнца и луны.",
-              "en": "About the creation of the sun and the moon.",
-              "zh": "关于太阳和月亮的创造。"
+              "es": "De la intriga y el engaño",
+              "ru": "Об интригах и обмане",
+              "en": "About intrigue and deception",
+              "zh": "关于阴谋和欺骗"
             }
           ]
         }

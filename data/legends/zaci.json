@@ -67,10 +67,45 @@
       "questions": [
         {
           "text": {
-            "es": "¿Cuáles eran las dos familias que se disputaban permanentemente el poder?",
-            "ru": "Назовите две семьи, которые постоянно боролись за власть.",
-            "en": "What were the two families that permanently disputed power?",
-            "zh": "哪两个家族在永远争夺权力？"
+            "es": "Identifica el sujeto en esta frase: “Esta curandera y hechicera era la jefa (patrona) de la familia Cocom.”",
+            "ru": "Определите субъект в этом предложении: “Эта целительница и знахарка была главой (покровительницей) семьи Коком.”",
+            "en": "Identify the subject in this sentence: “This healer and sorceress was the chief (patron) of the Cocom family.”",
+            "zh": "识别句子中的主语：“这位治疗师和女巫是科科姆家族的首领（庇护者）。”"
+          },
+          "answer": {
+            "es": "La curandera y la hechicera.",
+            "ru": "Целительница и знахарка.",
+            "en": "The healer and the sorceress.",
+            "zh": "治疗师和女巫。"
+          },
+          "options": [
+            {
+              "es": "Patrona",
+              "ru": "Покровительница",
+              "en": "Patron",
+              "zh": "庇护者"
+            },
+            {
+              "es": "Pueblo",
+              "ru": "Город",
+              "en": "City",
+              "zh": "城市"
+            },
+            {
+              "es": "Cocom",
+              "ru": "Коком",
+              "en": "Cocom",
+              "zh": "科科姆"
+            }
+          ]
+        },
+        {
+          "paragraph_id": [0, 1],
+          "text": {
+            "es": "¿Cuáles son los nombres de las familias que tenían el poder del imperio?",
+            "ru": "Назовите имена семей, которые управляли империей.",
+            "en": "What are the names of the families that ruled the empire?",
+            "zh": "哪些家族统治着帝国？"
           },
           "answer": {
             "es": "Los Cupules y los Cocomes.",
@@ -100,6 +135,7 @@
           ]
         },
         {
+          "paragraph_id": 2,
           "text": {
             "es": "¿Qué significa 'Sac-Nicte'?",
             "ru": "Что означает 'Сак-Никте'?",
@@ -134,70 +170,107 @@
           ]
         },
         {
+          "paragraph_id": 5,
           "text": {
-            "es": "¿Qué hizo Sac-Nicte cuando se enteró de la ceremonia?",
-            "ru": "Что сделала Сак-Никте, когда узнала о церемонии?",
-            "en": "What did Sac-Nicte do upon hearing about the ceremony?",
-            "zh": "萨克-尼克特得知仪式时做了什么？"
+            "es": "¿Qué le prometió la hechicera a su nieta?",
+            "ru": "Что обещала знахарка своей внучке?",
+            "en": "What did the sorceress promise to her granddaughter?",
+            "zh": "女巫对孙女许了什么诺言？"
           },
           "answer": {
-            "es": "Se arrojó al cenote con una piedra atada a su cabellera.",
-            "ru": "Бросилась в сенот, привязав камень к волосам.",
-            "en": "Threw herself into the cenote with a stone tied to her hair.",
-            "zh": "用石头绑在头发上投身天然井。"
+            "es": "Usar todo su poder/con todas sus fuerzas",
+            "ru": "Использовать всю свою силу",
+            "en": "Use all her power",
+            "zh": "使用全部力量"
           },
           "options": [
             {
-              "es": "Hizó un hechizo para el amor eterno.",
-              "ru": "Сделала заклинание для вечной любви.",
-              "en": "Cast a spell for eternal love.",
-              "zh": "施展了永恒之爱的咒语。"
+              "es": "Traer de vuelta a Hul-Kin",
+              "ru": "Вернуть Хуль-Кин",
+              "en": "Bring back Hul-Kin",
+              "zh": "带回胡尔-金"
             },
             {
-              "es": "Lloró hasta quedarse dormida.",
-              "ru": "Плакала, пока не уснула.",
-              "en": "Cried until she fell asleep.",
-              "zh": "哭着直到入睡。"
+              "es": "Pedir ayuda a los dioses",
+              "ru": "Попросить помощи у богов",
+              "en": "Ask for help from the gods",
+              "zh": "请求神灵的帮助"
             },
             {
-              "es": "Corrió hacia la casa de la hechicera.",
-              "ru": "Побежала к дому знахарки.",
-              "en": "Ran to the sorceress's house.",
-              "zh": "跑向女巫的家。"
+              "es": "Contar el secreto",
+              "ru": "Рассказать секрет",
+              "en": "Tell the secret",
+              "zh": "说出秘密"
             }
           ]
         },
         {
+          "paragraph_id": [7, 8],
           "text": {
-            "es": "¿Cuál era la condición del cenote según la maldición?",
-            "ru": "Каково было состояние сенота по проклятию?",
-            "en": "What was the condition of the cenote according to the curse?",
-            "zh": "根据诅咒，天然井的状况是什么？"
+            "es": "¿Qué amarró / ató Sac-Nicte a su larga cabellera?",
+            "ru": "Что привязала / прикрепила Сак-Никте к своим длинным волосам?",
+            "en": "What did Sac-Nicte tie / attach to her long hair?",
+            "zh": "萨克-尼克特把什么绑在长发上？"
           },
           "answer": {
-            "es": "Cobraría una vida anualmente como sacrificio de amor.",
-            "ru": "Будет ежегодно требовать жизнь в качестве жертвенной жертвы за любовь.",
-            "en": "Would claim a life annually as a sacrifice for love.",
-            "zh": "每年索取一个生命作为爱的祭品。"
+            "es": "Una piedra",
+            "ru": "Камень",
+            "en": "Stone",
+            "zh": "石头"
           },
           "options": [
             {
-              "es": "Se convertiría en un lugar de paz eterna.",
-              "ru": "Станет местом вечного мира.",
-              "en": "Would become a place of eternal peace.",
-              "zh": "会成为永恒和平的地方。"
+              "es": "Una flor",
+              "ru": "Цветок",
+              "en": "Flower",
+              "zh": "花"
             },
             {
-              "es": "Daría buena suerte a los enamorados.",
-              "ru": "Будет приносить удачу влюблённым.",
-              "en": "Would bring luck to lovers.",
-              "zh": "会给恋人带来好运。"
+              "es": "Unas plantas",
+              "ru": "Растения",
+              "en": "Plants",
+              "zh": "植物"
             },
             {
-              "es": "Las aguas se volverían de colores.",
-              "ru": "Воды станут разноцветными.",
-              "en": "The waters would turn colorful.",
-              "zh": "水会变成五颜六色。"
+              "es": "Nada",
+              "ru": "Ничего",
+              "en": "Nothing",
+              "zh": "什么都没有"
+            }
+          ]
+        },
+        {
+          "paragraph_id": [7, 8],
+          "text": {
+            "es": "¿Cuál fue la reacción de Hul-Kin cuando se enteró de que Sac-Nicte se había arrojado al cenote?",
+            "ru": "Какая была реакция у Хуль-Кинна, когда он узнал, что Сак-Никте бросилась в сенот?",
+            "en": "What was Hul-Kin's reaction when he learned that Sac-Nicte had thrown herself into the cenote?",
+            "zh": "胡尔-金得知萨克-尼克特投身天然井时有什么反应？"
+          },
+          "answer": {
+            "es": "Se arrojó al cenotee",
+            "ru": "Он бросился в сенот",
+            "en": "He threw himself into the cenote",
+            "zh": "他投身天然井"
+          },
+          "options": [
+            {
+              "es": "No hizo nada",
+              "ru": "Ничего не сделал",
+              "en": "He did nothing",
+              "zh": "他什么都没做"
+            },
+            {
+              "es": "Sintió un fuerte dolor",
+              "ru": "Почувствовал сильную боль",
+              "en": "He felt a strong pain",
+              "zh": "他感到强烈的疼痛"
+            },
+            {
+              "es": "Tiró una flor blanca",
+              "ru": "Он бросил белый цветок",
+              "en": "He threw a white flower",
+              "zh": "他扔了一朵白花"
             }
           ]
         }

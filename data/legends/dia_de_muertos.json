@@ -61,22 +61,22 @@
           },
           "options": [
             {
-              "es": "El Día de Todos los Santos en México",
-              "ru": "День всех святых в Мексике",
-              "en": "All Saints' Day in Mexico",
-              "zh": "墨西哥的万圣节"
+              "es": "Una celebración católica",
+              "ru": "Католическое празднование",
+              "en": "A Catholic celebration",
+              "zh": "天主教的庆祝活动"
             },
             {
-              "es": "Una celebración en la que las almas de los vivos regresan para convivir",
-              "ru": "Праздник, в котором души живых возвращаются, чтобы жить вместе",
-              "en": "A celebration in which the souls of the living return to coexist",
-              "zh": "一个灵魂与生者共存的节日"
+              "es": "Una celebración prehispánica",
+              "ru": "Доиспанское празднование",
+              "en": "A pre-Hispanic celebration",
+              "zh": "前西班牙时代的庆祝活动"
             },
             {
-              "es": "La combinación de la fe católica y las almas de los muertos",
-              "ru": "Сочетание католического вероисповедания и душей умерших",
-              "en": "The combination of Catholic faith and the souls of the dead",
-              "zh": "天主教信仰和逝者的灵魂"
+              "es": "Una celebración colonial",
+              "ru": "Колониальное празднование",
+              "en": "A colonial celebration",
+              "zh": "殖民时期的庆祝活动"
             }
           ]
         },
@@ -99,19 +99,19 @@
               "es": "Coyoacán",
               "ru": "Койоакан",
               "en": "Coyoacán",
-              "zh": "科约阿坎"
+              "zh": "科约阿坤"
             },
             {
-              "es": "Xochimilco",
-              "ru": "Сочимилько",
-              "en": "Xochimilco",
-              "zh": "索奇米尔科"
+              "es": "Tlalpan",
+              "ru": "Тлалпан",
+              "en": "Tlalpan",
+              "zh": "特拉尔潘"
             },
             {
-              "es": "Cuauhtémoc",
-              "ru": "Куаутемок",
-              "en": "Cuauhtémoc",
-              "zh": "库奥特莫克"
+              "es": "Venustiano Carranza",
+              "ru": "Венустиано Карранса",
+              "en": "Venustiano Carranza",
+              "zh": "维努斯蒂亚诺·卡拉泽"
             }
           ]
         },
@@ -131,22 +131,22 @@
           },
           "options": [
             {
-              "es": "Solo los ancianos",
-              "ru": "Только старики",
-              "en": "Only the elders",
-              "zh": "只有长者"
+              "es": "Los parientes de los difuntos",
+              "ru": "Родственники умерших",
+              "en": "The relatives of the deceased",
+              "zh": "逗者的亲属"
             },
             {
-              "es": "Solo los niños",
-              "ru": "Только дети",
-              "en": "Only the children",
-              "zh": "只有孩子"
+              "es": "Los parientes y la iglesia local",
+              "ru": "Родственники и местная церковь",
+              "en": "The relatives and the local church",
+              "zh": "亲属和当地教堂"
             },
             {
-              "es": "Solo los turistas",
-              "ru": "Только туристы",
-              "en": "Only the tourists",
-              "zh": "只有游客"
+              "es": "Los difuntos",
+              "ru": "Умершие",
+              "en": "The deceased",
+              "zh": "逗者"
             }
           ]
         },
@@ -166,22 +166,22 @@
           },
           "options": [
             {
-              "es": "La noche de las velas, las tumbas y las flores",
-              "ru": "Ночь свечей, могилы и цветы",
-              "en": "The night of the candles, tombs, and flowers",
-              "zh": "烛光之夜、墓地和鲜花"
+              "es": "La visita de los muertos",
+              "ru": "Посещение мёртвых",
+              "en": "The visit of the dead",
+              "zh": "死者的存问"
             },
             {
-              "es": "La comunión entre vivos y muertos",
-              "ru": "Общение между живыми и мёртвыми",
-              "en": "The communion between the living and the dead",
-              "zh": "生者与死者的交流"
+              "es": "El repique de las campanas",
+              "ru": "Звон колоколов",
+              "en": "The ringing of the bells",
+              "zh": "教堂钟声"
             },
             {
-              "es": "El arder del incienso en el cementerio",
-              "ru": "Горение ладана в кладбище",
-              "en": "The burning of incense in the cemetery",
-              "zh": "在墓地燃烧熏香"
+              "es": "La ofrenda",
+              "ru": "Подношение",
+              "en": "The offering",
+              "zh": "供品"
             }
           ]
         },
@@ -201,22 +201,22 @@
           },
           "options": [
             {
-              "es": "Los habitantes de la Delegación Tláhuac",
-              "ru": "Жителей делегации Тлауак",
-              "en": "The inhabitants of the Tláhuac Delegation",
-              "zh": "特拉瓦克区的居民"
+              "es": "A todo el pueblo",
+              "ru": "Ко всей деревне",
+              "en": "To the entire town",
+              "zh": "到整个村庄"
             },
             {
-              "es": "Las almas de los difuntos y a sus ofrendas",
-              "ru": "Души умерших и их подношения",
-              "en": "The souls of the deceased and their offerings",
-              "zh": "逝者的灵魂和他们的祭品"
+              "es": "A los visitantes del pueblo",
+              "ru": "К посетителям деревни",
+              "en": "To the visitors of the town",
+              "zh": "向村庄的客人"
             },
             {
-              "es": "Las almas de los niños y las oraciones",
-              "ru": "Души детей и молитвы",
-              "en": "The souls of the children and prayers",
-              "zh": "儿童的灵魂和祈祷"
+              "es": "A los vivos",
+              "ru": "К живым",
+              "en": "To the living",
+              "zh": "向活着的人"
             }
           ]
         },
@@ -236,22 +236,22 @@
           },
           "options": [
             {
-              "es": "Con comida y bebida",
-              "ru": "С едой и напитками",
-              "en": "With food and drinks",
-              "zh": "带着食物和饮料"
+              "es": "Con las oraciones",
+              "ru": "С молитвами",
+              "en": "With prayers",
+              "zh": "带着祈祷"
             },
             {
-              "es": "Con música y cantos",
-              "ru": "С музыкой и песнями",
-              "en": "With music and songs",
-              "zh": "带着音乐和歌声"
+              "es": "Con la música",
+              "ru": "С музыкой",
+              "en": "With music",
+              "zh": "带着音乐"
             },
             {
-              "es": "Con fotografías y recuerdos",
-              "ru": "С фотографиями и воспоминаниями",
-              "en": "With photographs and memories",
-              "zh": "带着照片和回忆"
+              "es": "Con el repique de las campanas",
+              "ru": "Со звоном колоколов",
+              "en": "With the ringing of the bells",
+              "zh": "伴着钟声"
             }
           ]
         }
